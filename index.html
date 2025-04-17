@@ -1,0 +1,1657 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <title>Collabridge</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/icon_C.png">
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="assets/css/bootstrap.css">
+   <link rel="stylesheet" href="assets/css/animate.css">
+   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="assets/css/slick.css">
+   <link rel="stylesheet" href="assets/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="assets/css/flaticon_Collabridge.css">
+   <link rel="stylesheet" href="assets/css/spacing.css">
+   <link rel="stylesheet" href="assets/css/main.css">
+   <style>
+      /* Image and text layout */
+      .row.align-items-center.mt-40 {
+          margin: 40px 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0;
+          opacity: 1;
+          transform: none;
+      }
+      
+      /* Image columns */
+      .col-md-5 {
+          padding: 0;
+          width: 25%;
+          flex: 0 0 25%;
+      }
+      
+      /* Center text container */
+      .col-md-2 {
+          flex: 0 0 50%;
+          max-width: 50%;
+          margin: 0;
+          padding: 0 20px;
+          text-align: center;
+      }
+      
+      /* Image styling */
+      .tp-testimonial-two-img {
+          margin: 0;
+          width: 100%;
+          max-width: 250px;
+      }
+      
+      .tp-testimonial-two-img img {
+          width: 100%;
+          height: auto;
+          max-width: 250px;
+          object-fit: contain;
+          display: block;
+      }
+      
+      .larger-text {
+          font-size: 16px;
+          line-height: 1.5;
+          margin: 0;
+          padding: 15px 0;
+          color: #333;
+      }
+      
+      /* Mobile view adjustments */
+      @media (max-width: 768px) {
+          .row.align-items-center.mt-40 {
+              flex-direction: row;
+              padding: 0 10px;
+              margin: 20px 0;
+              justify-content: space-between;
+          }
+          
+          .col-md-5 {
+              width: 20%;
+              flex: 0 0 20%;
+              padding: 0 5px;
+          }
+          
+          .col-md-2 {
+              flex: 0 0 60%;
+              max-width: 60%;
+              padding: 0 10px;
+          }
+          
+          .tp-testimonial-two-img {
+              max-width: 100px;
+          }
+          
+          .tp-testimonial-two-img img {
+              max-width: 100px;
+          }
+          
+          .larger-text {
+              font-size: 14px;
+              line-height: 1.4;
+              padding: 10px 0;
+          }
+      }
+
+      /* Add these new slider-specific styles */
+      .tp-testimonial-two-wrapper {
+          width: 100%;
+          max-width: 1140px;
+          margin: 0 auto; /* Center the container */
+      }
+
+      .tp-testimonial-two-slider {
+          position: relative;
+          width: 100%;
+      }
+
+      .swiper-container.tp-testimonial-two-active {
+          width: 100%;
+          max-width: 900px;
+          margin: 0 auto; /* Center the slider */
+          padding: 20px 0;
+      }
+
+      /* Slider card styles - reduced size */
+      .tp-testimonial-two-wrap {
+          text-align: center;
+          max-width: 400px; /* Reduced from 500px */
+          margin: 10px; /* Reduced from 15px */
+          padding: 20px; /* Reduced from 25px */
+          background: #fff;
+          border-radius: 8px; /* Reduced from 10px */
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+
+      /* Adjust content spacing */
+      .tp-testimonial-two-content {
+          padding: 15px; /* Reduced from 20px */
+      }
+
+      .tp-testimonial-two-content p {
+          font-size: 14px; /* Reduced from 16px */
+          line-height: 1.4;
+          margin-bottom: 15px;
+      }
+
+      /* Adjust avatar info */
+      .tp-testimonial-two-avater-info {
+          padding: 10px 0;
+      }
+
+      .tp-testimonial-two-avater-title {
+          font-size: 16px; /* Reduced from 20px */
+          margin-bottom: 3px;
+      }
+
+      .tp-testimonial-two-avater-info span {
+          font-size: 13px; /* Reduced from 16px */
+      }
+
+      /* Adjust slider container */
+      .swiper-container.tp-testimonial-two-active {
+          padding: 10px 0;
+          max-width: 900px; /* Reduced from 1100px */
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 768px) {
+          .tp-testimonial-two-wrap {
+              max-width: 320px;
+              padding: 15px;
+          }
+          
+          .tp-testimonial-two-content p {
+              font-size: 13px;
+          }
+          
+          .tp-testimonial-two-avater-title {
+              font-size: 14px;
+          }
+          
+          .tp-testimonial-two-avater-info span {
+              font-size: 12px;
+          }
+      }
+
+      #loading {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          z-index: 9999;
+          transition: all 0.3s ease;
+      }
+
+      .tp-preloader-circle {
+          animation: rotate 1s linear infinite;
+      }
+
+      .animate-circle {
+          stroke-dasharray: 1130;
+          stroke-dashoffset: 1130;
+          animation: dash 1.5s ease-in-out;
+      }
+
+      @keyframes rotate {
+          100% { transform: rotate(360deg); }
+      }
+
+      @keyframes dash {
+          0% { stroke-dashoffset: 1130; }
+          100% { stroke-dashoffset: 0; }
+      }
+
+      .tp-testimonial-two-wrap {
+          width: calc(100% - 30px);
+          margin: 15px;
+      }
+
+      .swiper-container.tp-testimonial-two-active {
+          padding: 20px 0;
+          overflow: hidden;
+          margin: 0 -15px;
+      }
+
+      @media (max-width: 991px) {
+          .tp-testimonial-two-wrap {
+              width: 100%;
+              margin: 15px auto;
+          }
+      }
+
+      /* Center the testimonial section beside slider */
+      .tp-testimonial {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          padding: 20px;
+      }
+
+      .tp-section-two {
+          text-align: center;
+          max-width: 400px;
+          margin: 0 auto;
+      }
+
+      .tp-section-title {
+          font-size: 28px;
+          line-height: 1.4;
+          margin-bottom: 20px;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 991px) {
+          .tp-testimonial {
+              margin-bottom: 30px;
+          }
+          
+          .tp-section-title {
+              font-size: 24px;
+          }
+      }
+
+      /* Adjust spacing between sections */
+      .tp-video-two {
+          margin-top: 0; /* Remove top margin */
+          margin-bottom: 120px;
+          padding-top: 0; /* Remove top padding */
+      }
+
+      /* Adjust testimonial section bottom spacing */
+      .testimonial-area.tp-testimonial-two {
+          padding-bottom: 60px; /* Increase bottom padding */
+          margin-bottom: 40px; /* Add margin bottom */
+      }
+
+      /* Video area background container */
+      .tp-video-two-bg {
+          margin-top: 0; /* Remove top margin */
+      }
+
+      /* Video wrapper adjustments */
+      .tp-video-two-wrapper {
+          padding-top: 35px; /* Reduce top padding */
+      }
+
+      /* Mobile responsive adjustments */
+      @media (max-width: 991px) {
+          .tp-video-two {
+              margin-top: 40px; /* Add top margin to create space */
+              margin-bottom: 60px;
+          }
+          
+          .tp-video-two-wrapper {
+              padding-top: 25px;
+          }
+      }
+
+      .tp-testimonial-two-wrapper {
+          width: 100%;
+          max-width: 1140px;
+          margin: 0 auto; /* Center the container */
+          margin-bottom: 40px; /* Add bottom margin */
+          padding: 0;
+      }
+
+      .tp-testimonial-two-wrap {
+          text-align: center;
+          max-width: 400px;
+          margin: 10px;
+          padding: 20px;
+          background: #fff;
+          border-radius: 8px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          margin-bottom: 20px; /* Add space below cards */
+      }
+
+      .swiper-container.tp-testimonial-two-active {
+          padding: 10px 0 30px 0; /* Increase bottom padding */
+          max-width: 900px;
+          margin: 0 auto; /* Center the slider */
+          margin-bottom: 20px; /* Add margin bottom */
+      }
+
+      /* Banner section adjustments */
+      .tp-banner-two-wrapper {
+          padding-bottom: 0; /* Remove bottom padding */
+      }
+
+      /* AI Universe section adjustments */
+      .testimonial-area.tp-testimonial-two {
+          padding-top: 40px; /* Reduce top padding */
+          padding-bottom: 40px; /* Reduce bottom padding */
+          margin-bottom: 0; /* Remove bottom margin */
+      }
+
+      /* Row spacing adjustments */
+      .row.align-items-center.mt-40 {
+          margin-top: 20px; /* Reduce top margin */
+          margin-bottom: 20px; /* Reduce bottom margin */
+      }
+
+      /* Video area adjustments */
+      .video-area.tp-video-two {
+          margin-top: 0; /* Remove top margin */
+          padding-top: 0; /* Remove top padding */
+      }
+
+      .tp-video-two-bg {
+          margin-top: 0; /* Remove top margin */
+      }
+
+      /* Remove excess spacing */
+      .tp-testimonial-two-wrapper {
+          margin-bottom: 20px; /* Reduce bottom margin */
+      }
+
+      /* Mobile responsive adjustments */
+      @media (max-width: 991px) {
+          .testimonial-area.tp-testimonial-two {
+              padding-top: 30px;
+              padding-bottom: 30px;
+          }
+          
+          .video-area.tp-video-two {
+              margin-top: 0;
+          }
+      }
+
+      .tp-section-sub-title {
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 30px;
+          position: relative;
+      }
+
+      /* Remove bullet point and adjust spacing */
+      .tp-section-sub-title::before,
+      .tp-section-sub-title::after {
+          display: none; /* Remove any bullets or decorative elements */
+      }
+
+      /* Center title container */
+      .row.align-items-center.mt-40 > span {
+          display: block;
+          text-align: center;
+          width: 100%;
+          margin: 0 auto 30px;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- pre loader area start -->
+   <div id="loading">
+      <div id="loading-center">
+         <div id="loading-center-absolute">
+            <!-- loading content here -->
+            <div class="tp-preloader-content">
+               <div class="tp-preloader-logo">
+                  <div class="tp-preloader-circle">
+                     <svg width="190" height="190" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle stroke="#D9D9D9" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
+                        </circle>
+                        <circle stroke="red" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round"></circle>
+                     </svg>
+                  </div>
+                  <img  width= "100"src="assets/img/logo/icon_C.png" alt="">
+               </div>
+            
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- pre loader area end -->
+
+   <!-- back to top start -->
+   <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn">
+         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+               stroke-linejoin="round" />
+         </svg>
+      </button>
+   </div>
+   <!-- back to top end -->
+
+   <!-- header area start -->
+   <header>
+      <div id="header-sticky" class="tp-header-area tp-header-transparent tp-header-2">
+    <div class="container">
+       <div class="tp-header-box">
+          <div class="row align-items-center">
+             <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+                <div class="logo">
+                   <a href="index.html">
+                      <img data-width="250" src="assets/img/logo/logo.png" alt="">
+                   </a>
+                </div>
+             </div>
+             <div class="col-xl-7 d-none d-xl-block" style="padding-left: 50px;"> <!-- Add padding here -->
+                <div class="main-menu">
+                   <nav id="mobile-menu" class="tp-main-menu-content">
+                      <ul>
+                         <li><a href="index.html">Home</a></li>
+                         <li class="has-dropdown"><a href="about.html">About Us</a></li>
+                         <li class="has-dropdown tp-megamenu">
+                            <a href="services.html" class="dropdown-toggle">Expertize</a>
+<!-- Desktop Dropdown -->
+<div class="tp-submenu desktop-submenu" style="background: #fff; padding: 15px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 1200px; left: 50%; transform: translateX(-50%); position: absolute; z-index: 1000; margin: 0 auto;">
+   <div class="row" style="margin: 0 auto; position: relative; display: flex; flex-wrap: nowrap; justify-content: center; max-width: 1000px;">
+      <!-- Industry Verticals -->
+      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%; margin: 0;">
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Industry Verticals</h4>
+         <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="services-details.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Manufacturing</a></li>
+            <li style="margin-bottom: 8px;"><a href="Energy & Utilities.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Oil & Gas</a></li>
+            <li style="margin-bottom: 8px;"><a href="Pharma & Lifesciences.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Pharma & LifeSciences</a></li>
+            <li style="margin-bottom: 8px;"><a href="Insurance.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Insurance</a></li>
+            <li style="margin-bottom: 8px;"><a href="W&R.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">WholeSale & Retail</a></li>
+         </ul>
+      </div>
+
+      <!-- Technologies -->
+      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Technologies</h4>
+         <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="AI-ML.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">AI/ML</a></li>
+            <li style="margin-bottom: 8px;"><a href="GenAI.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">GenAI</a></li>
+            <li style="margin-bottom: 8px;"><a href="LLM-SLM.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">LLM/SLM</a></li>
+            <li style="margin-bottom: 8px;"><a href="SAP-BTP.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">SAP,BTP</a></li>
+            <li style="margin-bottom: 8px;"><a href="SAP.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">SAP</a></li>
+            <li style="margin-bottom: 8px;"><a href="Oracle.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Oracle</a></li>
+            <li style="margin-bottom: 8px;"><a href="Microsoft.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Microsoft</a></li>
+         </ul>
+      </div>
+
+      <!-- Platforms -->
+      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Platforms</h4>
+         <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">AWS</a></li>
+            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">OCI</a></li>
+            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Azure</a></li>
+         </ul>
+      </div>
+
+      <!-- Service Offerings -->
+      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Service Offerings</h4>
+         <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="QBPM.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">QBPM</a></li>
+            <li style="margin-bottom: 8px;"><a href="Digital Transfromation & Consulting.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Transformation Consulting</a></li>
+            <li style="margin-bottom: 8px;"><a href="DataScience.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">DataScience & Advanced Analytics</a></li>
+            <li style="margin-bottom: 8px;"><a href="DTG.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital  Talent  Gardening</a></li>
+            <li style="margin-bottom: 8px;"><a href="GMS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Globally Managed Systems</a></li>
+         </ul>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="col-xl-2" style="padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Healthcare</h4>
+         <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 8px;"><a href="Pharmacov" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">PharmaCovigilance</a></li>
+            <li style="margin-bottom: 8px;"><a href="SmartManufacturing.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Smart Manufacturing</a></li>
+            <li style="margin-bottom: 8px;"><a href="DigitalOilField.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Oil Field</a></li>
+            <li style="margin-bottom: 8px;"><a href="SupplyChainManagement.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Supply Chain Management</a></li>
+            <li style="margin-bottom: 8px;"><a href="DigitalTwins.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Twins</a></li>
+            <li style="margin-bottom: 8px;"><a href="CustomerCentricity.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Customer Centricity</a></li>
+         </ul>
+      </div>
+   </div>
+</div>
+                         <!-- Mobile Dropdown -->
+<ul class="tp-submenu mobile-submenu">
+   <li class="has-dropdown mobile-menu-header">
+      <ul class="mobile-submenu-links">
+         <li class="has-dropdown">
+            <a href="#" class="submenu-toggle">Industry</a>
+            <ul class="submenu">
+               <li><a href="services-details.html">Manufacturing</a></li>
+               <li><a href="Energy & Utilities.html">Oil & Gas</a></li>
+               <li><a href="Pharma & Lifesciences.html">Pharma & LifeSciences</a></li>
+               <li><a href="Insurance.html">Insurance</a></li>
+               <li><a href="W&R.html">Wholesale & Retail</a></li>
+            </ul>
+         </li>
+         <li class="has-dropdown">
+            <a href="#" class="submenu-toggle">Technologies </a>
+            <ul class="submenu">
+               <li><a href="AI-ML.html">AI/ML</a></li>
+               <li><a href="GenAI.html">GenAI</a></li>
+               <li><a href="LLM-SLM.html">LLM/SLM</a></li>
+               <li><a href="SAP-BTP.html">SAP,BTP</a></li>
+               <li><a href="SAP.html">SAP</a></li>
+               <li><a href="Oracle.html">Oracle</a></li>
+               <li><a href="Microsoft.html">Microsoft</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   
+   <li class="has-dropdown mobile-menu-header">
+      <ul class="mobile-submenu-links">
+         <li class="has-dropdown">
+            <a href="#" class="submenu-toggle">Platforms </a>
+            <ul class="submenu">
+               <li><a href="AWS.html">AWS</a></li>
+               <li><a href="AWS.html">OCI</a></li>
+               <li><a href="AWS.html">Azure</a></li>
+            </ul>
+         </li>
+         <li class="has-dropdown">
+            <a href="#" class="submenu-toggle">Service-offerings</a>
+            <ul class="submenu">
+               <li><a href="QBPM.html">QBPM</a></li>
+            <li><a href="DigitaTransformationConsuting.html">Digital Transformation Consulting</a></li>
+            <li><a href="DataScience.html">DataScience & Advanced Analytics</a></li>
+            <li><a href="DTG.html">Digital Talent Gardening</a></li>
+            <li><a href="GMS.html">Globally Managed Systems</a></li>
+            </ul>
+         </li>
+         <li class="has-dropdown">
+            <a href="#" class="submenu-toggle">HealthCare</a>
+            <ul class="submenu">
+            <li><a href="Pharmacov.html">PharmaCovigilance</a></li>
+            <li><a href="Smart Manufacturing.html">Smart Manufacturing</a></li>
+            <li><a href="Digital Oil Field.html">Digital Oil Field</a></li>
+            <li><a href="Supply chain management.html">Supply Chain Management</a></li>
+            <li><a href="Digital Twins.html">Digital Twins</a></li>
+            <li><a href="Customer Centricity.html">Customer Centricity</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+</ul>
+                         </li>
+                         <li class="has-dropdown"><a href="blog.html">Blog</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                   </nav>
+                </div>
+             </div>
+             <div class="col-xl-2 col-lg-6 col-md-6 col-6">
+                <div class="tp-header-right d-flex align-items-center justify-content-end">
+                   <div class="tp-header-search">
+                      <button class="tp-header-demo-btn">Request a Demo</button>
+                   </div>
+                   <div class="offcanvas-btn d-xl-none ml-20">
+                      <button class="offcanvas-open-btn"><i class="fa-solid fa-bars"></i></button>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+       </div>
+    </header>
+    <!-- header area end -->
+ 
+    <!-- offcanvas area start -->
+    <div class="offcanvas__area">
+       <div class="offcanvas__wrapper">
+          <div class="offcanvas__close">
+             <button class="offcanvas__close-btn offcanvas-close-btn">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <path d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                   <path d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                </svg>
+             </button>
+          </div>
+          <div class="offcanvas__content">
+             <div class="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
+                <div class="offcanvas__logo logo">
+                   <a href="index.html">
+                     <img src="assets/img/logo/r_black.png" alt="logo" style="width: 250px; height: auto;">
+                   </a>
+                </div>
+             </div>
+             <div class="tp-main-menu-mobile"></div>
+             
+             <div class="offcanvas__btn">
+                <a href="contact.html" class="tp-btn">Getting Started</a>
+             </div>
+             <div class="side-info-contact">
+                <span>we are here</span>
+                <p>1489 Langley Ave <br> Grand Forks Afb, North.</p>
+             </div>
+             <div class="side-info-social">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://x.com/collabridge"><i class="fa-brands fa-circle-xmark"></i></a>
+                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                <a href="#"><i class="fa-solid fa-paper-plane"></i></a>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="body-overlay"></div>
+    <!-- offcanvas area end -->
+
+
+
+
+   <main>
+
+      <!-- baner-area-start -->
+      <section id="video-bg" class="banner-area tp-banner-two-wrapper tp-banner-two-overlay p-relative test-xy">
+         <div class="player" data-property="{videoURL:'https://youtu.be/BadB1z-V_qU',containment:'#video-bg', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></div>
+         <div class="tp-banner-two-bg" data-background="assets/img/banner/two/1.jpg"></div>
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tp-banner-two">
+                     <h2 class="tp-banner-two-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                        <span class="title-two-right-1">Powering the Future with </span><br>
+                        AI-Driven Automation!
+                      </h2>
+                     <div class="tp-banner-two-content d-flex align-items-center wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".7s">
+                        </p>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        
+         <div class="tp-banner-two-social d-none d-md-block">
+            <a href="https://www.facebook.com/CollabridgeSolutions" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/collabridgeinc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://in.linkedin.com/company/collabridge-solutions" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://x.com/collabridge" target="_blank"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+        </div> 
+      </section>
+      <!-- baner-area-end -->
+
+   
+         <!-- AI Universe-area-start -->
+      <section class="testimonial-area tp-testimonial-two p-relative"
+      data-background="assets/img/testimonial/testimonial-2-bg-1.jpg">
+      <div class="container">
+                     <!-- Images and Text Container -->
+      <div class="row align-items-center mt-40">
+         <span class="tp-section-sub-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">AI Universe</span>
+
+         <!-- Left Image -->
+          
+         <div class="col-md-5">
+             <div class="tp-testimonial-two-img">
+                 <img src="assets/img/banner/AIage1.png" alt="AI Unification">
+             </div>
+         </div>
+
+         <!-- Center Text -->
+         <div class="col-md-2">
+             <div class="tp-section tp-section-two text-center">
+                 <div class="tp-section-title-wrapper">
+                     <p class="larger-text">Collabridge's -- "AI universe", the complex and dynamic field with a multitude of interconnected areas and technologies -- serves as a foundation for exploring the endless possibilities that AI has to offer.
+ 
+ 
+                        Collabridge positions, the AI ecosystem to Anticipate and Adjust according to variations on an impromptu and Realtime basis thus signifying smartness.</p>
+                 </div>
+             </div>
+         </div>
+
+         <!-- Right Image -->
+         <div class="col-md-5">
+             <div class="tp-testimonial-two-img">
+                 <img src="assets/img/banner/AIuni.png" alt="AI Scaling">
+             </div>
+         </div>
+     </div>
+         <div class="row">
+   
+            <div class="col-lg-12">
+               <div class="tp-testimonial-two-wrapper">
+                  <div class="tp-testimonial-two-slider">
+                     <div class="swiper-container tp-testimonial-two-active">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="tp-testimonial-two-wrap mb-30">
+                                 <div class="tp-testimonial-two-item mb-20">
+                                   
+                                    <div class="tp-testimonial-two-content">
+                                       
+                                       <p>The future of enterprise AI lies in unification—where data, models, and automation converge to drive scalable intelligence.</p>
+                                    </div>
+                                    
+                                  
+                                 </div>
+                                 <div class="tp-testimonial-two-avater-info ml-30">
+                                    <h5 class="tp-testimonial-two-avater-title">Empower Enterprises to Adopt</h5>
+                                    <span>Applied AI at scale through a Unified Platform Approach</span>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="swiper-slide">
+                              <div class="tp-testimonial-two-wrap mb-30">
+                                 <div class="tp-testimonial-two-item mb-20">
+                                   
+                                    <div class="tp-testimonial-two-content">
+                                       
+                                       <p>Scaling AI isn't just about technology—it’s about transforming potential into impact with a unified approach.  </p>
+                                    </div>
+                                   
+                                    <div class="tp-testimonial-two-shape">
+                                       <img src="assets/img/testimonial/testimonial-2-shape-1.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="tp-testimonial-two-avater-info ml-30">
+                                    <h5 class="tp-testimonial-two-avater-title">Unleash the power of</h5>
+                                    <span>applied AI at scale with AI Next</span>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                           <div class="swiper-slide">
+                              <div class="tp-testimonial-two-wrap mb-30">
+                                 <div class="tp-testimonial-two-item mb-20">
+                                    
+                                    <div class="tp-testimonial-two-content">
+                                      
+                                       <p>AI-driven automation isn't just about speed—it’s about redefining efficiency and maximizing value across every process.  </p>
+                                    </div>
+                                    
+                                    <div class="tp-testimonial-two-shape">
+                                       <img src="assets/img/testimonial/testimonial-2-shape-1.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="tp-testimonial-two-avater-info ml-30">
+                                    <h5 class="tp-testimonial-two-avater-title">Unlock</h5>
+                                    <span>Efficiencies </span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testimonial-two-wrap mb-30">
+                                 <div class="tp-testimonial-two-item mb-20">
+                                  
+                                    <div class="tp-testimonial-two-content">
+
+                                       <p>A well-architected AI platform is the foundation for enterprise-wide intelligence, automation, and innovation.  </p>
+                                    </div>
+                                    
+                                    <div class="tp-testimonial-two-shape">
+                                       <img src="assets/img/testimonial/testimonial-2-shape-1.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="tp-testimonial-two-avater-info ml-30">
+                                    <h5 class="tp-testimonial-two-avater-title">Platform blueprint for scaling</h5>
+                                    <span>applied AI adoption in the enterprise</span>
+                                 </div>
+                              </div>
+                              
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-testimonial-two-wrap mb-30">
+                                 <div class="tp-testimonial-two-item mb-20">
+                                  
+                                    <div class="tp-testimonial-two-content">
+
+                                       <p>In a truly connected enterprise, AI bridges data, insights, and action—powering intelligent decision-making at scale.  </p>
+                                    </div>
+                                    
+                                    <div class="tp-testimonial-two-shape">
+                                       <img src="assets/img/testimonial/testimonial-2-shape-1.png" alt="">
+                                    </div>
+                                 </div>
+                                 <div class="tp-testimonial-two-avater-info ml-30">
+                                    <h5 class="tp-testimonial-two-avater-title">Harness power of</h5>
+                                    <span>connected ecosystem  </span>
+                                 </div>
+                              </div>
+                              
+                           </div>
+                        </div>
+                        <!-- Add navigation -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                     </div>
+
+               
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="tp-testimonial-shape">
+         <div class="tp-testimonial-two-shape-one">
+            <img src="assets/img/testimonial/testimonial-2-shape-2.png" alt="">
+         </div>
+      </div>
+   </section>
+   <!-- Ai UNiverse-area-end -->
+    <!-- video-area-start -->
+    <section class="video-area tp-video-two mb-120">
+      <div class="tp-video-two-bg  p-relative" data-background="assets/img/video/video-2-thumb-1.jpg">
+         <div class="tp-video-two-wrap  d-none d-lg-block">
+            <div class="tp-video-two-shape-one">
+               <img src="assets/img/shape/video-2-shape-1.png" alt="">
+            </div>
+            <div class="tp-video-two-shape-two">
+               <img src="assets/img/shape/video-2-shape-2.png" alt="">
+            </div>
+         </div>
+         <div class="tp-video-two-playlist">
+            <a class="popup-video" href="https://www.youtube.com/watch?v=nPQ4BpTfK1Q"><i
+                  class="fa-icon-play"></i></a>
+            <p>Watch Our Videos</p>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="offset-xl-7 col-xl-5 offset-lg-6 col-lg-6">
+               <div class="tp-video-two-wrapper p-relative pb-65 pt-55 wow fadeInRight" data-wow-duration="1s"
+                  data-wow-delay=".4s">
+                  <div class="tp-section tp-section-two mb-35">
+                     <span class="tp-section-sub-title">AI Agents</span>
+                     <h4 class="tp-section-title">We're Partner of Your Innovations</h4>
+                     <div class="tp-section-title-wrapper">
+                        <p> COLLABRIDGE uses AI agents to automate operations, optimize decisions, and enhance efficiency.
+                           Their multi-agent systems enable scalable coordination across complex tasks.
+                           They apply AI in industries like healthcare, finance, and smart infrastructure.
+                           With a focus on ethical, secure design, COLLABRIDGE delivers reliable, scalable AI solutions.</p>
+                     </div>
+                    
+                  </div>
+                  
+               
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- video-area-end -->
+
+      <!-- about-area-start -->
+      <section class="about-area tp-about-two pb-60">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="tp-about-two-thumb">
+                        <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
+                     </div>
+                     <div class="tp-about-two-thumb-shape tp-thumb-common fix">
+                        <div class="tp-thumb-common-overlay wow"></div>
+                        <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
+                     </div>
+                     <div class="tp-about-two-thumb-shape-two d-none d-md-block">
+                        <img src="assets/img/about/two/about-2-shape-3.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="tp-section tp-section-two mb-40">
+                        <span class="tp-section-sub-title">Who we are </span>
+                        <h4 class="tp-section-title">We Always Try to Give <br> Smart Solution For Business</h4>
+                        <div class="tp-section-title-wrapper">
+                           <p>We are an enterprise AI/ML Applications / Products / Tools development and services related thereof company with HQ office in US and development centres in Bangalore and Hyderabad. Our team of experienced professionals provide global IT/OT solutions focused on maximizing Business value. 
+                              We specialize in creating integrated Digital Transformation platforms. Our approach involves Digitizing processes, creating Digital interfaces, and integrating with Digital ecosystems.  
+                           </p>
+                        </div>
+                     </div>
+                    
+                   
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tp-about-two-shape">
+            <div class="tp-about-two-shape-3 d-none d-xl-block">
+               <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+            </div>
+            <div class="tp-about-two-shape-4">
+               <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+            </div>
+         </div>
+      </section>
+      <!-- about-area-end -->
+<!-- what we think start -->
+<section class="about-area tp-about-two pb-60">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 order-lg-1 order-2">
+            <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-section tp-section-two mb-40">
+                  <span class="tp-section-sub-title">What we think </span>
+                  <h4 class="tp-section-title">We Always Try to Give <br> Smart Solution For Business</h4>
+                  <div class="tp-section-title-wrapper">
+                     <p>COLLABRIDGE as an Enterprise AI / ML Company is into: Development of Solutions / Products / Applications / Tools and Providing Services related there of   
+                     </p>
+                  </div>
+               </div>
+               <div class="tp-about-two-list">
+                  <ul>
+                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Insights Automation </li>
+                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Empower the Business 
+                        Intelligence</li>
+                     </li>
+                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Enable the leadership </li>
+                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Create Digital Organization </li>
+                     
+
+                  </ul>
+               </div>
+              
+            </div>
+         </div>
+         <div class="col-lg-6 order-lg-2 order-1">
+            <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-about-two-thumb">
+                  <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
+               </div>
+               <div class="tp-about-two-thumb-shape tp-thumb-common fix">
+                  <div class="tp-thumb-common-overlay wow"></div>
+                  <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
+               </div>
+               <div class="tp-about-two-thumb-shape-two d-none d-md-block">
+                  <img src="assets/img/about/two/about-2-shape-3.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="tp-about-two-shape">
+      <div class="tp-about-two-shape-3 d-none d-xl-block">
+         <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+      </div>
+      <div class="tp-about-two-shape-4">
+         <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+      </div>
+   </div>
+</section>
+<!-- what we think end -->
+      <!-- what we do start -->
+      <section class="about-area tp-about-two pb-60">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6">
+                  <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="tp-about-two-thumb">
+                        <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
+                     </div>
+                     <div class="tp-about-two-thumb-shape tp-thumb-common fix">
+                        <div class="tp-thumb-common-overlay wow"></div>
+                        <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
+                     </div>
+                     <div class="tp-about-two-thumb-shape-two d-none d-md-block">
+                        <img src="assets/img/about/two/about-2-shape-3.png" alt="">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="tp-section tp-section-two mb-40">
+                        <span class="tp-section-sub-title">What we do </span>
+                        <h4 class="tp-section-title">We, as a team of domain experts and topnotch IT consultants engage in: </h4>
+                        
+                     </div>
+                     <div class="tp-about-two-list">
+                        <div class="tp-about-two-list">
+                           <ul style="list-style: none; padding-left: 0;">
+                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                                 <span>Finding elegant solutions to various business problems, aimed at injecting optimization, prediction, and contextual intelligence</span>
+                              </li>
+                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                                 <span>Ways to map IT technologies to drive intelligent automation.</span>
+                              </li>
+                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                                 <span>Constant innovation with the objective of process transformation, transaction automation, digital adoption, and decision-making digitization.</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tp-about-details d-flex align-items-center flex-wrap">
+                        <div class="tp-about-btn mr-30">
+                           <a class="tp-btn" href="about.html">Discover More</a>
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tp-about-two-shape">
+            <div class="tp-about-two-shape-3 d-none d-xl-block">
+               <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+            </div>
+            <div class="tp-about-two-shape-4">
+               <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+            </div>
+         </div>
+      </section>
+      <!-- what we do end-->
+
+
+
+
+  
+
+      <!-- step-area-start -->
+      <section class="step-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tp-step-wrapper d-flex justify-content-between">
+                     <div class="tp-step-item text-center mb-30 wow bounceIn" data-wow-duration=".6s"
+                        data-wow-delay=".6s">
+                        <div class="tp-step-item-count">
+                           <span>1</span>
+                        </div>
+                        <div class="tp-step-item-overlay p-relative mb-30">
+                           <div class="tp-step-item-thumb">
+                              <img src="assets/img/thumbs/step/step-thumb-1.png" alt="">
+                           </div>
+                           <div class="tp-step-item-thumb-icon">
+                              <i class="flaticon-design"></i>
+                           </div>
+                        </div>
+                        <div class="tp-step-item-content">
+                           <h4 class="tp-step-item-title">Discover</h4>
+                           <p>Occact dolorbib umbrel <br> magna conse</p>
+                        </div>
+                     </div>
+                     <div class="tp-step-item tp-step-item-even text-center mb-30 wow bounceIn" data-wow-duration=".5s"
+                        data-wow-delay=".5s">
+                        <div class="tp-step-item-count">
+                           <span>2</span>
+                        </div>
+                        <div class="tp-step-item-overlay p-relative mb-30">
+                           <div class="tp-step-item-thumb">
+                              <img src="assets/img/thumbs/step/step-thumb-2.png" alt="">
+                           </div>
+                           <div class="tp-step-item-thumb-icon">
+                              <i class="flaticon-design"></i>
+                           </div>
+                        </div>
+                        <div class="tp-step-item-content">
+                           <h4 class="tp-step-item-title">Design</h4>
+                           <p>Occact dolorbib umbrel <br> magna conse</p>
+                        </div>
+                     </div>
+                     <div class="tp-step-item text-center mb-30 wow bounceIn" data-wow-duration=".5s"
+                        data-wow-delay=".5s">
+                        <div class="tp-step-item-count">
+                           <span>3</span>
+                        </div>
+                        <div class="tp-step-item-overlay p-relative mb-30">
+                           <div class="tp-step-item-thumb">
+                              <img src="assets/img/thumbs/step/step-thumb-3.png" alt="">
+                           </div>
+                           <div class="tp-step-item-thumb-icon">
+                              <i class="flaticon-design"></i>
+                           </div>
+                        </div>
+                        <div class="tp-step-item-content">
+                           <h4 class="tp-step-item-title">Development</h4>
+                           <p>Occact dolorbib umbrel <br> magna conse</p>
+                        </div>
+                     </div>
+                     <div class="tp-step-item tp-step-item-even text-center mb-30 wow bounceIn" data-wow-duration=".5s"
+                        data-wow-delay=".6s">
+                        <div class="tp-step-item-count">
+                           <span>4</span>
+                        </div>
+                        <div class="tp-step-item-overlay p-relative mb-30">
+                           <div class="tp-step-item-thumb">
+                              <img src="assets/img/thumbs/step/step-thumb-4.png" alt="">
+                           </div>
+                           <div class="tp-step-item-thumb-icon">
+                              <i class="flaticon-design"></i>
+                           </div>
+                        </div>
+                        <div class="tp-step-item-content">
+                           <h4 class="tp-step-item-title">Deploy</h4>
+                           <p>Occact dolorbib umbrel <br> magna conse</p>
+                        </div>
+                     </div>
+                     <div class="tp-step-line-shape d-none d-xl-block">
+                        <img src="assets/img/thumbs/step/step-line-shape-1.svg" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- step-area-end -->
+
+
+
+  
+   <!-- brand-area-start -->
+   <section class="brand-area pb-120">
+      <div class="container">
+         <div class="row gx-0">
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-wrapper mb-40">
+                  <h4 class="tp-brand-title">1K+ Software <br> Business Company <br> Growing with <br> Our
+                     <span>Tecz</span> Solution</h4>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-1.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-2.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-3.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-4.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-5.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-6.png" alt="">
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+               <div class="tp-brand-item">
+                  <img src="assets/img/brand/one/brand-logo-7.png" alt="">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- brand-area-end -->
+
+
+      <!-- blog-area-start -->
+      <!-- <section class="blog-area tp-blog-two-bg fix">
+         <div class="container">
+            <div class="row align-items-end">
+               <div class="col-lg-5">
+                  <div class="tp-section tp-section-two mb-35">
+                     <span class="tp-section-sub-title">Waht’s New</span>
+                     <h4 class="tp-section-title">Blog & Article</h4>
+                  </div>
+               </div>
+               <div class="offset-lg-2 col-lg-5">
+                  <div class="tp-section mb-40">
+                     <div class="tp-section-title-wrapper">
+                        <p>System is a term used to refer to an organized collection symbols and processes that may be
+                           used to operate on such symbols. Perspiciatis omnis natus error voupems accusa </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="tp-blog-two-wrapper">
+                     <div class="swiper-container tp-blog-two-active">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <div class="tp-blog-two mb-40">
+                                 <div class="tp-blog-two-item">
+                                    <div class="tp-blog-two-thumb overlay-anim tp-thumb-common fix">
+                                       <div class="tp-thumb-common-overlay wow"></div>
+                                       <a href="blog-details.html"><img src="assets/img/blog/two/blog-2-thumb-1.jpg"
+                                             alt=""></a>
+                                    </div>
+                                    <div class="tp-blog-two-content">
+                                       <span>March 23, 2023 _ IT Service</span>
+                                       <h4 class="tp-blog-two-title">
+                                          <a href="blog-details.html">A Simple Social Media Marketing List</a>
+                                       </h4>
+                                       <div class="tp-blog-two-btn">
+                                          <a href="blog-details.html">Read More</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-blog-two mb-40">
+                                 <div class="tp-blog-two-item">
+                                    <div class="tp-blog-two-thumb overlay-anim tp-thumb-common fix">
+                                       <div class="tp-thumb-common-overlay wow"></div>
+                                       <a href="blog-details.html"><img src="assets/img/blog/two/blog-2-thumb-2.jpg"
+                                             alt=""></a>
+                                    </div>
+                                    <div class="tp-blog-two-content">
+                                       <span>March 23, 2023 _ Development</span>
+                                       <h4 class="tp-blog-two-title">
+                                          <a href="blog-details.html">Does My Website Need Any Blog?</a>
+                                       </h4>
+                                       <div class="tp-blog-two-btn">
+                                          <a href="blog-details.html">Read More</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-blog-two mb-40">
+                                 <div class="tp-blog-two-item">
+                                    <div class="tp-blog-two-thumb overlay-anim tp-thumb-common fix">
+                                       <div class="tp-thumb-common-overlay wow"></div>
+                                       <a href="blog-details.html"><img src="assets/img/blog/two/blog-2-thumb-3.jpg"
+                                             alt=""></a>
+                                    </div>
+                                    <div class="tp-blog-two-content">
+                                       <span>March 23, 2023 _ IT Service</span>
+                                       <h4 class="tp-blog-two-title">
+                                          <a href="blog-details.html">A Simple Social Media Marketing List</a>
+                                       </h4>
+                                       <div class="tp-blog-two-btn">
+                                          <a href="blog-details.html">Read More</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <div class="tp-blog-two mb-40">
+                                 <div class="tp-blog-two-item">
+                                    <div class="tp-blog-two-thumb overlay-anim tp-thumb-common fix">
+                                       <div class="tp-thumb-common-overlay wow"></div>
+                                       <a href="blog-details.html"><img src="assets/img/blog/two/blog-2-thumb-4.jpg"
+                                             alt=""></a>
+                                    </div>
+                                    <div class="tp-blog-two-content">
+                                       <span>March 23, 2023 _ Startup Business</span>
+                                       <h4 class="tp-blog-two-title">
+                                          <a href="blog-details.html">What is Holding Back
+                                             The IT Solution</a>
+                                       </h4>
+                                       <div class="tp-blog-two-btn">
+                                          <a href="blog-details.html">Read More</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+      <!-- blog-area-end -->
+
+      <!-- cta-area-star -->
+      <section class="cta-area tp-cta-three-bg" data-background="assets/img/bg/cta-2-bg-1.jpg">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-1 col-lg-2">
+                  <div class="tp-cta-three-icon wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <i class="flaticon-solution"></i>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6">
+                  <div class="tp-cta-three-content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <h4 class="tp-cta-three-title">Collabridge — Solving Problems, Delivering Solutions</h4>
+                  </div>
+               </div>
+               <div class="offset-xl-4 col-xl-3 col-lg-4">
+                  <div class="tp-cta-three-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <a href="contact.html" class="tp-btn">Discover More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- cta-area-end -->
+
+   </main>
+
+   <!-- footer-area-start -->
+   <footer>
+      <div class="footer-area">
+         <div class="tp-footer-top pt-115 pb-70 theme-bg" data-background="assets/img/footer/one/footer-bg-1.jpg">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="tp-footer-widget footer-col-1 mb-40 wow fadeInUp" data-wow-duration="1s"
+                        data-wow-delay=".4s">
+                        <div class="tp-footer-widget-logo mb-15">
+                           <a href="index.html">
+                              <img data-width="250" src ="assets/img/logo/logo.png" alt="fw-logo">
+                           </a>
+                        </div>
+                        <div class="tp-footer-widget-content">
+                           <p>Desires to obtain pain of itself, because it is pain, but occasionally circum</p>
+                           <div class="tp-footer-widget-content-list">
+                              <div class="tp-footer-widget-content-list-item">
+                                 <i class="fa-solid fa-square-phone"></i><a href="tel:0123456789">+91 1234567890
+                                    </a>
+                              </div>
+                              <div class="tp-footer-widget-content-list-item">
+                                 <i class="fa-solid fa-envelope"></i> <a
+                                    href="mailto:Collabridgeofficaila@gmail.com">Sample@gmail.com</a>
+                              </div>
+                              <div class="tp-footer-widget-content-list-item">
+                                 <i class="fa-solid fa-location-dot"></i> <a href="#">Sample Address 123 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <div class="tp-footer-widget tp-footer-col-2 mb-40 wow fadeInUp" data-wow-duration="1.2s"
+                        data-wow-delay=".6s">
+                        <h4 class="tp-footer-widget-title mb-30">Our Navigation</h4>
+                        <div class="tp-footer-widget-link">
+                           <ul>
+                              <li><a href="about.html"><i class="fa-sharp fa-solid fa-plus"></i> About Collabridge</a></li>
+                              <li><a href="team.html"><i class="fa-sharp fa-solid fa-plus"></i> Meet the Team</a></li>
+                              <li><a href="blog.html"><i class="fa-sharp fa-solid fa-plus"></i> News & Media</a></li>
+                              <li><a href="project-1.html"><i class="fa-sharp fa-solid fa-plus"></i> Our Projects</a>
+                              </li>
+                              <li><a href="contact.html"><i class="fa-sharp fa-solid fa-plus"></i> Contact</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6">
+                     <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s"
+                        data-wow-delay=".8s">
+                        <h4 class="tp-footer-widget-title mb-40">Our Navigation</h4>
+                        <div class="tp-footer-widget-gallery">
+                           <div class="tp-footer-widget-gallery-all">
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-1.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-2.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-3.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-4.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-5.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                              <div class="tp-footer-widget-gallery-single-item">
+                                 <a href="#" class="tp-footer-widget-gallery-item">
+                                    <div class="tp-footer-widget-gallery-thumb">
+                                       <img src="assets/img/footer/one/gallery/fw-g-6.jpg" alt="">
+                                       <div class="tp-footer-widget-gallery-social">
+                                          <i class="fa-brands fa-linkedin-in"></i>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12">
+                     <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
+                        data-wow-delay="1s">
+                        <h4 class="tp-footer-widget-title mb-20">Subscribe</h4>
+                        <div class="tp-footer-widget-newsletter-wrap">
+                           <form action="#">
+                              <div class="tp-footer-widget-newsletter-wrapper">
+                                 <div class="tp-footer-widget-newsletter-input">
+                                    <input type="email" placeholder="Get News & Updates">
+                                 </div>
+                                 <div class="tp-footer-widget-newsletter-submit">
+                                    <button>
+                                       <i class="fa-regular fa-arrow-right"></i>
+                                    </button>
+                                 </div>
+                              </div>
+                           </form>
+                           <div class="tp-footer-widget-newsletter-content">
+                              <div class="tp-footer-widget-newsletter-social">
+                                 <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                 <a href="https://www.instagram.com/collabridgeinc/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                 <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                 <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="tp-footer-bottom">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-6 col-md-7">
+                     <div class="tp-footer-copyright">
+                        <span>Copyright © 2025 by  <a target="_blank" href="https:www.collabridge.com">Collabridge</a> All Rights Reserved </span>
+                     </div>
+                  </div>
+                  <div class="col-lg-6 col-md-5">
+                     <div class="tp-footer-terms">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Privacy Policy</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- footer-area-end -->
+
+
+   <!-- JS here -->
+   <script src="assets/js/vendor/jquery.js"></script>
+   <script src="assets/js/vendor/waypoints.js"></script>
+   <script src="assets/js/bootstrap-bundle.js"></script>
+   <script src="assets/js/meanmenu.js"></script>
+   <script src="assets/js/swiper-bundle.js"></script>
+   <script src="assets/js/slick.js"></script>
+   <script src="assets/js/range-slider.js"></script>
+   <script src="assets/js/magnific-popup.js"></script>
+   <script src="assets/js/nice-select.js"></script>
+   <script src="assets/js/purecounter.js"></script>
+   <script src="assets/js/countdown.js"></script>
+   <script src="assets/js/wow.js"></script>
+   <script src="assets/js/isotope-pkgd.js"></script>
+   <script src="assets/js/imagesloaded-pkgd.js"></script>
+   <script src="assets/js/jquery.mb.YTPlayer.js"></script>
+   <script src="assets/js/ajax-form.js"></script>
+   <script src="assets/js/main.js"></script>
+     <!-- Add your new mobile menu JavaScript here -->
+     <script>
+      function initMobileMenu() {
+   // Handle main submenu toggles
+   document.querySelectorAll('.mobile-menu-header > .submenu-toggle').forEach(toggle => {
+     toggle.addEventListener('click', (e) => {
+       e.preventDefault();
+       const header = toggle.closest('.mobile-menu-header');
+       const submenu = header.querySelector('.mobile-submenu-links');
+       
+       // Close other main submenus
+       document.querySelectorAll('.mobile-menu-header').forEach(other => {
+         if (other !== header) {
+           other.querySelector('.mobile-submenu-links')?.classList.remove('active');
+           other.querySelector('.submenu-toggle')?.classList.remove('active');
+         }
+       });
+       
+       // Toggle current submenu
+       toggle.classList.toggle('active');
+       submenu.classList.toggle('active');
+     });
+   });
+ 
+   // Handle nested dropdown toggles
+   document.querySelectorAll('.has-dropdown > .submenu-toggle').forEach(toggle => {
+     toggle.addEventListener('click', (e) => {
+       e.preventDefault();
+       const parent = toggle.closest('.has-dropdown');
+       const submenu = parent.querySelector('.submenu');
+       
+       // Close other dropdowns at same level
+       const siblings = parent.parentElement.children;
+       Array.from(siblings).forEach(sibling => {
+         if (sibling !== parent && sibling.classList.contains('has-dropdown')) {
+           sibling.classList.remove('active');
+           sibling.querySelector('.submenu')?.classList.remove('active');
+         }
+       });
+       
+       // Toggle current dropdown
+       parent.classList.toggle('active');
+       submenu.classList.toggle('active');
+     });
+   });
+ }
+ 
+ document.addEventListener('DOMContentLoaded', initMobileMenu);
+ </script>
+ <!-- Add Intersection Observer for animation -->
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Observe the row container
+    const row = document.querySelector('.row.align-items-center.mt-40');
+    if (row) {
+        observer.observe(row);
+    }
+});
+ </script>
+ <!-- Update Swiper initialization -->
+ <script>
+ const testimonialSlider = new Swiper('.tp-testimonial-two-active', {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 30
+        },
+        992: {
+            slidesPerView: 2,
+            spaceBetween: 30
+        }
+    }
+});
+ </script>
+ <!-- Add loader script -->
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Set maximum loading time to 2 seconds
+    const maxLoadTime = 2000;
+    const loading = document.getElementById('loading');
+    
+    // Hide loader when page is loaded or after maxLoadTime
+    const hideLoader = () => {
+        loading.style.opacity = '0';
+        setTimeout(() => {
+            loading.style.display = 'none';
+        }, 300);
+    };
+
+    // Hide loader when content is loaded
+    window.addEventListener('load', hideLoader);
+    
+    // Force hide loader after maxLoadTime
+    setTimeout(hideLoader, maxLoadTime);
+});
+ </script>
+</body>
+
+
+<!-- Mirrored from html.storebuild.shop/Collabridge-prv/Collabridge/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Mar 2025 03:49:50 GMT -->
+</html>
