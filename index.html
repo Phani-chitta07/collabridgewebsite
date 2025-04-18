@@ -491,10 +491,154 @@
         flex: 0 0 100%;
     }
 }
+/* Cookie Consent Styles */
+.cookie-consent {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    color: #fff;
+    padding: 20px;
+    z-index: 9999;
+    transition: bottom 0.5s ease-in-out;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Start hidden */
+}
+
+.cookie-consent.active {
+    bottom: 0;
+    display: block; /* Show when active */
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.accept-all {
+    background: #474ed4;
+    color: #fff;
+}
+
+.accept-all:hover {
+    background: #3339b1;
+}
+
+.customize {
+    background: #444;
+    color: #fff;
+}
+
+.customize:hover {
+    background: #555;
+}
+
+.save-preferences {
+    background: #28a745;
+    color: #fff;
+}
+
+.save-preferences:hover {
+    background: #218838;
+}
+
+.cookie-preferences {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cookie-preferences.active {
+    display: block;
+}
+
+.preference-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.preference-item label {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #474ed4;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
    </style>
 </head>
 
 <body>
+   
 
    <!-- pre loader area start -->
    <div id="loading">
@@ -518,7 +662,50 @@
       </div>
    </div>
    <!-- pre loader area end -->
-
+<!-- Cookie Consent Banner -->
+<div class="cookie-consent">
+   <div class="cookie-content">
+       <div class="cookie-text">
+           <h4 style="color: #fff; margin-bottom: 10px;">Cookie Settings</h4>
+           <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p>
+       </div>
+       <div class="cookie-buttons">
+           <button class="cookie-btn accept-all">Accept All</button>
+           <button class="cookie-btn customize">Customize</button>
+       </div>
+       <div class="cookie-preferences">
+           <div class="preference-item">
+               <label class="switch">
+                   <input type="checkbox" id="necessary" checked disabled>
+                   <span class="slider"></span>
+               </label>
+               <label>Necessary (Required)</label>
+           </div>
+           <div class="preference-item">
+               <label class="switch">
+                   <input type="checkbox" id="functional">
+                   <span class="slider"></span>
+               </label>
+               <label>Functional</label>
+           </div>
+           <div class="preference-item">
+               <label class="switch">
+                   <input type="checkbox" id="analytics">
+                   <span class="slider"></span>
+               </label>
+               <label>Analytics</label>
+           </div>
+           <div class="preference-item">
+               <label class="switch">
+                   <input type="checkbox" id="marketing">
+                   <span class="slider"></span>
+               </label>
+               <label>Marketing</label>
+           </div>
+           <button class="cookie-btn save-preferences">Save Preferences</button>
+       </div>
+   </div>
+</div>
    <!-- back to top start -->
    <div class="back-to-top-wrapper">
       <button id="back_to_top" type="button" class="back-to-top-btn">
@@ -728,7 +915,7 @@
              <div class="tp-main-menu-mobile"></div>
              
              <div class="offcanvas__btn">
-                <a href="contact.html" class="tp-btn">Getting Started</a>
+                <a href="contact.html" class="tp-btn">Request A Demo</a>
              </div>
              <div class="side-info-contact">
                 <span>we are here</span>
@@ -795,7 +982,7 @@
           
          <div class="col-md-5">
              <div class="tp-testimonial-two-img">
-                 <img src="assets/img/banner/AIage1.png" alt="AI Unification">
+                 <img src="assets/img/banner/AIuni.png" alt="AI Unification">
              </div>
          </div>
 
@@ -814,7 +1001,7 @@
          <!-- Right Image -->
          <div class="col-md-5">
              <div class="tp-testimonial-two-img">
-                 <img src="assets/img/banner/AIuni.png" alt="AI Scaling">
+                 <img src="assets/img/banner/AIage1.png" alt="AI Scaling">
              </div>
          </div>
      </div>
@@ -1039,7 +1226,7 @@
                   <span class="tp-section-sub-title">What we think </span>
                   <h4 class="tp-section-title">We Always Try to Give <br> Smart Solution For Business</h4>
                   <div class="tp-section-title-wrapper">
-                     <p>COLLABRIDGE as an Enterprise AI / ML Company is into: Development of Solutions / Products / Applications / Tools and Providing Services related there of   
+                     <p>COLLABRIDGE, as an enterprise AI/ML company, is constantly on a mission to position information technology as a business technology and information solutions as business solutions. Our endeavor is to create sustainable competitive advantage, competitive strategy, and competitive differentiation by enabling companies to embrace the technologies as appropriate.</p>   
                      </p>
                   </div>
                </div>
@@ -1795,8 +1982,98 @@
        });
    });
    </script>
+<!-- cookies consent -->
+<script>
+   class CookieConsent {
+      constructor() {
+    this.cookieConsent = document.querySelector('.cookie-consent');
+    if (!this.cookieConsent) return;
+
+    this.acceptAllBtn = document.querySelector('.accept-all');
+    this.customizeBtn = document.querySelector('.customize');
+    this.savePreferencesBtn = document.querySelector('.save-preferences');
+    this.preferences = document.querySelector('.cookie-preferences');
+    this.cookieInputs = document.querySelectorAll('.cookie-preferences input[type="checkbox"]');
+
+    // Check for existing cookie on initialization
+    if (this.checkCookieExists('cookieConsent')) {
+        this.cookieConsent.classList.remove('active');
+        this.cookieConsent.style.display = 'none';
+    } else {
+        this.showBanner();
+    }
+
+    this.bindEvents();
+}
+       checkCookieExists(name) {
+           return document.cookie.split(';').some(item => item.trim().startsWith(name + '='));
+       }
+   
+       showBanner() {
+           this.cookieConsent.style.display = 'block';
+           setTimeout(() => {
+               this.cookieConsent.classList.add('active');
+           }, 100);
+       }
+       hideBanner() {
+    this.cookieConsent.classList.remove('active');
+    this.cookieConsent.style.display = 'none';
+}
+   
+      // ...existing code...
+setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "; expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
+}
+// ...existing code...
+   
+       acceptAll() {
+           const preferences = {
+               necessary: true,
+               functional: true,
+               analytics: true,
+               marketing: true
+           };
+           this.setCookie('cookieConsent', 'accepted', 365);
+           this.setCookie('cookiePreferences', JSON.stringify(preferences), 365);
+           this.hideBanner();
+       }
+   
+       savePreferences() {
+           const preferences = {
+               necessary: true
+           };
+           
+           this.cookieInputs.forEach(input => {
+               if (input.id !== 'necessary') {
+                   preferences[input.id] = input.checked;
+               }
+           });
+   
+           this.setCookie('cookieConsent', 'customized', 365);
+           this.setCookie('cookiePreferences', JSON.stringify(preferences), 365);
+           this.hideBanner();
+       }
+   
+       togglePreferences() {
+           this.preferences.classList.toggle('active');
+       }
+   
+       bindEvents() {
+           this.acceptAllBtn?.addEventListener('click', () => this.acceptAll());
+           this.customizeBtn?.addEventListener('click', () => this.togglePreferences());
+           this.savePreferencesBtn?.addEventListener('click', () => this.savePreferences());
+       }
+   }
+   
+   // Initialize cookie consent when DOM is loaded
+   document.addEventListener('DOMContentLoaded', () => {
+       const consent = new CookieConsent();
+   });
+   </script>
 </body>
 
 
-<!-- Mirrored from html.storebuild.shop/Collabridge-prv/Collabridge/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Mar 2025 03:49:50 GMT -->
 </html>

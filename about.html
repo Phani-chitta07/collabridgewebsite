@@ -228,6 +228,23 @@
         flex: 0 0 100%;
     }
 }
+  /* Add to your existing style section */
+  @media (max-width: 1200px) { /* xl breakpoint */
+          .tp-header-demo-btn {
+              display: none !important;
+          }
+      }
+
+      /* Adjust spacing when demo button is hidden */
+      @media (max-width: 1200px) {
+          .tp-header-right {
+              justify-content: flex-end !important;
+          }
+          
+          .offcanvas-btn.d-xl-none {
+              margin-left: 0 !important;
+          }
+      }
          </style>
    </head>
    <body>
@@ -283,7 +300,7 @@
                    <nav id="mobile-menu" class="tp-main-menu-content">
                       <ul>
                          <li><a href="index.html">Home</a></li>
-                         <li class="has-dropdown"><a href="about.html">About Us</a></li>
+                         <li ><a href="about.html">About Us</a></li>
                          <li class="has-dropdown tp-megamenu">
                             <a href="services.html" class="dropdown-toggle">Expertize</a>
 <!-- Desktop Dropdown -->
@@ -415,7 +432,7 @@
    </li>
 </ul>
                          </li>
-                         <li class="has-dropdown"><a href="blog.html">Blog</a></li>
+                         <li><a href="blog.html">Blog</a></li>
                          <li><a href="contact.html">Contact</a></li>
                       </ul>
                    </nav>
@@ -464,7 +481,7 @@
              <div class="tp-main-menu-mobile"></div>
              
              <div class="offcanvas__btn">
-                <a href="contact.html" class="tp-btn">Getting Started</a>
+                <a href="contact.html" class="tp-btn">Request A Demo</a>
              </div>
              <div class="side-info-contact">
                 <span>we are here</span>
