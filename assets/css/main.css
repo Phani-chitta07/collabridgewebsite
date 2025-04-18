@@ -3658,7 +3658,7 @@ div.demo img {
   transform: translateY(-50%);
   height: 6px;
   width: 6px;
-  background-color: var(--tp-theme-secondary);
+
   border-radius: 50%;
 }
 .tp-section-title {

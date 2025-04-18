@@ -21,7 +21,7 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
    <style>
-      /* Image and text layout */
+      /* Image and text layout base styles */
       .row.align-items-center.mt-40 {
           margin: 40px 0;
           width: 100%;
@@ -33,14 +33,14 @@
           transform: none;
       }
       
-      /* Image columns */
+      /* Base image columns */
       .col-md-5 {
           padding: 0;
           width: 25%;
           flex: 0 0 25%;
       }
       
-      /* Center text container */
+      /* Base center text container */
       .col-md-2 {
           flex: 0 0 50%;
           max-width: 50%;
@@ -49,7 +49,7 @@
           text-align: center;
       }
       
-      /* Image styling */
+      /* Base image styling */
       .tp-testimonial-two-img {
           margin: 0;
           width: 100%;
@@ -64,338 +64,287 @@
           display: block;
       }
       
+      /* Text styling */
       .larger-text {
           font-size: 16px;
           line-height: 1.5;
           margin: 0;
           padding: 15px 0;
           color: #333;
+          list-style: none;
+          text-align: justify;
+      }
+      
+      /* Title styling */
+      .tp-section-sub-title {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: block;
+          text-align: center;
       }
       
       /* Mobile view adjustments */
       @media (max-width: 768px) {
           .row.align-items-center.mt-40 {
-              flex-direction: row;
-              padding: 0 10px;
+              flex-direction: column;
+              padding: 0 15px;
               margin: 20px 0;
-              justify-content: space-between;
           }
           
           .col-md-5 {
-              width: 20%;
-              flex: 0 0 20%;
-              padding: 0 5px;
+              width: 100%;
+              flex: 0 0 100%;
+              padding: 15px 0;
           }
           
+          /* Make first image appear first */
+          .col-md-5:first-of-type {
+              order: 1;
+          }
+          
+          /* Make text appear second */
           .col-md-2 {
-              flex: 0 0 60%;
-              max-width: 60%;
-              padding: 0 10px;
+              order: 2;
+              flex: 0 0 100%;
+              max-width: 100%;
+              padding: 20px 0;
+          }
+          
+          /* Make second image appear last */
+          .col-md-5:last-of-type {
+              order: 3;
           }
           
           .tp-testimonial-two-img {
-              max-width: 100px;
+              max-width: 100%;
+              margin: 0 auto;
           }
           
           .tp-testimonial-two-img img {
-              max-width: 100px;
+              max-width: 80%;
+              margin: 0 auto;
           }
           
           .larger-text {
               font-size: 14px;
               line-height: 1.4;
-              padding: 10px 0;
+              padding: 15px 0;
+              list-style: none;
+              text-align: justify;
+          }
+          
+          /* Title adjustment for mobile */
+          .tp-section-sub-title {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              text-align: center;
+              width: 100%;
+              display: block;
           }
       }
 
-      /* Add these new slider-specific styles */
-      .tp-testimonial-two-wrapper {
-          width: 100%;
-          max-width: 1140px;
-          margin: 0 auto; /* Center the container */
+      /* Update your existing style section with these additional rules */
+
+      /* Base styles for the AI Universe title */
+      .tp-section-sub-title {
+          list-style: none !important;
+          list-style-type: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          display: block !important;
+          text-align: center !important;
       }
 
-      .tp-testimonial-two-slider {
-          position: relative;
-          width: 100%;
+      /* Container styling reset */
+      .row.align-items-center.mt-40 {
+          list-style: none !important;
+          padding: 0 !important;
       }
 
-      .swiper-container.tp-testimonial-two-active {
-          width: 100%;
-          max-width: 900px;
-          margin: 0 auto; /* Center the slider */
-          padding: 20px 0;
+      /* Span element reset */
+      span.tp-section-sub-title {
+          display: block !important;
+          list-style: none !important;
+          padding-left: 0 !important;
+          margin-left: 0 !important;
+          text-align: center !important;
       }
 
-      /* Slider card styles - reduced size */
-      .tp-testimonial-two-wrap {
-          text-align: center;
-          max-width: 400px; /* Reduced from 500px */
-          margin: 10px; /* Reduced from 15px */
-          padding: 20px; /* Reduced from 25px */
-          background: #fff;
-          border-radius: 8px; /* Reduced from 10px */
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      /* Mobile specific overrides */
+      @media (max-width: 768px) {
+          .tp-section-sub-title {
+              list-style: none !important;
+              list-style-type: none !important;
+              padding: 0 !important;
+              margin: 0 !important;
+              text-align: center !important;
+              width: 100% !important;
+              display: block !important;
+          }
       }
 
-      /* Adjust content spacing */
+      /* Add these styles to center the text and hide navigation buttons */
       .tp-testimonial-two-content {
-          padding: 15px; /* Reduced from 20px */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 120px; /* Adjust based on your needs */
+          text-align: center;
+          padding: 20px 15px;
       }
 
       .tp-testimonial-two-content p {
-          font-size: 14px; /* Reduced from 16px */
-          line-height: 1.4;
-          margin-bottom: 15px;
-      }
-
-      /* Adjust avatar info */
-      .tp-testimonial-two-avater-info {
-          padding: 10px 0;
-      }
-
-      .tp-testimonial-two-avater-title {
-          font-size: 16px; /* Reduced from 20px */
-          margin-bottom: 3px;
-      }
-
-      .tp-testimonial-two-avater-info span {
-          font-size: 13px; /* Reduced from 16px */
-      }
-
-      /* Adjust slider container */
-      .swiper-container.tp-testimonial-two-active {
-          padding: 10px 0;
-          max-width: 900px; /* Reduced from 1100px */
-      }
-
-      /* Mobile adjustments */
-      @media (max-width: 768px) {
-          .tp-testimonial-two-wrap {
-              max-width: 320px;
-              padding: 15px;
-          }
-          
-          .tp-testimonial-two-content p {
-              font-size: 13px;
-          }
-          
-          .tp-testimonial-two-avater-title {
-              font-size: 14px;
-          }
-          
-          .tp-testimonial-two-avater-info span {
-              font-size: 12px;
-          }
-      }
-
-      #loading {
-          position: fixed;
+          margin: 0;
           width: 100%;
-          height: 100%;
-          background: #fff;
-          z-index: 9999;
-          transition: all 0.3s ease;
       }
 
-      .tp-preloader-circle {
-          animation: rotate 1s linear infinite;
+      .tp-testimonial-two-avater-info {
+          text-align: center;
+          margin-left: 0 !important;
+          padding: 15px 0;
       }
 
-      .animate-circle {
-          stroke-dasharray: 1130;
-          stroke-dashoffset: 1130;
-          animation: dash 1.5s ease-in-out;
+      /* Hide navigation buttons on all devices */
+      .swiper-button-next,
+      .swiper-button-prev {
+          display: none !important;
       }
 
-      @keyframes rotate {
-          100% { transform: rotate(360deg); }
-      }
-
-      @keyframes dash {
-          0% { stroke-dashoffset: 1130; }
-          100% { stroke-dashoffset: 0; }
-      }
-
-      .tp-testimonial-two-wrap {
-          width: calc(100% - 30px);
-          margin: 15px;
-      }
-
-      .swiper-container.tp-testimonial-two-active {
-          padding: 20px 0;
-          overflow: hidden;
-          margin: 0 -15px;
-      }
-
-      @media (max-width: 991px) {
-          .tp-testimonial-two-wrap {
-              width: 100%;
-              margin: 15px auto;
+      /* Additional mobile adjustments */
+      @media (max-width: 768px) {
+          .tp-testimonial-two-content {
+              min-height: 100px;
+              padding: 15px 10px;
           }
       }
 
-      /* Center the testimonial section beside slider */
-      .tp-testimonial {
+      /* Add to your existing style section */
+      /* Global text wrapping and alignment */
+      * {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          hyphens: auto;
+      }
+
+      /* Container alignment */
+      .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+      }
+
+      /* Section content alignment */
+      .tp-section-title-wrapper {
+          text-align: justify;
+          margin: 0 auto;
+          max-width: 100%;
+      }
+
+      /* Text content alignment */
+      p, .larger-text {
+          text-align: justify;
+          margin-bottom: 1em;
+          line-height: 1.6;
+      }
+
+      /* Header alignment */
+      .tp-section-title, 
+      .tp-banner-two-title,
+      h1, h2, h3, h4, h5, h6 {
           text-align: center;
+          margin-bottom: 0.5em;
+          line-height: 1.4;
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+          .tp-section-title-wrapper {
+              padding: 0 10px;
+          }
+
+          p, .larger-text {
+              font-size: 14px;
+              line-height: 1.5;
+          }
+
+          .tp-testimonial-two-content {
+              padding: 15px;
+              text-align: center;
+          }
+
+          .tp-testimonial-two-avater-info {
+              text-align: center;
+              padding: 10px 15px;
+          }
+      }
+
+      /* Slider content alignment */
+      .swiper-slide {
           display: flex;
-          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .tp-testimonial-two-content {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+
+      /* Image alignment */
+      .tp-testimonial-two-img {
+          display: flex;
           justify-content: center;
           align-items: center;
-          height: 100%;
-          padding: 20px;
-      }
-
-      .tp-section-two {
-          text-align: center;
-          max-width: 400px;
           margin: 0 auto;
       }
 
-      .tp-section-title {
-          font-size: 28px;
-          line-height: 1.4;
-          margin-bottom: 20px;
+      .tp-testimonial-two-img img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
       }
 
-      /* Mobile responsiveness */
-      @media (max-width: 991px) {
-          .tp-testimonial {
-              margin-bottom: 30px;
+      /* Section spacing */
+      section {
+          padding: 60px 0;
+          overflow: hidden;
+      }
+
+      /* List alignment */
+      ul, ol {
+          padding-left: 20px;
+          margin: 1em 0;
+      }
+
+      /* Button alignment */
+      .tp-btn {
+          display: inline-block;
+          text-align: center;
+      }
+
+      /* Add to your existing style section */
+      @media (max-width: 1200px) { /* xl breakpoint */
+          .tp-header-demo-btn {
+              display: none !important;
+          }
+      }
+
+      /* Adjust spacing when demo button is hidden */
+      @media (max-width: 1200px) {
+          .tp-header-right {
+              justify-content: flex-end !important;
           }
           
-          .tp-section-title {
-              font-size: 24px;
+          .offcanvas-btn.d-xl-none {
+              margin-left: 0 !important;
           }
       }
-
-      /* Adjust spacing between sections */
-      .tp-video-two {
-          margin-top: 0; /* Remove top margin */
-          margin-bottom: 120px;
-          padding-top: 0; /* Remove top padding */
-      }
-
-      /* Adjust testimonial section bottom spacing */
-      .testimonial-area.tp-testimonial-two {
-          padding-bottom: 60px; /* Increase bottom padding */
-          margin-bottom: 40px; /* Add margin bottom */
-      }
-
-      /* Video area background container */
-      .tp-video-two-bg {
-          margin-top: 0; /* Remove top margin */
-      }
-
-      /* Video wrapper adjustments */
-      .tp-video-two-wrapper {
-          padding-top: 35px; /* Reduce top padding */
-      }
-
-      /* Mobile responsive adjustments */
-      @media (max-width: 991px) {
-          .tp-video-two {
-              margin-top: 40px; /* Add top margin to create space */
-              margin-bottom: 60px;
-          }
-          
-          .tp-video-two-wrapper {
-              padding-top: 25px;
-          }
-      }
-
-      .tp-testimonial-two-wrapper {
-          width: 100%;
-          max-width: 1140px;
-          margin: 0 auto; /* Center the container */
-          margin-bottom: 40px; /* Add bottom margin */
-          padding: 0;
-      }
-
-      .tp-testimonial-two-wrap {
-          text-align: center;
-          max-width: 400px;
-          margin: 10px;
-          padding: 20px;
-          background: #fff;
-          border-radius: 8px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-          margin-bottom: 20px; /* Add space below cards */
-      }
-
-      .swiper-container.tp-testimonial-two-active {
-          padding: 10px 0 30px 0; /* Increase bottom padding */
-          max-width: 900px;
-          margin: 0 auto; /* Center the slider */
-          margin-bottom: 20px; /* Add margin bottom */
-      }
-
-      /* Banner section adjustments */
-      .tp-banner-two-wrapper {
-          padding-bottom: 0; /* Remove bottom padding */
-      }
-
-      /* AI Universe section adjustments */
-      .testimonial-area.tp-testimonial-two {
-          padding-top: 40px; /* Reduce top padding */
-          padding-bottom: 40px; /* Reduce bottom padding */
-          margin-bottom: 0; /* Remove bottom margin */
-      }
-
-      /* Row spacing adjustments */
-      .row.align-items-center.mt-40 {
-          margin-top: 20px; /* Reduce top margin */
-          margin-bottom: 20px; /* Reduce bottom margin */
-      }
-
-      /* Video area adjustments */
-      .video-area.tp-video-two {
-          margin-top: 0; /* Remove top margin */
-          padding-top: 0; /* Remove top padding */
-      }
-
-      .tp-video-two-bg {
-          margin-top: 0; /* Remove top margin */
-      }
-
-      /* Remove excess spacing */
-      .tp-testimonial-two-wrapper {
-          margin-bottom: 20px; /* Reduce bottom margin */
-      }
-
-      /* Mobile responsive adjustments */
-      @media (max-width: 991px) {
-          .testimonial-area.tp-testimonial-two {
-              padding-top: 30px;
-              padding-bottom: 30px;
-          }
-          
-          .video-area.tp-video-two {
-              margin-top: 0;
-          }
-      }
-
-      .tp-section-sub-title {
-          display: block;
-          text-align: center;
-          width: 100%;
-          margin-bottom: 30px;
-          position: relative;
-      }
-
-      /* Remove bullet point and adjust spacing */
-      .tp-section-sub-title::before,
-      .tp-section-sub-title::after {
-          display: none; /* Remove any bullets or decorative elements */
-      }
-
-      /* Center title container */
-      .row.align-items-center.mt-40 > span {
-          display: block;
-          text-align: center;
-          width: 100%;
-          margin: 0 auto 30px;
-      }
+      
    </style>
 </head>
 
@@ -453,7 +402,7 @@
                    <nav id="mobile-menu" class="tp-main-menu-content">
                       <ul>
                          <li><a href="index.html">Home</a></li>
-                         <li class="has-dropdown"><a href="about.html">About Us</a></li>
+                         <li><a href="about.html">About Us</a></li>
                          <li class="has-dropdown tp-megamenu">
                             <a href="services.html" class="dropdown-toggle">Expertize</a>
 <!-- Desktop Dropdown -->
@@ -507,11 +456,11 @@
          </ul>
       </div>
 
-      <!-- Healthcare -->
+      <!-- Our Drivers -->
       <div class="col-xl-2" style="padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Healthcare</h4>
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Our Drivers</h4>
          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="Pharmacov" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">PharmaCovigilance</a></li>
+            <li style="margin-bottom: 8px;"><a href="Pharmacov.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">PharmaCovigilance</a></li>
             <li style="margin-bottom: 8px;"><a href="SmartManufacturing.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Smart Manufacturing</a></li>
             <li style="margin-bottom: 8px;"><a href="DigitalOilField.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Oil Field</a></li>
             <li style="margin-bottom: 8px;"><a href="SupplyChainManagement.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Supply Chain Management</a></li>
@@ -571,21 +520,21 @@
             </ul>
          </li>
          <li class="has-dropdown">
-            <a href="#" class="submenu-toggle">HealthCare</a>
+            <a href="#" class="submenu-toggle">Our Drivers</a>
             <ul class="submenu">
             <li><a href="Pharmacov.html">PharmaCovigilance</a></li>
-            <li><a href="Smart Manufacturing.html">Smart Manufacturing</a></li>
-            <li><a href="Digital Oil Field.html">Digital Oil Field</a></li>
-            <li><a href="Supply chain management.html">Supply Chain Management</a></li>
-            <li><a href="Digital Twins.html">Digital Twins</a></li>
-            <li><a href="Customer Centricity.html">Customer Centricity</a></li>
+            <li><a href="SmartManufacturing.html">Smart Manufacturing</a></li>
+             <li><a href="DigitalOilField.html">Digital Oil Field</a></li>
+           <li><a href="SupplyChainManagement.html">Supply Chain Management</a></li>
+            <li><a href="DigitalTwins.html">Digital Twins</a></li>
+                     <li><a href="CustomerCentricity.html">Customer Centricity</a></li>
             </ul>
          </li>
       </ul>
    </li>
 </ul>
                          </li>
-                         <li class="has-dropdown"><a href="blog.html">Blog</a></li>
+                         <li><a href="blog.html">Blog</a></li>
                          <li><a href="contact.html">Contact</a></li>
                       </ul>
                    </nav>
