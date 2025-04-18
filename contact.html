@@ -269,6 +269,63 @@
         flex: 0 0 100%;
     }
 }
+
+/* Updated World Map Container Styles */
+.world-map-container {
+   height: 600px;
+   width: 100vw; /* Make the map stretch full viewport width */
+   max-width: 100vw; /* Remove max-width restriction */
+   margin: 0 calc(-1 * ((100vw - 100%) / 2)); /* Pull container to edges */
+   align-items: center;
+   overflow: hidden;
+   background-color: #f8fafc;
+   border-radius: 12px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+   position: relative;
+}
+
+@media (max-width: 1200px) {
+   .world-map-container {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 calc(-1 * ((100vw - 100%) / 2));
+      height: auto;
+      aspect-ratio: 2/1;
+   }
+}
+
+/* Pin positions for the amcharts map */
+.pin-plano {
+   top: 35%;
+   left: 19%;  /* United States - Texas area */
+}
+
+.pin-hyderabad {
+   top: 46%;
+   left: 67%;  /* India - Hyderabad */
+}
+
+.pin-bangalore {
+   top: 49%;
+   left: 66%;  /* India - Bangalore */
+}
+
+/* Remove or override any mobile-specific pin position changes */
+@media (max-width: 768px) {
+   /* Do NOT change pin positions on mobile, keep them same as desktop */
+   .pin-plano {
+      top: 35% !important;
+      left: 19% !important;
+   }
+   .pin-hyderabad {
+      top: 40% !important;
+      left: 61% !important;
+   }
+   .pin-bangalore {
+      top: 41% !important;
+      left: 63% !important;
+   }
+}
       </style>
 </head>
    <body>
@@ -787,8 +844,8 @@
                      <div class="pin-tooltip">
                         <h5>Head Office</h5>
                         <p>Plano, Texas, USA</p>
-                        <a href="tel:+12345678901"><i class="fa-light fa-phone"></i> +1 (234) 567-8901</a>
-                        <a href="mailto:plano@company.com"><br><i class="fa-light fa-envelope"></i></a></i> plano@company.com</a></br>
+                        <a href="tel:+1 (469) 512-2191"><i class="fa-light fa-phone"></i> +1 (469) 512-2191</a>
+                        <a href="mailto:plano@company.com"><br><i class="fa-light fa-envelope"></i></a></i> info@collabridge.com</a></br>
                      </div>
                   </div>
                   
@@ -799,8 +856,8 @@
                      <div class="pin-tooltip">
                         <h5>Global Development Center</h5>
                         <p>Hyderabad, India</p>
-                        <a href="tel:+919876543210"><i class="fa-light fa-phone"></i> +91 9876 543 210</a>
-                        <a href="mailto:Hyderabad@company.com"><br><i class="fa-light fa-envelope"></i></a></i> Hyderabad@company.com</a></br>
+                        <a href="tel:+91 888 5165 333"><i class="fa-light fa-phone"></i> +91 888 5165 333</a>
+                        <a href="mailto:Info@collabridge.com"><br><i class="fa-light fa-envelope"></i></a></i> info@collabridge.com</a></br>
                      </div>
                   </div>
                   
@@ -811,8 +868,8 @@
                      <div class="pin-tooltip">
                         <h5>Global Development Center</h5>
                         <p>Bangalore, India</p>
-                        <a href="tel:+918765432109"><i class="fa-light fa-phone"></i> +91 8765 432 109</a>
-                        <a href="mailto:Bangalore@company.com"><br><i class="fa-light fa-envelope"></i></a></i> Bangalore@company.com</a></br>
+                        <a href="tel:+91 888 5165 333"><i class="fa-light fa-phone"></i> +91 888 5165 333</a>
+                        <a href="mailto:Info@collabridge.com"><br><i class="fa-light fa-envelope"></i></a></i> info@collabridge.com</a></br>
                      </div>
                   </div>
                </div>
@@ -860,9 +917,9 @@
    <style>
       .world-map-container {
          height: 600px;
-         width: 100%; /* Change to 100% width */
-         max-width: 1200px; /* Add max-width instead of fixed width */
-         margin: 0 auto;
+         width: 100vw; /* Make the map stretch full viewport width */
+         max-width: 100vw; /* Remove max-width restriction */
+         margin: 0 calc(-1 * ((100vw - 100%) / 2)); /* Pull container to edges */
          align-items: center;
          overflow: hidden;
          background-color: #f8fafc;
@@ -871,12 +928,13 @@
          position: relative;
       }
       
-      /* Also add responsive width for smaller screens */
       @media (max-width: 1200px) {
          .world-map-container {
-            width: 100%; /* Make container full width on smaller screens */
+            width: 100vw;
+            max-width: 100vw;
+            margin: 0 calc(-1 * ((100vw - 100%) / 2));
             height: auto;
-            aspect-ratio: 2/1; /* Maintain map aspect ratio */
+            aspect-ratio: 2/1;
          }
       }
       
@@ -1084,10 +1142,9 @@
                            </a>
                         </div>
                         <div class="tp-footer-widget-content">
-                           <p>Desires to obtain pain of itself, because it is pain, but occasionally circum</p>
                            <div class="tp-footer-widget-content-list">
                               <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-square-phone"></i><a href="tel:0123456789">+91
+                                 <i class="fa-solid fa-square-phone"></i><a href="tel:+91 888 5165 333">+91 888 5165 333
                                     </a>
                               </div>
                               <div class="tp-footer-widget-content-list-item">
@@ -1104,7 +1161,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-6">
                      <div class="tp-footer-widget tp-footer-col-2 mb-40 wow fadeInUp" data-wow-duration="1.2s"
                         data-wow-delay=".6s">
-                        <h4 class="tp-footer-widget-title mb-30">Our Navigation</h4>
+                        <h4 class="tp-footer-widget-title mb-30">Navigation</h4>
                         <div class="tp-footer-widget-link">
                            <ul>
                               <li><a href="about.html"><i class="fa-sharp fa-solid fa-plus"></i> About Collabridge</a></li>
@@ -1243,6 +1300,7 @@
       </div>
    </footer>
    <!-- footer-area-end -->
+
       
 
       <!-- JS here -->
