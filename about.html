@@ -82,6 +82,152 @@
              50% { stroke-dashoffset: 0; }
              100% { stroke-dashoffset: -1130; }
          }
+          /* Add this to your existing style section */
+      .tp-footer-widget-content-list-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 15px;
+      }
+
+      .tp-footer-widget-content-list-item i {
+          flex-shrink: 0;
+          margin-top: 5px;
+      }
+
+      .tp-footer-widget-content-list-item a {
+          flex: 1;
+          word-wrap: break-word;
+          line-height: 1.4;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+          .tp-footer-widget-content-list-item {
+              gap: 8px;
+          }
+          
+          .tp-footer-widget-content-list-item a {
+              font-size: 14px;
+          }
+      }
+
+/* Video popup styles */
+.video-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+}
+
+.video-popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: none;
+}
+
+.video-popup-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.video-popup-iframe {
+    width: 80vw;
+    max-width: 900px;
+    height: 45vw;
+    max-height: 506px;
+    border: none;
+}
+/* Video Gallery Grid Styles */
+.tp-footer-video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.tp-footer-video-item {
+    flex: 0 0 calc(33.333% - 10px);
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-play-icon i {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.tp-footer-video-item:hover .video-thumb img {
+    transform: scale(1.1);
+}
+
+.tp-footer-video-item:hover .video-play-icon {
+    background: #474ed4;
+}
+
+.tp-footer-video-item:hover .video-play-icon i {
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tp-footer-video-grid {
+        gap: 8px;
+    }
+    
+    .tp-footer-video-item {
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tp-footer-video-item {
+        flex: 0 0 100%;
+    }
+}
          </style>
    </head>
    <body>
@@ -491,7 +637,6 @@
          <!-- cta-area-end -->
 
       </main>
-
    <!-- footer-area-start -->
    <footer>
       <div class="footer-area">
@@ -510,15 +655,15 @@
                            <p>Desires to obtain pain of itself, because it is pain, but occasionally circum</p>
                            <div class="tp-footer-widget-content-list">
                               <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-square-phone"></i><a href="tel:0123456789">+91 1234567890
+                                 <i class="fa-solid fa-square-phone"></i><a href="tel:0123456789">+91
                                     </a>
                               </div>
                               <div class="tp-footer-widget-content-list-item">
                                  <i class="fa-solid fa-envelope"></i> <a
-                                    href="mailto:teczofficaila@gmail.com">Sample@gmail.com</a>
+                                    href="mailto:Collabridgeofficaila@gmail.com">info@collabridge.com</a>
                               </div>
                               <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-location-dot"></i> <a href="#">Sample Address 123 </a>
+                                 <i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/duMPhuScBMHD6wLs6"target="_blank">#309 B-block Asian Suncity,Kondpaur hyderabad</a>
                               </div>
                            </div>
                         </div>
@@ -531,9 +676,9 @@
                         <div class="tp-footer-widget-link">
                            <ul>
                               <li><a href="about.html"><i class="fa-sharp fa-solid fa-plus"></i> About Collabridge</a></li>
-                              <li><a href="team.html"><i class="fa-sharp fa-solid fa-plus"></i> Meet the Team</a></li>
+                              <li><a href="services.html"><i class="fa-sharp fa-solid fa-plus"></i> Expertize</a></li>
                               <li><a href="blog.html"><i class="fa-sharp fa-solid fa-plus"></i> News & Media</a></li>
-                              <li><a href="project-1.html"><i class="fa-sharp fa-solid fa-plus"></i> Our Projects</a>
+                              <li><a href="Careers.html"><i class="fa-sharp fa-solid fa-plus"></i> Careers</a>
                               </li>
                               <li><a href="contact.html"><i class="fa-sharp fa-solid fa-plus"></i> Contact</a></li>
                            </ul>
@@ -541,75 +686,80 @@
                      </div>
                   </div>
                   <div class="col-lg-3 col-md-6 col-sm-6">
-                     <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s"
-                        data-wow-delay=".8s">
-                        <h4 class="tp-footer-widget-title mb-40">Our Navigation</h4>
-                        <div class="tp-footer-widget-gallery">
-                           <div class="tp-footer-widget-gallery-all">
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-1.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-2.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-3.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-4.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-5.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                              <div class="tp-footer-widget-gallery-single-item">
-                                 <a href="#" class="tp-footer-widget-gallery-item">
-                                    <div class="tp-footer-widget-gallery-thumb">
-                                       <img src="assets/img/footer/one/gallery/fw-g-6.jpg" alt="">
-                                       <div class="tp-footer-widget-gallery-social">
-                                          <i class="fa-brands fa-linkedin-in"></i>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
+                     <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
+                         <h4 class="tp-footer-widget-title mb-40">Featured Videos</h4>
+                         <div class="tp-footer-widget-video-gallery">
+                             <div class="tp-footer-video-grid">
+                                 <!-- Video 1 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_1">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb1.jpg" alt="Video Thumbnail 1">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                                 <!-- Video 2 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_2">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb2.jpg" alt="Video Thumbnail 2">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                                 <!-- Video 3 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_3">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb3.jpg" alt="Video Thumbnail 3">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                                 <!-- Video 4 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_4">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb4.jpg" alt="Video Thumbnail 4">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                                 <!-- Video 5 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_5">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb5.jpg" alt="Video Thumbnail 5">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                                 <!-- Video 6 -->
+                                 <div class="tp-footer-video-item">
+                                     <a href="#" class="video-popup" data-video-url="https://www.youtube.com/embed/VIDEO_ID_6">
+                                         <div class="video-thumb">
+                                             <img src="assets/img/videos/thumb6.jpg" alt="Video Thumbnail 6">
+                                             <div class="video-play-icon">
+                                                 <i class="fa-solid fa-play"></i>
+                                             </div>
+                                         </div>
+                                     </a>
+                                 </div>
+                             </div>
+                         </div>
                      </div>
-                  </div>
+                 </div>
                   <div class="col-lg-3 col-md-6 col-sm-12">
                      <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
                         data-wow-delay="1s">
@@ -629,10 +779,10 @@
                            </form>
                            <div class="tp-footer-widget-newsletter-content">
                               <div class="tp-footer-widget-newsletter-social">
-                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                 <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                 <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                 <a href="https://www.instagram.com/collabridgeinc/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                 <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                 <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
                               </div>
                            </div>
                         </div>
@@ -661,7 +811,6 @@
       </div>
    </footer>
    <!-- footer-area-end -->
-      
 
       <!-- JS here -->
       <script src="assets/js/vendor/jquery.js"></script>
@@ -757,6 +906,51 @@
        }
    });
    </script>
+    <script>
+      // Add this after your existing scripts
+      document.addEventListener('DOMContentLoaded', function() {
+          // Create popup elements
+          const overlay = document.createElement('div');
+          overlay.className = 'video-popup-overlay';
+          
+          const container = document.createElement('div');
+          container.className = 'video-popup-container';
+          
+          const closeBtn = document.createElement('div');
+          closeBtn.className = 'video-popup-close';
+          closeBtn.innerHTML = '×';
+          
+          const iframe = document.createElement('iframe');
+          iframe.className = 'video-popup-iframe';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          
+          container.appendChild(closeBtn);
+          container.appendChild(iframe);
+          document.body.appendChild(overlay);
+          document.body.appendChild(container);
+          
+          // Handle video clicks
+          document.querySelectorAll('.video-popup').forEach(link => {
+              link.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  const videoUrl = this.getAttribute('data-video-url');
+                  iframe.src = videoUrl;
+                  overlay.style.display = 'block';
+                  container.style.display = 'block';
+              });
+          });
+          
+          // Handle close click
+          [overlay, closeBtn].forEach(el => {
+              el.addEventListener('click', function() {
+                  overlay.style.display = 'none';
+                  container.style.display = 'none';
+                  iframe.src = '';
+              });
+          });
+      });
+      </script>
 
    </body>
 
