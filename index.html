@@ -634,6 +634,27 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(26px);
 }
+/* Make step images a bit bigger */
+.tp-step-item-thumb {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    
+}
+
+.tp-step-item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
    </style>
 </head>
 
@@ -1132,20 +1153,12 @@ input:checked + .slider:before {
    <!-- Ai UNiverse-area-end -->
     <!-- video-area-start -->
     <section class="video-area tp-video-two mb-120">
-      <div class="tp-video-two-bg  p-relative" data-background="assets/img/video/video-2-thumb-1.jpg">
-         <div class="tp-video-two-wrap  d-none d-lg-block">
-            <div class="tp-video-two-shape-one">
-               <img src="assets/img/shape/video-2-shape-1.png" alt="">
-            </div>
-            <div class="tp-video-two-shape-two">
-               <img src="assets/img/shape/video-2-shape-2.png" alt="">
-            </div>
+      <div class="tp-video-two-bg  p-relative" data-background="assets/WebImages/Homewebp/3.webp">
+         <div class="tp-video-two-wrap d-none d-lg-block">
+           
+            
          </div>
-         <div class="tp-video-two-playlist">
-            <a class="popup-video" href="https://www.youtube.com/watch?v=nPQ4BpTfK1Q"><i
-                  class="fa-icon-play"></i></a>
-            <p>Watch Our Videos</p>
-         </div>
+         
       </div>
       <div class="container">
          <div class="row">
@@ -1179,13 +1192,10 @@ input:checked + .slider:before {
             <div class="row">
                <div class="col-lg-6">
                   <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                     <div class="tp-about-two-thumb">
-                        <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
-                     </div>
-                     <div class="tp-about-two-thumb-shape tp-thumb-common fix">
-                        <div class="tp-thumb-common-overlay wow"></div>
-                        <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
-                     </div>
+                     <div class="tp-about-two-thumb" style="display: flex; justify-content: flex-start; align-items: flex-start;">
+                        <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
+                    </div>
+                     
                      <div class="tp-about-two-thumb-shape-two d-none d-md-block">
                         <img src="assets/img/about/two/about-2-shape-3.png" alt="">
                      </div>
@@ -1195,7 +1205,7 @@ input:checked + .slider:before {
                   <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                      <div class="tp-section tp-section-two mb-40">
                         <span class="tp-section-sub-title">Who we are </span>
-                        <h4 class="tp-section-title">We Always Try to Give <br> Smart Solution For Business</h4>
+                        <h4 class="tp-section-title">Committed to Providing Smart Solutions for Every Business Need. <br></h4>
                         <div class="tp-section-title-wrapper">
                            <p>We are an enterprise AI/ML Applications / Products / Tools development and services related thereof company with HQ office in US and development centres in Bangalore and Hyderabad. Our team of experienced professionals provide global IT/OT solutions focused on maximizing Business value. 
                               We specialize in creating integrated Digital Transformation platforms. Our approach involves Digitizing processes, creating Digital interfaces, and integrating with Digital ecosystems.  
@@ -1226,7 +1236,7 @@ input:checked + .slider:before {
             <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-section tp-section-two mb-40">
                   <span class="tp-section-sub-title">What we think </span>
-                  <h4 class="tp-section-title">We Always Try to Give <br> Smart Solution For Business</h4>
+                  <h4 class="tp-section-title"> Always Delivering Smart Solutions for Business Success <br>
                   <div class="tp-section-title-wrapper">
                      <p>COLLABRIDGE, as an enterprise AI/ML company, is constantly on a mission to position information technology as a business technology and information solutions as business solutions. Our endeavor is to create sustainable competitive advantage, competitive strategy, and competitive differentiation by enabling companies to embrace the technologies as appropriate.</p>   
                      </p>
@@ -1250,12 +1260,9 @@ input:checked + .slider:before {
          <div class="col-lg-6 order-lg-2 order-1">
             <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-about-two-thumb">
-                  <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
+                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
                </div>
-               <div class="tp-about-two-thumb-shape tp-thumb-common fix">
-                  <div class="tp-thumb-common-overlay wow"></div>
-                  <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
-               </div>
+              
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
                   <img src="assets/img/about/two/about-2-shape-3.png" alt="">
                </div>
@@ -1280,12 +1287,9 @@ input:checked + .slider:before {
                <div class="col-lg-6">
                   <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                      <div class="tp-about-two-thumb">
-                        <img src="assets/img/about/two/about-2-thumb-1.jpg" alt="">
+                        <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
                      </div>
-                     <div class="tp-about-two-thumb-shape tp-thumb-common fix">
-                        <div class="tp-thumb-common-overlay wow"></div>
-                        <img src="assets/img/about/two/about-2-thumb-2.jpg" alt="">
-                     </div>
+                    
                      <div class="tp-about-two-thumb-shape-two d-none d-md-block">
                         <img src="assets/img/about/two/about-2-shape-3.png" alt="">
                      </div>
@@ -1355,7 +1359,7 @@ input:checked + .slider:before {
                         </div>
                         <div class="tp-step-item-overlay p-relative mb-30">
                            <div class="tp-step-item-thumb">
-                              <img src="assets/img/thumbs/step/step-thumb-1.png" alt="">
+                              <img src="assets/WebImages/Homewebp/discover.webp" alt="">
                            </div>
                            <div class="tp-step-item-thumb-icon">
                               <i class="flaticon-design"></i>
@@ -1372,7 +1376,7 @@ input:checked + .slider:before {
                         </div>
                         <div class="tp-step-item-overlay p-relative mb-30">
                            <div class="tp-step-item-thumb">
-                              <img src="assets/img/thumbs/step/step-thumb-2.png" alt="">
+                              <img src="assets/WebImages/Homewebp/design.webp" alt="">
                            </div>
                            <div class="tp-step-item-thumb-icon">
                               <i class="flaticon-design"></i>
@@ -1389,7 +1393,7 @@ input:checked + .slider:before {
                         </div>
                         <div class="tp-step-item-overlay p-relative mb-30">
                            <div class="tp-step-item-thumb">
-                              <img src="assets/img/thumbs/step/step-thumb-3.png" alt="">
+                              <img src="assets/WebImages/Homewebp/develop.webp" alt="">
                            </div>
                            <div class="tp-step-item-thumb-icon">
                               <i class="flaticon-design"></i>
@@ -1406,7 +1410,7 @@ input:checked + .slider:before {
                         </div>
                         <div class="tp-step-item-overlay p-relative mb-30">
                            <div class="tp-step-item-thumb">
-                              <img src="assets/img/thumbs/step/step-thumb-4.png" alt="">
+                              <img src="assets/WebImages/Homewebp/deploy.webp" alt="">
                            </div>
                            <div class="tp-step-item-thumb-icon">
                               <i class="flaticon-design"></i>
