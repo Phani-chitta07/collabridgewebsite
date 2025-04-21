@@ -7313,6 +7313,10 @@ body .ui-tooltip {
   }
 }
 .tp-banner-two::before {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.tp-banner-two::before {
   position: absolute;
   content: "";
   border-radius: 50%;
@@ -7430,7 +7434,7 @@ body .ui-tooltip {
 }
 .title-two-right-1 {
   display: inline-block;
-  transform: translateX(-10px); /* adjust the value as needed */
+
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-banner-two-title .title-two-right-1 {
