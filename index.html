@@ -819,6 +819,34 @@ input:checked + .slider:before {
     text-align: justify !important;
   }
 }
+/* Add this to your existing style section in the head */
+@media (max-width: 767px) {
+  .tp-step-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tp-step-item {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 40px !important;
+  }
+
+  /* Handle the even items specially */
+  .tp-step-item-even {
+    margin-top: 0;
+  }
+  
+  /* Ensure images look good */
+  .tp-step-item-thumb {
+    margin: 0 auto;
+  }
+  
+  /* Hide the line shape completely on mobile */
+  .tp-step-line-shape {
+    display: none !important;
+  }
+}
    </style>
 </head>
 
@@ -1354,7 +1382,7 @@ input:checked + .slider:before {
                <div class="col-lg-6">
                   <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                      <div class="tp-about-two-thumb" style="display: flex; justify-content: flex-start; align-items: flex-start;">
-                        <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
+                        <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style=" height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
                     </div>
                      
                      <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1421,7 +1449,7 @@ input:checked + .slider:before {
          <div class="col-lg-6 order-lg-2 order-1">
             <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-about-two-thumb">
-                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
+                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
                </div>
               
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1448,7 +1476,7 @@ input:checked + .slider:before {
                <div class="col-lg-6">
                   <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                      <div class="tp-about-two-thumb">
-                        <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="width: 520px; height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
+                        <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
                      </div>
                     
                      <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1783,30 +1811,7 @@ input:checked + .slider:before {
       </section> -->
       <!-- blog-area-end -->
 
-      <!-- cta-area-star -->
-      <section class="cta-area tp-cta-three-bg" data-background="assets/img/bg/cta-2-bg-1.jpg">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-xl-1 col-lg-2">
-                  <div class="tp-cta-three-icon wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                     <i class="flaticon-solution"></i>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-6">
-                  <div class="tp-cta-three-content wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                     <h4 class="tp-cta-three-title">Collabridge — Solving Problems, Delivering Solutions</h4>
-                  </div>
-               </div>
-               <div class="offset-xl-4 col-xl-3 col-lg-4">
-                  <div class="tp-cta-three-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
-                     <a href="contact.html" class="tp-btn">Discover More</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- cta-area-end -->
-
+     
    </main>
 
      <!-- footer-area-start -->
