@@ -7282,7 +7282,82 @@ body .ui-tooltip {
 .cls-5 {
   animation: tpup-down 2s infinite linear alternate;
 }
+/* Expertize Dropdown Header Alignment Fix */
+.tp-submenu.desktop-submenu h4 {
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 15px !important;
+  margin-bottom: 12px !important;
+  color: #222 !important;
+  font-weight: 600 !important;
+  padding-bottom: 8px !important;
+  border-bottom: 2px solid #f0f0f0 !important;
+  position: relative !important;
+  line-height: 1.2 !important;
+}
 
+/* Make all columns the same height and structure */
+.tp-submenu.desktop-submenu .row > div {
+  min-height: 260px !important;
+  padding: 0 12px !important;
+  flex: 1 !important;
+  max-width: 20% !important;
+  margin: 0 !important;
+  border-right: 1px solid #e5e5e5 !important;
+}
+
+/* Remove border from last column */
+.tp-submenu.desktop-submenu .row > div:last-child {
+  border-right: none !important;
+}
+
+/* Fix row alignment */
+.tp-submenu.desktop-submenu .row {
+  align-items: stretch !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  max-width: 1000px !important;
+}
+
+/* Fix dropdown width and position */
+.tp-submenu.desktop-submenu {
+  padding: 15px 0 !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  position: absolute !important;
+  z-index: 1000 !important;
+}
+/* For standard HTML <select> dropdowns */
+select option {
+  padding: 2px 5px; /* Reduce padding */
+  margin: 0; /* Remove margins */
+  line-height: 1.2; /* Reduce line height */
+}
+
+/* For custom dropdown menus */
+.dropdown-menu {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.dropdown-item {
+  padding: 4px 8px; /* Smaller padding */
+  margin: 0;
+  line-height: 1.2; /* Tighter line height */
+}
+
+/* If you're using Bootstrap or similar framework */
+.dropdown-menu > li > a,
+.dropdown-menu .dropdown-item {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 /*----------------------------------------*/
 /*  6.2 Banner Style 2
 /*----------------------------------------*/
@@ -7392,13 +7467,13 @@ body .ui-tooltip {
   z-index: 1;
 }
 .tp-banner-two-title {
-  font-size: 60px;
+  font-size: 45px;
   color: var(--tp-common-white);
-  font-weight: 800;
+  font-weight: 700;
   position: relative;
   z-index: 1;
   margin-bottom: 200px;
-  text-align: center;
+ 
   opacity: 0;
   transform: translateY(20px); /* Start position */
   animation: fadeInUp 1s ease-out forwards;

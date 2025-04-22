@@ -3,12 +3,39 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Collabridge</title>
-   <meta name="description" content="">
+   <!-- Primary Meta Tags -->
+   <title>Collabridge | AI-Driven Automation & Enterprise Solutions</title>
+   <meta name="title" content="Collabridge | AI-Driven Automation & Enterprise Solutions">
+   <meta name="description" content="Collabridge delivers enterprise AI/ML solutions that transform businesses through optimization, prediction, and contextual intelligence. Our expertise spans digital transformation, data science, and intelligent automation.">
+   <meta name="keywords" content="AI solutions, enterprise AI, machine learning, digital transformation, business intelligence, data science, intelligent automation, collabridge">
+   <meta name="author" content="Collabridge">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://www.collabridge.com/">
+
+   <!-- Open Graph / Facebook -->
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://www.collabridge.com/">
+   <meta property="og:title" content="Collabridge | AI-Driven Automation & Enterprise Solutions">
+   <meta property="og:description" content="Powering the future with AI-driven automation solutions for enterprise digital transformation and business intelligence.">
+   <meta property="og:image" content="https://www.collabridge.com/assets/img/logo/logo.png">
+
+   <!-- Twitter -->
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:url" content="https://www.collabridge.com/">
+   <meta property="twitter:title" content="Collabridge | AI-Driven Automation & Enterprise Solutions">
+   <meta property="twitter:description" content="Powering the future with AI-driven automation solutions for enterprise digital transformation and business intelligence.">
+   <meta property="twitter:image" content="https://www.collabridge.com/assets/img/logo/logo.png">
+
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/icon_C.png">
+
+   <!-- Preload critical resources -->
+   <link rel="preload" href="assets/css/bootstrap.css" as="style">
+   <link rel="preload" href="assets/css/main.css" as="style">
+   <link rel="preload" href="assets/js/vendor/jquery.js" as="script">
+   <link rel="preload" href="assets/WebImages/Homewebp/vid2.mp4" as="video" type="video/mp4">
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.css">
@@ -894,7 +921,317 @@ section {
 .brand-area.pb-120 {
     padding-bottom: 40px !important;
 }
+
+/* Add this to your existing style section */
+
+/* Right-aligned title on desktop */
+@media (min-width: 768px) {
+  .tp-banner-two {
+    text-align: right;
+  }
+  
+  .tp-banner-two-title {
+    text-align: right;
+    padding-right: 40px;
+    max-width: 800px;
+    margin-left: auto;
+  }
+  
+  .tp-banner-two-title .title-two-right-1 {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    line-height: 1.4;
+    max-width: none;
+  }
+  
+  /* Remove the after pseudo-element */
+  .tp-banner-two-title .title-two-right-1:after {
+    display: none;
+  }
+}
+
+/* Add this to your existing style section */
+
+/* Replace your existing banner title CSS with this */
+.tp-banner-two-title {
+  width: 100% !important;
+  text-align: left !important;
+  position: absolute !important;
+  bottom: 50px !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 100 !important;
+  padding-left: 40px !important; /* Add left padding */
+}
+
+.tp-banner-two-title .title-two-right-1 {
+  white-space: nowrap !important;
+  display: inline-block !important;
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  text-align: left !important; /* Left align text */
+  max-width: 95% !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .tp-banner-two-title {
+    bottom: 30px !important;
+    padding-left: 20px !important; /* Less padding on mobile */
+  }
+  
+  .tp-banner-two-title .title-two-right-1 {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Add these styles with !important to override all other banner title styles */
+.banner-area .tp-banner-two-title {
+  position: absolute !important;
+  bottom: 50px !important;
+  left: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+  padding: 0 0 0 30px !important;
+  z-index: 200 !important;
+  margin: 0 !important;
+}
+
+.banner-area .tp-banner-two-title .title-two-right-1 {
+  display: block !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  line-height: 1.3 !important;
+  max-width: 90% !important;
+  text-align: left !important;
+}
+
+/* Remove the forced line break after element */
+.banner-area .tp-banner-two-title .title-two-right-1:after {
+  display: none !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .banner-area .tp-banner-two-title {
+    bottom: 30px !important;
+    padding: 0 20px !important;
+  }
+  
+  .banner-area .tp-banner-two-title .title-two-right-1 {
+    font-size: 1.5rem !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Add this to your existing style section to control line breaks */
+.banner-area .tp-banner-two-title .title-two-right-1 {
+  text-align: right !important;
+  white-space: normal !important; /* Allow wrapping */
+  display: inline-block !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  width: 80% !important; /* Control width to force 2 lines */
+  max-width: 800px !important;
+}
+
+/* Force line break after "with" */
+.banner-area .tp-banner-two-title .title-two-right-1:after {
+  content: "";
+  display: block !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .banner-area .tp-banner-two-title .title-two-right-1 {
+    font-size: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Two-line banner title fix */
+.banner-area .tp-banner-two-title {
+  position: absolute !important;
+  bottom: 50px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  padding: 0 !important; /* Remove all padding */
+  margin: 0 !important;
+  z-index: 200 !important;
+  text-align: center !important; /* Center the container */
+}
+
+.banner-area .tp-banner-two-title .title-two-right-1 {
+  display: inline-block !important;
+  font-size: 2.5rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  line-height: 1.3 !important;
+  width: 100% !important; /* Full width */
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+/* Ensure the line break works properly */
+.banner-area .tp-banner-two-title .title-two-right-1 br {
+  display: block !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .banner-area .tp-banner-two-title {
+    bottom: 30px !important;
+  }
+  
+  .banner-area .tp-banner-two-title .title-two-right-1 {
+    font-size: 1.5rem !important;
+  }
+}
    </style>
+
+   <!-- Schema.org structured data for organization -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "Organization",
+     "name": "Collabridge",
+     "url": "https://www.collabridge.com/",
+     "logo": "https://www.collabridge.com/assets/img/logo/logo.png",
+     "description": "Enterprise AI/ML solutions company specializing in digital transformation and intelligent automation",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "#309 B-Block Asian Suncity, Kondapur",
+       "addressLocality": "Hyderabad",
+       "addressRegion": "Telangana",
+       "addressCountry": "India"
+     },
+     "contactPoint": {
+       "@type": "ContactPoint",
+       "telephone": "+91 888 5165 333",
+       "contactType": "customer service",
+       "email": "info@collabridge.com"
+     },
+     "sameAs": [
+       "https://www.facebook.com/CollabridgeSolutions",
+       "https://x.com/collabridge",
+       "https://www.instagram.com/collabridgeinc",
+       "https://in.linkedin.com/company/collabridge-solutions"
+     ]
+   }
+   </script>
+
+   <!-- Schema.org structured data for local business -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "ProfessionalService",
+     "name": "Collabridge",
+     "image": "https://www.collabridge.com/assets/img/logo/logo.png",
+     "url": "https://www.collabridge.com",
+     "telephone": "+91 888 5165 333",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "#309 B-Block Asian Suncity, Kondapur",
+       "addressLocality": "Hyderabad",
+       "addressRegion": "Telangana",
+       "addressCountry": "India"
+     },
+     "geo": {
+       "@type": "GeoCoordinates"
+     },
+     "openingHoursSpecification": {
+       "@type": "OpeningHoursSpecification",
+       "dayOfWeek": [
+         "Monday",
+         "Tuesday",
+         "Wednesday",
+         "Thursday",
+         "Friday"
+       ],
+       "opens": "09:00",
+       "closes": "18:00"
+     },
+     "sameAs": [
+       "https://www.facebook.com/CollabridgeSolutions",
+       "https://in.linkedin.com/company/collabridge-solutions"
+     ]
+   }
+   </script>
+   <script>
+// Update heading hierarchy for better SEO
+document.addEventListener('DOMContentLoaded', function() {
+  // Ensure only one H1 per page
+  const h1Tags = document.querySelectorAll('h1');
+  if (h1Tags.length > 1) {
+    for (let i = 1; i < h1Tags.length; i++) {
+      const newH2 = document.createElement('h2');
+      newH2.innerHTML = h1Tags[i].innerHTML;
+      newH2.className = h1Tags[i].className;
+      h1Tags[i].parentNode.replaceChild(newH2, h1Tags[i]);
+    }
+  }
+  
+  // Add schema markup to the testimonials
+  const testimonials = document.querySelectorAll('.tp-testimonial-two-wrap');
+  if (testimonials.length > 0) {
+    const testimonialData = Array.from(testimonials).map(item => {
+      const text = item.querySelector('.tp-testimonial-two-content p')?.textContent || '';
+      const authorName = item.querySelector('.tp-testimonial-two-avater-title')?.textContent || '';
+      return {text, authorName};
+    });
+    
+    const schema = {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": testimonialData.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Review",
+          "reviewBody": item.text,
+          "author": {
+            "@type": "Person",
+            "name": item.authorName
+          }
+        }
+      }))
+    };
+    
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+});
+</script>
+   <!-- Defer non-critical JavaScript -->
+   <script>
+   // Function to load non-critical CSS
+   function loadDeferredStyles() {
+     const addStylesNode = document.getElementById("deferred-styles");
+     const replacement = document.createElement("div");
+     replacement.innerHTML = addStylesNode.textContent;
+     document.body.appendChild(replacement);
+     addStylesNode.parentElement.removeChild(addStylesNode);
+   }
+   // Run after page load
+   window.addEventListener('load', loadDeferredStyles);
+   </script>
 </head>
 
 <body>
@@ -1007,7 +1344,7 @@ section {
          <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Industry Verticals</h4>
          <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin-bottom: 8px;"><a href="services-details.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Manufacturing</a></li>
-            <li style="margin-bottom: 8px;"><a href="Energy & Utilities.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Oil & Gas</a></li>
+            <li style="margin-bottom: 8px;"><a href="Energy & Utilities.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Energy & Utilities</a></li>
             <li style="margin-bottom: 8px;"><a href="Pharma & Lifesciences.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Pharma & LifeSciences</a></li>
             <li style="margin-bottom: 8px;"><a href="Insurance.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Insurance</a></li>
             <li style="margin-bottom: 8px;"><a href="W&R.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">WholeSale & Retail</a></li>
@@ -1043,7 +1380,7 @@ section {
          <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Service Offerings</h4>
          <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin-bottom: 8px;"><a href="QBPM.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">QBPM</a></li>
-            <li style="margin-bottom: 8px;"><a href="Digital Transfromation & Consulting.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Transformation Consulting</a></li>
+            <li style="margin-bottom: 8px;"><a href="DTC.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Transformation Consulting</a></li>
             <li style="margin-bottom: 8px;"><a href="DataScience.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">DataScience & Advanced Analytics</a></li>
             <li style="margin-bottom: 8px;"><a href="DTG.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital  Talent  Gardening</a></li>
             <li style="margin-bottom: 8px;"><a href="GMS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Globally Managed Systems</a></li>
@@ -1052,7 +1389,7 @@ section {
 
       <!-- Healthcare -->
       <div class="col-xl-2" style="padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Healthcare</h4>
+         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Our Drivers</h4>
          <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin-bottom: 8px;"><a href="Pharmacov.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">PharmaCovigilance</a></li>
             <li style="margin-bottom: 8px;"><a href="SmartManufacturing.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Smart Manufacturing</a></li>
@@ -1072,7 +1409,7 @@ section {
             <a href="#" class="submenu-toggle">Industry</a>
             <ul class="submenu">
                <li><a href="services-details.html">Manufacturing</a></li>
-               <li><a href="Energy & Utilities.html">Oil & Gas</a></li>
+               <li><a href="Energy & Utilities.html">Energy &  Utilities</a></li>
                <li><a href="Pharma & Lifesciences.html">Pharma & LifeSciences</a></li>
                <li><a href="Insurance.html">Insurance</a></li>
                <li><a href="W&R.html">Wholesale & Retail</a></li>
@@ -1107,7 +1444,7 @@ section {
             <a href="#" class="submenu-toggle">Service-offerings</a>
             <ul class="submenu">
                <li><a href="QBPM.html">QBPM</a></li>
-            <li><a href="DigitaTransformationConsuting.html">Digital Transformation Consulting</a></li>
+            <li><a href="DTC.html">Digital Transformation Consulting</a></li>
             <li><a href="DataScience.html">DataScience & Advanced Analytics</a></li>
             <li><a href="DTG.html">Digital Talent Gardening</a></li>
             <li><a href="GMS.html">Globally Managed Systems</a></li>
@@ -1184,10 +1521,10 @@ section {
                 <span>we are here</span>
                 <p>#309 B-Block Asian Suncity <br> Kondapur,Hyderabad<br>Telangana.</p>
              </div>
-             <div class="side-info-social">
+             <div class="side-info-social">an>
                 <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://x.com/collabridge"target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/collabridgeinc"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/collabridgeinc"target="_blank"><i class="fa-brands fa-instagram"></i>ty and Innovation!</span>
                 <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
              </div>
           </div>
@@ -1213,7 +1550,7 @@ section {
                <div class="col-lg-12">
                   <div class="tp-banner-two">
                      <h2 class="tp-banner-two-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                        <span class="title-two-right-1">Powering the Future with <br class="desktop-break">AI-Driven Automation!</span>
+                        <span class="title-two-right-1">Powering the Enterprises with<br>Automation, Productivity and Innovation!</span>
                       </h2>
                      <div class="tp-banner-two-content d-flex align-items-center wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".7s">
@@ -1444,7 +1781,7 @@ section {
          <div class="col-lg-6">
             <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
-                  <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
+                  <img src="assets/WebImages/Homewebp/who-1.webp" alt="Collabridge team providing AI solutions for business transformation" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
                </div>
                
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1490,7 +1827,7 @@ section {
          <div class="col-lg-6 order-lg-1 order-1">
             <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
-                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
+                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="Smart business solutions powered by Collabridge AI technology" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
                </div>
               
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1543,7 +1880,7 @@ section {
          <div class="col-lg-6">
             <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
-                  <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
+                  <img src="assets/WebImages/Homewebp/do-2.webp" alt="Collabridge domain experts implementing AI solutions for business optimization" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
                </div>
                
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1581,7 +1918,7 @@ section {
                         </div>
                         <div class="tp-step-item-overlay p-relative mb-30">
                            <div class="tp-step-item-thumb">
-                              <img src="assets/WebImages/Homewebp/discover.webp" alt="">
+                              <img src="assets/WebImages/Homewebp/discover.webp" alt="Collabridge discovery phase in AI implementation process" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
                            </div>
                            <div class="tp-step-item-thumb-icon">
                               <i class="flaticon-design"></i>

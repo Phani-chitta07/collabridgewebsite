@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/WebImages/expwebp/  # Optional: exclude large media files from crawling
+Disallow: /admin/                    # Optional: exclude admin areas if they exist
+Disallow: /temp/                     # Optional: exclude temporary pages
+
+# Point to your sitemap
+Sitemap: https://www.collabridge.com/sitemap.xml
