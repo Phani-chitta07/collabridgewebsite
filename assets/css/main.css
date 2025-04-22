@@ -985,7 +985,7 @@ div.demo img {
   display: inline-block;
   font-weight: 700;
   font-size: 16px;
-  background-color: var(--tp-theme-primary);
+  background-color: #d90a2c;
   padding: 17px 51px;
   color: var(--tp-common-white);
   position: relative;
@@ -3050,7 +3050,7 @@ div.demo img {
   height: 50px;
   width: 50px;
   line-height: 40px;
-  background-color: var(--tp-theme-primary);
+  background-color:#d90a2c;
   color: var(--tp-common-white);
 }
 @media (max-width: 767px) {
@@ -3223,7 +3223,7 @@ div.demo img {
   z-index: -1;
 }
 .breadcrumb-title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
   color: #ffffff;
   margin-bottom: 0;
@@ -3634,7 +3634,131 @@ div.demo img {
   height: 2px;
   background-color: var(--tp-common-black);
 }
+/* Change all links in header area to use the red color when clicked/active */
+.tp-header-area a:active,
+.tp-header-area a:focus,
+.tp-header-area a:hover {
+    color: #d90a2c !important;
+}
 
+/* Change the color for the main menu links */
+.tp-main-menu-content ul li a:active,
+.tp-main-menu-content ul li a:focus,
+.tp-main-menu-content ul li a:hover,
+.tp-main-menu-content ul li.active > a {
+    color: #d90a2c !important;
+}
+
+/* Change color for dropdown menu links */
+.tp-submenu a:active,
+.tp-submenu a:focus,
+.tp-submenu a:hover {
+    color: #d90a2c !important;
+}
+
+/* Remove default focus outline or make it match your brand color */
+.tp-header-area a:focus {
+    outline-color: #d90a2c;
+}
+/* ...existing code... */
+
+/* Improve AI Universe slider responsiveness */
+@media (max-width: 767px) {
+  /* Make cards smaller on mobile */
+  .tp-testimonial-two-wrap {
+      padding: 10px;
+  }
+  
+  .tp-testimonial-two-content {
+      min-height: 80px;
+      padding: 10px;
+  }
+  
+  .tp-testimonial-two-content p {
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 5px;
+  }
+  
+  .tp-testimonial-two-avater-info {
+      padding: 8px 0;
+  }
+  
+  .tp-testimonial-two-avater-title {
+      font-size: 14px;
+      margin-bottom: 2px;
+  }
+  
+  .tp-testimonial-two-avater-info span {
+      font-size: 12px;
+  }
+}
+
+/* Ensure slider controls are visible */
+.swiper-pagination-bullets {
+  bottom: -5px !important;
+}
+/* Add this to your stylesheet or in a style tag in the head */
+.ai-universe-section {
+  position: relative;
+  margin: 30px auto;
+  padding: 30px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: visible !important;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Subtle top and bottom shadows */
+.ai-universe-section:before,
+.ai-universe-section:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  width: 90%;
+  height: 10px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ai-universe-section:before {
+  top: -5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ai-universe-section:after {
+  bottom: -5px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .ai-universe-section {
+      margin: 20px 10px;
+      padding: 20px 0;
+  }
+}
+/* Add this to your CSS file */
+.dropdown-category:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown-category:hover a {
+  color:#d90a2c  !important;
+  padding-left: 22px !important;
+}
+
+.desktop-submenu {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px) translateX(-50%); }
+  to { opacity: 1; transform: translateY(0) translateX(-50%); }
+}
+
+/* ...existing code... */
 /*----------------------------------------*/
 /*  2.14 Modal
 /*----------------------------------------*/
@@ -3644,7 +3768,7 @@ div.demo img {
 .tp-section-sub-title {
   font-weight: 700;
   font-size: 30px;
-  color: var(--tp-theme-primary);
+  color: #d90a2c;
   position: relative;
   padding-left: 15px;
   margin-bottom: 20px;
@@ -6430,7 +6554,7 @@ body .ui-tooltip {
 }
 .side-info-contact span {
   font-weight: 700;
-  color: var(--tp-theme-primary);
+  color: #d90a2c;
   font-size: 20px;
   text-transform: uppercase;
   display: inline-block;
@@ -9616,6 +9740,214 @@ blockquote cite::before {
 .tp-footer-red-shape-2 img {
   opacity: 0.2;
 }
+/* Better vertical stacking for office locations */
+.location-offices {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-offices .row {
+  width: 100%;
+}
+
+.location-offices .col-12 {
+  width: 100%;
+  display: block;
+}
+
+/* Add more separation and visual definition */
+.location-office-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 0 15px 15px;
+  border-left: 3px solid #d90a2c;
+  transition: all 0.3s ease;
+}
+
+/* Improve text spacing */
+.location-office-item h4 {
+  font-size: 16px;
+  margin-bottom: 6px !important;
+}
+
+.location-office-item p {
+  margin-bottom: 8px !important;
+}
+
+.location-office-item a {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Add hover effect */
+.location-office-item:hover {
+  background-color: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+/* Optional: Add separation line between offices */
+.location-office-item:not(:last-child):after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+/* Modernized dropdown styling - cleaner version */
+.collabridge-dropdown {
+  background: #fff;
+  padding: 8px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  width: 220px;
+  position: absolute;
+  z-index: 1000;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: collabridgeDropdownFadeIn 0.2s ease-out;
+  display: none;
+}
+
+/* Show dropdown only on hover */
+.has-dropdown.tp-megamenu:hover .collabridge-dropdown {
+  display: block;
+}
+
+.collabridge-dropdown-inner {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.collabridge-dropdown-item {
+  position: relative;
+  margin: 3px 5px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.collabridge-dropdown-link {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.collabridge-dropdown-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hide dots and arrows */
+.collabridge-dropdown-dot,
+.collabridge-dropdown-arrow {
+  display: none;
+}
+
+.collabridge-dropdown-text {
+  font-size: 14px;
+}
+
+.collabridge-dropdown-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.25s ease;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* Enhanced Hover Effects */
+.collabridge-dropdown-item:hover {
+  background-color: #f5f7fa;
+  transform: translateX(3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.collabridge-dropdown-item:hover .collabridge-dropdown-link {
+  color: #474ed4;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes collabridgeDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+/* Arrow indicator at top */
+.collabridge-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-left: 1px solid rgba(0,0,0,0.04);
+}
+/* Add this to your assets/css/main.css file */
+.sticky-sidebar {
+  position: sticky;
+  top: 100px; /* Adjust this value as needed - distance from top */
+  z-index: 10;
+  max-height: calc(100vh - 150px); /* Prevents sidebar from being too tall */
+  transition: top 0.3s ease; /* Smooth transition when sticking */
+}
+
+/* Current/active link styling */
+.tp-services-details-services-wrap a.active {
+  color: #d90a2c;
+  font-weight: 500;
+}
+
+
+
+/* Enhance hover state */
+.tp-services-details-services-wrap a:hover {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+  /* Ensure Botpress elements are visible and clickable */
+  #bp-web-widget-container,
+  .bp-widget-widget,
+  .bp-widget-button {
+    z-index: 9999 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
 
 /*----------------------------------------*/
 /*  7.1 Hero css
@@ -15170,7 +15502,7 @@ blockquote cite::before {
   }
 }
 .tp-contact-details-form {
-  border-top: 8px solid var(--tp-theme-primary);
+  border-top: 8px #d90a2c;
   padding-top: 30px;
 }
 .tp-contact-details-form-input {
@@ -15206,7 +15538,374 @@ blockquote cite::before {
 .tp-contact-details-form-btn .tp-btn {
   width: 100%;
 }
+  /* Demo Scheduler Styles */
+  .demo-scheduler-area {
+    padding: 80px 0;
+ }
 
+ .demo-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+ }
+
+ .demo-feature-item i {
+    font-size: 18px;
+    margin-top: 3px;
+ }
+
+ .demo-feature-item p {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+ }
+
+ /* Step Indicator */
+ .demo-steps-indicator {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+ }
+
+ .demo-steps-indicator:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    right: 30px;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: 1;
+ }
+
+ .demo-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+ }
+
+ .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+ }
+
+ .demo-step.active .step-number {
+    background-color: #474ed4;
+    color: white;
+ }
+
+ .demo-step.completed .step-number {
+    background-color: #00c9a7;
+    color: white;
+ }
+
+ .step-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+ }
+
+ .demo-step.active .step-label,
+ .demo-step.completed .step-label {
+    color: #222;
+    font-weight: 600;
+ }
+
+ /* Form Steps */
+ .demo-step-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222;
+ }
+
+ .demo-step-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+ }
+
+ /* Service Selection */
+ .service-selection-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ .service-category h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+ }
+
+ .service-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+ }
+
+ .service-option {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0;
+ }
+
+ .service-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+ }
+
+ .service-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+ }
+
+ .service-option:hover .service-check {
+    border-color: #474ed4;
+ }
+
+ .service-option input:checked ~ .service-check {
+    background-color: #474ed4;
+    border-color: #474ed4;
+ }
+
+ .service-check:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+ }
+
+ .service-option input:checked ~ .service-check:after {
+    display: block;
+ }
+
+ .service-name {
+    font-size: 15px;
+    color: #444;
+ }
+
+ /* Date Time Picker */
+ .date-time-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+
+ input[type="date"] {
+    font-family: inherit;
+    color: #444;
+    height: 54px;
+    padding: 0 20px;
+ }
+
+ .time-slot-heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+ }
+
+ .time-slots-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+
+ .time-slot-column {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .time-slot {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0;
+    padding: 0;
+ }
+
+ .time-slot input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+ }
+
+ .time-slot-text {
+    font-size: 14px;
+    color: #444;
+ }
+
+ .time-slot:hover {
+    border-color: #474ed4;
+    background-color: rgba(71, 78, 212, 0.05);
+ }
+
+ .time-slot input:checked + .time-slot-text {
+    font-weight: 600;
+    color: #474ed4;
+ }
+
+ .time-slot input:checked ~ .time-slot {
+    border-color: #474ed4;
+    background-color: rgba(71, 78, 212, 0.1);
+ }
+
+ /* Form Buttons */
+ .demo-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+ }
+
+ .tp-btn-outline {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #474ed4;
+    background: transparent;
+    height: 56px;
+    line-height: 54px;
+    padding: 0 30px;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid #474ed4;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.4s ease-out 0s;
+ }
+
+ .tp-btn-outline:hover {
+    color: #fff;
+    background-color: #474ed4;
+ }
+
+ /* Responsive styles */
+ @media (max-width: 991px) {
+    .service-options {
+       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+ }
+
+ @media (max-width: 767px) {
+    .demo-steps-indicator:before {
+       left: 20px;
+       right: 20px;
+    }
+
+    .service-options {
+       grid-template-columns: 1fr 1fr;
+    }
+
+    .time-slots-container {
+       flex-direction: column;
+       gap: 15px;
+    }
+
+    .time-slot-column {
+       flex-direction: row;
+       flex-wrap: wrap;
+    }
+
+    .time-slot {
+       flex: 1;
+       min-width: 90px;
+    }
+ }
+
+ @media (max-width: 480px) {
+    .demo-steps-indicator {
+       flex-direction: column;
+       align-items: flex-start;
+       gap: 10px;
+    }
+
+    .demo-steps-indicator:before {
+       display: none;
+    }
+
+    .demo-step {
+       flex-direction: row;
+       gap: 10px;
+    }
+
+    .service-options {
+       grid-template-columns: 1fr;
+    }
+
+    .demo-form-buttons {
+       flex-direction: column;
+    }
+
+    .prev-step {
+       order: 2;
+    }
+
+    .next-step,
+    button[type="submit"] {
+       order: 1;
+    }
+ }
+ /* Hide desktop dropdown on mobile devices */
+@media (max-width: 1199px) {
+  /* This targets screens smaller than the xl breakpoint (1200px) */
+  .collabridge-dropdown {
+    display: none !important;
+  }
+}
+
+/* Ensure proper functioning of mobile dropdown */
+@media (max-width: 1199px) {
+  .tp-submenu.mobile-submenu {
+    display: block; /* Make sure mobile submenu is displayed when needed */
+  }
+}
 /*----------------------------------------*/
 /*  7.11 FAQ css
 /*----------------------------------------*/

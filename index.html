@@ -1102,7 +1102,132 @@ section {
     font-size: 1.5rem !important;
   }
 }
+
+/* Modernized dropdown styling - aligned with parent menu item */
+.collabridge-dropdown {
+  background: #fff;
+  padding: 8px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  width: 100%;          /* Auto width to match content */
+  /* Minimum width for content */
+  position: absolute;
+  z-index: 1000;
+  margin: 0;            /* Reset margin */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+  left: 0;              /* Align with left edge of parent */
+  transform: none;      /* Remove transform */
+  animation: collabridgeDropdownFadeIn 0.2s ease-out;
+  display: none;
+}
+
+/* Update animation to remove horizontal shift */
+@keyframes collabridgeDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Arrow indicator positioned above dropdown but centered on parent */
+.collabridge-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;           /* Position arrow to match parent text */
+  transform: rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-left: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Fix parent positioning */
+.has-dropdown.tp-megamenu {
+  position: relative;
+}
+
+/* Enhanced hover transitions for dropdown elements */
+.collabridge-dropdown-link {
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.collabridge-dropdown-text {
+  transition: transform 0.3s ease, color 0.3s ease, padding-left 0.3s ease !important;
+}
+
+/* Text animation on hover */
+.collabridge-dropdown-item:hover .collabridge-dropdown-text {
+  transform: translateX(3px);
+  color: #d90a2c;
+  padding-left: 3px;
+}
+
+/* Smoother background transition */
+.collabridge-dropdown-item {
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Enhanced highlight effect */
+.collabridge-dropdown-highlight {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+/* Add subtle glow effect on hover */
+.collabridge-dropdown-item:hover {
+  box-shadow: 0 4px 12px rgba(71, 78, 212, 0.08) !important;
+}
+
+/* Add dot pulse animation */
+.collabridge-dropdown-item:hover .collabridge-dropdown-dot {
+  animation: dotPulse 1s infinite alternate ease-in-out !important;
+}
+
+@keyframes dotPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.3); }
+}
+/* Change "Grow with" text color to #d90a2c */
+.tp-brand-title span {
+  color: #d90a2c !important;
+}
+
+/* Reduce gap between step-area and brand-area */
+.step-area {
+  padding-bottom: 30px !important; /* Reduced from default */
+  margin-bottom: 0 !important;
+}
+
+.brand-area.pb-120 {
+  padding-top: 0 !important;
+  padding-bottom: 60px !important; /* Reduced from 120px */
+}
    </style>
+   <style>
+      /* Change "Grow with" text color to #d90a2c */
+      .tp-brand-title span {
+        color: #d90a2c !important;
+      }
+    
+      /* Reduce gap between step-area and brand-area */
+      .step-area {
+        padding-bottom: 30px !important;
+        margin-bottom: 0 !important;
+      }
+    
+      .brand-area.pb-120 {
+        padding-top: 0 !important;
+        padding-bottom: 60px !important;
+      }
+    </style>
    <style>
       /* Aggressive fix for mobile gap in "What We Do" section */
       @media (max-width: 991px) {
@@ -1145,6 +1270,189 @@ section {
           margin: 0 !important;
         }
       }
+    </style>
+    <style>
+/* Better vertical stacking for office locations */
+.location-offices {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-offices .row {
+  width: 100%;
+}
+
+.location-offices .col-12 {
+  width: 100%;
+  display: block;
+}
+
+/* Add more separation and visual definition */
+.location-office-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 0 15px 15px;
+  border-left: 3px solid #d90a2c;
+  transition: all 0.3s ease;
+}
+
+/* Improve text spacing */
+.location-office-item h4 {
+  font-size: 16px;
+  margin-bottom: 6px !important;
+}
+
+.location-office-item p {
+  margin-bottom: 8px !important;
+}
+
+.location-office-item a {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Add hover effect */
+.location-office-item:hover {
+  background-color: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+/* Optional: Add separation line between offices */
+.location-office-item:not(:last-child):after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+    </style>
+    
+    <style>
+
+    /* Modernized dropdown styling - cleaner version */
+.collabridge-dropdown {
+  background: #fff;
+  padding: 8px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  width: 220px;
+  position: absolute;
+  z-index: 1000;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: collabridgeDropdownFadeIn 0.2s ease-out;
+  display: none;
+}
+
+/* Show dropdown only on hover */
+.has-dropdown.tp-megamenu:hover .collabridge-dropdown {
+  display: block;
+}
+
+.collabridge-dropdown-inner {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.collabridge-dropdown-item {
+  position: relative;
+  margin: 3px 5px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.collabridge-dropdown-link {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.collabridge-dropdown-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hide dots and arrows */
+.collabridge-dropdown-dot,
+.collabridge-dropdown-arrow {
+  display: none;
+}
+
+.collabridge-dropdown-text {
+  font-size: 14px;
+}
+
+.collabridge-dropdown-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.25s ease;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* Enhanced Hover Effects */
+.collabridge-dropdown-item:hover {
+  background-color: #f5f7fa;
+  transform: translateX(3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.collabridge-dropdown-item:hover .collabridge-dropdown-link {
+  color: #474ed4;
+  font-weight: 600;
+}
+
+/* Animation */
+@keyframes collabridgeDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+/* Arrow indicator at top */
+.collabridge-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  border-left: 1px solid rgba(0,0,0,0.04);
+}
     </style>
 
    <!-- Schema.org structured data for organization -->
@@ -1275,6 +1583,7 @@ document.addEventListener('DOMContentLoaded', function() {
    // Run after page load
    window.addEventListener('load', loadDeferredStyles);
    </script>
+   
 </head>
 
 <body>
@@ -1347,16 +1656,7 @@ document.addEventListener('DOMContentLoaded', function() {
        </div>
    </div>
 </div>
-   <!-- back to top start -->
-   <div class="back-to-top-wrapper">
-      <button id="back_to_top" type="button" class="back-to-top-btn">
-         <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-               stroke-linejoin="round" />
-         </svg>
-      </button>
-   </div>
-   <!-- back to top end -->
+
 
      <!-- header area start -->
     <header>
@@ -1378,76 +1678,104 @@ document.addEventListener('DOMContentLoaded', function() {
                          <li><a href="index.html">Home</a></li>
                          <li><a href="about.html">About Us</a></li>
                          <li class="has-dropdown tp-megamenu">
-                            <a href="services.html">Expertize</a>
-<!-- Desktop Dropdown -->
-<div class="tp-submenu desktop-submenu" style="background: #fff; padding: 15px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 1200px; left: 50%; transform: translateX(-50%); position: absolute; z-index: 1000; margin: 0 auto;">
-   <div class="row" style="margin: 0 auto; position: relative; display: flex; flex-wrap: nowrap; justify-content: center; max-width: 1000px;">
-      <!-- Industry Verticals -->
-      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%; margin: 0;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Industry Verticals</h4>
-         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="services-details.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Manufacturing</a></li>
-            <li style="margin-bottom: 8px;"><a href="Energy & Utilities.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Energy & Utilities</a></li>
-            <li style="margin-bottom: 8px;"><a href="Pharma & Lifesciences.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Pharma & LifeSciences</a></li>
-            <li style="margin-bottom: 8px;"><a href="Insurance.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Insurance</a></li>
-            <li style="margin-bottom: 8px;"><a href="W&R.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">WholeSale & Retail</a></li>
-         </ul>
+                            <a href="services.html">Offerings</a>
+<!-- Modern Card Style Dropdown with unique class names -->
+<div class="collabridge-dropdown">
+   <div class="collabridge-dropdown-inner">
+         <!-- Solutions -->
+         <div class="collabridge-dropdown-item">
+            <a href="Solutions.html" class="collabridge-dropdown-link">
+               <div class="collabridge-dropdown-content">
+                  <div class="collabridge-dropdown-left">
+                     <span class="collabridge-dropdown-dot" style="background: #474ed4;"></span>
+                     <span class="collabridge-dropdown-text">Solutions</span>
+                  </div>
+                  <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+               </div>
+            </a>
+            <div class="collabridge-dropdown-highlight" style="background-color: rgba(71, 78, 212, 0.05);"></div>
+         </div>
+      
+      <!-- Service Offerings -->
+      <div class="collabridge-dropdown-item">
+         <a href="QBPM.html" class="collabridge-dropdown-link">
+            <div class="collabridge-dropdown-content">
+               <div class="collabridge-dropdown-left">
+                  <span class="collabridge-dropdown-dot" style="background: #474ed4;"></span>
+                  <span class="collabridge-dropdown-text">Service Offerings</span>
+               </div>
+               <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+         </a>
+         <div class="collabridge-dropdown-highlight" style="background-color: rgba(71, 78, 212, 0.05);"></div>
       </div>
 
-      <!-- Technologies -->
-      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Technologies</h4>
-         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="AI-ML.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">AI/ML</a></li>
-            <li style="margin-bottom: 8px;"><a href="GenAI.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">GenAI</a></li>
-            <li style="margin-bottom: 8px;"><a href="LLM-SLM.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">LLM/SLM</a></li>
-            <li style="margin-bottom: 8px;"><a href="SAP-BTP.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">SAP,BTP</a></li>
-            <li style="margin-bottom: 8px;"><a href="SAP.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">SAP</a></li>
-            <li style="margin-bottom: 8px;"><a href="Oracle.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Oracle</a></li>
-            <li style="margin-bottom: 8px;"><a href="Microsoft.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Microsoft</a></li>
-         </ul>
+      <!-- Industry Verticals -->
+      <div class="collabridge-dropdown-item">
+         <a href="services-details.html" class="collabridge-dropdown-link">
+            <div class="collabridge-dropdown-content">
+               <div class="collabridge-dropdown-left">
+                  <span class="collabridge-dropdown-dot" style="background: #00c9a7;"></span>
+                  <span class="collabridge-dropdown-text">Industry Verticals</span>
+               </div>
+               <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+         </a>
+         <div class="collabridge-dropdown-highlight" style="background-color: rgba(0, 201, 167, 0.05);"></div>
+      </div>
+      
+      <!-- Our Drivers -->
+      <div class="collabridge-dropdown-item">
+         <a href="SmartManufacturing.html" class="collabridge-dropdown-link">
+            <div class="collabridge-dropdown-content">
+               <div class="collabridge-dropdown-left">
+                  <span class="collabridge-dropdown-dot" style="background: #ff6b6b;"></span>
+                  <span class="collabridge-dropdown-text">Our Drivers</span>
+               </div>
+               <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+         </a>
+         <div class="collabridge-dropdown-highlight" style="background-color: rgba(255, 107, 107, 0.05);"></div>
       </div>
 
       <!-- Platforms -->
-      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Platforms</h4>
-         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">AWS</a></li>
-            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">OCI</a></li>
-            <li style="margin-bottom: 8px;"><a href="AWS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Azure</a></li>
-         </ul>
+      <div class="collabridge-dropdown-item">
+         <a href="AWS.html" class="collabridge-dropdown-link">
+            <div class="collabridge-dropdown-content">
+               <div class="collabridge-dropdown-left">
+                  <span class="collabridge-dropdown-dot" style="background: #ffd43b;"></span>
+                  <span class="collabridge-dropdown-text">Platforms</span>
+               </div>
+               <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+         </a>
+         <div class="collabridge-dropdown-highlight" style="background-color: rgba(255, 212, 59, 0.05);"></div>
       </div>
 
-      <!-- Service Offerings -->
-      <div class="col-xl-2" style="border-right: 1px solid #e5e5e5; padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Service Offerings</h4>
-         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="QBPM.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">QBPM</a></li>
-            <li style="margin-bottom: 8px;"><a href="DTC.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Transformation Consulting</a></li>
-            <li style="margin-bottom: 8px;"><a href="DataScience.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">DataScience & Advanced Analytics</a></li>
-            <li style="margin-bottom: 8px;"><a href="DTG.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital  Talent  Gardening</a></li>
-            <li style="margin-bottom: 8px;"><a href="GMS.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Globally Managed Systems</a></li>
-         </ul>
-      </div>
-
-      <!-- Healthcare -->
-      <div class="col-xl-2" style="padding: 0 12px; min-height: 260px; flex: 1; max-width: 20%;">
-         <h4 style="font-size: 15px; margin-bottom: 12px; color: #222; font-weight: 600; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0;">Our Drivers</h4>
-         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;"><a href="Pharmacov.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">PharmaCovigilance</a></li>
-            <li style="margin-bottom: 8px;"><a href="SmartManufacturing.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Smart Manufacturing</a></li>
-            <li style="margin-bottom: 8px;"><a href="DigitalOilField.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Oil Field</a></li>
-            <li style="margin-bottom: 8px;"><a href="SupplyChainManagement.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Supply Chain Management</a></li>
-            <li style="margin-bottom: 8px;"><a href="DigitalTwins.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Digital Twins</a></li>
-            <li style="margin-bottom: 8px;"><a href="CustomerCentricity.html" style="color: #666; text-decoration: none; font-size: 13px; line-height: 1.3; display: block; word-wrap: break-word;">Customer Centricity</a></li>
-         </ul>
+      <!-- Technologies -->
+      <div class="collabridge-dropdown-item">
+         <a href="AI-ML.html" class="collabridge-dropdown-link">
+            <div class="collabridge-dropdown-content">
+               <div class="collabridge-dropdown-left">
+                  <span class="collabridge-dropdown-dot" style="background: #4dabf7;"></span>
+                  <span class="collabridge-dropdown-text">Technologies</span>
+               </div>
+               <svg class="collabridge-dropdown-arrow" width="16" height="16" viewBox="0 0 24 24"><path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+         </a>
+         <div class="collabridge-dropdown-highlight" style="background-color: rgba(77, 171, 247, 0.05);"></div>
       </div>
    </div>
 </div>
+
                          <!-- Mobile Dropdown -->
 <ul class="tp-submenu mobile-submenu">
    <li class="has-dropdown mobile-menu-header">
       <ul class="mobile-submenu-links">
+         <li>
+            <a href="Solutions.html" class="submenu-toggle">Solutions</a>
+            
+         </li>
          <li class="has-dropdown">
             <a href="#" class="submenu-toggle">Industry</a>
             <ul class="submenu">
@@ -1517,9 +1845,9 @@ document.addEventListener('DOMContentLoaded', function() {
              <div class="col-xl-2 col-lg-6 col-md-6 col-6">
                 <div class="tp-header-right d-flex align-items-center justify-content-end">
                  <div class="tp-header-search">
-   <a href="contact.html">
-      <button class="tp-header-demo-btn">Request a Demo</button>
-   </a>
+                  <a href="RequestDemo.html">
+                     <button class="tp-header-demo-btn">Request a Demo</button>
+                  </a>
 </div>
                    <div class="offcanvas-btn d-xl-none ml-20">
                       <button class="offcanvas-open-btn"><i class="fa-solid fa-bars"></i></button>
@@ -1557,17 +1885,17 @@ document.addEventListener('DOMContentLoaded', function() {
              </div>
              <div class="tp-main-menu-mobile"></div>
              
-             <div class="offcanvas__btn">
-                <a href="contact.html" class="tp-btn">Getting Started</a>
+               <div class="offcanvas__btn">
+                <a href="RequestDemo.html" class="tp-btn">Request A Demo</a>
              </div>
              <div class="side-info-contact">
                 <span>we are here</span>
                 <p>#309 B-Block Asian Suncity <br> Kondapur,Hyderabad<br>Telangana.</p>
              </div>
-             <div class="side-info-social">an>
+             <div class="side-info-social">
                 <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://x.com/collabridge"target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/collabridgeinc"target="_blank"><i class="fa-brands fa-instagram"></i>ty and Innovation!</span>
+                <a href="https://www.instagram.com/collabridgeinc"target="_blank"><i class="fa-brands fa-instagram"></i></span>
                 <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
              </div>
           </div>
@@ -1593,7 +1921,7 @@ document.addEventListener('DOMContentLoaded', function() {
                <div class="col-lg-12">
                   <div class="tp-banner-two">
                      <h2 class="tp-banner-two-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
-                        <span class="title-two-right-1">Powering the Enterprises with<br>Automation, Productivity and Innovation!</span>
+                        <span class="title-two-right-1">AI Universe-Powering the Enterprises with<br>Automation, Productivity and Innovation!</span>
                       </h2>
                      <div class="tp-banner-two-content d-flex align-items-center wow fadeInUp" data-wow-duration="1s"
                         data-wow-delay=".7s">
@@ -1610,9 +1938,12 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- baner-area-end -->
 
    
-         <!-- AI Universe-area-start -->
-      <section class="testimonial-area tp-testimonial-two p-relative"
+<!-- AI Universe-area-start -->
+<section class="testimonial-area tp-testimonial-two p-relative ai-universe-section" 
       data-background="assets/img/testimonial/testimonial-2-bg-1.jpg">
+      <!-- Section Start Divider -->
+    
+      
       <div class="container">
                      <!-- Images and Text Container -->
       <div class="row align-items-center mt-40">
@@ -1622,7 +1953,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
          <div class="col-md-5">
              <div class="tp-testimonial-two-img">
-                 <img src="assets/img/banner/AIuni.png" alt="AI Unification">
+                 <img src="assets/WebImages/expwebp/34.png" alt="AI Unification">
              </div>
          </div>
 
@@ -1630,7 +1961,7 @@ document.addEventListener('DOMContentLoaded', function() {
          <div class="col-md-2">
              <div class="tp-section tp-section-two text-center">
                  <div class="tp-section-title-wrapper">
-                     <p class="larger-text">Collabridge's -- "AI universe", the complex and dynamic field with a multitude of interconnected areas and technologies -- serves as a foundation for exploring the endless possibilities that AI has to offer.
+                     <p class="larger-text">Collabridge's "AI universe", the complex and dynamic field with a multitude of interconnected areas and technologies.Serves as a foundation for exploring the endless possibilities that AI has to offer.
  
  
                         Collabridge positions, the AI ecosystem to Anticipate and Adjust according to variations on an impromptu and Realtime basis thus signifying smartness.</p>
@@ -1652,6 +1983,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   <div class="tp-testimonial-two-slider">
                      <div class="swiper-container tp-testimonial-two-active">
                         <div class="swiper-wrapper">
+                           <!-- Swiper slides remain the same -->
                            <div class="swiper-slide">
                               <div class="tp-testimonial-two-wrap mb-30">
                                  <div class="tp-testimonial-two-item mb-20">
@@ -1669,14 +2001,15 @@ document.addEventListener('DOMContentLoaded', function() {
                                  </div>
                               </div>
                            </div>
-
+                           
+                           <!-- Remaining slides... -->
                            <div class="swiper-slide">
                               <div class="tp-testimonial-two-wrap mb-30">
                                  <div class="tp-testimonial-two-item mb-20">
                                    
                                     <div class="tp-testimonial-two-content">
                                        
-                                       <p>Scaling AI isn't just about technology—it’s about transforming potential into impact with a unified approach.  </p>
+                                       <p>Scaling AI isn't just about technology—it's about transforming potential into impact with a unified approach.  </p>
                                     </div>
                                    
                                     <div class="tp-testimonial-two-shape">
@@ -1696,7 +2029,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     
                                     <div class="tp-testimonial-two-content">
                                       
-                                       <p>AI-driven automation isn't just about speed—it’s about redefining efficiency and maximizing value across every process.  </p>
+                                       <p>AI-driven automation isn't just about speed—it's about redefining efficiency and maximizing value across every process.  </p>
                                     </div>
                                     
                                     <div class="tp-testimonial-two-shape">
@@ -1753,14 +2086,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- Add navigation -->
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        <!-- Add pagination bullets -->
+                        <div class="swiper-pagination"></div>
                      </div>
-
-               
                   </div>
                </div>
             </div>
          </div>
       </div>
+      
+   
+      
       <div class="tp-testimonial-shape">
          <div class="tp-testimonial-two-shape-one">
             <img src="assets/img/testimonial/testimonial-2-shape-2.png" alt="">
@@ -2040,8 +2376,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="row gx-0">
          <div class="col-lg-3 col-md-6">
             <div class="tp-brand-wrapper mb-40">
-               <h4 class="tp-brand-title"><br> Business Company <br>
-                  <span>Growing with</span> Us</h4>
+               <h4 class="tp-brand-title"><br> <br>
+                  <span>Grow with</span> Us</h4>
             </div>
          </div>
          <div class="col-lg-3 col-md-6">
@@ -2228,175 +2564,249 @@ document.addEventListener('DOMContentLoaded', function() {
      
    </main>
 
-     <!-- footer-area-start -->
-   <footer>
-      <div class="footer-area">
-         <div class="tp-footer-top pt-115 pb-70 theme-bg" data-background="assets/img/footer/one/footer-bg-1.jpg">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-3 col-md-6 col-sm-12">
-                     <div class="tp-footer-widget footer-col-1 mb-40 wow fadeInUp" data-wow-duration="1s"
-                        data-wow-delay=".4s">
-                        <div class="tp-footer-widget-logo mb-15">
-                           <a href="index.html">
-                              <img data-width="250" src ="assets/img/logo/logo.png" alt="fw-logo">
-                           </a>
-                        </div>
-                        <div class="tp-footer-widget-content">
-                           <div class="tp-footer-widget-content-list">
-                              <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-square-phone"></i><a href="tel:+91 888 5165 333">+91 888 5165 333
-                                    </a>
-                              </div>
-                              <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-envelope"></i> <a
-                                    href="mailto:Collabridgeofficaila@gmail.com">info@collabridge.com</a>
-                              </div>
-                              <div class="tp-footer-widget-content-list-item">
-                                 <i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/duMPhuScBMHD6wLs6"target="_blank">#309 B-block Asian Suncity,Kondpaur hyderabad</a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <div class="tp-footer-widget tp-footer-col-2 mb-40 wow fadeInUp" data-wow-duration="1.2s"
-                        data-wow-delay=".6s">
-                        <h4 class="tp-footer-widget-title mb-30">Navigation</h4>
-                        <div class="tp-footer-widget-link">
-                           <ul>
-                              <li><a href="about.html"><i class="fa-sharp fa-solid fa-plus"></i> About Collabridge</a></li>
-                              <li><a href="services.html"><i class="fa-sharp fa-solid fa-plus"></i> Expertize</a></li>
-                              <li><a href="blog.html"><i class="fa-sharp fa-solid fa-plus"></i> News & Media</a></li>
-                              <li><a href="Careers.html"><i class="fa-sharp fa-solid fa-plus"></i> Careers</a>
-                              </li>
-                              <li><a href="contact.html"><i class="fa-sharp fa-solid fa-plus"></i> Contact</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
-                         <h4 class="tp-footer-widget-title mb-40">Featured Videos</h4>
-                         <div class="tp-footer-widget-video-gallery">
-                             <div class="tp-footer-video-grid">
-                                 <!-- Video 1 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/CB_AI.mp4">                                         <div class="video-thumb">
-                                       <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 1">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                                 <!-- Video 2 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">                                         <div class="video-thumb">
-                                       <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 2">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                                 <!-- Video 3 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/chat_bridge_video.mp4">                                         <div class="video-thumb">
-                                       <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 3">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                                 <!-- Video 4 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/email.mp4">                                         <div class="video-thumb">
-                                       <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 4">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                                 <!-- Video 5 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">                                         <div class="video-thumb">
-                                       <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 5">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                                 <!-- Video 6 -->
-                                 <div class="tp-footer-video-item">
-                                    <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/doc.mp4">                                         <div class="video-thumb">
-                                             <img src="assets/WebImages/expwebp/button1.jpg" alt="Video Thumbnail 6">
-                                             <div class="video-play-icon">
-                                                 <i class="fa-solid fa-play"></i>
-                                             </div>
-                                         </div>
-                                     </a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                  <div class="col-lg-3 col-md-6 col-sm-12">
-                     <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
-                        data-wow-delay="1s">
-                        <h4 class="tp-footer-widget-title mb-20">Subscribe</h4>
-                        <div class="tp-footer-widget-newsletter-wrap">
-                           <form action="#">
-                              <div class="tp-footer-widget-newsletter-wrapper">
-                                 <div class="tp-footer-widget-newsletter-input">
-                                    <input type="email" placeholder="Get News & Updates">
-                                 </div>
-                                 <div class="tp-footer-widget-newsletter-submit">
-                                    <button>
-                                       <i class="fa-regular fa-arrow-right"></i>
-                                    </button>
-                                 </div>
-                              </div>
-                           </form>
-                           <div class="tp-footer-widget-newsletter-content">
-                              <div class="tp-footer-widget-newsletter-social">
-                                 <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                                 <a href="https://www.instagram.com/collabridgeinc/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                 <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                                 <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+<!-- footer-area-start -->
+<footer>
+   <div class="footer-area">
+      <div class="tp-footer-top pt-60 pb-70 theme-bg" data-background="assets/img/footer/one/footer-bg-1.jpg">
+         <div class="container">
+            <!-- Logo Section - Now at the very top -->
+            <div class="row mb-30">
+               <div class="col-12 text-left">
+                  <div class="tp-footer-widget-logo mb-15">
+                     <a href="index.html">
+                        <img data-width="250" src ="assets/img/logo/logo.png" alt="fw-logo">
+                     </a>
                   </div>
                </div>
             </div>
-         </div>
-         <div class="tp-footer-bottom">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-6 col-md-7">
-                     <div class="tp-footer-copyright">
-                        <span>Copyright © 2025 by  <a target="_blank" href="https:www.collabridge.com">Collabridge</a> All Rights Reserved </span>
+            
+            <!-- Office Locations Section - Now below the logo -->
+            <div class="row mb-40">
+               <div class="col-12">
+                  <h4 class="tp-footer-widget-title mb-30">Our Global Offices</h4>
+                  <div class="office-locations-wrapper">
+                     <div class="row">
+                        <!-- First Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp"data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Head Office</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Plano, Texas, USA</p>
+                              <a href="tel:+14695122191" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +1 (469)-512-2191</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
+                        
+                        <!-- Second Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Global Development Center</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
+                              <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
+                        
+                        <!-- Third Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Global Development Center</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
+                              <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
                      </div>
                   </div>
-                  <div class="col-lg-6 col-md-5">
-                     <div class="tp-footer-terms">
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Privacy Policy</a>
-                     </div>
+                  <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0 30px;">
+               </div>
+            </div>
+            
+            <!-- Main Footer Columns - Reorganized -->
+            <div class="row">
+           
+     <!-- Column: Our Expertise -->
+<div class="col-lg-3 col-md-6 col-sm-12">
+   <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
+      data-wow-delay="1s">
+      <h4 class="tp-footer-widget-title mb-20 text-left">Our Expertise</h4>
+      <div class="tp-footer-expertise-wrap">
+         <ul class="tp-footer-expertise-list">
+            <li>
+               <a href="AI-ML.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  AI & Machine Learning
+               </a>
+            </li>
+            <li>
+               <a href="GenAI.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Generative AI Solutions
+               </a>
+            </li>
+            <li>
+               <a href="DataScience.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Data Science & Analytics
+               </a>
+            </li>
+            <li>
+               <a href="DTG.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Digital Transformation
+               </a>
+            </li>
+            <li>
+               <a href="SmartManufacturing.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Smart Manufacturing
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+     <!-- Column 4: Featured Videos (Unchanged) -->
+     <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
+          <h4 class="tp-footer-widget-title mb-30 text-left">Featured Videos</h4>
+          <div class="tp-footer-widget-video-list">
+              <ul class="video-text-links">
+                  <!-- Video links as text -->
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/CB_AI.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        CallScribe AI
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Image Processing AI
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/chat_bridge_video.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        ChatBridge
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/email.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Email Automation
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Visual Recognition 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/doc.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Docbridge AI
+                     </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+               
+            <!-- Column 3: Navigation (Updated to match Featured Videos style) -->
+<div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
+      <h4 class="tp-footer-widget-title mb-30 text-left">Navigation</h4>
+      <div class="tp-footer-widget-video-list">
+         <ul class="video-text-links">
+            <li>
+               <a href="about.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  About Collabridge
+               </a>
+            </li>
+            <li>
+               <a href="services.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Expertize
+               </a>
+            </li>
+            <li>
+               <a href="blog.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  News & Media
+               </a>
+            </li>
+            <li>
+               <a href="Careers.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Careers
+               </a>
+            </li>
+            <li>
+               <a href="contact.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Contact
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+          
+                        <!-- Column 2: Subscribe Form (Unchanged) -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                           <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
+                              data-wow-delay="1s">
+                              <h4 class="tp-footer-widget-title mb-20 text-left">Subscribe</h4>
+                              <div class="tp-footer-widget-newsletter-wrap">
+                                 <form action="#">
+                                    <div class="tp-footer-widget-newsletter-wrapper">
+                                       <div class="tp-footer-widget-newsletter-input">
+                                          <input type="email" placeholder="Get News & Updates">
+                                       </div>
+                                       <div class="tp-footer-widget-newsletter-submit">
+                                          <button>
+                                             <i class="fa-regular fa-arrow-right"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </form>
+                                 <div class="tp-footer-widget-newsletter-content">
+                                    <div class="tp-footer-widget-newsletter-social">
+                                       <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                       <a href="https://www.instagram.com/collabridgeinc/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                       <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                       <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        
+            </div>
+         </div>
+      </div>
+      <div class="tp-footer-bottom">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-md-7">
+                  <div class="tp-footer-copyright">
+                     <span>Copyright © 2025 by  <a target="_blank" href="https:www.collabridge.com">Collabridge</a> All Rights Reserved </span>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-5">
+                  <div class="tp-footer-terms">
+                     <a href="#">Terms of Use</a>
+                     <a href="#">Privacy Policy</a>
                   </div>
                </div>
             </div>
          </div>
       </div>
-   </footer>
-   <!-- footer-area-end -->
-
-
+   </div>
+</footer>
+<!-- footer-area-end -->
    <!-- JS here -->
    <script src="assets/js/vendor/jquery.js"></script>
    <script src="assets/js/vendor/waypoints.js"></script>
@@ -2498,6 +2908,12 @@ document.addEventListener('DOMContentLoaded', function() {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    // Add pagination configuration
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
     },
     breakpoints: {
         320: {
@@ -2672,6 +3088,7 @@ setCookie(name, value, days) {
    document.addEventListener('DOMContentLoaded', () => {
        const consent = new CookieConsent();
    });
+   
    </script>
    <!-- Add this script before the closing </body> tag -->
 <script>
@@ -2752,6 +3169,61 @@ setCookie(name, value, days) {
      });
    });
  </script>
+ <!-- Add this JavaScript to update the hover behavior -->
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+       const menuItems = document.querySelectorAll('.dropdown-category');
+       
+       menuItems.forEach(item => {
+           const bgOverlay = item.querySelector('div[style*="transform: translateX(-100%)"]');
+           const arrow = item.querySelector('svg');
+           const colorDot = item.querySelector('span[style*="display: inline-block; width: 8px;"]');
+           
+           item.addEventListener('mouseenter', function() {
+               bgOverlay.style.transform = 'translateX(0)';
+               arrow.style.opacity = '1';
+               arrow.style.transform = 'translateX(3px)';
+               colorDot.style.transform = 'scale(1.2)';
+           });
+           
+           item.addEventListener('mouseleave', function() {
+               bgOverlay.style.transform = 'translateX(-100%)';
+               arrow.style.opacity = '0.6';
+               arrow.style.transform = 'translateX(0)';
+               colorDot.style.transform = 'scale(1)';
+           });
+       });
+   });
+   </script>
+   <script>
+      // Add this script to initialize the hover effects
+document.addEventListener('DOMContentLoaded', function() {
+    const menuItems = document.querySelectorAll('.collabridge-dropdown-item');
+    
+    menuItems.forEach(item => {
+        const highlight = item.querySelector('.collabridge-dropdown-highlight');
+        const arrow = item.querySelector('.collabridge-dropdown-arrow');
+        const dot = item.querySelector('.collabridge-dropdown-dot');
+        
+        item.addEventListener('mouseenter', function() {
+            highlight.style.transform = 'translateX(0)';
+            arrow.style.opacity = '1';
+            arrow.style.transform = 'translateX(3px)';
+            dot.style.transform = 'scale(1.2)';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            highlight.style.transform = 'translateX(-100%)';
+            arrow.style.opacity = '0.6';
+            arrow.style.transform = 'translateX(0)';
+            dot.style.transform = 'scale(1)';
+        });
+    });
+});
+   </script>
+   <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+   <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
+
 </body>
 
 
