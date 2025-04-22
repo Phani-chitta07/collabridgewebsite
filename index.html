@@ -847,6 +847,53 @@ input:checked + .slider:before {
     display: none !important;
   }
 }
+/* Reduce spacing between sections */
+section {
+    padding: 40px 0 !important; /* Reduced from 60px */
+    margin-bottom: 0 !important;
+    overflow: visible;
+}
+
+/* Reduce specific bottom paddings */
+.pb-60 {
+    padding-bottom: 20px !important;
+}
+
+.pb-120 {
+    padding-bottom: 40px !important;
+}
+
+/* Reduce margins between content wrappers */
+.mb-60, .mb-40, .mb-35, .mb-30 {
+    margin-bottom: 20px !important;
+}
+
+/* Reduce space after section titles */
+.tp-section-two.mb-40 {
+    margin-bottom: 15px !important;
+}
+
+/* Fix step area spacing specifically */
+.step-area {
+    padding-top: 20px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Reduce space in video area */
+.video-area.tp-video-two.mb-120 {
+    margin-bottom: 40px !important;
+}
+
+/* Adjust testimonial spacing */
+.testimonial-area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Reduce brand area bottom spacing */
+.brand-area.pb-120 {
+    padding-bottom: 40px !important;
+}
    </style>
 </head>
 
@@ -875,6 +922,7 @@ input:checked + .slider:before {
       </div>
    </div>
    <!-- pre loader area end -->
+    
 <!-- Cookie Consent Banner -->
 <div class="cookie-consent">
    <div class="cookie-content">
@@ -1375,81 +1423,74 @@ input:checked + .slider:before {
    </section>
    <!-- video-area-end -->
 
-      <!-- about-area-start -->
-      <section class="about-area tp-about-two pb-60">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-6">
-                  <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                     <div class="tp-about-two-thumb" style="display: flex; justify-content: flex-start; align-items: flex-start;">
-                        <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style=" height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
-                    </div>
-                     
-                     <div class="tp-about-two-thumb-shape-two d-none d-md-block">
-                        <img src="assets/img/about/two/about-2-shape-3.png" alt="">
-                     </div>
+<!-- about-area-start -->
+<section class="about-area tp-about-two pb-60">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <div class="tp-about-two-wrapper mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-section tp-section-two mb-40">
+                  <span class="tp-section-sub-title">Who we are </span>
+                  <h4 class="tp-section-title">Committed to Providing Smart Solutions for Every Business Need. <br></h4>
+                  <div class="tp-section-title-wrapper">
+                     <p>We are an enterprise AI/ML Applications / Products / Tools development and services related thereof company with HQ office in US and development centres in Bangalore and Hyderabad. Our team of experienced professionals provide global IT/OT solutions focused on maximizing Business value. 
+                        We specialize in creating integrated Digital Transformation platforms. Our approach involves Digitizing processes, creating Digital interfaces, and integrating with Digital ecosystems.  
+                     </p>
                   </div>
                </div>
-               <div class="col-lg-6">
-                  <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                     <div class="tp-section tp-section-two mb-40">
-                        <span class="tp-section-sub-title">Who we are </span>
-                        <h4 class="tp-section-title">Committed to Providing Smart Solutions for Every Business Need. <br></h4>
-                        <div class="tp-section-title-wrapper">
-                           <p>We are an enterprise AI/ML Applications / Products / Tools development and services related thereof company with HQ office in US and development centres in Bangalore and Hyderabad. Our team of experienced professionals provide global IT/OT solutions focused on maximizing Business value. 
-                              We specialize in creating integrated Digital Transformation platforms. Our approach involves Digitizing processes, creating Digital interfaces, and integrating with Digital ecosystems.  
-                           </p>
-                        </div>
-                     </div>
-                    
-                   
-                  </div>
+             
+            </div>
+         </div>
+         <div class="col-lg-6">
+            <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
+                  <img src="assets/WebImages/Homewebp/who-1.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
+               </div>
+               
+               <div class="tp-about-two-thumb-shape-two d-none d-md-block">
+                  <img src="assets/img/about/two/about-2-shape-3.png" alt="">
                </div>
             </div>
          </div>
-         <div class="tp-about-two-shape">
-            <div class="tp-about-two-shape-3 d-none d-xl-block">
-               <img src="assets/img/about/two/about-2-shape-1.png" alt="">
-            </div>
-            <div class="tp-about-two-shape-4">
-               <img src="assets/img/about/two/about-2-shape-2.png" alt="">
-            </div>
-         </div>
-      </section>
-      <!-- about-area-end -->
+      </div>
+   </div>
+   <div class="tp-about-two-shape">
+      <div class="tp-about-two-shape-3 d-none d-xl-block">
+         <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+      </div>
+      <div class="tp-about-two-shape-4">
+         <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+      </div>
+   </div>
+</section>
+<!-- about-area-end -->
 <!-- what we think start -->
 <section class="about-area tp-about-two pb-60">
    <div class="container">
       <div class="row">
-         <div class="col-lg-6 order-lg-1 order-2">
-            <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+         <div class="col-lg-6 order-lg-2 order-2">
+            <div class="tp-about-two-wrapper mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="tp-section tp-section-two mb-40">
                   <span class="tp-section-sub-title">What we think </span>
-                  <h4 class="tp-section-title"> Always Delivering Smart Solutions for Business Success <br>
+                  <h4 class="tp-section-title"> Always Delivering Smart Solutions for Business Success <br></h4>
                   <div class="tp-section-title-wrapper">
                      <p>COLLABRIDGE, as an enterprise AI/ML company, is constantly on a mission to position information technology as a business technology and information solutions as business solutions. Our endeavor is to create sustainable competitive advantage, competitive strategy, and competitive differentiation by enabling companies to embrace the technologies as appropriate.</p>   
-                     </p>
                   </div>
                </div>
                <div class="tp-about-two-list">
                   <ul>
                      <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Insights Automation </li>
-                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Empower the Business 
-                        Intelligence</li>
-                     </li>
+                     <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Empower the Business Intelligence</li>
                      <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Enable the leadership </li>
                      <li><span><img src="assets/img/icon/check-icon.svg" alt=""></span>Create Digital Organization </li>
-                     
-
                   </ul>
                </div>
-              
             </div>
          </div>
-         <div class="col-lg-6 order-lg-2 order-1">
-            <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-               <div class="tp-about-two-thumb">
-                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
+         <div class="col-lg-6 order-lg-1 order-1">
+            <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
+                  <img src="assets/WebImages/Homewebp/what-1.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
                </div>
               
                <div class="tp-about-two-thumb-shape-two d-none d-md-block">
@@ -1469,67 +1510,59 @@ input:checked + .slider:before {
    </div>
 </section>
 <!-- what we think end -->
-      <!-- what we do start -->
-      <section class="about-area tp-about-two pb-60">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-6">
-                  <div class="tp-about-two-wrap mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
-                     <div class="tp-about-two-thumb">
-                        <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="height: 420px; object-fit: cover; display: block; margin: 0; padding: 0;">
-                     </div>
-                    
-                     <div class="tp-about-two-thumb-shape-two d-none d-md-block">
-                        <img src="assets/img/about/two/about-2-shape-3.png" alt="">
-                     </div>
-                  </div>
+<!-- what we do start -->
+<section class="about-area tp-about-two pb-60">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <div class="tp-about-two-wrapper mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-section tp-section-two mb-40">
+                  <span class="tp-section-sub-title">What we do </span>
+                  <h4 class="tp-section-title">We, as a team of domain experts and topnotch IT consultants engage in: </h4>
                </div>
-               <div class="col-lg-6">
-                  <div class="tp-about-two-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-                     <div class="tp-section tp-section-two mb-40">
-                        <span class="tp-section-sub-title">What we do </span>
-                        <h4 class="tp-section-title">We, as a team of domain experts and topnotch IT consultants engage in: </h4>
-                        
-                     </div>
-                     <div class="tp-about-two-list">
-                        <div class="tp-about-two-list">
-                           <ul style="list-style: none; padding-left: 0;">
-                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
-                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
-                                 <span>Finding elegant solutions to various business problems, aimed at injecting optimization, prediction, and contextual intelligence</span>
-                              </li>
-                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
-                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
-                                 <span>Ways to map IT technologies to drive intelligent automation.</span>
-                              </li>
-                              <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
-                                 <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
-                                 <span>Constant innovation with the objective of process transformation, transaction automation, digital adoption, and decision-making digitization.</span>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                     <div class="tp-about-details d-flex align-items-center flex-wrap">
-                        <div class="tp-about-btn mr-30">
-                           <a class="tp-btn" href="about.html">Discover More</a>
-                        </div>
-                        
-                     </div>
+               <div class="tp-about-two-list">
+                  <div class="tp-about-two-list">
+                     <ul style="list-style: none; padding-left: 0;">
+                        <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                           <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                           <span>Finding elegant solutions to various business problems, aimed at injecting optimization, prediction, and contextual intelligence</span>
+                        </li>
+                        <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                           <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                           <span>Ways to map IT technologies to drive intelligent automation.</span>
+                        </li>
+                        <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
+                           <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
+                           <span>Constant innovation with the objective of process transformation, transaction automation, digital adoption, and decision-making digitization.</span>
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
          </div>
-         <div class="tp-about-two-shape">
-            <div class="tp-about-two-shape-3 d-none d-xl-block">
-               <img src="assets/img/about/two/about-2-shape-1.png" alt="">
-            </div>
-            <div class="tp-about-two-shape-4">
-               <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+         <div class="col-lg-6">
+            <div class="tp-about-two-wrap mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
+               <div class="tp-about-two-thumb" style="display: flex; justify-content: center; align-items: center; max-height: 420px; overflow: hidden;">
+                  <img src="assets/WebImages/Homewebp/do-2.webp" alt="" style="max-height: 420px; max-width: 100%; object-fit: contain; display: block; margin: 0 auto; padding: 0;">
+               </div>
+               
+               <div class="tp-about-two-thumb-shape-two d-none d-md-block">
+                  <img src="assets/img/about/two/about-2-shape-3.png" alt="">
+               </div>
             </div>
          </div>
-      </section>
-      <!-- what we do end-->
-
+      </div>
+   </div>
+   <div class="tp-about-two-shape">
+      <div class="tp-about-two-shape-3 d-none d-xl-block">
+         <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+      </div>
+      <div class="tp-about-two-shape-4">
+         <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+      </div>
+   </div>
+</section>
+<!-- what we do end-->
 
 
 
@@ -1695,6 +1728,7 @@ input:checked + .slider:before {
    </div>
 </section>
 <!-- brand-area-end -->
+
 
 
       <!-- blog-area-start -->
@@ -2049,6 +2083,7 @@ input:checked + .slider:before {
  }
  
  document.addEventListener('DOMContentLoaded', initMobileMenu);
+ 
  </script>
  <!-- Add Intersection Observer for animation -->
  <script>
@@ -2258,6 +2293,85 @@ setCookie(name, value, days) {
        const consent = new CookieConsent();
    });
    </script>
+   <!-- Add this script before the closing </body> tag -->
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+     // First, update the brand area HTML structure
+     const brandArea = document.querySelector('.brand-area .container');
+     if (!brandArea) return;
+     
+     // Get the title and create a new row for it
+     const titleElement = brandArea.querySelector('.tp-brand-title');
+     const title = titleElement ? titleElement.outerHTML : '<h4 class="tp-brand-title">Business Companies <br><span>Growing with</span> Us</h4>';
+     
+     // Get all the brand items/images
+     const brandItems = Array.from(brandArea.querySelectorAll('.tp-brand-item img'));
+     
+     // Create new HTML structure
+     let newHTML = `
+       <div class="row">
+         <div class="col-lg-12">
+           <div class="tp-brand-wrapper mb-40 text-center">
+             ${title}
+           </div>
+         </div>
+       </div>
+       
+       <div class="swiper-container brand-slider">
+         <div class="swiper-wrapper">
+     `;
+     
+     // Add all brand items as slides
+     brandItems.forEach(img => {
+       newHTML += `
+         <div class="swiper-slide">
+           <div class="tp-brand-item">
+             ${img.outerHTML}
+           </div>
+         </div>
+       `;
+     });
+     
+     newHTML += `
+         </div>
+       </div>
+     `;
+     
+     // Replace the container content
+     brandArea.innerHTML = newHTML;
+     
+     // Initialize the Swiper slider
+     const brandSlider = new Swiper('.brand-slider', {
+       slidesPerView: 5,
+       spaceBetween: 30,
+       loop: true,
+       autoplay: {
+         delay: 2000,
+         disableOnInteraction: false,
+       },
+       speed: 1000,
+       grabCursor: true,
+       breakpoints: {
+         320: {
+           slidesPerView: 2,
+           spaceBetween: 20
+         },
+         576: {
+           slidesPerView: 3,
+           spaceBetween: 20
+         },
+         768: {
+           slidesPerView: 4,
+           spaceBetween: 30
+         },
+         992: {
+           slidesPerView: 5,
+           spaceBetween: 30
+         }
+       }
+     });
+   });
+ </script>
 </body>
 
 
