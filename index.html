@@ -1103,6 +1103,49 @@ section {
   }
 }
    </style>
+   <style>
+      /* Aggressive fix for mobile gap in "What We Do" section */
+      @media (max-width: 991px) {
+        /* Container spacing adjustments */
+        .about-area.tp-about-two.pb-60 {
+          padding-bottom: 0 !important;
+          padding-top: 20px !important;
+        }
+        
+        /* Eliminate all margins from wrappers */
+        .tp-about-two-wrapper.mb-60,
+        .tp-about-two-wrap.mb-60 {
+          margin: 0 !important;
+          padding-top: 0 !important;
+          padding-bottom: 15px !important;
+        }
+        
+        /* Force columns to have no spacing */
+        .about-area .col-lg-6 {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+        
+        /* Fix section title spacing */
+        .tp-section.tp-section-two.mb-40 {
+          margin-bottom: 15px !important;
+        }
+        
+        /* Disable all animations in this section */
+        .about-area .wow {
+          animation: none !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        
+        /* Reduce image height and margins */
+        .tp-about-two-thumb {
+          max-height: 220px !important;
+          margin: 0 !important;
+        }
+      }
+    </style>
 
    <!-- Schema.org structured data for organization -->
    <script type="application/ld+json">
@@ -1857,8 +1900,8 @@ document.addEventListener('DOMContentLoaded', function() {
                   <span class="tp-section-sub-title">What we do </span>
                   <h4 class="tp-section-title">We, as a team of domain experts and topnotch IT consultants engage in: </h4>
                </div>
-               <div class="tp-about-two-list">
-                  <div class="tp-about-two-list">
+             
+                 
                      <ul style="list-style: none; padding-left: 0;">
                         <li style="font-weight: normal; display: flex; align-items: flex-start; margin-bottom: 15px; text-align: left;">
                            <span style="margin-right: 10px; flex-shrink: 0;"><img src="assets/img/icon/check-icon.svg" alt=""></span>
@@ -1873,8 +1916,8 @@ document.addEventListener('DOMContentLoaded', function() {
                            <span>Constant innovation with the objective of process transformation, transaction automation, digital adoption, and decision-making digitization.</span>
                         </li>
                      </ul>
-                  </div>
-               </div>
+               
+            
             </div>
          </div>
          <div class="col-lg-6">
@@ -1892,12 +1935,12 @@ document.addEventListener('DOMContentLoaded', function() {
    </div>
    <div class="tp-about-two-shape">
       <div class="tp-about-two-shape-3 d-none d-xl-block">
-         <img src="assets/img/about/two/about-2-shape-1.png" alt="">
+        <img src="assets/img/about/two/about-2-shape-1.png" alt="">
       </div>
       <div class="tp-about-two-shape-4">
-         <img src="assets/img/about/two/about-2-shape-2.png" alt="">
+        <img src="assets/img/about/two/about-2-shape-2.png" alt="">
       </div>
-   </div>
+    </div>
 </section>
 <!-- what we do end-->
 
