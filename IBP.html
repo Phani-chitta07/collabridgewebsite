@@ -1,0 +1,1389 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+   
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Collabridge</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/icon_C.png">
+
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/slick.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+      <link rel="stylesheet" href="assets/css/flaticon_tecz.css">
+      <link rel="stylesheet" href="assets/css/spacing.css">
+      <link rel="stylesheet" href="assets/css/main.css">
+      <style>
+         /* Preloader Styles */
+         #loading {
+             position: fixed;
+             width: 100%;
+             height: 100%;
+             background: #ffffff;
+             z-index: 99999;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         
+         #loading-center {
+             position: relative;
+             text-align: center;
+         }
+         
+         .tp-preloader-content {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         
+         .tp-preloader-logo {
+             position: relative;
+             margin-bottom: 20px;
+         }
+         
+         .tp-preloader-circle {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 190px;
+             height: 190px;
+             animation: rotate 2s linear infinite;
+         }
+         
+         .tp-preloader-circle circle:last-child {
+             stroke-dasharray: 1130;
+             stroke-dashoffset: 1130;
+             animation: dash 2s ease-in-out infinite;
+         }
+         
+         .tp-preloader-subtitle {
+             font-size: 16px;
+             color: #666;
+             margin-top: 15px;
+         }
+         
+         @keyframes rotate {
+             100% { transform: translate(-50%, -50%) rotate(360deg); }
+         }
+         
+         @keyframes dash {
+             0% { stroke-dashoffset: 1130; }
+             50% { stroke-dashoffset: 0; }
+             100% { stroke-dashoffset: -1130; }
+         }
+          /* Add to your existing style section */
+      @media (max-width: 1200px) { /* xl breakpoint */
+          .tp-header-demo-btn {
+              display: none !important;
+          }
+      }
+
+      /* Adjust spacing when demo button is hidden */
+      @media (max-width: 1200px) {
+          .tp-header-right {
+              justify-content: flex-end !important;
+          }
+          
+          .offcanvas-btn.d-xl-none {
+              margin-left: 0 !important;
+          }
+      }
+      
+      /* Add this to your existing style section */
+      .tp-footer-widget-content-list-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 15px;
+      }
+
+      .tp-footer-widget-content-list-item i {
+          flex-shrink: 0;
+          margin-top: 5px;
+      }
+
+      .tp-footer-widget-content-list-item a {
+          flex: 1;
+          word-wrap: break-word;
+          line-height: 1.4;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+          .tp-footer-widget-content-list-item {
+              gap: 8px;
+          }
+          
+          .tp-footer-widget-content-list-item a {
+              font-size: 14px;
+          }
+      }
+
+/* Video popup styles */
+.video-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    display: none;
+}
+
+.video-popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    display: none;
+}
+
+.video-popup-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.video-popup-iframe {
+    width: 80vw;
+    max-width: 900px;
+    height: 45vw;
+    max-height: 506px;
+    border: none;
+}
+/* Video Gallery Grid Styles */
+.tp-footer-video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.tp-footer-video-item {
+    flex: 0 0 calc(33.333% - 10px);
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-play-icon i {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.tp-footer-video-item:hover .video-thumb img {
+    transform: scale(1.1);
+}
+
+.tp-footer-video-item:hover .video-play-icon {
+    background: #474ed4;
+}
+
+.tp-footer-video-item:hover .video-play-icon i {
+    color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tp-footer-video-grid {
+        gap: 8px;
+    }
+    
+    .tp-footer-video-item {
+        flex: 0 0 calc(50% - 8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .tp-footer-video-item {
+        flex: 0 0 100%;
+    }
+}
+         </style>
+   </head>
+   <body>
+
+   <!-- pre loader area start -->
+   <div id="loading">
+      <div id="loading-center">
+         <div id="loading-center-absolute">
+            <!-- loading content here -->
+            <div class="tp-preloader-content">
+               <div class="tp-preloader-logo">
+                  <div class="tp-preloader-circle">
+                     <svg width="190" height="190" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle stroke="#D9D9D9" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
+                        </circle>
+                        <circle stroke="red" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round"></circle>
+                     </svg>
+                  </div>
+                  <img  width= "100"src="assets/img/logo/icon_C.png" alt="">
+               </div>
+            
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- pre loader area end -->
+
+
+      <!-- back to top start -->
+      <div class="back-to-top-wrapper">
+         <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>               
+         </button>
+      </div>
+      <!-- back to top end -->
+
+
+<!-- header area start -->
+<header>
+    <div id="header-sticky" class="tp-header-area tp-header-transparent tp-header-2">
+      <div class="container">
+        <div class="tp-header-box">
+          <div class="row align-items-center">
+            <div class="col-xl-3 col-lg-6 col-md-6 col-6">
+              <div class="logo">
+                <a href="index.html">
+                  <img data-width="250" src="assets/img/logo/logo.png" alt="Collabridge Logo">
+                </a>
+              </div>
+            </div>
+            <div class="col-xl-7 d-none d-xl-block" style="padding-left: 50px;">
+              <div class="main-menu">
+                <nav id="mobile-menu" class="tp-main-menu-content">
+                  <ul>
+ <!-- OFFERINGS MENU -->
+ <li class="has-dropdown tp-megamenu">
+    <a href="services.html">Offerings <i class="fa-solid fa-chevron-down"></i></a>
+    <div class="mega-menu-container" style="font-size: 13px !important; font-weight: bold !important;color: #000 !important;">
+      <div class="container">
+        <!-- First Row - Current Categories -->
+        <div class="row">
+          <!-- AI Products (SaaS) Column -->
+          <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">AI Products (SaaS)</h4>
+              <ul class="mega-menu-list">
+                <li><a href="services-details.html" style="font-size: 18px !important; font-weight: bold !important;color: #000 !important;">Digital Manufacturing</a></li>
+                <li><a href="IBP.html" style="font-size: 12px !important;">Integrated Business Planning​</a></li>
+                <li><a href="df.html" style="font-size: 12px !important;">Demand Forecasting</a></li>
+                <li><a href="svrr.html" style="font-size: 12px !important;">Supply Chain Visibility, <br>Responsiveness and Resilience​​</a></li>
+                <li><a href="IM.html" style="font-size: 12px !important;">Inventory Modeling​</a></li>
+                <li><a href="MRP.html" style="font-size: 12px !important;">MRP Optimization​ </a></li>
+                <li><a href="CM.html" style="font-size: 12px !important;">Condition Monitoring​</a></li>
+                <li><a href="DigitalTwins.html" style="font-size: 12px !important;">Digital Twins​</a></li>
+                <li><a href="Transport.html" style="font-size: 12px !important;">Transport Cost Optimization​​</a></li>
+                <li><a href="VPRA.html" style="font-size: 12px !important;">Vendor Performance & Risk Assessment​​</a></li>
+              </ul>
+            </div>
+          </div>
+     <!-- Services Column with fixed hover effect -->
+ <div class="col-3">
+    <div class="mega-menu-section">
+       <h4 class="mega-menu-title" style="color: #fff !important;">.</h4>
+      <ul class="mega-menu-list">
+        <li class="has-hover-line">
+          <a href="QBPM.html" style="font-size: 18px !important; font-weight: bold !important;color: #000 !important; position: relative; display: inline-block;">
+            Oil & Gas​
+            <span class="hover-line" style="position: absolute !important; bottom: -2px !important; left: 0 !important; width: 0 !important; height: 2px !important; background-color: #d90a2c !important; transition: width 0.3s ease !important;"></span>
+          </a>
+        </li>
+        <li><a href="FE.html" style="font-size: 12px !important;">Furnace Efficiency​​</a></li>
+        <li><a href="FA.html" style="font-size: 12px !important;">Flare Analytics​</a></li>
+        <li><a href="CBO.html" style="font-size: 12px !important;">Crude Basket Optimization​</a></li>
+        <li><a href="COM.html" style="font-size: 12px !important;">Corrosion monitoring​</a></li>
+        <li><a href="PIM.html" style="font-size: 12px !important;">Pipeline Integrity Monitoring​</a></li>
+        <li><a href="IATDO.html" style="font-size: 12px !important;">Intelligent Automation of Trade desk Operations​</a></li>
+        <li><a href="RS.html" style="font-size: 12px !important;">Remote Sensing - VFM</a></li>
+      </ul>
+      
+      
+    </div>
+ </div>
+          
+          <!-- Our Drivers Column -->
+          <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">Services</h4>
+              <ul class="mega-menu-list">
+                <li><a href="QBPM.html" style="font-size: 12px !important;">QBPM</a></li>
+                <li><a href="DTC.html" style="font-size: 12px !important;">Digital Transformation Consulting</a></li>
+                <li><a href="DataScience.html" style="font-size: 12px !important;">DataScience & Advanced Analytics</a></li>
+                <li><a href="DTG.html" style="font-size: 12px !important;">Digital Talent Gardening</a></li>
+                <li><a href="GMS.html" style="font-size: 12px !important;">Globally Managed Systems</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Platforms Column -->
+          <div class="col-3">
+             <div class="mega-menu-section">
+                <h4 class="mega-menu-title" style="color: #fff !important;">.</h4>
+              <ul class="mega-menu-list">
+                <li><a href="services-details.html" style="font-size: 18px !important; font-weight: bold !important;color: #000 !important;">Infrastructure(Iaas)</a></li>
+                <li><a href="OCI.html" style="font-size: 12px !important;">OCI</a></li>
+                <li><a href="Azure.html" style="font-size: 12px !important;">Azure</a></li>
+                <li><a href="AWS.html" style="font-size: 12px !important;">Aws</a></li>
+                <li><a href="GCP.html" style="font-size: 12px !important;">GCP</a></li>
+                <li><a href="H&M.html" style="font-size: 12px !important;">Hosting & Migrations</a></li>
+                <li><a href="DB.html" style="font-size: 12px !important;">Databases</a></li>
+                <li><a href="Network.html" style="font-size: 12px !important;">Network</a></li>
+                <li><a href="Cyber.html" style="font-size: 12px !important;">CyberSecurity</a></li>
+ 
+ 
+ 
+ 
+ 
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      <!-- Separator with reduced margin -->
+ <div class="row">
+    <div class="col-12">
+      <hr style="margin: 7px 0 !important; border-top: 1px solid rgba(0,0,0,0.1);">
+    </div>
+  </div>
+        
+ 
+     <!-- Second Row - Additional Categories -->
+ <div class="row" style="margin-top: -5px !important;">
+          <!-- AI Products (SaaS) Column - Second Row -->
+          <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">Pharmacovigilance​</h4>
+              <ul class="mega-menu-list">
+                <li><a href="callscribe AI.html" style="font-size: 12px !important;">Call Scribe AI​​</a></li>
+                <li><a href="docbridge AI.html" style="font-size: 12px !important;">DocBridge AI​</a></li>
+                <li><a href="EmailAi.html" style="font-size: 12px !important;">EMail AI</a></li>
+                <li><a href="Smartbridge AI.html" style="font-size: 12px !important;">MedTech Smart Bridge</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Services Column - Second Row -->
+          <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">Wholesale & Retail</h4>
+              <ul class="mega-menu-list">
+                <li><a href="PRO.html" style="font-size: 12px !important;">Price Optimization​​</a></li>
+                <li><a href="DA.html" style="font-size: 12px !important;">Discount Analysis​</a></li>
+                <li><a href="TF.html" style="font-size: 12px !important;">Trend Forecasting​​</a></li>
+                <li><a href="LA.html" style="font-size: 12px !important;">Likelihood Analysis​</a></li>
+                <li><a href="CS.html" style="font-size: 12px !important;">Customer Segmentation​</a></li>
+ 
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Our Drivers Column - Second Row -->
+          <!-- <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">Platforms</h4>
+              <ul class="mega-menu-list">
+                <li><a href="OCI.html" style="font-size: 12px !important;">OCI</a></li>
+                <li><a href="Azure.html" style="font-size: 12px !important;">Azure</a></li>
+                <li><a href="AWS.html" style="font-size: 12px !important;">Aws</a></li>
+                <li><a href="GCP.html" style="font-size: 12px !important;">GCP</a></li>
+              </ul>
+            </div>
+          </div> -->
+          
+          <!-- Platforms Column - Second Row -->
+          <!-- <div class="col-3">
+            <div class="mega-menu-section">
+              <h4 class="mega-menu-title">More Platforms</h4>
+              <ul class="mega-menu-list">
+                <li><a href="gcp.html" style="font-size: 12px !important;">Google Cloud</a></li>
+                <li><a href="ibm-cloud.html" style="font-size: 12px !important;">IBM Cloud</a></li>
+                <li><a href="kubernetes.html" style="font-size: 12px !important;">Kubernetes</a></li>
+                <li><a href="serverless.html" style="font-size: 12px !important;">Serverless</a></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </li>
+                    <!-- RESOURCES MENU -->
+                    <li class="has-dropdown tp-megamenu">
+                      <a href="blog.html">Resources <i class="fa-solid fa-chevron-down"></i></a>
+                      <div class="mega-menu-container">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-4">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Learning Resources</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="blog.html">Blogs</a></li>
+                                  <li><a href="blog.html">Case Studies</a></li>
+                                  <li><a href="blog.html">White Papers</a></li>
+                                  <li><a href="blog.html">Demo Videos</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Educational Content</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="blog.html">Academy</a></li>
+                                  <li><a href="blog.html">Webinars</a></li>
+                                  <li><a href="blog.html">Podcasts</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Updates</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="blog.html">News</a></li>
+                                  <li><a href="blog.html">Events</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <!-- COMPANY MENU -->
+                    <li class="has-dropdown tp-megamenu">
+                      <a href="about.html">Company<i class="fa-solid fa-chevron-down"></i></a>
+                      <div class="mega-menu-container">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-3">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">About Us</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="about.html#our-story">Our Story</a></li>
+                                  <li><a href="about.html#mission-vision">Vision & Mission</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Alliances</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="oracle-partnership.html">Oracle</a></li>
+                                  <li><a href="zscaler.html">Zscaler</a></li>
+                                  <li><a href="paloalto.html">Palo Alto Networks</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Technologies</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="AI-ML.html">AI/ML</a></li>
+                                  <li><a href="GenAI.html">GenAI</a></li>
+                                  <li><a href="LLM-SLM.html">LLM/SLM</a></li>
+                                  <li><a href="SAP-BTP.html">SAP, BTP</a></li>
+                                  <li><a href="SAP.html">SAP</a></li>
+                                  <li><a href="Oracle.html">Oracle</a></li>
+                                  <li><a href="Microsoft.html">Microsoft</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-3">
+                              <div class="mega-menu-section">
+                                <h4 class="mega-menu-title">Connect</h4>
+                                <ul class="mega-menu-list">
+                                  <li><a href="contact.html#map">Geographies</a></li>
+                                  <li><a href="Careers.html">Careers</a></li>
+                                  <li><a href="contact.html#contact">Contact</a></li>
+                                  <li class="social-links">
+                                    <a href="https://www.linkedin.com/company/collabridge-solutions" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                    <a href="https://www.facebook.com/CollabridgeSolutions" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/collabridgeinc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://x.com/collabridge" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  
+                </nav>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-6 col-md-6 col-6">
+              <div class="tp-header-right d-flex align-items-center justify-content-end">
+                <div class="tp-header-search">
+                  <a href="RequestDemo.html">
+                    <button class="tp-header-demo-btn">Request a Demo</button>
+                  </a>
+                </div>
+                <div class="offcanvas-btn d-xl-none ml-20">
+                  <button class="offcanvas-open-btn"><i class="fa-solid fa-bars"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header area end -->
+  
+ <!-- Updated offcanvas area with mobile menu -->
+ <div class="offcanvas__area">
+    <div class="offcanvas__wrapper">
+       <div class="offcanvas__close">
+          <button class="offcanvas__close-btn offcanvas-close-btn">
+             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L1 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                   stroke-linejoin="round" />
+                <path d="M1 1L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                   stroke-linejoin="round" />
+             </svg>
+          </button>
+       </div>
+       <div class="offcanvas__content">
+          <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
+             <div class="offcanvas__logo logo">
+                <a href="index.html">
+                  <img src="assets/img/logo/r_black.png" alt="logo" style="width: 250px; height: auto;">
+                </a>
+             </div>
+          </div>
+ 
+      <!-- Mobile menu start -->
+ <div class="offcanvas-mobile-menu">
+    <ul class="mobile-menu-list">
+       <!-- OFFERINGS MENU -->
+       <li class="mobile-menu-item has-children">
+          <a href="services.html" class="toggle-menu">
+             <span>Offerings</span>
+             <i class="toggle-icon fa-regular fa-angle-down"></i>
+          </a>
+          <ul class="sub-menu">
+             <!-- Digital Manufacturing Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Digital Manufacturing</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="services-details.html">Digital Manufacturing</a></li>
+                   <li><a href="IBP.html">Integrated Business Planning​</a></li>
+                   <li><a href="df.html">Demand Forecasting</a></li>
+                   <li><a href="svrr.html">Supply Chain Visibility, Responsiveness and Resilience​​</a></li>
+                   <li><a href="IM.html">Inventory Modeling​</a></li>
+                   <li><a href="MRP.html">MRP Optimization​</a></li>
+                   <li><a href="CM.html">Condition Monitoring​</a></li>
+                   <li><a href="DigitalTwins.html">Digital Twins​</a></li>
+                   <li><a href="Transport.html">Transport Cost Optimization​​</a></li>
+                   <li><a href="VPRA.html">Vendor Performance & Risk Assessment​​</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Oil & Gas Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Oil & Gas</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="FA.html">Oil & Gas​</a></li>
+                   <li><a href="FA.html">Furnace Efficiency​​</a></li>
+                   <li><a href="FE.html">Flare Analytics​</a></li>
+                   <li><a href="CBO.html">Crude Basket Optimization​</a></li>
+                   <li><a href="COM.html">Corrosion monitoring​</a></li>
+                   <li><a href="PIM.html">Pipeline Integrity Monitoring​</a></li>
+                   <li><a href="IATDO.html">Intelligent Automation of Trade desk Operations​</a></li>
+                   <li><a href="RS.html">Remote Sensing - VFM</a></li>
+                </ul>
+             </li>
+      <!-- Pharmacovigilance Section -->
+      <li class="mobile-sub-item has-children">
+       <a href="#" class="toggle-submenu">
+          <span>Pharmacovigilance​</span>
+          <i class="toggle-icon fa-regular fa-angle-down"></i>
+       </a>
+       <ul class="inner-submenu">
+          <li><a href="callscribe AI.html">Call Scribe AI​​</a></li>
+          <li><a href="docbridge AI.html">DocBridge AI​</a></li>
+          <li><a href="EmailAi.html">EMail AI</a></li>
+          <li><a href="Smartbridge AI.html">MedTech Smart Bridge</a></li>
+       </ul>
+    </li>
+    
+    <!-- Wholesale & Retail Section -->
+    <li class="mobile-sub-item has-children">
+       <a href="#" class="toggle-submenu">
+          <span>Wholesale & Retail</span>
+          <i class="toggle-icon fa-regular fa-angle-down"></i>
+       </a>
+       <ul class="inner-submenu">
+          <li><a href="PRO.html">Price Optimization​​</a></li>
+          <li><a href="DA.html">Discount Analysis​</a></li>
+          <li><a href="TF.html">Trend Forecasting​​</a></li>
+          <li><a href="LA.html">Likelihood Analysis​</a></li>
+          <li><a href="CS.html">Customer Segmentation​</a></li>
+       </ul>
+    </li>
+             <!-- Services Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Services</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="QBPM.html">QBPM</a></li>
+                   <li><a href="DTC.html">Digital Transformation Consulting</a></li>
+                   <li><a href="DataScience.html">DataScience & Advanced Analytics</a></li>
+                   <li><a href="DTG.html">Digital Talent Gardening</a></li>
+                   <li><a href="GMS.html">Globally Managed Systems</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Infrastructure Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Infrastructure (IaaS)</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="services-details.html">Infrastructure(IaaS)</a></li>
+                   <li><a href="OCI.html">OCI</a></li>
+                   <li><a href="Azure.html">Azure</a></li>
+                   <li><a href="AWS.html">AWS</a></li>
+                   <li><a href="GCP.html">GCP</a></li>
+                   <li><a href="H&M.html">Hosting & Migrations</a></li>
+                   <li><a href="DB.html">Databases</a></li>
+                   <li><a href="Network.html">Network</a></li>
+                   <li><a href="Cyber.html">CyberSecurity</a></li>
+                </ul>
+             </li>
+             
+        
+          </ul>
+       </li>
+ 
+       <!-- RESOURCES MENU - Updated to match desktop navigation -->
+       <li class="mobile-menu-item has-children">
+          <a href="blog.html" class="toggle-menu">
+             <span>Resources</span>
+             <i class="toggle-icon fa-regular fa-angle-down"></i>
+          </a>
+          <ul class="sub-menu">
+             <!-- Learning Resources Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Learning Resources</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="blog.html">Blogs</a></li>
+                   <li><a href="blog.html">Case Studies</a></li>
+                   <li><a href="blog.html">White Papers</a></li>
+                   <li><a href="blog.html">Demo Videos</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Educational Content Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Educational Content</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="blog.html">Academy</a></li>
+                   <li><a href="blog.html">Webinars</a></li>
+                   <li><a href="blog.html">Podcasts</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Updates Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Updates</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="blog.html">News</a></li>
+                   <li><a href="blog.html">Events</a></li>
+                </ul>
+             </li>
+          </ul>
+       </li>
+ 
+       <!-- COMPANY MENU - Updated to match desktop navigation -->
+       <li class="mobile-menu-item has-children">
+          <a href="about.html" class="toggle-menu">
+             <span>Company</span>
+             <i class="toggle-icon fa-regular fa-angle-down"></i>
+          </a>
+          <ul class="sub-menu">
+             <!-- About Us Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>About Us</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="about.html#our-story">Our Story</a></li>
+                   <li><a href="about.html#mission-vision">Vision & Mission</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Alliances Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Alliances</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="oracle-partnership.html">Oracle</a></li>
+                   <li><a href="zscaler.html">Zscaler</a></li>
+                   <li><a href="paloalto.html">Palo Alto Networks</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Technologies Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Technologies</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="AI-ML.html">AI/ML</a></li>
+                   <li><a href="GenAI.html">GenAI</a></li>
+                   <li><a href="LLM-SLM.html">LLM/SLM</a></li>
+                   <li><a href="SAP-BTP.html">SAP, BTP</a></li>
+                   <li><a href="SAP.html">SAP</a></li>
+                   <li><a href="Oracle.html">Oracle</a></li>
+                   <li><a href="Microsoft.html">Microsoft</a></li>
+                </ul>
+             </li>
+ 
+             <!-- Connect Section -->
+             <li class="mobile-sub-item has-children">
+                <a href="#" class="toggle-submenu">
+                   <span>Connect</span>
+                   <i class="toggle-icon fa-regular fa-angle-down"></i>
+                </a>
+                <ul class="inner-submenu">
+                   <li><a href="contact.html#map">Geographies</a></li>
+                   <li><a href="Careers.html">Careers</a></li>
+                   <li><a href="contact.html#contact">Contact</a></li>
+                </ul>
+             </li>
+          </ul>
+       </li>
+    </ul>
+ </div>
+ <!-- Mobile menu end -->
+ 
+          <div class="offcanvas__btn mt-30">
+             <a href="RequestDemo.html" class="tp-btn">Request A Demo</a>
+          </div>
+          
+          <div class="offcanvas__social mt-30">
+             <a href="https://www.facebook.com/CollabridgeSolutions" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+             <a href="https://www.instagram.com/collabridgeinc" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://in.linkedin.com/company/collabridge-solutions" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+             <a href="https://x.com/collabridge" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+       </div>
+    </div>
+ </div>
+ 
+
+
+
+  
+
+
+   <main>
+
+      <!-- breadcrumb-area-start -->
+      <section class="breadcrumb-area breadcrumb-wrap">
+         <div class="breadcrumb-bg" data-background="assets/WebImages/expwebp/exp12.jpg"></div>
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-12">
+                  <div class="tpbreadcrumb">
+                     <div class="breadcrumb-link mb-15">
+                        <span class="breadcrumb-item-active"><a href="index.html">Home</a></span>
+                        <span> /Integrated Business Planning</span>
+                     </div>
+                     <h2 class="breadcrumb-title">Maximizing production potential through smart, connected manufacturing systems.</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="breadcrumb-shape">
+            <div class="breadcrumb-shape-1 wow fadeInRight" data-wow-duration="1.8s" data-wow-delay=".4s">
+               <img src="assets/img/breadcrumb/breadcrumb-shape-1.png" alt="">
+            </div>
+            <div class="breadcrumb-shape-4 wow slideInRight"  data-wow-duration="1.2s" data-wow-delay=".1s">
+               <img src="assets/img/breadcrumb/breadcrumb-shape-3.png" alt="">
+            </div>
+            <div class="breadcrumb-shape-5 wow slideInRight"  data-wow-duration="1.4s" data-wow-delay=".3s">
+               <img src="assets/img/breadcrumb/breadcrumb-shape-2.png" alt="">
+            </div>
+         </div>
+      </section>
+      <!-- breadcrumb-area-end -->
+    <!-- sercices-area-start -->
+    <section class="services-area pt-115 pb-80">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-4">
+                <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
+
+                    <div class="tp-services-details-services mb-50">
+                        <h4 class="tp-services-details-services-title">Digital Manufacturing</h4>
+                        <div class="tp-services-details-services-wrap">
+                            <a href="IBP.html">Integrated Business <br>Planning<i class="fa-light fa-arrow-right"></i></a>
+                            <a href="df.html">Demand Forecasting <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="svrr.html">Supply Chain Visibility,<br>Responsiveness,Resilience​​<i class="fa-light fa-arrow-right"></i></a>
+                            <a href="IM.html">Inventory Modeling<i class="fa-light fa-arrow-right"></i></a>
+                            <a href="MRP.html">MRP Optimization <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="CM.html">Condition Monitoring <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="DigitalTwins.html">Digital Twins <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="Transport.html">Transport Cost<br> Optimization <i class="fa-light fa-arrow-right"></i></a>
+                            <a href="VPRA.html">Vendor Performance &<br> Risk Assessment​​ <i class="fa-light fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="col-lg-8">
+               <div class="tp-services-details-wrapper ml-30">
+                  <div class="tp-services-details-main-thumb mb-30 w-img">
+                     <img src="assets/WebImages/expwebp/manufacturing.webp" alt="">
+                  </div>
+                  <h4 class="tp-services-details-title mb-20">Manufacturing</h4>
+                  <p>
+                     COLLABRIDGE empowers the Manufacturing sector with AI-driven automation, efficiency, and resilience. Our Self-Optimizing Factory model leverages IIoT, Digital Twins, and Advanced Analytics for real-time optimization and predictive maintenance. We enhance supply chain visibility, demand forecasting, inventory modeling, and MRP optimization. With robotics, cloud & edge computing, and cybersecurity, we ensure scalable and secure operations. Our expertise in sustainable manufacturing and ERP integration drives efficiency and resilience. We also offer training programs to upskill the workforce for next-gen manufacturing.                  </p>
+                  <div class="tp-services-details-check-container">
+                     <!-- First row of checkboxes -->
+                     <div class="tp-services-details-check d-flex align-items-center mt-30">
+                        <div class="tp-services-details-check-item d-flex align-items-center mb-20">
+                           <i class="fa-light fa-check"></i>
+                           <span>Integrated Business Planning</span>
+                        </div>
+                        <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
+                           <i class="fa-light fa-check"></i>
+                           <span>Inventory Modeling</span>
+                        </div>
+                     </div>
+                     
+                     
+                     <!-- Second row of checkboxes -->
+                     <div class="tp-services-details-check d-flex align-items-center mt-20">
+                        <div class="tp-services-details-check-item d-flex align-items-center mb-20">
+                           <i class="fa-light fa-check"></i>
+                           <span>Transport Cost Optimization</span>
+                        </div>
+                        
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+   <!-- sercices-area-end -->
+
+   </main>
+
+    <!-- footer-area-start -->
+<footer>
+   <div class="footer-area">
+      <div class="tp-footer-top pt-60 pb-70 theme-bg" data-background="assets/img/footer/one/footer-bg-1.jpg">
+         <div class="container">
+            <!-- Logo Section - Now at the very top -->
+            <div class="row mb-30">
+               <div class="col-12 text-left">
+                  <div class="tp-footer-widget-logo mb-15">
+                     <a href="index.html">
+                        <img data-width="250" src ="assets/img/logo/logo.png" alt="fw-logo">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Office Locations Section - Now below the logo -->
+            <div class="row mb-40">
+               <div class="col-12">
+                  <h4 class="tp-footer-widget-title mb-30">Our Global Offices</h4>
+                  <div class="office-locations-wrapper">
+                     <div class="row">
+                        <!-- First Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp"data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Head Office</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Plano, Texas, USA</p>
+                              <a href="tel:+14695122191" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +1 (469)-512-2191</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
+                        
+                        <!-- Second Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Global Development Center</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
+                              <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
+                        
+                        <!-- Third Office -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+                           <div class="location-office-item text-left mb-30">
+                              <h4 class="mb-10" style="color: #fff;">Global Development Center</h4>
+                              <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
+                              <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333</a>
+                              <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0 30px;">
+               </div>
+            </div>
+            
+            <!-- Main Footer Columns - Reorganized -->
+            <div class="row">
+           
+     <!-- Column: Our Expertise -->
+<div class="col-lg-3 col-md-6 col-sm-12">
+   <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
+      data-wow-delay="1s">
+      <h4 class="tp-footer-widget-title mb-20 text-left">Our Expertise</h4>
+      <div class="tp-footer-expertise-wrap">
+         <ul class="tp-footer-expertise-list">
+            <li>
+               <a href="AI-ML.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  AI & Machine Learning
+               </a>
+            </li>
+            <li>
+               <a href="GenAI.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Generative AI Solutions
+               </a>
+            </li>
+            <li>
+               <a href="DataScience.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Data Science & Analytics
+               </a>
+            </li>
+            <li>
+               <a href="DTG.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Digital Transformation
+               </a>
+            </li>
+            <li>
+               <a href="SmartManufacturing.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Smart Manufacturing
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+     <!-- Column 4: Featured Videos (Unchanged) -->
+     <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
+          <h4 class="tp-footer-widget-title mb-30 text-left">Featured Videos</h4>
+          <div class="tp-footer-widget-video-list">
+              <ul class="video-text-links">
+                  <!-- Video links as text -->
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/CB_AI.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        CallScribe AI
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Image Processing AI
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/chat_bridge_video.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        ChatBridge
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/email.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Email Automation
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/4. Image(AI).mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Visual Recognition 
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/doc.mp4">
+                        <i style="margin-right: 10px;"></i>
+                        Docbridge AI
+                     </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+               
+            <!-- Column 3: Navigation (Updated to match Featured Videos style) -->
+<div class="col-lg-3 col-md-6 col-sm-6">
+   <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
+      <h4 class="tp-footer-widget-title mb-30 text-left">Navigation</h4>
+      <div class="tp-footer-widget-video-list">
+         <ul class="video-text-links">
+            <li>
+               <a href="about.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  About Collabridge
+               </a>
+            </li>
+            <li>
+               <a href="services.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Expertize
+               </a>
+            </li>
+            <li>
+               <a href="blog.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  News & Media
+               </a>
+            </li>
+            <li>
+               <a href="Careers.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Careers
+               </a>
+            </li>
+            <li>
+               <a href="contact.html">
+                  <i  style=" margin-right: 10px;"></i>
+                  Contact
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</div>
+          
+                        <!-- Column 2: Subscribe Form (Unchanged) -->
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                           <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s"
+                              data-wow-delay="1s">
+                              <h4 class="tp-footer-widget-title mb-20 text-left">Subscribe</h4>
+                              <div class="tp-footer-widget-newsletter-wrap">
+                                 <form action="#">
+                                    <div class="tp-footer-widget-newsletter-wrapper">
+                                       <div class="tp-footer-widget-newsletter-input">
+                                          <input type="email" placeholder="Get News & Updates">
+                                       </div>
+                                       <div class="tp-footer-widget-newsletter-submit">
+                                          <button>
+                                             <i class="fa-regular fa-arrow-right"></i>
+                                          </button>
+                                       </div>
+                                    </div>
+                                 </form>
+                                 <div class="tp-footer-widget-newsletter-content">
+                                    <div class="tp-footer-widget-newsletter-social">
+                                       <a href="https://www.facebook.com/CollabridgeSolutions"target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                       <a href="https://www.instagram.com/collabridgeinc/"target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                       <a href="https://in.linkedin.com/company/collabridge-solutions"target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                                       <a href="#"target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        
+            </div>
+         </div>
+      </div>
+      <div class="tp-footer-bottom">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-6 col-md-7">
+                  <div class="tp-footer-copyright">
+                     <span>Copyright © 2025 by  <a target="_blank" href="https:www.collabridge.com">Collabridge</a> All Rights Reserved </span>
+                  </div>
+               </div>
+               <div class="col-lg-6 col-md-5">
+                  <div class="tp-footer-terms">
+                     <a href="#">Terms of Use</a>
+                     <a href="#">Privacy Policy</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- footer-area-end -->
+
+
+      <!-- JS here -->
+      <script src="assets/js/vendor/jquery.js"></script>
+      <script src="assets/js/vendor/waypoints.js"></script>
+      <script src="assets/js/bootstrap-bundle.js"></script>
+      <script src="assets/js/meanmenu.js"></script>
+      <script src="assets/js/swiper-bundle.js"></script>
+      <script src="assets/js/slick.js"></script>
+      <script src="assets/js/range-slider.js"></script>
+      <script src="assets/js/magnific-popup.js"></script>
+      <script src="assets/js/nice-select.js"></script>
+      <script src="assets/js/purecounter.js"></script>
+      <script src="assets/js/countdown.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/isotope-pkgd.js"></script>
+      <script src="assets/js/imagesloaded-pkgd.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/main.js"></script>
+       <!-- Add your new mobile menu JavaScript here -->
+     <script>
+      function initMobileMenu() {
+   // Handle main submenu toggles
+   document.querySelectorAll('.mobile-menu-header > .submenu-toggle').forEach(toggle => {
+     toggle.addEventListener('click', (e) => {
+       e.preventDefault();
+       const header = toggle.closest('.mobile-menu-header');
+       const submenu = header.querySelector('.mobile-submenu-links');
+       
+       // Close other main submenus
+       document.querySelectorAll('.mobile-menu-header').forEach(other => {
+         if (other !== header) {
+           other.querySelector('.mobile-submenu-links')?.classList.remove('active');
+           other.querySelector('.submenu-toggle')?.classList.remove('active');
+         }
+       });
+       
+       // Toggle current submenu
+       toggle.classList.toggle('active');
+       submenu.classList.toggle('active');
+     });
+   });
+ 
+   // Handle nested dropdown toggles
+   document.querySelectorAll('.has-dropdown > .submenu-toggle').forEach(toggle => {
+     toggle.addEventListener('click', (e) => {
+       e.preventDefault();
+       const parent = toggle.closest('.has-dropdown');
+       const submenu = parent.querySelector('.submenu');
+       
+       // Close other dropdowns at same level
+       const siblings = parent.parentElement.children;
+       Array.from(siblings).forEach(sibling => {
+         if (sibling !== parent && sibling.classList.contains('has-dropdown')) {
+           sibling.classList.remove('active');
+           sibling.querySelector('.submenu')?.classList.remove('active');
+         }
+       });
+       
+       // Toggle current dropdown
+       parent.classList.toggle('active');
+       submenu.classList.toggle('active');
+     });
+   });
+ }
+ 
+ document.addEventListener('DOMContentLoaded', initMobileMenu);
+ </script>
+ <script>
+   document.addEventListener('DOMContentLoaded', function() {
+       const loader = document.getElementById('loading');
+       const maxLoadTime = 2000; // Maximum loading time in milliseconds
+   
+       // Function to hide loader
+       function hideLoader() {
+           loader.style.opacity = '0';
+           loader.style.transition = 'opacity 0.3s ease';
+           
+           setTimeout(() => {
+               loader.style.display = 'none';
+           }, 300);
+       }
+   
+       // Hide loader when page is fully loaded
+       window.addEventListener('load', hideLoader);
+   
+       // Fallback: Hide loader after maxLoadTime
+       setTimeout(hideLoader, maxLoadTime);
+   
+       // Add animation to the circle
+       const circle = document.querySelector('.tp-preloader-circle circle:last-child');
+       if (circle) {
+           circle.classList.add('animate-circle');
+       }
+   });
+   </script>
+    <script>
+      // Add this after your existing scripts
+      document.addEventListener('DOMContentLoaded', function() {
+          // Create popup elements
+          const overlay = document.createElement('div');
+          overlay.className = 'video-popup-overlay';
+          
+          const container = document.createElement('div');
+          container.className = 'video-popup-container';
+          
+          const closeBtn = document.createElement('div');
+          closeBtn.className = 'video-popup-close';
+          closeBtn.innerHTML = '×';
+          
+          const iframe = document.createElement('iframe');
+          iframe.className = 'video-popup-iframe';
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          
+          container.appendChild(closeBtn);
+          container.appendChild(iframe);
+          document.body.appendChild(overlay);
+          document.body.appendChild(container);
+          
+          // Handle video clicks
+          document.querySelectorAll('.video-popup').forEach(link => {
+              link.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  const videoUrl = this.getAttribute('data-video-url');
+                  iframe.src = videoUrl;
+                  overlay.style.display = 'block';
+                  container.style.display = 'block';
+              });
+          });
+          
+          // Handle close click
+          [overlay, closeBtn].forEach(el => {
+              el.addEventListener('click', function() {
+                  overlay.style.display = 'none';
+                  container.style.display = 'none';
+                  iframe.src = '';
+              });
+          });
+      });
+      </script>
+         <script>
+            // Mobile Menu Functionality with Animation
+       document.addEventListener('DOMContentLoaded', function() {
+         // Toggle main menu items
+         const toggleMenuLinks = document.querySelectorAll('.toggle-menu');
+         toggleMenuLinks.forEach(link => {
+           link.addEventListener('click', function(e) {
+             e.preventDefault();
+             const subMenu = this.nextElementSibling;
+             
+             // Close other open main menus
+             toggleMenuLinks.forEach(otherLink => {
+               if (otherLink !== this && otherLink.classList.contains('active')) {
+                 otherLink.classList.remove('active');
+                 const otherMenu = otherLink.nextElementSibling;
+                 otherMenu.classList.remove('active');
+               }
+             });
+             
+             // Toggle current menu
+             this.classList.toggle('active');
+             subMenu.classList.toggle('active');
+           });
+         });
+         
+         // Toggle submenu items
+         const toggleSubMenuLinks = document.querySelectorAll('.toggle-submenu');
+         toggleSubMenuLinks.forEach(link => {
+           link.addEventListener('click', function(e) {
+             e.preventDefault();
+             const innerSubMenu = this.nextElementSibling;
+             
+             // Close other open submenus at this level
+             const siblings = Array.from(this.parentElement.parentElement.children)
+               .filter(el => el !== this.parentElement)
+               .map(el => el.querySelector('.toggle-submenu'))
+               .filter(Boolean);
+               
+             siblings.forEach(sibling => {
+               if (sibling.classList.contains('active')) {
+                 sibling.classList.remove('active');
+                 sibling.nextElementSibling.classList.remove('active');
+               }
+             });
+             
+             // Toggle current submenu
+             this.classList.toggle('active');
+             innerSubMenu.classList.toggle('active');
+           });
+         });
+       });
+          </script>
+        <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+        <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
+   </body>
+
+</html>

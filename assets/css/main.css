@@ -6240,6 +6240,29 @@ body .ui-tooltip {
   color: var(--tp-theme-primary);
 }
 /*New Header*/
+/* Dropdown toggle styling */
+.tp-megamenu > a .dropdown-toggle {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Rotate toggle when menu is open */
+.tp-megamenu:hover > a .dropdown-toggle,
+.tp-megamenu:focus-within > a .dropdown-toggle {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+/* Adjust spacing for navigation links */
+.tp-megamenu > a {
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+}
 /* Mega Menu Styles - Ultra-Compact Version */
 .mega-menu-container {
   position: fixed;
@@ -6247,7 +6270,7 @@ body .ui-tooltip {
   left: 0;
   right: 0;
   width: 100%;
-  background: #000000;
+  background: #ffffff;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   padding: 4px 0;
   z-index: 999;
@@ -6281,9 +6304,9 @@ body .ui-tooltip {
   padding: 0;
   margin: 0 !important;
   list-style: none;
-  display: block !important;
   width: 100%;
   flex-direction: column !important;
+  font-family: inherit;
 }
 
 /* Ensuring list items display vertically */
@@ -6291,18 +6314,17 @@ body .ui-tooltip {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 1 !important;
-  display: block !important;
   width: 100%;
   margin-bottom: 1px !important;
   float: none !important;
+  font-family: inherit;
 }
 
 /* Ensuring links display as proper vertical blocks */
 .mega-menu-list li a {
-  color: #d90a2c;
+  color: #5c5b5bf9 !important;
   font-size: 15px !important;
   transition: all 0.3s ease;
-  display: block !important;
   padding: 1px 0 !important;
   text-decoration: none;
   line-height: 1.3 !important;
@@ -6311,7 +6333,7 @@ body .ui-tooltip {
   text-align: left;
   transform: translateX(3px);
   background-color: rgba(255,255,255,0.03); /* Subtle highlight */
-
+  font-weight: normal; /* Added to make text not bold */
 }
 
 .mega-menu-list li a:hover,
@@ -6323,13 +6345,19 @@ body .ui-tooltip {
 .mega-menu-title {
   font-size: 20px;
   font-weight: 600;
-  color: #fdf9f9;
+  color: #000;
   margin-bottom: 2px !important;
   padding-bottom: 2px !important;
   position: relative;
-  display: inline-block;
+  font-family: inherit;
   width: auto; /* Only as wide as content */
+  /* Font smoothing properties */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
 }
+
 /* For smoother dropdown experience */
 .has-dropdown.tp-megamenu {
   position: relative;
@@ -6364,7 +6392,7 @@ body .ui-tooltip {
 
 .mega-menu-container .row > [class*="col-"] {
   padding: 0 1px !important;
-  display: block;
+
 }
 
 .mega-menu-container .container {
@@ -6389,6 +6417,25 @@ body .ui-tooltip {
     font-size: 10px !important;
   }
 }
+/* Reduce the space between rows in mega menu */
+.mega-menu-container .row + .row {
+  margin-top: 10px; /* Reduced from previous value */
+}
+
+/* Fix the extremely large bottom margin of sections */
+.mega-menu-section {
+  padding: 2px !important;
+  margin-bottom: 20px !important; /* Reduced from 300px! */
+}
+
+/* Reduce the separator margin */
+.mega-menu-container hr {
+  margin: 10px 0 !important; /* Reduced from 20px */
+  border-top: 1px solid rgba(0,0,0,0.05) !important; /* Lighter border */
+}
+
+
+
 /* Horizontal Social Links in Mega Menu */
 li.social-links {
   display: flex !important;
@@ -6413,7 +6460,7 @@ li.social-links a {
 
 li.social-links a i {
   font-size: 16px;
-  color: #fff;
+  color: #000000;
 }
 
 li.social-links a:hover {
