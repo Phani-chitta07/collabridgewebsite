@@ -6300,7 +6300,7 @@ body .ui-tooltip {
 /* Ensuring links display as proper vertical blocks */
 .mega-menu-list li a {
   color: #d90a2c;
-  font-size: 17px !important;
+  font-size: 15px !important;
   transition: all 0.3s ease;
   display: block !important;
   padding: 1px 0 !important;
@@ -6321,7 +6321,7 @@ body .ui-tooltip {
 }
 
 .mega-menu-title {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   color: #fdf9f9;
   margin-bottom: 2px !important;
