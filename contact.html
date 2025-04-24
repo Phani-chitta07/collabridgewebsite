@@ -1447,6 +1447,139 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
        });
    });
    </script>
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find the contact form - adjust the selector if needed
+        const contactForm = document.querySelector('form');
+        
+        if (!contactForm) {
+          console.error('Contact form not found');
+          return;
+        }
+        
+        // Create message container for notifications
+        const messageContainer = document.createElement('div');
+        messageContainer.className = 'form-message';
+        messageContainer.style.padding = '15px';
+        messageContainer.style.marginTop = '20px';
+        messageContainer.style.borderRadius = '5px';
+        messageContainer.style.display = 'none';
+        contactForm.appendChild(messageContainer);
+        
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Get form fields - adjust selectors as needed for your form
+          const firstName = contactForm.querySelector('input[name="firstName"]')?.value || 
+                            contactForm.querySelector('input[placeholder="First Name"]')?.value || '';
+          const lastName = contactForm.querySelector('input[name="lastName"]')?.value || 
+                           contactForm.querySelector('input[placeholder="Last Name"]')?.value || '';
+          const email = contactForm.querySelector('input[name="email"]')?.value || 
+                        contactForm.querySelector('input[type="email"]')?.value || 
+                        contactForm.querySelector('input[placeholder="Email Address"]')?.value || '';
+          const phone = contactForm.querySelector('input[name="phone"]')?.value || 
+                        contactForm.querySelector('input[placeholder="Phone Number"]')?.value || '';
+          const company = contactForm.querySelector('input[name="company"]')?.value || 
+                          contactForm.querySelector('input[placeholder="Company Name"]')?.value || '';
+          const subject = contactForm.querySelector('input[name="subject"]')?.value || 
+                          contactForm.querySelector('input[placeholder="Your Subject"]')?.value || '';
+          const message = contactForm.querySelector('textarea[name="message"]')?.value || 
+                          contactForm.querySelector('textarea')?.value || '';
+          
+          // Validate form
+          if (!firstName || !lastName || !email || !message) {
+            showMessage('error', 'Please fill in all required fields');
+            return;
+          }
+          
+          // Simple email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showMessage('error', 'Please enter a valid email address');
+            return;
+          }
+          
+          // Disable submit button and show loading
+          const submitBtn = contactForm.querySelector('button[type="submit"]');
+          const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+          if (submitBtn) {
+            submitBtn.innerHTML = 'Sending...';
+            submitBtn.disabled = true;
+          }
+          
+          // Prepare form data
+          const formData = {
+            firstName,
+            lastName,
+            email,
+            phone,
+            company,
+            subject,
+            message
+          };
+          
+          // Send data to server
+          fetch('/collabridge-forms/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+          })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`Server responded with status ${response.status}`);
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data.success) {
+              // Clear form
+              contactForm.reset();
+              showMessage('success', 'Your message has been sent successfully! We\'ll get back to you soon.');
+            } else {
+              throw new Error(data.message || 'Unknown error occurred');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            showMessage('error', 'There was a problem sending your message. Please try again later or contact us directly.');
+          })
+          .finally(() => {
+            // Re-enable submit button
+            if (submitBtn) {
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            }
+          });
+        });
+        
+        function showMessage(type, text) {
+          messageContainer.textContent = text;
+          messageContainer.style.display = 'block';
+          
+          if (type === 'success') {
+            messageContainer.style.backgroundColor = 'rgba(0, 201, 167, 0.1)';
+            messageContainer.style.color = '#00c9a7';
+            messageContainer.style.border = '1px solid #00c9a7';
+          } else {
+            messageContainer.style.backgroundColor = 'rgba(255, 107, 107, 0.1)';
+            messageContainer.style.color = '#ff6b6b';
+            messageContainer.style.border = '1px solid #ff6b6b';
+          }
+          
+          // Scroll to message
+          messageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          
+          // Auto-hide after 5 seconds for success messages
+          if (type === 'success') {
+            setTimeout(() => {
+              messageContainer.style.display = 'none';
+            }, 5000);
+          }
+        }
+      });
+    </script>
      <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
      <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
    </body>

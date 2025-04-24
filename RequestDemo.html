@@ -1332,9 +1332,8 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
                 const lastName = demoForm.querySelector('input[name="last_name"]').value;
                 const email = demoForm.querySelector('input[name="email"]').value;
                 const phone = demoForm.querySelector('input[name="phone"]').value;
-                const company = demoForm.querySelector('input[name="company"]').value;
                 
-                if (!firstName || !lastName || !email || !phone || !company) {
+                if (!firstName || !lastName || !email || !phone) {
                    alert('Please fill in all required fields.');
                    return false;
                 }
@@ -1356,263 +1355,285 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
  </script>
    <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Set min date for calendar to today
-        const today = new Date();
-        const formattedDate = today.toISOString().split('T')[0];
-        document.getElementById('demo-date').min = formattedDate;
-        
-        // Step navigation
-        const nextButtons = document.querySelectorAll('.next-step');
-        const prevButtons = document.querySelectorAll('.prev-step');
-        const steps = document.querySelectorAll('.demo-step');
-        const formSteps = document.querySelectorAll('.demo-form-step');
-        
-        nextButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const currentStep = parseInt(this.dataset.step);
-                const prevStep = currentStep - 1;
-                
-                // Validate current step before proceeding
-                if (validateStep(prevStep)) {
-                    // Hide current step
-                    document.getElementById('step' + prevStep).style.display = 'none';
-                    // Show next step
-                    document.getElementById('step' + currentStep).style.display = 'block';
-                    
-                    // Update step indicator
-                    steps.forEach(step => {
-                        const stepNum = parseInt(step.dataset.step);
-                        if (stepNum < currentStep) {
-                            step.classList.add('completed');
-                            step.classList.remove('active');
-                        } else if (stepNum === currentStep) {
-                            step.classList.add('active');
-                        } else {
-                            step.classList.remove('active', 'completed');
-                        }
-                    });
-                }
-            });
-        });
-        
-        prevButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const currentStep = parseInt(this.dataset.step);
-                const nextStep = currentStep + 1;
-                
-                // Hide current step
-                document.getElementById('step' + nextStep).style.display = 'none';
-                // Show previous step
-                document.getElementById('step' + currentStep).style.display = 'block';
-                
-                // Update step indicator
-                steps.forEach(step => {
-                    const stepNum = parseInt(step.dataset.step);
-                    if (stepNum < currentStep) {
-                        step.classList.add('completed');
-                        step.classList.remove('active');
-                    } else if (stepNum === currentStep) {
-                        step.classList.add('active');
-                    } else {
-                        step.classList.remove('active', 'completed');
-                    }
-                });
-            });
-        });
-        
-        // Form submission
-        const demoForm = document.getElementById('demoRequestForm');
-        demoForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+      // Set min date for calendar to today
+      const today = new Date();
+      const formattedDate = today.toISOString().split('T')[0];
+      const dateInput = document.getElementById('demo-date');
+      if (dateInput) {
+        dateInput.min = formattedDate;
+      }
+      
+      // Step navigation
+      const nextButtons = document.querySelectorAll('.next-step');
+      const prevButtons = document.querySelectorAll('.prev-step');
+      const steps = document.querySelectorAll('.demo-step');
+      const formSteps = document.querySelectorAll('.demo-form-step');
+      
+      nextButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const currentStep = parseInt(this.dataset.step);
+          const prevStep = currentStep - 1;
+          
+          // Validate current step before proceeding
+          if (validateStep(prevStep)) {
+            // Hide current step
+            document.getElementById('step' + prevStep).style.display = 'none';
+            // Show next step
+            document.getElementById('step' + currentStep).style.display = 'block';
             
-            if (validateStep(3)) {
-                // Show loading state
-                const submitBtn = demoForm.querySelector('[type="submit"]');
-                const originalText = submitBtn.innerText;
-                submitBtn.innerText = 'Processing...';
-                submitBtn.disabled = true;
-                
-                // Format date nicely for display
-                const demoDate = document.getElementById('demo-date').value;
-                const date = new Date(demoDate);
-                const formattedDate = date.toLocaleDateString('en-US', {
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric'
-                });
-                
-                // Collect form data
-                const formData = {
-                    firstName: demoForm.querySelector('input[name="first_name"]').value,
-                    lastName: demoForm.querySelector('input[name="last_name"]').value,
-                    email: demoForm.querySelector('input[name="email"]').value,
-                    phone: demoForm.querySelector('input[name="phone"]').value,
-                    requirements: demoForm.querySelector('textarea[name="requirements"]').value || 'None provided',
-                    demoDate: formattedDate,
-                    timeSlot: document.querySelector('input[name="time-slot"]:checked').value,
-                    timezone: document.getElementById('timezone').value,
-                    selectedServices: Array.from(document.querySelectorAll('input[name="service[]"]:checked'))
-                        .map(input => input.value).join(", ") || 'None selected',
-                    selectedTechnologies: Array.from(document.querySelectorAll('input[name="technology[]"]:checked'))
-                        .map(input => input.value).join(", ") || 'None selected',
-                    selectedIndustries: Array.from(document.querySelectorAll('input[name="industry[]"]:checked'))
-                        .map(input => input.value).join(", ") || 'None selected'
-                };
-                
-                // Send data to Power Automate (replace with your actual Power Automate flow URL)
-                fetch('https://prod-xx.westus.logic.azure.com:443/workflows/your-flow-id/triggers/manual/paths/invoke', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Show success message
-                    const formContainer = demoForm.parentElement;
-                    formContainer.innerHTML = `
-                        <div class="demo-success-message text-center">
-                            <div class="success-icon mb-20">
-                                <i class="fa-solid fa-check-circle" style="font-size: 64px; color: #00c9a7;"></i>
-                            </div>
-                            <h3 class="mb-20">Demo Request Scheduled!</h3>
-                            <p>Thank you for scheduling a demo with Collabridge Solutions. We've received your request and will be in touch shortly to confirm your appointment.</p>
-                            <p class="mt-10">A confirmation email has been sent to ${formData.email} with all the details.</p>
-                            <div class="mt-30">
-                                <a href="index.html" class="tp-btn">Return to Homepage</a>
-                            </div>
-                        </div>
-                    `;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    
-                    // If Power Automate is not set up yet, we can show success for testing
-                    // Remove this fallback in production and handle errors properly
-                    const formContainer = demoForm.parentElement;
-                    formContainer.innerHTML = `
-                        <div class="demo-success-message text-center">
-                            <div class="success-icon mb-20">
-                                <i class="fa-solid fa-check-circle" style="font-size: 64px; color: #00c9a7;"></i>
-                            </div>
-                            <h3 class="mb-20">Demo Request Scheduled!</h3>
-                            <p>Thank you for scheduling a demo with Collabridge Solutions. We've received your request and will be in touch shortly to confirm your appointment.</p>
-                            <p class="mt-10">A confirmation email has been sent to ${formData.email} with all the details.</p>
-                            <div class="mt-30">
-                                <a href="index.html" class="tp-btn">Return to Homepage</a>
-                            </div>
-                        </div>
-                    `;
-                    
-                    // Uncomment the below code in production
-                    /*
-                    alert("There was an error submitting your request. Please try again or contact us directly at info@collabridge.com");
-                    submitBtn.innerText = 'Schedule Demo';
-                    submitBtn.disabled = false;
-                    */
-                });
-            }
+            // Update step indicator
+            steps.forEach(step => {
+              const stepNum = parseInt(step.dataset.step);
+              if (stepNum < currentStep) {
+                step.classList.add('completed');
+                step.classList.remove('active');
+              } else if (stepNum === currentStep) {
+                step.classList.add('active');
+              } else {
+                step.classList.remove('active', 'completed');
+              }
+            });
+          }
         });
-        
-        // Validation functions
-        function validateStep(step) {
-            switch(step) {
-                case 1:
-                    // Validate service selection
-                    const serviceCheckboxes = document.querySelectorAll('input[name="service[]"], input[name="technology[]"], input[name="industry[]"]');
-                    let checked = false;
-                    
-                    serviceCheckboxes.forEach(checkbox => {
-                        if (checkbox.checked) {
-                            checked = true;
-                        }
-                    });
-                    
-                    if (!checked) {
-                        alert('Please select at least one service, technology, or industry solution for your demo.');
-                        return false;
-                    }
-                    return true;
-                    
-                case 2:
-                    // Validate date and time
-                    const demoDate = document.getElementById('demo-date').value;
-                    const timeSlot = document.querySelector('input[name="time-slot"]:checked');
-                    const timezone = document.getElementById('timezone').value;
-                    
-                    if (!demoDate) {
-                        alert('Please select a date for your demo.');
-                        return false;
-                    }
-                    
-                    if (!timeSlot) {
-                        alert('Please select a time slot for your demo.');
-                        return false;
-                    }
-                    
-                    if (!timezone) {
-                        alert('Please select your timezone.');
-                        return false;
-                    }
-                    
-                    return true;
-                    
-                case 3:
-                    // Validate personal details
-                    const firstName = demoForm.querySelector('input[name="first_name"]').value;
-                    const lastName = demoForm.querySelector('input[name="last_name"]').value;
-                    const email = demoForm.querySelector('input[name="email"]').value;
-                    const phone = demoForm.querySelector('input[name="phone"]').value;
-                    
-                    if (!firstName) {
-                        alert('Please enter your first name.');
-                        return false;
-                    }
-                    
-                    if (!lastName) {
-                        alert('Please enter your last name.');
-                        return false;
-                    }
-                    
-                    if (!email) {
-                        alert('Please enter your email address.');
-                        return false;
-                    }
-                    
-                    if (!phone) {
-                        alert('Please enter your phone number.');
-                        return false;
-                    }
-                    
-                    // Simple email validation
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(email)) {
-                        alert('Please enter a valid email address.');
-                        return false;
-                    }
-                    
-                    // Validate consent checkbox
-                    const consent = document.getElementById('consent');
-                    if (!consent.checked) {
-                        alert('Please agree to receive communications about Collabridge services and solutions.');
-                        return false;
-                    }
-                    
-                    return true;
-                    
-                default:
-                    return true;
+      });
+      
+      prevButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const currentStep = parseInt(this.dataset.step);
+          const nextStep = currentStep + 1;
+          
+          // Hide current step
+          document.getElementById('step' + nextStep).style.display = 'none';
+          // Show previous step
+          document.getElementById('step' + currentStep).style.display = 'block';
+          
+          // Update step indicator
+          steps.forEach(step => {
+            const stepNum = parseInt(step.dataset.step);
+            if (stepNum < currentStep) {
+              step.classList.add('completed');
+              step.classList.remove('active');
+            } else if (stepNum === currentStep) {
+              step.classList.add('active');
+            } else {
+              step.classList.remove('active', 'completed');
             }
+          });
+        });
+      });
+      
+      // Form submission
+      const demoForm = document.getElementById('demoRequestForm');
+      if (demoForm) {
+        demoForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          if (validateStep(3)) {
+            // Show loading state
+            const submitBtn = demoForm.querySelector('[type="submit"]');
+            const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+            if (submitBtn) {
+              submitBtn.innerHTML = 'Processing...';
+              submitBtn.disabled = true;
+            }
+            
+            // Format date nicely for display
+            let formattedDate = '';
+            const demoDateInput = document.getElementById('demo-date');
+            if (demoDateInput && demoDateInput.value) {
+              const date = new Date(demoDateInput.value);
+              formattedDate = date.toLocaleDateString('en-US', {
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric'
+              });
+            } else {
+              formattedDate = 'Not specified';
+            }
+            
+            // Get selected time slot
+            let timeSlot = '';
+            const selectedTimeSlot = document.querySelector('input[name="time-slot"]:checked');
+            if (selectedTimeSlot) {
+              timeSlot = selectedTimeSlot.value;
+            } else {
+              timeSlot = 'Not specified';
+            }
+            
+            // Get selected timezone
+            let timezone = '';
+            const timezoneSelect = document.getElementById('timezone');
+            if (timezoneSelect) {
+              timezone = timezoneSelect.value;
+            } else {
+              timezone = 'Not specified';
+            }
+            
+            // Collect form data
+            const formData = {
+              firstName: document.querySelector('input[name="first_name"]')?.value || '',
+              lastName: document.querySelector('input[name="last_name"]')?.value || '',
+              email: document.querySelector('input[name="email"]')?.value || '',
+              phone: document.querySelector('input[name="phone"]')?.value || '',
+              requirements: document.querySelector('textarea[name="requirements"]')?.value || 'None provided',
+              demoDate: formattedDate,
+              timeSlot: timeSlot,
+              timezone: timezone,
+              selectedServices: Array.from(document.querySelectorAll('input[name="service[]"]:checked'))
+                .map(input => input.value) || [],
+              selectedTechnologies: Array.from(document.querySelectorAll('input[name="technology[]"]:checked'))
+                .map(input => input.value) || [],
+              selectedIndustries: Array.from(document.querySelectorAll('input[name="industry[]"]:checked'))
+                .map(input => input.value) || []
+            };
+            
+            // Send data to Node.js backend
+            fetch('/collabridge-forms/api/demo-request', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`Server responded with status ${response.status}`);
+              }
+              return response.json();
+            })
+            .then(data => {
+              if (data.success) {
+                // Show success message
+                const formContainer = demoForm.closest('.demo-form-container') || demoForm.parentElement;
+                formContainer.innerHTML = `
+                  <div class="demo-success-message text-center">
+                    <div class="success-icon mb-20">
+                      <i class="fa-solid fa-check-circle" style="font-size: 64px; color: #00c9a7;"></i>
+                    </div>
+                    <h3 class="mb-20">Demo Request Scheduled!</h3>
+                    <p>Thank you for scheduling a demo with Collabridge Solutions. We've received your request and will be in touch shortly to confirm your appointment.</p>
+                    <p class="mt-10">A confirmation email has been sent to ${formData.email} with all the details.</p>
+                    <div class="mt-30">
+                      <a href="index.html" class="tp-btn">Return to Homepage</a>
+                    </div>
+                  </div>
+                `;
+              } else {
+                throw new Error(data.message || 'Unknown error occurred');
+              }
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              
+              // Show error message but allow retry
+              alert("There was an error submitting your request. Please try again or contact us directly at info@collabridge.com");
+            })
+            .finally(() => {
+              // Re-enable submit button if error occurred
+              if (submitBtn && submitBtn.parentNode) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+              }
+            });
+          }
+        });
+      } else {
+        console.error('Demo request form not found');
+      }
+      
+      // Validation functions
+      function validateStep(step) {
+        switch(step) {
+          case 1:
+            // Validate service selection
+            const serviceCheckboxes = document.querySelectorAll('input[name="service[]"], input[name="technology[]"], input[name="industry[]"]');
+            let checked = false;
+            
+            serviceCheckboxes.forEach(checkbox => {
+              if (checkbox.checked) {
+                checked = true;
+              }
+            });
+            
+            if (!checked) {
+              alert('Please select at least one service, technology, or industry solution for your demo.');
+              return false;
+            }
+            return true;
+            
+          case 2:
+            // Validate date and time
+            const demoDate = document.getElementById('demo-date')?.value;
+            const timeSlot = document.querySelector('input[name="time-slot"]:checked');
+            const timezone = document.getElementById('timezone')?.value;
+            
+            if (!demoDate) {
+              alert('Please select a date for your demo.');
+              return false;
+            }
+            
+            if (!timeSlot) {
+              alert('Please select a time slot for your demo.');
+              return false;
+            }
+            
+            if (!timezone) {
+              alert('Please select your timezone.');
+              return false;
+            }
+            
+            return true;
+            
+          case 3:
+            // Validate personal details
+            const firstName = document.querySelector('input[name="first_name"]')?.value;
+            const lastName = document.querySelector('input[name="last_name"]')?.value;
+            const email = document.querySelector('input[name="email"]')?.value;
+            const phone = document.querySelector('input[name="phone"]')?.value;
+            
+            if (!firstName) {
+              alert('Please enter your first name.');
+              return false;
+            }
+            
+            if (!lastName) {
+              alert('Please enter your last name.');
+              return false;
+            }
+            
+            if (!email) {
+              alert('Please enter your email address.');
+              return false;
+            }
+            
+            if (!phone) {
+              alert('Please enter your phone number.');
+              return false;
+            }
+            
+            // Simple email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+              alert('Please enter a valid email address.');
+              return false;
+            }
+            
+            // Validate consent checkbox
+            const consent = document.getElementById('consent');
+            if (consent && !consent.checked) {
+              alert('Please agree to receive communications about Collabridge services and solutions.');
+              return false;
+            }
+            
+            return true;
+            
+          default:
+            return true;
         }
+      }
     });
-</script>
+  </script>
 <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
    </body>
