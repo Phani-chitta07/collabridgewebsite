@@ -6240,6 +6240,30 @@ body .ui-tooltip {
   color: var(--tp-theme-primary);
 }
 /*New Header*/
+/* Base styling for mega menu links */
+.mega-menu-list li a {
+  position: relative !important;
+  display: inline-block !important;
+  overflow: hidden !important;
+   width: fit-content !important; /* Add this line */
+}
+
+/* Create the hover line for all mega menu links */
+.mega-menu-list li a::after {
+  content: '';
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background-color: #d90a2c !important;
+  transition: width 0.3s ease !important;
+}
+
+/* Show full line on hover that matches text width */
+.mega-menu-list li a:hover::after {
+  width: 100% !important; /* Changed from 40% to 100% */
+}
 /* Dropdown toggle styling */
 .tp-megamenu > a .dropdown-toggle {
   font-size: 12px;
@@ -6346,6 +6370,7 @@ body .ui-tooltip {
   font-size: 20px;
   font-weight: 600;
   color: #000;
+
   margin-bottom: 2px !important;
   padding-bottom: 2px !important;
   position: relative;
@@ -6363,16 +6388,6 @@ body .ui-tooltip {
   position: relative;
 }
 
-.mega-menu-title:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 25px;
-  height: 1px;
-  background: #d90a2c;
-  transition: width 0.3s ease;
-}
 
 .mega-menu-section:hover .mega-menu-title:after {
   width: 40px;
