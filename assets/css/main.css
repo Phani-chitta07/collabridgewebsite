@@ -95,19 +95,7 @@ li,
   padding: 0;
   box-sizing: border-box;
 }
-/* Add/modify these styles in your existing <style> tag */
-.world-map-container {
-  height: 600px;
-  width: 100%; /* Changed from fixed 1200px to 100% */
-  max-width: 1200px; /* Added max-width */
-  margin: 0 auto; /* Center the container */
-  align-items: center;
-  overflow: hidden;
-  background-color: #f8fafc;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  position: relative;
-}
+
 .tp-testimonial-two {
   margin-bottom: -40px;  /* Reduce from default */
   padding-bottom: 20px;

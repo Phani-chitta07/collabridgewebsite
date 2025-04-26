@@ -932,94 +932,98 @@
 
       </main>
 <!-- interactive-map-area-start -->
-<section class="map-location-area pb-100" id="map">
-   <div class="container">
-      <div class="row">
-         <div class="col-12">
-            <div class="tp-section tp-section-two text-center mb-50">
-               <span class="tp-section-sub-title"><i class="flaticon-map"></i> Our Global Presence</span>
-               <h4 class="tp-section-title">Find Us Worldwide</h4>
+<section class="map-location-area pb-100 px-0" id="map">
+   <div class="container-fluid p-0">
+      <div class="container">
+         <div class="row mb-50">
+            <div class="col-12">
+               <div class="tp-section tp-section-two text-center">
+                  <span class="tp-section-sub-title"><i class="flaticon-map"></i> Our Global Presence</span>
+                  <h4 class="tp-section-title">Find Us Worldwide</h4>
+               </div>
             </div>
          </div>
       </div>
-      <div class="row">
-         <div class="col-12">
-            <div class="world-map-container position-relative mb-50">
-               <!-- World Map with Interactive Pins -->
-               <div class="world-map">
-                  <!-- Using a high-quality map image -->
-                  <img src="assets/WebImages/expwebp/17947.jpg" alt="World Map" class="img-fluid">
-                  
-                  <!-- Location Pins -->
-                  <div class="map-pin pin-plano" data-location="plano">
-                     <div class="pin-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                     </div>
-                     <div class="pin-tooltip">
-                        <h5>Head Office</h5>
-                        <p>Plano, Texas, USA</p>
-                        <a href="tel:+14695122191"><i class="fa-light fa-phone"></i> +1 (469)-512-2191</a>
-                        <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i></a></i> info@collabridge.com</a></br>
-                     </div>
+      
+      <!-- Full-width map container -->
+      <div class="world-map-container-wrapper">
+         <div class="world-map-container position-relative">
+            <!-- World Map with Interactive Pins -->
+            <div class="world-map">
+               <!-- Using a high-quality map image -->
+               <img src="assets/WebImages/expwebp/17947.jpg" alt="World Map" class="img-fluid">
+               
+               <!-- Location Pins - Unchanged -->
+               <div class="map-pin pin-plano" data-location="plano">
+                  <div class="pin-icon">
+                     <i class="fa-solid fa-location-dot"></i>
                   </div>
-                  
-                  <div class="map-pin pin-hyderabad" data-location="hyderabad">
-                     <div class="pin-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                     </div>
-                     <div class="pin-tooltip">
-                        <h5>Global Development Center</h5>
-                        <p>Hyderabad, India</p>
-                        <a href="tel:+918885165333"><i class="fa-light fa-phone"></i> +91 888-5165-333</a>
-                        <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i></a></i>info@collabridge.com</a></br>
-                     </div>
+                  <div class="pin-tooltip">
+                     <h5>Head Office</h5>
+                     <p>Plano, Texas, USA</p>
+                     <a href="tel:+1214-440-2435"><i class="fa-light fa-phone"></i> +1 (214)-440-2435</a>
+                     <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i> info@collabridge.com</a>
                   </div>
-                  
-                  <div class="map-pin pin-bangalore" data-location="bangalore">
-                     <div class="pin-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                     </div>
-                     <div class="pin-tooltip">
-                        <h5>Global Development Center</h5>
-                        <p>Bangalore, India</p>
-                        <a href="tel:+918765432109"><i class="fa-light fa-phone"></i> +91 888-5165-333</a>
-                        <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i></a></i>info@collabridge.com</a></br>
-                     </div>
+               </div>
+               
+               <div class="map-pin pin-hyderabad" data-location="hyderabad">
+                  <div class="pin-icon">
+                     <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="pin-tooltip">
+                     <h5>Global Capability Center</h5>
+                     <p>Hyderabad, India</p>
+                     <a href="tel:+918885165333"><i class="fa-light fa-phone"></i> +91 888-5165-333</a>
+                     <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i>info@collabridge.com</a>
+                  </div>
+               </div>
+               
+               <div class="map-pin pin-bangalore" data-location="bangalore">
+                  <div class="pin-icon">
+                     <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="pin-tooltip">
+                     <h5>Global Capability Center</h5>
+                     <p>Bangalore, India</p>
+                     <a href="tel:+918885165333"><i class="fa-light fa-phone"></i> +91 888-5165-333</a>
+                     <a href="mailto:info@collabridge.com"><br><i class="fa-light fa-envelope"></i>info@collabridge.com</a>
                   </div>
                </div>
             </div>
-            
-            <!-- Office locations for mobile -->
-            <div class="location-offices pt-20 d-md-none">
-               <div class="row justify-content-center">
-                  <!-- First Office -->
-                  <div class="col-md-4 col-sm-12">
-                     <div class="location-office-item text-center mb-30">
-                        <h4 class="mb-10">Head Office</h4>
-                        <p class="mb-5">Plano, Texas, USA</p>
-                        <a href="tel:+14695122191" class="d-block mb-5"><i class="fa-light fa-phone"></i>  +1 (469)-512-2191</a>
-                        <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabridge.com</a>
-                     </div>
+         </div>
+      </div>
+      
+      <!-- Office locations for mobile - Wrapped in container for proper padding -->
+      <div class="container">
+         <div class="location-offices pt-20 d-md-none">
+            <div class="row justify-content-center">
+               <!-- First Office -->
+               <div class="col-md-4 col-sm-12">
+                  <div class="location-office-item text-center mb-30">
+                     <h4 class="mb-10">Head Office</h4>
+                     <p class="mb-5">Plano, Texas, USA</p>
+                     <a href="tel:+14695122191" class="d-block mb-5"><i class="fa-light fa-phone"></i>  +1 (469)-512-2191</a>
+                     <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabridge.com</a>
                   </div>
-                  
-                  <!-- Second Office -->
-                  <div class="col-md-4 col-sm-12">
-                     <div class="location-office-item text-center mb-30">
-                        <h4 class="mb-10">Global Development Center</h4>
-                        <p class="mb-5">Hyderabad, India</p>
-                        <a href="tel:+918885165333" class="d-block mb-5"><i class="fa-light fa-phone"></i>+91 888-5165-333</a>
-                        <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabridge.com</a>
-                     </div>
+               </div>
+               
+               <!-- Second Office -->
+               <div class="col-md-4 col-sm-12">
+                  <div class="location-office-item text-center mb-30">
+                     <h4 class="mb-10">Global Development Center</h4>
+                     <p class="mb-5">Hyderabad, India</p>
+                     <a href="tel:+918885165333" class="d-block mb-5"><i class="fa-light fa-phone"></i>+91 888-5165-333</a>
+                     <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabridge.com</a>
                   </div>
-                  
-                  <!-- Third Office -->
-                  <div class="col-md-4 col-sm-12">
-                     <div class="location-office-item text-center mb-30">
-                        <h4 class="mb-10">Global Development Center</h4>
-                        <p class="mb-5">Bangalore, India</p>
-                        <a href="tel:+918885165333" class="d-block mb-5"><i class="fa-light fa-phone"></i>  +91 888-5165-333</a>
-                        <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabrigde.com</a>
-                     </div>
+               </div>
+               
+               <!-- Third Office -->
+               <div class="col-md-4 col-sm-12">
+                  <div class="location-office-item text-center mb-30">
+                     <h4 class="mb-10">Global Development Center</h4>
+                     <p class="mb-5">Bangalore, India</p>
+                     <a href="tel:+918885165333" class="d-block mb-5"><i class="fa-light fa-phone"></i>  +91 888-5165-333</a>
+                     <a href="mailto:info@collabridge.com"><i class="fa-light fa-envelope"></i> info@collabrigde.com</a>
                   </div>
                </div>
             </div>
@@ -1029,26 +1033,40 @@
    
    <!-- CSS for the interactive map -->
    <style>
+       /* Full-width wrapper with transform-based positioning */
+   .world-map-container-wrapper {
+      width: 100vw !important;
+      position: relative !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%) !important;
+      margin: 0 !important;
+      margin-bottom: 0 !important; /* Changed from 50px to 0 */
+      overflow: hidden !important;
+      max-width: none !important;
+      box-sizing: border-box !important;
+   }
+   
+      /* Also adjust the section padding */
+.map-location-area.pb-100 {
+   padding-bottom: 10px !important; /* Changed from 10px to 0 */
+}
+/* Ensure no gap between map and footer */
+.footer-area {
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+}
       .world-map-container {
          height: 600px;
-         width: 100%; /* Change to 100% width */
-         max-width: 1200px; /* Add max-width instead of fixed width */
-         margin: 0 auto;
+         width: 100%;
+         margin: 0;
+         padding: 0;
          align-items: center;
          overflow: hidden;
-         background-color: #f8fafc;
-         border-radius: 12px;
-         box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+         background-color: transparent;
+         border-radius: 0;
+         box-shadow: none;
          position: relative;
-      }
-      
-      /* Also add responsive width for smaller screens */
-      @media (max-width: 1200px) {
-         .world-map-container {
-            width: 100%; /* Make container full width on smaller screens */
-            height: auto;
-            aspect-ratio: 2/1; /* Maintain map aspect ratio */
-         }
       }
       
       .world-map {
@@ -1065,7 +1083,89 @@
          height: 100%;
          object-fit: cover;
       }
+      /* Updated full-width wrapper styles with better edge handling */
+   .world-map-container-wrapper {
+      width: 100vw;
+      max-width: 100vw;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      left: 50%;
+      right: 50%;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 50px;
+   }
+   
+   /* Force full width and proper alignment */
+   .map-location-area {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      position: relative !important;
+   }
+   
+   .container-fluid.p-0 {
+      width: 100vw !important;
+      max-width: none !important;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      overflow: hidden !important;
+   }
+   
+  /* Ensure map container takes full width */
+  .world-map-container {
+      width: 100% !important;
+      height: 600px;
+      margin: 0 !important;
+      padding: 0 !important;
+      align-items: center !important;
+      overflow: hidden !important;
+      background-color: transparent !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      position: relative !important;
+   }
+   
+   /* World map content */
+   .world-map {
+      position: relative !important;
+      width: 100% !important;
+      height: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+   }
+   /* Ensure image covers full width with no constraints */
+   .world-map img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+      max-width: none !important;
+   }
+   /* Responsive behavior for smaller screens */
+   @media (max-width: 1200px) {
+      .world-map-container {
+         height: auto !important;
+         aspect-ratio: 2/1 !important;
+      }
+   }
+
+      /* Fix for any potential Bootstrap padding override */
+      .container-fluid.p-0 {
+         padding-right: 0 !important;
+         padding-left: 0 !important;
+      }
       
+      /* Ensure section has no horizontal padding */
+      .map-location-area.px-0 {
+         padding-left: 0 !important;
+         padding-right: 0 !important;
+         overflow-x: hidden;
+      }
+      
+      /* Rest of the existing styles remain unchanged */
       .map-pin {
          position: absolute;
          cursor: pointer;
@@ -1107,7 +1207,7 @@
          transition: all 0.3s ease;
          z-index: 20;
          border-left: 4px solid red;
-         pointer-events: none; /* Add this to prevent tooltip from interfering with hover */
+         pointer-events: none;
       }
       
       /* Desktop hover styles */
@@ -1127,8 +1227,8 @@
       @media (max-width: 768px) {
          .world-map-container {
             height: 350px;
-            overflow: visible; /* Allow tooltips to overflow outside container */
-            padding-top: 20px; /* Add some space at top for tooltips */
+            overflow: visible;
+            padding-top: 20px;
          }
 
          .map-pin {
@@ -1143,10 +1243,9 @@
             white-space: normal;
             font-size: 14px;
             padding: 12px;
-            /* Adjust tooltip positioning */
             bottom: calc(100% + 5px);
             transform: translateX(-50%);
-            z-index: 100; /* Ensure tooltip stays on top */
+            z-index: 100;
          }
 
          .map-pin.touched .pin-tooltip {
@@ -1155,16 +1254,17 @@
             bottom: calc(100% + 15px);
          }
 
-         /* Handle tooltips near edges */
-         .map-pin:first-child .pin-tooltip {
-            left: 0;
-            transform: translateX(0);
+         .pin-plano {
+            top: 42% !important;
+            left: 35% !important;
          }
-
-         .map-pin:last-child .pin-tooltip {
-            left: auto;
-            right: 0;
-            transform: translateX(0);
+         .pin-hyderabad {
+            top: 48% !important;
+            left: 77% !important;
+         }
+         .pin-bangalore {
+            top: 50% !important;
+            left: 74% !important;
          }
       }
       
@@ -1185,219 +1285,17 @@
       
       /* Pin positions for the amcharts map */
       .pin-plano {
-         top: 35%;
-         left: 28%;  /* United States - Texas area */
+         top: 45%;
+         left: 41%;
       }
-      
       .pin-hyderabad {
-         top: 46%;
-         left: 67%;  /* India - Hyderabad */
+         top: 56%;
+         left: 75%;
       }
-      
       .pin-bangalore {
-         top: 49%;
-         left: 66%;  /* India - Bangalore */
+         top: 58%;
+         left: 74%;
       }
-      
-      @media (max-width: 768px) {
-         .world-map-container {
-            height: 350px;
-         }
-      }
-      /* ...existing code... */
-
-/* Pin positions for the amcharts map */
-.pin-plano {
-   top: 45%;
-   left: 41%;
-}
-.pin-hyderabad {
-   top: 56%;
-   left: 75%;
-}
-.pin-bangalore {
-   top: 58%;
-   left: 74%;
-}
-
-/* Ensure pin positions stay the same on mobile */
-@media (max-width: 768px) {
-   .pin-plano {
-      top: 42% !important;
-      left: 35% !important;
-   }
-   .pin-hyderabad {
-      top: 48% !important;
-      left: 77% !important;
-   }
-   .pin-bangalore {
-      top: 50% !important;
-      left: 74% !important;
-   }
-}
-              /* Add to your existing style section */
-              @media (max-width: 1200px) { /* xl breakpoint */
-          .tp-header-demo-btn {
-              display: none !important;
-          }
-      }
-
-      /* Adjust spacing when demo button is hidden */
-      @media (max-width: 1200px) {
-          .tp-header-right {
-              justify-content: flex-end !important;
-          }
-          
-          .offcanvas-btn.d-xl-none {
-              margin-left: 0 !important;
-          }
-      }
-         /* Add this to your existing style section */
-         .tp-footer-widget-content-list-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 10px;
-          margin-bottom: 15px;
-      }
-
-      .tp-footer-widget-content-list-item i {
-          flex-shrink: 0;
-          margin-top: 5px;
-      }
-
-      .tp-footer-widget-content-list-item a {
-          flex: 1;
-          word-wrap: break-word;
-          line-height: 1.4;
-      }
-
-      /* Mobile responsiveness */
-      @media (max-width: 768px) {
-          .tp-footer-widget-content-list-item {
-              gap: 8px;
-          }
-          
-          .tp-footer-widget-content-list-item a {
-              font-size: 14px;
-          }
-      }
-
-/* Video popup styles */
-.video-popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 9999;
-    display: none;
-}
-
-.video-popup-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    display: none;
-}
-
-.video-popup-close {
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.video-popup-iframe {
-    width: 80vw;
-    max-width: 900px;
-    height: 45vw;
-    max-height: 506px;
-    border: none;
-}
-/* Video Gallery Grid Styles */
-.tp-footer-video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-}
-
-.tp-footer-video-item {
-    flex: 0 0 calc(33.333% - 10px);
-    position: relative;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.video-thumb {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.video-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.video-play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.video-play-icon i {
-    color: #ff0000;
-    font-size: 16px;
-}
-
-.tp-footer-video-item:hover .video-thumb img {
-    transform: scale(1.1);
-}
-
-.tp-footer-video-item:hover .video-play-icon {
-    background: #474ed4;
-}
-
-.tp-footer-video-item:hover .video-play-icon i {
-    color: #fff;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .tp-footer-video-grid {
-        gap: 8px;
-    }
-    
-    .tp-footer-video-item {
-        flex: 0 0 calc(50% - 8px);
-    }
-}
-
-@media (max-width: 480px) {
-    .tp-footer-video-item {
-        flex: 0 0 100%;
-    }
-}
    </style>
    
    <!-- JavaScript for enhanced interactivity -->
@@ -1434,6 +1332,8 @@
    </script>
 </section>
 <!-- interactive-map-area-end -->
+<!-- interactive-map-area-end -->
+<!-- interactive-map-area-end -->
 <!-- footer-area-start -->
 <footer>
    <div class="footer-area">
@@ -1461,7 +1361,7 @@
                <div class="location-office-item text-left mb-30">
                   <h4 class="mb-10" style="color: #fff;">Head Office</h4>
                   <p class="mb-5" style="color: rgba(255,255,255,0.8);">Dallas, Texas, USA</p>
-                  <a href="tel:+14695122191" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +1 (214)-440-2435</a>
+                  <a href="tel:+1214-440-2435" class="d-block mb-5" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +1 (214)-440-2435</a>
                   <a href="mailto:info@collabridge.com" style="color: rgba(255,255,255,0.8);"><i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com</a>
                </div>
             </div>
