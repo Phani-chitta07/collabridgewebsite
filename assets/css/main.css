@@ -104,6 +104,7 @@ li,
   margin-bottom: 60px;  /* Reduce from 120px */
   padding-top: 0;
 }
+
 /*---------------------------------
 	typography css start 
 ---------------------------------*/
@@ -3746,12 +3747,7 @@ div.demo img {
   height: 2px;
   background-color: var(--tp-common-black);
 }
-/* Change all links in header area to use the red color when clicked/active */
-.tp-header-area a:active,
-.tp-header-area a:focus,
-.tp-header-area a:hover {
-    color: #d90a2c !important;
-}
+
 
 /* Change the color for the main menu links */
 .tp-main-menu-content ul li a:active,
@@ -6352,6 +6348,59 @@ body .ui-tooltip {
   color: var(--tp-theme-primary);
 }
 /*New Header*/
+/* Change text color to white on hover for main menu items */
+.tp-megamenu > a:hover,
+.tp-megamenu > a:hover i {
+  color: white !important;
+}
+.toggle-active .icon,
+.toggle-active .text {
+  color: white !important;
+}
+
+/* Ensure the chevron icon also turns white */
+.tp-megamenu > a:hover .fa-chevron-down {
+  color: white !important;
+}
+/* Remove the underline hover effect */
+.tp-megamenu > a .hover-line {
+  display: none !important; /* Hide the hover line element completely */
+}
+
+/* Keep original text color on hover */
+.tp-megamenu > a:hover,
+.tp-megamenu > a:hover i,
+.tp-megamenu > a:hover span,
+.mega-menu-container a:hover {
+  color: inherit !important;
+}
+
+/* Option 1: Subtle scale effect */
+.tp-megamenu > a {
+  position: relative !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.tp-megamenu > a:hover {
+  transform: scale(1.05) !important; /* Slightly enlarges the text */
+}
+
+/* Option 2: Soft background highlight effect 
+   (uncomment this section to use instead of Option 1) */
+/*
+.tp-megamenu > a {
+  position: relative !important;
+  display: inline-block !important;
+  padding: 2px 4px !important;
+  transition: background-color 0.3s ease !important;
+  border-radius: 3px !important;
+}
+
+.tp-megamenu > a:hover {
+  background-color: rgba(236, 236, 236, 0.3) !important;
+}
+*/
 /* Base styling for mega menu links */
 .mega-menu-list li a {
   position: relative !important;
@@ -6469,7 +6518,7 @@ body .ui-tooltip {
   text-align: left;
   transform: translateX(3px);
   background-color: rgba(255,255,255,0.03); /* Subtle highlight */
-  font-weight: normal; /* Added to make text not bold */
+  font-weight: lighter; /* Added to make text not bold */
 }
 
 .mega-menu-list li a:hover,
@@ -6495,11 +6544,138 @@ body .ui-tooltip {
 
 }
 
+* { 
+  font-weight: normal !important; 
+}
+/*footer*/
+@media (min-width: 992px) {
+  .global-capability-heading {
+    text-align:right !important;
+    margin-right: 378px;
+  }
+}
+/*dropdown*/
+ /* Base dropdown styling */
+ .digitalManufacturingDropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  background-image: url('assets/img/down-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.digitalManufacturingDropdown:focus {
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 992px) {
+  .digitalManufacturingDropdown {
+      font-size: 15px;
+      padding: 6px 8px 6px 10px;
+      background-position: right 8px center;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .digitalManufacturingDropdown {
+      font-size: 14px;
+      padding: 6px 8px 6px 10px;
+      background-position: right 6px center;
+      width: 100%;
+      max-width: 100%;
+  }
+}
+
+
+.digitalManufacturingDropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  background-image: url('assets/img/down-arrow.png');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.digitalManufacturingDropdown:focus {
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Tablet responsiveness */
+@media (max-width: 992px) {
+  .digitalManufacturingDropdown {
+      font-size: 15px;
+      padding: 6px 8px 6px 10px;
+      background-position: right 8px center;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .digitalManufacturingDropdown {
+      font-size: 14px;
+      padding: 6px 8px 6px 10px;
+      background-position: right 6px center;
+      width: 100%;
+      max-width: 100%;
+  }
+}
 /* For smoother dropdown experience */
 .has-dropdown.tp-megamenu {
   position: relative;
 }
+/* Add this to your existing CSS file */
 
+.tp-megamenu > a {
+  font-weight: normal !important;
+  position: relative !important;
+  display: inline-block !important;
+  color: white !important;
+}
+
+.tp-megamenu > a .fa-chevron-down {
+  color: white !important;
+}
+
+.tp-megamenu > a .hover-line {
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background-color: #d90a2c !important;
+  transition: width 0.3s ease !important;
+}
+
+.tp-megamenu > a:hover .hover-line {
+  width: 70% !important;
+}
+
+/* Keep hover color consistent */
+.tp-megamenu > a:hover,
+.tp-megamenu > a:hover i {
+  color: white !important;
+}
 
 .mega-menu-section:hover .mega-menu-title:after {
   width: 40px;
