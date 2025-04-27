@@ -6640,10 +6640,32 @@ body .ui-tooltip {
       max-width: 100%;
   }
 }
+.dropdown-hint {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: lighter;
+  margin-left: 25px;
+
+}
 /* For smoother dropdown experience */
 .has-dropdown.tp-megamenu {
   position: relative;
 }
+/*FEATURES*/
+@media (max-width: 768px) {
+  .unique-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .unique-image,
+  .unique-details {
+      flex: 1 1 100%;
+  }
+}
+.tp-footer-widget-title.text-left {
+  margin-left: -120px !important; /* Adjust value as needed */
+}
+
 /* Add this to your existing CSS file */
 
 .tp-megamenu > a {
