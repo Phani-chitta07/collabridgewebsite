@@ -6510,6 +6510,9 @@ body .ui-tooltip {
   }
 }
 
+@media (max-width: 768px) { .global-capability-heading { margin-left: 0 !important; text-align: center !important; white-space: nowrap !important; /* Force single line */ } .location-office-item, .location-office-item a { text-align: center !important; }
+
+}
 /* Ensuring list items display vertically */
 .mega-menu-list li {
   margin: 0 !important;
