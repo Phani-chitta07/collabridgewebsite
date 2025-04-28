@@ -2321,9 +2321,11 @@ document.addEventListener('DOMContentLoaded', function() {
        
        <!-- Left Image -->
        <div class="col-md-5">
-         <div class="tp-testimonial-two-img">
-           <img src="assets/img/banner/32.jpg" alt="AI Unification">
-         </div>
+        <!-- Wrap image in an anchor -->
+     <!-- Updated markup: removed the anchor and increased the image size -->
+<div class="tp-testimonial-two-img" style="max-width: 160%; margin: 0 auto;">
+   <img src="assets/WebImages/expwebp/Generative%20AI.png" alt="AI Unification" style="width: 100%; height: auto; object-fit: cover;">
+ </div>
        </div>
        
        <!-- Center Text -->
@@ -2964,7 +2966,7 @@ document.addEventListener('DOMContentLoaded', function() {
            <div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
             <!-- Single Heading in Center -->
                  <!-- Responsive heading without fixed negative margin -->
-                  <h4 class="mb-10" style="color: #fff;font-size:16px !important">Global Capability Centers1</h4>                  
+                  <h4 class="mb-10" style="color: #fff;font-size:16px !important">Global Capability Centers</h4>                  
                   <div class="row">
               <!-- Hyderabad Card -->
               <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
@@ -3117,6 +3119,15 @@ document.addEventListener('DOMContentLoaded', function() {
    <script src="assets/js/jquery.mb.YTPlayer.js"></script>
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
+   <script>
+      $(document).ready(function(){
+        console.log('Initializing Magnific Popup');
+        $('.image-popup').magnificPopup({
+          type: 'image',
+          gallery: { enabled: true }
+        });
+      });
+    </script>
      <!-- Add your new mobile menu JavaScript here -->
      <script>
       function initMobileMenu() {
