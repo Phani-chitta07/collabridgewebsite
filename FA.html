@@ -923,39 +923,21 @@
  <!-- New Services Area Layout for Flare Analysis (Small Top Dropdown & Content-First Layout) -->
 <section class="services-area" style="padding:80px 0; background-color:#ffffff;">
    <div class="container" style="max-width:1200px; margin:0 auto;">
-     <!-- Top Dropdown Navigation (full width, smaller) -->
-<div class="top-dropdown" style="background:#fff; padding:10px 15px; border:2px solid #ffffff; border-radius:8px; max-width:400px; margin:0 auto 20px; text-align:center;">
-   <h4 style="font-size:30px; color:#333; font-weight: normal; font-family:Arial, sans-serif; margin:0 0 8px 0;">
-     Oil & Gas
-   </h4>
-   <div class="tp-services-details-services-wrap" style="position: relative; margin-top:5px;">
-     <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" 
-       onchange="if(this.value) window.location.href=this.value;" 
-       style="margin-top:8px; padding:6px 35px 6px 6px; font-size:16px; border:1px solid #ccc; border-radius:4px; width:100%;">
-       <option value="" disabled selected>Select a Service</option>
-       <option value="FE.html">Furnace Efficiency</option>
-       <option value="FA.html">Flare Analysis​​</option>
-       <option value="CBO.html">Crude Basket Optimization</option>
-       <option value="COM.html">Corrosion monitoring</option>
-       <option value="PIM.html">Pipeline Integrity Monitoring</option>
-       <option value="IATDO.html">Intelligent Automation Of Trade Desk Operations</option>
-       <option value="RS.html">Remote Sensing-VFM</option>
-     </select>
-     <i class="fa-solid fa-chevron-down" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); pointer-events:none; color:#ccc;"></i>
-   </div>
-   <script>
-     document.addEventListener("DOMContentLoaded", function() {
-       var currentPage = window.location.pathname.split("/").pop();
-       var dropdown = document.getElementById("digitalManufacturingDropdown");
-       for (var i = 0; i < dropdown.options.length; i++){
-         if(dropdown.options[i].value === currentPage) {
-           dropdown.selectedIndex = i;
-           break;
-         }
-       }
-     });
-   </script>
- </div>
+     <!-- Updated Sidebar Section: Horizontal Navigation -->
+     <div class="services-nav" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; text-align: center;">
+       <h3 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px;">Oil & Gas</h3>
+       <nav style="display: inline-flex; flex-wrap: wrap; gap: 30px;">
+         <a href="FE.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Furnance Efficiency</a>
+         <a href="FA.html" style="font-size: 16px; text-decoration: none; color: #e63946; padding: 5px 10px; border-bottom: 2px solid #e63946;">
+          Flare Analysis</a>
+         </a>
+         <a href="CBO.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Crude Basket Optimization</a>
+         <a href="COM.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Corrosion Monitoring</a>
+         <a href="PIM.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">PipeLine Integrity Monitoring</a>
+         <a href="IATDO.html" style="font-size: 16px; margin-left: 220px;text-decoration: none; color: #2c3e50; padding: 5px 10px;">Intelligent Automation of Trade Desk Operations</a>
+         <a href="RS.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Remote Sensing-VFM</a>
+       </nav>
+     </div>
      
 <!-- Variation 1: Image on Left, Content on Right -->
 <div class="service-detail-alt" style="display:flex; align-items:center; margin-bottom:40px;">
