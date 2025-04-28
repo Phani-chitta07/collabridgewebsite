@@ -586,7 +586,7 @@
            <div class="col-xl-2 col-lg-6 col-md-6 col-6">
              <div class="tp-header-right d-flex align-items-center justify-content-end">
                <div class="tp-header-search">
-                 <a href="RequestDemo.html" style="display: block !important;">
+                 <a href="Requestdemo.html#demo" style="display: block !important;">
                    <button class="tp-header-demo-btn">Request a Demo</button>
                  </a>
                </div>
@@ -879,7 +879,7 @@
    <!-- Mobile menu end -->
  
           <div class="offcanvas__btn mt-30">
-             <a href="RequestDemo.html" class="tp-btn">Request A Demo</a>
+             <a href="Requestdemo.html#demo" class="tp-btn">Request A Demo</a>
           </div>
           
           <div class="offcanvas__social mt-30">
@@ -907,26 +907,13 @@
             <div class="row align-items-center">
                <div class="col-12">
                   <div class="tpbreadcrumb">
-                     <div class="breadcrumb-link mb-15">
-                        <span class="breadcrumb-item-active"><a href="index.html">Home</a></span>
-                        <span> /Supply Chain </span>
-                     </div>
+                    
                      <h2 class="breadcrumb-title">See Clearly. Respond Intelligently. Thrive Continuously.</h2>
                   </div>
                </div>
             </div>
          </div>
-         <div class="breadcrumb-shape">
-            <div class="breadcrumb-shape-1 wow fadeInRight" data-wow-duration="1.8s" data-wow-delay=".4s">
-               <img src="assets/img/breadcrumb/breadcrumb-shape-1.png" alt="">
-            </div>
-            <div class="breadcrumb-shape-4 wow slideInRight"  data-wow-duration="1.2s" data-wow-delay=".1s">
-               <img src="assets/img/breadcrumb/breadcrumb-shape-3.png" alt="">
-            </div>
-            <div class="breadcrumb-shape-5 wow slideInRight"  data-wow-duration="1.4s" data-wow-delay=".3s">
-               <img src="assets/img/breadcrumb/breadcrumb-shape-2.png" alt="">
-            </div>
-         </div>
+     
       </section>
       <!-- breadcrumb-area-end -->
     <!-- sercices-area-start -->
@@ -934,24 +921,61 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-4">
-                <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-
-                    <div class="tp-services-details-services mb-50">
-                        <h4 class="tp-services-details-services-title">Digital Manufacturing</h4>
-                        <div class="tp-services-details-services-wrap">
-                            <a href="IBP.html">Integrated Business <br>Planning<i class="fa-light fa-arrow-right"></i></a>
-                            <a href="df.html">Demand Forecasting <i class="fa-light fa-arrow-right"></i></a>
-                            <a href="svrr.html">Supply Chain Visibility,<br>Responsiveness,Resilience​​<i class="fa-light fa-arrow-right"></i></a>
-                            <a href="IM.html">Inventory Modeling<i class="fa-light fa-arrow-right"></i></a>
-                            <a href="MRP.html">MRP Optimization <i class="fa-light fa-arrow-right"></i></a>
-                            <a href="CM.html">Condition Monitoring <i class="fa-light fa-arrow-right"></i></a>
-                            <a href="DigitalTwins.html">Digital Twins <i class="fa-light fa-arrow-right"></i></a>
-                            <a href="Transport.html">Transport Cost<br> Optimization <i class="fa-light fa-arrow-right"></i></a>
-                            <a href="VPRA.html">Vendor Performance &<br> Risk Assessment​​ <i class="fa-light fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                
-                </div>
+               <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
+                  <div class="tp-services-details-services mb-50">
+                     <h4 class="tp-services-details-services-title">
+                        Digital Manufacturing 
+                        <span class="dropdown-indicator"></span>
+                    </h4>            
+                    <div class="tp-services-details-services-wrap">
+                     <span class="dropdown-indicator" onclick="toggleDropdown()">
+                    
+                     </span>
+                     <div class="dropdown-container" style="position: relative; display: inline-block;">
+                        <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px;">
+                           <option value="" disabled selected>Select a Service</option>
+                           <option value="IBP.html">Integrated Business Planning</option>
+                           <option value="df.html">Demand Forecasting</option>
+                           <option value="svrr.html">Supply Chain Visibility​​</option>
+                           <option value="IM.html">Inventory Modeling</option>
+                           <option value="MRP.html">MRP Optimization</option>
+                           <option value="CM.html">Condition Monitoring</option>
+                           <option value="DigitalTwins.html">Digital Twins</option>
+                           <option value="Transport.html">Transport Cost Optimization</option>
+                           <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
+                         </select>
+                        <i class="fa-solid fa-chevron-down" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"></i>
+                      </div>
+                   </div>
+                   
+               
+                   
+                   <script>
+                     function toggleDropdown() {
+                       var dropdown = document.getElementById('digitalManufacturingDropdown');
+                       // Focus the dropdown to open it (behavior may vary by browser)
+                       dropdown.focus();
+                       // Optionally simulate a click (for browsers that support it)
+                       dropdown.click();
+                     }
+                   </script>
+                     <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            // Get the current page name
+                            var currentPage = window.location.pathname.split("/").pop();
+                            var dropdown = document.getElementById("digitalManufacturingDropdown");
+                        
+                            // Loop through the options. If one matches the current page, select it.
+                            for (var i = 0; i < dropdown.options.length; i++) {
+                                if (dropdown.options[i].value === currentPage) {
+                                    dropdown.selectedIndex = i;
+                                    break;
+                                }
+                            }
+                        });
+                     </script>
+                  </div>
+               </div>
             </div>
             <div class="col-lg-8">
                <div class="tp-services-details-wrapper ml-30">
@@ -959,10 +983,12 @@
                      <img src="assets/WebImages/expwebp/supplychain-min.jpg" alt="">
                   </div>
                   <h4 class="tp-services-details-title mb-20">Supply Chain Visibility,Responsiveness,Resilience​</h4>
-                  <p>
-                    In today’s fast-evolving business environment, supply chains must be more than efficient—they must be intelligent, agile, and resilient. At Collabridge, we empower organizations with AI/ML-driven visibility and control, transforming fragmented supply chain data into real-time insights and proactive decisions.
-
-                    Our solution enables businesses to anticipate disruptions, adapt to change, and build supply chains that are not only efficient—but also future-ready:    </p>
+                  <p> In today’s fast-evolving business environment, supply chains must be more than just efficient—they must be intelligent, agile, and resilient. With increasing global disruptions, shifting market dynamics, and growing customer expectations, organizations need to rethink how they manage and optimize their supply chains. At Collabridge, we empower businesses with AI/ML-driven visibility and control, transforming fragmented and siloed supply chain data into actionable, real-time insights that enable proactive decision-making.
+                     Our solution provides organizations with the tools to not only streamline operations but also to predict and mitigate potential disruptions before they occur. By using advanced AI and machine learning algorithms, we help businesses anticipate changes in demand, supply availability, and other critical factors. This empowers companies to adapt quickly to shifting market conditions, ensuring that their supply chains are both efficient and adaptable.
+                     
+                     At Collabridge, we don't just focus on improving existing processes—we help businesses build supply chains that are resilient and future-ready. Our AI-driven approach gives you the flexibility to embrace new opportunities, overcome unforeseen challenges, and maintain a competitive edge, no matter what the future holds.
+                     
+                     </p>
                   <div class="tp-services-details-check-container">
                      <!-- First row of checkboxes -->
                      <div class="tp-services-details-check d-flex align-items-center mt-30">
@@ -1033,35 +1059,36 @@
                            </div>
                         </div>
                         
-<!-- Global Capabilities Center - Single heading with multiple locations -->
-<div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
-   <div class="location-office-item text-left mb-30">
-      <!-- Responsive heading -->
-      <h4 class="mb-10 global-capability-heading" style="color: #fff;">Global Capability Centers</h4>
-      <div class="row" style="justify-content: flex-start;">
-         <!-- Hyderabad Location -->
-         <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
-            <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
-            <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
-            </a>
-            <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
-            </a>
-         </div>
-         <!-- Bangalore Location -->
-         <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
-            <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
-            <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
-            </a>
-            <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
-            </a>
-         </div>
-      </div>
-   </div>
-</div>
+           <!-- Global Capability Centers Section with Two Cards -->
+           <div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+            <!-- Single Heading in Center -->
+            <h4 class="mb-10 global-capability-heading" style="color: #fff; font-size:16px !important;margin-left: 200px !important; white-space: nowrap;">Global Capability Centers</h4>            <div class="row" style="justify-content: center;">
+              <!-- Hyderabad Card -->
+              <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
+                <div class="location-office-item text-left mb-30">
+                  <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
+                  <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
+                  </a>
+                  <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
+                  </a>
+                </div>
+              </div>
+              <!-- Bangalore Card -->
+              <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
+                <div class="location-office-item text-left mb-30">
+                  <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
+                  <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
+                  </a>
+                  <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
                      </div>
                   </div>
@@ -1107,7 +1134,7 @@
                <!-- Column: Navigation -->
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
-                     <h4 class="tp-footer-widget-title mb-30 text-left">Navigation</h4>
+                     <h4 class="tp-footer-widget-title mb-30 text-left" style="padding-right:50px !important">Navigation</h4>
                      <div class="tp-footer-widget-video-list">
                         <ul class="video-text-links">
                            <li><a href="about.html"><i style="margin-right: 10px;"></i>About Collabridge</a></li>
@@ -1123,7 +1150,7 @@
                <!-- Column: Subscribe Form -->
                <div class="col-lg-3 col-md-6 col-sm-12">
                   <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
-                     <h4 class="tp-footer-widget-title mb-20 text-left">Subscribe</h4>
+                     <h4 class="tp-footer-widget-title mb-20 text-left"style="padding-right:100px !important">Subscribe</h4>
                      <div class="tp-footer-widget-newsletter-wrap">
                         <form action="#">
                            <div class="tp-footer-widget-newsletter-wrapper">

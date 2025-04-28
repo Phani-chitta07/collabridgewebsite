@@ -588,7 +588,7 @@
            <div class="col-xl-2 col-lg-6 col-md-6 col-6">
              <div class="tp-header-right d-flex align-items-center justify-content-end">
                <div class="tp-header-search">
-                 <a href="RequestDemo.html" style="display: block !important;">
+                 <a href="Requestdemo.html#demo" style="display: block !important;">
                    <button class="tp-header-demo-btn">Request a Demo</button>
                  </a>
                </div>
@@ -881,7 +881,7 @@
    <!-- Mobile menu end -->
  
           <div class="offcanvas__btn mt-30">
-             <a href="RequestDemo.html" class="tp-btn">Request A Demo</a>
+             <a href="Requestdemo.html#demo" class="tp-btn">Request A Demo</a>
           </div>
           
           <div class="offcanvas__social mt-30">
@@ -912,26 +912,13 @@
       <div class="row align-items-center">
          <div class="col-12">
             <div class="tpbreadcrumb">
-               <div class="breadcrumb-link mb-15">
-                  <span class="breadcrumb-item-active"><a href="index.html">Home</a></span>
-                  <span> /Conditonal Monitoring </span>
-               </div>
+              
                <h2 class="breadcrumb-title">Anticipate Failures. Maximize Uptime. Optimize Performance.</h2>
             </div>
          </div>
       </div>
    </div>
-   <div class="breadcrumb-shape">
-      <div class="breadcrumb-shape-1 wow fadeInRight" data-wow-duration="1.8s" data-wow-delay=".4s">
-         <img src="assets/img/breadcrumb/breadcrumb-shape-1.png" alt="">
-      </div>
-      <div class="breadcrumb-shape-4 wow slideInRight"  data-wow-duration="1.2s" data-wow-delay=".1s">
-         <img src="assets/img/breadcrumb/breadcrumb-shape-3.png" alt="">
-      </div>
-      <div class="breadcrumb-shape-5 wow slideInRight"  data-wow-duration="1.4s" data-wow-delay=".3s">
-         <img src="assets/img/breadcrumb/breadcrumb-shape-2.png" alt="">
-      </div>
-   </div>
+
 </section>
 <!-- breadcrumb-area-end -->
     <!-- sercices-area-start -->
@@ -943,23 +930,40 @@
                   <div class="tp-services-details-services mb-50">
                      <h4 class="tp-services-details-services-title">
                         Digital Manufacturing 
-                        <span class="dropdown-indicator"><i class="fa-solid fa-chevron-down"></i></span>
+                        <span class="dropdown-indicator"></span>
                     </h4>            
                     <div class="tp-services-details-services-wrap">
-                     <span class="dropdown-hint">Click here to open the dropdown</span>
-                     <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility, Responsiveness, Resilience​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                     </select>
-                 </div>
+                     <span class="dropdown-indicator" onclick="toggleDropdown()">
+                    
+                     </span>
+                     <div class="dropdown-container" style="position: relative; display: inline-block;">
+                        <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px;">
+                           <option value="" disabled selected>Select a Service</option>
+                           <option value="IBP.html">Integrated Business Planning</option>
+                           <option value="df.html">Demand Forecasting</option>
+                           <option value="svrr.html">Supply Chain Visibility​​</option>
+                           <option value="IM.html">Inventory Modeling</option>
+                           <option value="MRP.html">MRP Optimization</option>
+                           <option value="CM.html">Condition Monitoring</option>
+                           <option value="DigitalTwins.html">Digital Twins</option>
+                           <option value="Transport.html">Transport Cost Optimization</option>
+                           <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
+                         </select>
+                        <i class="fa-solid fa-chevron-down" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"></i>
+                      </div>
+                   </div>
+                   
+               
+                   
+                   <script>
+                     function toggleDropdown() {
+                       var dropdown = document.getElementById('digitalManufacturingDropdown');
+                       // Focus the dropdown to open it (behavior may vary by browser)
+                       dropdown.focus();
+                       // Optionally simulate a click (for browsers that support it)
+                       dropdown.click();
+                     }
+                   </script>
                      <script>
                         document.addEventListener("DOMContentLoaded", function() {
                             // Get the current page name
@@ -984,10 +988,14 @@
                      <img src="assets/WebImages/expwebp/Conn-min.jpg" alt="">
                   </div>
                   <h4 class="tp-services-details-title mb-20">Condition Monitoring</h4>
-                  <p>
-                    At Collabridge, we bring Condition Monitoring to life by integrating real-time data with advanced AI and predictive analytics. Our solution continuously monitors the health of your assets and equipment, providing deep insights that allow you to predict failures before they happen, optimize maintenance schedules, and extend the lifespan of your machinery.
-
-Condition Monitoring goes beyond basic tracking—it helps you shift from reactive repairs to proactive management, ensuring that your assets operate at peak performance, with minimal downtime and maximum efficiency.  </p>
+                  <p> At Collabridge, we bring Condition Monitoring to life by integrating real-time data with advanced AI and predictive analytics. Our solution continuously monitors the health of your assets and equipment, providing deep insights that allow you to predict failures before they happen, optimize maintenance schedules, and extend the lifespan of your machinery.
+                     By analyzing vibration patterns, temperature changes, operational anomalies, and other critical indicators, our platform ensures that potential issues are detected early—long before they escalate into costly breakdowns. This real-time visibility empowers maintenance teams to act decisively, reduce unplanned downtime, and achieve greater operational reliability.
+                     
+                     Condition Monitoring goes beyond basic tracking—it transforms asset management by enabling a shift from reactive repairs to proactive, predictive strategies. By anticipating problems rather than merely responding to them, organizations can improve safety, reduce maintenance costs, maximize asset performance, and significantly enhance overall productivity.
+                     
+                     At Collabridge, we help you ensure that your assets operate at peak performance with minimal disruption, driving greater efficiency, longevity, and success for your business.
+                     
+                     </p>
                   <div class="tp-services-details-check-container">
                      <!-- First row of checkboxes -->
                      <div class="tp-services-details-check d-flex align-items-center mt-30">
@@ -1058,35 +1066,36 @@ Condition Monitoring goes beyond basic tracking—it helps you shift from reacti
                            </div>
                         </div>
                         
-<!-- Global Capabilities Center - Single heading with multiple locations -->
-<div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
-   <div class="location-office-item text-left mb-30">
-      <!-- Responsive heading -->
-      <h4 class="mb-10 global-capability-heading" style="color: #fff;">Global Capability Centers</h4>
-      <div class="row" style="justify-content: flex-start;">
-         <!-- Hyderabad Location -->
-         <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
-            <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
-            <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
-            </a>
-            <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
-            </a>
-         </div>
-         <!-- Bangalore Location -->
-         <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
-            <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
-            <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
-            </a>
-            <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-               <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
-            </a>
-         </div>
-      </div>
-   </div>
-</div>
+           <!-- Global Capability Centers Section with Two Cards -->
+           <div class="col-lg-8 col-md-8 col-sm-12 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
+            <!-- Single Heading in Center -->
+            <h4 class="mb-10 global-capability-heading" style="color: #fff; font-size:16px !important;margin-left: 200px !important; white-space: nowrap;">Global Capability Centers</h4>            <div class="row" style="justify-content: center;">
+              <!-- Hyderabad Card -->
+              <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
+                <div class="location-office-item text-left mb-30">
+                  <p class="mb-5" style="color: rgba(255,255,255,0.8);">Hyderabad, India</p>
+                  <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
+                  </a>
+                  <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
+                  </a>
+                </div>
+              </div>
+              <!-- Bangalore Card -->
+              <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: left;">
+                <div class="location-office-item text-left mb-30">
+                  <p class="mb-5" style="color: rgba(255,255,255,0.8);">Bangalore, India</p>
+                  <a href="tel:+918885165333" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-phone" style="color: #d90a2c;"></i>&nbsp; +91 888-5165-333
+                  </a>
+                  <a href="mailto:info@collabridge.com" class="d-block mb-5" style="color: rgba(255,255,255,0.8); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                    <i class="fa-light fa-envelope" style="color: #d90a2c;"></i>&nbsp; info@collabridge.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
                      </div>
                   </div>
@@ -1132,7 +1141,7 @@ Condition Monitoring goes beyond basic tracking—it helps you shift from reacti
                <!-- Column: Navigation -->
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <div class="tp-footer-widget tp-footer-col-3 mb-40 wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".8s">
-                     <h4 class="tp-footer-widget-title mb-30 text-left">Navigation</h4>
+                     <h4 class="tp-footer-widget-title mb-30 text-left" style="padding-right:50px !important">Navigation</h4>
                      <div class="tp-footer-widget-video-list">
                         <ul class="video-text-links">
                            <li><a href="about.html"><i style="margin-right: 10px;"></i>About Collabridge</a></li>
@@ -1148,7 +1157,7 @@ Condition Monitoring goes beyond basic tracking—it helps you shift from reacti
                <!-- Column: Subscribe Form -->
                <div class="col-lg-3 col-md-6 col-sm-12">
                   <div class="tp-footer-widget tp-footer-col-4 mb-40 wow fadeInUp" data-wow-duration="1.6s" data-wow-delay="1s">
-                     <h4 class="tp-footer-widget-title mb-20 text-left">Subscribe</h4>
+                     <h4 class="tp-footer-widget-title mb-20 text-left"style="padding-right:100px !important">Subscribe</h4>
                      <div class="tp-footer-widget-newsletter-wrap">
                         <form action="#">
                            <div class="tp-footer-widget-newsletter-wrapper">
