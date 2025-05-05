@@ -6400,9 +6400,257 @@ body .ui-tooltip {
 .tp-megamenu > a:hover {
   background-color: rgba(236, 236, 236, 0.3) !important;
 }
+/* Desktop styles */
+/* Mobile styles */
+@media (max-width: 768px) {
+  .global-capability-heading {
+      margin-left: -200px !important;
+      padding-left: 15px !important;
+      text-align: left !important;
+      font-size: 16px !important;
+      color: #fff !important;
+      white-space: nowrap !important;
+  }
+}
 
 /* Ensure the footer sticks to the bottom and no extra space appears after it */
+/* Responsive adjustments for stats */
+@media (max-width: 768px) {
+  .stats-container {
+    position: relative;
+    padding-top: 20px;
+  }
+  
+  .stat-item {
+    text-align: center !important;
+    margin-bottom: -50px !important;
+  }
+  
+  .stat-item span {
+    font-size: 20px !important;
+  }
+  
+  .stat-item p {
+    font-size: 12px !important;
+  }
+}
 
+/* Add hover effect for stats */
+.stat-item {
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Card and Image Styles */
+.tp-blog-two-thumb {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.tp-blog-two-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tp-blog-two-item {
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tp-blog-two-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tp-blog-two-content span {
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tp-blog-two-title {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tp-blog-two-title a {
+  color: #222;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.tp-blog-two-btn {
+  margin-top: auto;
+}
+
+.tp-blog-two-btn a {
+  display: inline-block;
+  color: #d90a2c;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.tp-blog-two-thumb img:hover {
+  transform: scale(1.05);
+}
+
+.tp-blog-two-title a:hover {
+  color: #d90a2c;
+}
+
+.tp-blog-two-btn a:hover {
+  color: #b30824;
+}
+
+/* Overlay Styles */
+.overlay-anim {
+  position: relative;
+}
+
+.tp-thumb-common-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tp-blog-two-thumb-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tp-blog-two-thumb:hover .tp-thumb-common-overlay,
+.tp-blog-two-thumb:hover .tp-blog-two-thumb-plus {
+  opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tp-blog-two-thumb {
+      height: 250px;
+  }
+  
+  .tp-blog-two-title a {
+      font-size: 18px;
+  }
+  
+  .tp-blog-two-content {
+      padding: 20px;
+  }
+}
+/* Add this CSS to your stylesheet */
+.blog-area {
+  position: relative;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+/* Background pattern overlay */
+.blog-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(#d90a2c0d 2px, transparent 2px),
+    radial-gradient(#d90a2c0d 2px, transparent 2px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Floating shapes */
+.blog-area::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, #d90a2c08 25%, transparent 25%) -50px 0,
+    linear-gradient(-45deg, #d90a2c08 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, transparent 75%, #d90a2c08 75%) -50px 0,
+    linear-gradient(-45deg, transparent 75%, #d90a2c08 75%) -50px 0;
+  background-size: 100px 100px;
+  z-index: 1;
+}
+
+/* Content positioning */
+.blog-area .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Blog card enhancements */
+.tp-blog-two-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tp-blog-two-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern gradient border */
+.tp-blog-two-thumb::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #d90a2c15, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.tp-blog-two-item:hover .tp-blog-two-thumb::after {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-area::before,
+  .blog-area::after {
+    background-size: 60px 60px;
+  }
+}
 /* Base styling for mega menu links */
 .mega-menu-list li a {
   position: relative !important;
@@ -6410,6 +6658,7 @@ body .ui-tooltip {
   overflow: hidden !important;
    width: fit-content !important; /* Add this line */
 }
+
 
 /* Create the hover line for all mega menu links */
 .mega-menu-list li a::after {
