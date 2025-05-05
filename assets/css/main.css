@@ -6400,7 +6400,9 @@ body .ui-tooltip {
 .tp-megamenu > a:hover {
   background-color: rgba(236, 236, 236, 0.3) !important;
 }
-*/
+
+/* Ensure the footer sticks to the bottom and no extra space appears after it */
+
 /* Base styling for mega menu links */
 .mega-menu-list li a {
   position: relative !important;
@@ -6550,6 +6552,37 @@ body .ui-tooltip {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.breadcrumb-area {
+  position: relative;
+  overflow: hidden;
+}
+.breadcrumb-bg {
+  will-change: transform;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+/*video styling for callscribe AI*/
+@media (max-width: 768px) {
+  .services-content {
+    flex-direction: column !important;
+  }
+  .services-image {
+    order: -1 !important;
+    width: 100% !important;
+  }
+  .services-image video {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+  }
+  .services-text {
+    order: 2 !important;
+  }
 }
 /* Ensuring links display as proper vertical blocks */
 .mega-menu-list li a {
