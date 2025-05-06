@@ -326,7 +326,7 @@
                                  }
                                </style>
                                <ul class="mega-menu-list">
-                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Digital Manufacturing</a></li>
+                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Manufacturing</a></li>
                                  <li><a href="IBP.html" style="font-size: 12px !important; display: block !important;">Integrated Business Planning​</a></li>
                                  <li><a href="df.html" style="font-size: 12px !important; display: block !important;">Demand Forecasting</a></li>
                                  <li><a href="svrr.html" style="font-size: 12px !important; display: block !important;">Supply Chain Visibility, <br>Responsiveness and Resilience​​</a></li>
@@ -357,6 +357,14 @@
                                  <li><a href="PIM.html" style="font-size: 12px !important; display: block !important;">Pipeline Integrity Monitoring​</a></li>
                                  <li><a href="IATDO.html" style="font-size: 12px !important; display: block !important;">Intelligent Automation of Trade desk Operations​</a></li>
                                  <li><a href="RS.html" style="font-size: 12px !important; display: block !important;">Remote Sensing - VFM</a></li>
+                                 <li class="has-hover-line">
+                                  <a href="Energy & Utilities.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; position: relative; display: block !important;margin-top:10px !important;">
+                                    Insurance
+                                    <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                                  </a>
+                                </li> 
+                                <li><a href="AUP.html" style="font-size: 12px !important; display: block !important;">Automation of Underwriting Process</a></li>
+                                 <li><a href="RAS.html" style="font-size: 12px !important; display: block !important;">Risk Assessment</a></li>
                                </ul>
                              </div>
                            </div>
@@ -645,10 +653,10 @@
          <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
        </a>
        <ul class="sub-menu">
-         <!-- Digital Manufacturing Section -->
+         <!-- Manufacturing Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
-             <span>Digital Manufacturing</span>
+             <span>Manufacturing</span>
              <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
            </a>
            <ul class="inner-submenu">
@@ -680,6 +688,17 @@
              <li><a href="RS.html">Remote Sensing - VFM</a></li>
            </ul>
          </li>
+         <li class="mobile-sub-item has-children">
+          <a href="#" class="toggle-submenu">
+            <span>Insurance</span>
+            <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <ul class="inner-submenu">
+            <li><a href="AUP.html">Automation of Underwriting Process</a></li>
+            <li><a href="RAS.html">Risk Assessment</a></li>
+           
+          </ul>
+        </li>
          <!-- Pharmacovigilance Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
@@ -908,140 +927,852 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Digital Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
-                </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
+<!-- Supply Chain Section -->
+<section class="services-area pt-90 pb-80" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="content-wrapper">
+          <h2 class="section-title mb-4" style="font-size: 2.5rem; font-weight: 700; color: #2a2a2a;">
+            Transform Your Supply Chain
+            <span class="title-accent" style="display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #d90a2c, transparent); margin-top: 15px; border-radius: 2px;"></span>
+          </h2>
+
+          <p class="lead mb-4" style="color: #666; line-height: 1.8; font-size: 1.1rem; position: relative; padding-left: 20px; border-left: 3px solid #d90a2c;">
+            Our AI-powered platform provides end-to-end visibility across your entire supply chain network, enabling real-time monitoring and intelligent decision making.
+          </p>
+
+          <!-- Key Metrics -->
+          <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px;">
+            <div class="metric-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center;">
+              <div class="metric-icon" style="color: #d90a2c; margin-bottom: 10px;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
               </div>
+              <h3 style="color: #d90a2c; font-size: 2.2rem; margin-bottom: 5px;">85%</h3>
+              <p style="color: #666; margin: 0;">Increased Visibility</p>
+            </div>
+            <div class="metric-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center;">
+              <div class="metric-icon" style="color: #d90a2c; margin-bottom: 10px;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3 style="color: #d90a2c; font-size: 2.2rem; margin-bottom: 5px;">60%</h3>
+              <p style="color: #666; margin: 0;">Risk Reduction</p>
             </div>
           </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/supplychain-min.jpg" alt="Supply Chain Visibility">
-              </div>
-              <h4 class="tp-services-details-title mb-20">Supply Chain Visibility, Resilience, and Responsiveness</h4>
-              <p style="white-space: pre-line;">
-                At Collabridge, we empower businesses to strengthen their supply chains with AI/ML-powered solutions designed to enhance visibility, resilience, and responsiveness. In an increasingly complex and dynamic global marketplace, maintaining an agile and resilient supply chain is critical. Our solution enables businesses to monitor and manage every aspect of their supply chain, from sourcing to delivery, with real-time insights and predictive analytics.
-          
-                By integrating advanced AI models with real-time data streams, our platform offers unmatched visibility into supply chain operations, allowing businesses to quickly identify risks, disruptions, and opportunities. This enhanced visibility drives proactive decision-making, improves forecasting accuracy, and optimizes inventory management, ensuring that supply chains remain resilient in the face of disruptions.
-          
-                We combine data-driven insights with intelligent automation to help organizations not only respond to current challenges but also adapt and build resilience for the future. At Collabridge, we believe that the key to supply chain excellence lies in the ability to anticipate, respond, and adapt swiftly in a rapidly changing market.
-              </p>
-          
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Real-Time Supply Chain Monitoring</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>AI-Driven Risk Mitigation</span>
-                  </div>
-                </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Enhanced Demand Forecasting</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Proactive Inventory Optimization</span>
-                  </div>
-                </div>
-                <!-- Third row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>End-to-End Supply Chain Visibility</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </div>
-    </section>
-   <!-- sercices-area-end -->
+
+      <!-- Right Column -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="image-section" style="position: relative;">
+          <img src="assets/WebImages/expwebp/supplychain-min.jpg" alt="Supply Chain Dashboard" 
+               style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+          
+          <!-- Feature Cards Overlay -->
+          <div class="features-overlay" style="position: absolute; bottom: -30px; left: 50%; transform: translateX(-50%); width: 90%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+            <div class="feature-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
+              <div class="icon" style="color: #d90a2c; margin-bottom: 10px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </div>
+              <h5 style="font-size: 1rem; margin-bottom: 5px;">Real-time Monitoring</h5>
+              <p style="color: #666; font-size: 0.85rem;">Live tracking & alerts</p>
+            </div>
+            <div class="feature-card" style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.08);">
+              <div class="icon" style="color: #d90a2c; margin-bottom: 10px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <h5 style="font-size: 1rem; margin-bottom: 5px;">AI Analytics</h5>
+              <p style="color: #666; font-size: 0.85rem;">Smart insights & predictions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.metric-card {
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .features-overlay {
+    position: relative;
+    bottom: 0;
+    transform: none;
+    left: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .image-section {
+    margin-bottom: 60px;
+  }
+}
+</style>
+<!-- Why Choose Us Section -->
+<section class="why-choose-section pt-90 pb-80" style="background: linear-gradient(135deg, rgba(217, 10, 44, 0.03), rgba(255, 255, 255, 0.1));">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-7 text-center">
+        <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #2a2a2a;">
+          Why Choose Our Supply Chain Solution
+          <span class="title-accent" style="display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #d90a2c, transparent); margin: 15px auto 0; border-radius: 2px;"></span>
+        </h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <!-- Feature Cards -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <div class="icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="feature-content">
+            <h4>AI-Powered Analytics</h4>
+            <p>Advanced algorithms provide predictive insights and real-time optimization recommendations.</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <div class="icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="feature-content">
+            <h4>Real-Time Visibility</h4>
+            <p>End-to-end transparency across your entire supply chain network with instant updates.</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <div class="icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+          </div>
+          <div class="feature-content">
+            <h4>Risk Management</h4>
+            <p>Proactive risk identification and mitigation strategies to ensure business continuity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+    .feature-card {
+      position: relative;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.4s ease;
+      overflow: hidden;
+      border: 1px solid rgba(217, 10, 44, 0.1);
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(217, 10, 44, 0.05), rgba(255, 255, 255, 0));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(217, 10, 44, 0.1);
+    }
+    
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+    
+    .feature-icon {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    
+    .icon-wrapper {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    
+    .icon-wrapper::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      border-radius: inherit;
+      filter: blur(10px);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+    
+    .feature-card:hover .icon-wrapper {
+      transform: scale(1.1) rotate(5deg);
+    }
+    
+    .feature-card:hover .icon-wrapper::after {
+      opacity: 0.3;
+    }
+    
+    .feature-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .feature-content h4 {
+      color: #2a2a2a;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+    
+    .feature-content p {
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+    
+    .feature-card:hover .feature-content h4 {
+      color: #d90a2c;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .feature-card {
+        padding: 30px 20px;
+      }
+    
+      .icon-wrapper {
+        width: 60px;
+        height: 60px;
+      }
+    
+      .feature-content h4 {
+        font-size: 1.1rem;
+      }
+    
+      .feature-content p {
+        font-size: 0.9rem;
+      }
+    }
+    </style>
+  </div>
+</section>
+
+<!-- Before & After Section with Enhanced Styling -->
+<section class="before-after-section pt-90 pb-80" style="background: linear-gradient(135deg, rgba(217, 10, 44, 0.03), rgba(255, 255, 255, 0.1));">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #2a2a2a;">
+          Experience the Transformation
+          <span class="title-accent"></span>
+        </h2>
+        <p class="section-subtitle" style="color: #666; margin-top: 20px; font-size: 1.1rem;">
+          See how our solutions revolutionize supply chain management
+        </p>
+      </div>
+    </div>
+
+    <div class="row align-items-stretch comparison-row">
+      <!-- Before Card -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="comparison-card before-card">
+          <div class="card-header">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#dc3545" stroke-width="2">
+                <path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3>Before Our Solution</h3>
+          </div>
+          <div class="card-body">
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">✕</span>
+                <span class="text">Limited supply chain visibility</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span class="text">Reactive problem-solving approach</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span class="text">Manual tracking and reporting</span>
+              </li>
+              <li>
+                <span class="icon">✕</span>
+                <span class="text">Delayed response to disruptions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- After Card -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="comparison-card after-card">
+          <div class="card-header">
+            <div class="header-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3>After Our Solution</h3>
+          </div>
+          <div class="card-body">
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">✓</span>
+                <span class="text">Complete end-to-end visibility</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span class="text">Proactive risk management</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span class="text">Automated AI-driven insights</span>
+              </li>
+              <li>
+                <span class="icon">✓</span>
+                <span class="text">Real-time response capabilities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+ <!-- Implementation Journey Section -->
+<section class="implementation-section pt-90 pb-80" style="background: white;">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #2a2a2a;">
+          Implementation Journey
+          <span class="title-accent" style="display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #d90a2c, transparent); margin: 15px auto 0; border-radius: 2px;"></span>
+        </h2>
+        <p class="section-subtitle" style="color: #666; margin-top: 20px; font-size: 1.1rem;">
+          Our proven approach to transform your supply chain operations
+        </p>
+      </div>
+    </div>
+
+    <div class="implementation-timeline">
+      <div class="row">
+        <!-- Step 1 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
+          <div class="timeline-item">
+            <div class="timeline-number">01</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              </div>
+              <h4>Assessment</h4>
+              <p>Comprehensive analysis of current supply chain processes and identification of optimization opportunities</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-item">
+            <div class="timeline-number">02</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <h4>Strategy</h4>
+              <p>Development of tailored implementation plan aligned with your business objectives</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-item">
+            <div class="timeline-number">03</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+              </div>
+              <h4>Implementation</h4>
+              <p>Seamless integration of AI-powered solutions with existing systems and processes</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-item">
+            <div class="timeline-number">04</div>
+            <div class="timeline-content">
+              <div class="timeline-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </div>
+              <h4>Optimization</h4>
+              <p>Continuous monitoring and refinement for optimal performance and ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Implementation Timeline Styling */
+.implementation-timeline {
+  padding: 40px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  height: 100%;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(217, 10, 44, 0.1);
+}
+
+.timeline-item:hover::before {
+  opacity: 1;
+}
+
+.timeline-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(217, 10, 44, 0.1);
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover .timeline-number {
+  color: rgba(217, 10, 44, 0.2);
+  transform: scale(1.1);
+}
+
+.timeline-icon {
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.timeline-content h4 {
+  color: #2a2a2a;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.timeline-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.timeline-item:hover .timeline-content h4 {
+  color: #d90a2c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .timeline-item {
+    margin-bottom: 30px;
+  }
+  
+  .timeline-number {
+    font-size: 2.5rem;
+  }
+}
+</style>
+  </div>
+</section>
+
+<style>
+/* Enhanced Before & After Cards Styling */
+.comparison-row {
+  margin-top: 40px;
+}
+
+.comparison-card {
+  height: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.card-header {
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.05), rgba(255, 255, 255, 0.1));
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.comparison-list li:hover {
+  transform: translateX(10px);
+  background: rgba(217, 10, 44, 0.05);
+}
+
+.comparison-list .icon {
+  min-width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.before-card .icon {
+  color: #dc3545;
+}
+
+.after-card .icon {
+  color: #28a745;
+}
+
+/* Results Section Styling */
+.result-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.result-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(217, 10, 44, 0.1);
+}
+
+.result-icon {
+  margin-bottom: 20px;
+}
+
+.result-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d90a2c;
+  margin-bottom: 10px;
+}
+
+.result-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+}
+
+.result-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .comparison-card {
+    margin-bottom: 30px;
+  }
+  
+  .result-card {
+    margin-bottom: 30px;
+  }
+}
+
+</style>
+<!-- Supply Chain Visibility Section -->
+<section class="visibility-section pt-90 pb-80" style="background: linear-gradient(135deg, rgba(217, 10, 44, 0.03), rgba(255, 255, 255, 0.1));">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #2a2a2a;">
+          End-to-End Supply Chain Visibility
+          <span class="title-accent" style="display: block; width: 60px; height: 4px; background: linear-gradient(90deg, #d90a2c, transparent); margin: 15px auto 0; border-radius: 2px;"></span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="visibility-content pr-lg-5">
+          <h3 class="mb-4" style="color: #2a2a2a; font-size: 1.8rem;">Real-Time Insights Across Your Network</h3>
+          <p class="mb-4" style="color: #666; line-height: 1.8;">
+            Our advanced supply chain visibility solution provides a comprehensive view of your entire supply network, from suppliers to end customers. Through AI-powered analytics and real-time monitoring, we help you:
+          </p>
+          <ul class="visibility-features" style="list-style: none; padding: 0;">
+            <li class="mb-3 d-flex align-items-center">
+              <span class="icon-wrapper" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </span>
+              <span>Track inventory levels and movement in real-time</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="icon-wrapper" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </span>
+              <span>Monitor supplier performance and compliance</span>
+            </li>
+            <li class="mb-3 d-flex align-items-center">
+              <span class="icon-wrapper" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5"/>
+                </svg>
+              </span>
+              <span>Identify and mitigate potential disruptions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="visibility-cards">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="insight-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); height: 100%;">
+                <div class="card-icon mb-4" style="color: #d90a2c;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #2a2a2a; margin-bottom: 15px;">Real-Time Tracking</h4>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                  Monitor your supply chain operations 24/7 with live updates and instant notifications.
+                </p>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="insight-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); height: 100%;">
+                <div class="card-icon mb-4" style="color: #d90a2c;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #2a2a2a; margin-bottom: 15px;">Predictive Analytics</h4>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                  Leverage AI to forecast potential issues and optimize operations proactively.
+                </p>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="insight-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); height: 100%;">
+                <div class="card-icon mb-4" style="color: #d90a2c;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #2a2a2a; margin-bottom: 15px;">Performance Metrics</h4>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                  Track KPIs and performance metrics with customizable dashboards and reports.
+                </p>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="insight-card" style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); height: 100%;">
+                <div class="card-icon mb-4" style="color: #d90a2c;">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                  </svg>
+                </div>
+                <h4 style="font-size: 1.2rem; color: #2a2a2a; margin-bottom: 15px;">Intelligent Alerts</h4>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">
+                  Receive smart notifications for critical events and potential disruptions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.visibility-features li {
+  transition: all 0.3s ease;
+}
+
+.visibility-features li:hover {
+  transform: translateX(10px);
+}
+
+.insight-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.insight-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(217, 10, 44, 0.1);
+}
+
+.card-icon {
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+  .visibility-content {
+    margin-bottom: 40px;
+  }
+  
+  .insight-card {
+    margin-bottom: 20px;
+  }
+}
+</style>
 
    </main>
 

@@ -327,7 +327,7 @@
                                  }
                                </style>
                                <ul class="mega-menu-list">
-                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Digital Manufacturing</a></li>
+                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Manufacturing</a></li>
                                  <li><a href="IBP.html" style="font-size: 12px !important; display: block !important;">Integrated Business Planning​</a></li>
                                  <li><a href="df.html" style="font-size: 12px !important; display: block !important;">Demand Forecasting</a></li>
                                  <li><a href="svrr.html" style="font-size: 12px !important; display: block !important;">Supply Chain Visibility, <br>Responsiveness and Resilience​​</a></li>
@@ -358,6 +358,14 @@
                                  <li><a href="PIM.html" style="font-size: 12px !important; display: block !important;">Pipeline Integrity Monitoring​</a></li>
                                  <li><a href="IATDO.html" style="font-size: 12px !important; display: block !important;">Intelligent Automation of Trade desk Operations​</a></li>
                                  <li><a href="RS.html" style="font-size: 12px !important; display: block !important;">Remote Sensing - VFM</a></li>
+                                 <li class="has-hover-line">
+                                  <a href="Energy & Utilities.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; position: relative; display: block !important;margin-top:10px !important;">
+                                    Insurance
+                                    <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                                  </a>
+                                </li> 
+                                <li><a href="AUP.html" style="font-size: 12px !important; display: block !important;">Automation of Underwriting Process</a></li>
+                                 <li><a href="RAS.html" style="font-size: 12px !important; display: block !important;">Risk Assessment</a></li>
                                </ul>
                              </div>
                            </div>
@@ -647,10 +655,10 @@
          <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
        </a>
        <ul class="sub-menu">
-         <!-- Digital Manufacturing Section -->
+         <!-- Manufacturing Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
-             <span>Digital Manufacturing</span>
+             <span>Manufacturing</span>
              <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
            </a>
            <ul class="inner-submenu">
@@ -682,6 +690,17 @@
              <li><a href="RS.html">Remote Sensing - VFM</a></li>
            </ul>
          </li>
+         <li class="mobile-sub-item has-children">
+          <a href="#" class="toggle-submenu">
+            <span>Insurance</span>
+            <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <ul class="inner-submenu">
+            <li><a href="AUP.html">Automation of Underwriting Process</a></li>
+            <li><a href="RAS.html">Risk Assessment</a></li>
+           
+          </ul>
+        </li>
          <!-- Pharmacovigilance Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
@@ -913,141 +932,775 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Digital Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+
+      <section class="digital-twins-showcase">
+        <div class="container">
+         <div class="hero-content" style="margin-top: 60px;">
+  <h1 class="hero-title" style ="font-size: 40px;">Transform Physical Assets into
+    <div class="dynamic-words">
+      <span>Digital Replicas</span>
+      <span>Smart Models</span>
+      <span>Virtual Twins</span>
+    </div>
+  </h1>
+</div>
+<style>
+  .dynamic-words {
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .dynamic-words span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #d90a2c;
+    opacity: 0;
+    animation: wipeAnimation 12s linear infinite;
+  }
+  
+  .dynamic-words span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(217, 10, 44, 0.2), transparent);
+    animation: wipeEffect 12s linear infinite;
+  }
+  
+  .dynamic-words span:nth-child(1) {
+    animation-delay: -0s;
+  }
+  
+  .dynamic-words span:nth-child(1)::after {
+    animation-delay: -0s;
+  }
+  
+  .dynamic-words span:nth-child(2) {
+    animation-delay: -4s;
+  }
+  
+  .dynamic-words span:nth-child(2)::after {
+    animation-delay: -4s;
+  }
+  
+  .dynamic-words span:nth-child(3) {
+    animation-delay: -8s;
+  }
+  
+  .dynamic-words span:nth-child(3)::after {
+    animation-delay: -8s;
+  }
+  
+  @keyframes wipeAnimation {
+    0%, 5% {
+      opacity: 0;
+      transform: translate3d(-40px, 0, 0);
+      clip-path: inset(0 100% 0 0);
+    }
+    15%, 25% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      clip-path: inset(0 0 0 0);
+    }
+    30%, 35% {
+      opacity: 0;
+      transform: translate3d(40px, 0, 0);
+      clip-path: inset(0 0 0 100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(40px, 0, 0);
+      clip-path: inset(0 0 0 100%);
+    }
+  }
+  
+  @keyframes wipeEffect {
+    0% {
+      left: -100%;
+    }
+    20%, 80% {
+      left: 100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Add perspective to parent for better 3D effect */
+  .hero-title {
+    perspective: 1000px;
+  }
+  
+  /* Optional hover pause */
+  .dynamic-words:hover span {
+    animation-play-state: paused;
+  }
+  </style>
+            
+            <section class="dt-showcase">
+              <div class="dt-container">
+                <!-- Main Info Section -->
+                <div class="dt-main-info">
+                  <div class="dt-info-left" data-aos="fade-right">
+                    <h2 class="dt-title">What are Digital Twins?</h2>
+                    <p class="dt-description">
+                      Virtual replicas that transform physical assets into intelligent digital models, enabling real-time monitoring and predictive insights.
+                    </p>
+                    <div class="dt-stats-grid">
+                      <div class="dt-stat-card">
+                        <div class="dt-stat-number">99.9<span>%</span></div>
+                        <div class="dt-stat-label">Accuracy Rate</div>
+                      </div>
+                      <div class="dt-stat-card">
+                        <div class="dt-stat-number">45<span>%</span></div>
+                        <div class="dt-stat-label">Cost Reduction</div>
+                      </div>
+                      <div class="dt-stat-card">
+                        <div class="dt-stat-number">30<span>min</span></div>
+                        <div class="dt-stat-label">Response Time</div>
+                      </div>
                     </div>
                   </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
+                  
+                  <div class="dt-info-right" data-aos="fade-left">
+                    <div class="dt-3d-model">
+                      <img src="assets/WebImages/expwebp/digitaltwins.webp" alt="Digital Twin">
+                      <div class="dt-overlay-points">
+                        <div class="dt-point" style="--x: 30%; --y: 20%;">
+                          <div class="dt-point-pulse"></div>
+                          <div class="dt-point-label">Real-time Data</div>
+                        </div>
+                        <div class="dt-point" style="--x: 70%; --y: 50%;">
+                          <div class="dt-point-pulse"></div>
+                          <div class="dt-point-label">Performance Analytics</div>
+                        </div>
+                        <div class="dt-point" style="--x: 40%; --y: 80%;">
+                          <div class="dt-point-pulse"></div>
+                          <div class="dt-point-label">Predictive Maintenance</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
+            
+                <!-- Features Grid -->
+                <div class="dt-features">
+                  <div class="dt-feature-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="dt-feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                      </svg>
+                    </div>
+                    <h3>Real-time Monitoring</h3>
+                    <p>Continuous asset tracking with millisecond precision</p>
+                    <div class="dt-progress">
+                      <div class="dt-progress-bar" style="--progress: 85%"></div>
+                    </div>
+                  </div>
+            
+                  <div class="dt-feature-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="dt-feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                      </svg>
+                    </div>
+                    <h3>Predictive <br> Analytics</h3>
+                    <p>AI-powered insights for maintenance optimization</p>
+                    <div class="dt-progress">
+                      <div class="dt-progress-bar" style="--progress: 92%"></div>
+                    </div>
+                  </div>
+            
+                  <div class="dt-feature-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="dt-feature-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                      </svg>
+                    </div>
+                    <h3>Performance Optimization</h3>
+                    <p>Smart optimization through real-time analysis</p>
+                    <div class="dt-progress">
+                      <div class="dt-progress-bar" style="--progress: 88%"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </section>
+            
+            <style>
+            .dt-showcase {
+              padding: 100px 0;
+              background: linear-gradient(135deg, #ffffff 0%, #fff 100%);
+              position: relative;
+              overflow: hidden;
+            }
+            
+            .dt-container {
+              max-width: 1400px;
+              margin: 0 auto;
+              padding: 0 20px;
+            }
+            
+            .dt-main-info {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 60px;
+              align-items: center;
+              margin-bottom: 100px;
+            }
+            
+            .dt-title {
+              font-size: 3.5rem;
+              background: linear-gradient(135deg, #2a2a2a, #d90a2c);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              margin-bottom: 30px;
+            }
+            
+            .dt-description {
+              font-size: 1.2rem;
+              color: #666;
+              line-height: 1.6;
+              margin-bottom: 40px;
+            }
+            
+            .dt-stats-grid {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 20px;
+            }
+            
+            .dt-stat-card {
+              padding: 25px;
+              background: rgba(255, 255, 255, 0.9);
+              border-radius: 20px;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+              text-align: center;
+              transition: transform 0.3s ease;
+            }
+            
+            .dt-stat-card:hover {
+              transform: translateY(-5px);
+            }
+            
+            .dt-stat-number {
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: #d90a2c;
+              line-height: 1;
+              margin-bottom: 10px;
+            }
+            
+            .dt-stat-number span {
+              font-size: 1.5rem;
+              opacity: 0.8;
+            }
+            
+            .dt-stat-label {
+              font-size: 0.9rem;
+              color: #666;
+            }
+            
+            .dt-3d-model {
+              position: relative;
+              border-radius: 30px;
+              overflow: hidden;
+              box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            }
+            
+            .dt-3d-model img {
+              width: 100%;
+              height: auto;
+              display: block;
+            }
+            
+            .dt-overlay-points {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+            
+            .dt-point {
+              position: absolute;
+              left: var(--x);
+              top: var(--y);
+              transform: translate(-50%, -50%);
+            }
+            
+            .dt-point-pulse {
+              width: 12px;
+              height: 12px;
+              background: #d90a2c;
+              border-radius: 50%;
+              cursor: pointer;
+              position: relative;
+            }
+            
+            .dt-point-pulse::before {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background: rgba(217, 10, 44, 0.3);
+              border-radius: 50%;
+              animation: dtPulse 2s infinite;
+            }
+            
+            .dt-point-label {
+              position: absolute;
+              white-space: nowrap;
+              background: rgba(0, 0, 0, 0.8);
+              color: #fff;
+              padding: 8px 12px;
+              border-radius: 6px;
+              font-size: 12px;
+              top: -40px;
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+            
+            .dt-point:hover .dt-point-label {
+              opacity: 1;
+            }
+            
+            .dt-features {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+              gap: 30px;
+            }
+            
+            .dt-feature-card {
+              background: rgba(255, 255, 255, 0.9);
+              padding: 40px;
+              border-radius: 25px;
+              box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+              transition: all 0.3s ease;
+            }
+            
+            .dt-feature-card:hover {
+              transform: translateY(-10px);
+              box-shadow: 0 25px 50px rgba(217, 10, 44, 0.1);
+            }
+            
+            .dt-feature-icon {
+              width: 60px;
+              height: 60px;
+              background: linear-gradient(135deg, #d90a2c10, #ff4b6e10);
+              border-radius: 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 20px;
+            }
+            
+            .dt-feature-icon svg {
+              width: 30px;
+              height: 30px;
+              stroke: #d90a2c;
+            }
+            
+            .dt-progress {
+              height: 6px;
+              background: #f0f0f0;
+              border-radius: 3px;
+              margin-top: 20px;
+              overflow: hidden;
+            }
+            
+            .dt-progress-bar {
+              height: 100%;
+              background: linear-gradient(90deg, #d90a2c, #ff4b6e);
+              border-radius: 3px;
+              width: var(--progress);
+              transition: width 1.5s ease;
+            }
+            
+            @keyframes dtPulse {
+              0% { transform: scale(1); opacity: 1; }
+              100% { transform: scale(3); opacity: 0; }
+            }
+            
+            @media (max-width: 991px) {
+              .dt-main-info {
+                grid-template-columns: 1fr;
+                gap: 40px;
+              }
+            
+              .dt-title {
+                font-size: 2.5rem;
+              }
+            
+              .dt-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+              }
+            }
+            
+            @media (max-width: 768px) {
+              .dt-stats-grid {
+                grid-template-columns: 1fr;
+              }
+            }
+            </style>
           </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/digitaltwins.webp" alt="Digital Twins">
-              </div>
-              <h4 class="tp-services-details-title mb-20">Digital Twins</h4>
-              <p style="white-space: pre-line;">
-                At Collabridge, we help businesses create powerful, real-time digital replicas of their physical assets, processes, and systems through AI/ML-powered Digital Twin technology. In today’s data-driven world, businesses need a deeper understanding of their assets and operations. Our solution bridges the gap between the physical and digital worlds, providing valuable insights that drive operational efficiency and innovation.
-          
-                By leveraging real-time sensor data, AI, and machine learning algorithms, our Digital Twin solutions enable businesses to simulate, predict, and optimize the performance of assets and systems in a virtual environment. This allows for enhanced decision-making, predictive maintenance, and performance optimization, ultimately leading to better asset management and reduced costs.
-          
-                Collabridge’s Digital Twins empower businesses to improve agility and enhance operational performance by integrating the digital and physical realms. Our solution transforms how organizations manage their assets, optimize operations, and reduce risks—driving smarter and more sustainable growth.
-              </p>
-          
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Real-Time Asset Simulation</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Predictive Maintenance and Optimization</span>
-                  </div>
-                </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>AI-Driven Performance Insights</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Risk Mitigation through Digital Simulation</span>
-                  </div>
-                </div>
-                <!-- Third row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Seamless Integration of Physical and Digital Worlds</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+      
+
+    
+
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Animate metrics
+        const metrics = document.querySelectorAll('.metric-value');
+        metrics.forEach(metric => {
+          const target = parseFloat(metric.dataset.value);
+          let current = 0;
+          const increment = target / 50;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            metric.textContent = current.toFixed(1) + '%';
+          }, 40);
+        });
+      });
+      </script>
+      <!-- Industry Preference Section -->
+<section class="industry-preference">
+  <div class="container">
+    <h2 class="section-title">Why Industries Choose Our Digital Twin Solutions</h2>
+    
+    <div class="preference-cards">
+      <div class="preference-card" data-aos="fade-up">
+        <div class="card-icon">
+          <div class="pulse-ring"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <h3>Real-Time Intelligence</h3>
+        <p>Instant insights and predictive analytics for proactive decision-making</p>
+        <div class="tech-tags">
+          <span>AI/ML</span>
+          <span>IoT</span>
+          <span>Analytics</span>
         </div>
       </div>
-    </section>
-   <!-- sercices-area-end -->
 
+      <div class="preference-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-icon">
+          <div class="pulse-ring"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 7L9 19l-5.5-5.5"/>
+          </svg>
+        </div>
+        <h3>Cost Efficiency</h3>
+        <p>Reduce operational costs through predictive maintenance and optimization</p>
+        <div class="tech-tags">
+          <span>ROI</span>
+          <span>Optimization</span>
+          <span>Savings</span>
+        </div>
+      </div>
+
+      <div class="preference-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-icon">
+          <div class="pulse-ring"></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3>Rapid Implementation</h3>
+        <p>Quick deployment and seamless integration with existing systems</p>
+        <div class="tech-tags">
+          <span>Agile</span>
+          <span>Seamless</span>
+          <span>Scalable</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation Roadmap -->
+<section class="implementation-roadmap">
+  <div class="container">
+    <h2 class="section-title">Implementation Journey</h2>
+    
+    <div class="roadmap">
+      <div class="timeline">
+        <div class="timeline-track"></div>
+        
+        <div class="timeline-point" data-aos="fade-right">
+          <div class="point-content">
+            <div class="point-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+              </svg>
+            </div>
+            <div class="point-info">
+              <h3>Discovery</h3>
+              <p>Assessment and planning of digital twin requirements</p>
+              <span class="duration">Week 1-2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-point" data-aos="fade-left">
+          <div class="point-content">
+            <div class="point-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              </svg>
+            </div>
+            <div class="point-info">
+              <h3>Design & Architecture</h3>
+              <p>Creating the digital twin blueprint and integration plan</p>
+              <span class="duration">Week 3-4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-point" data-aos="fade-right">
+          <div class="point-content">
+            <div class="point-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+              </svg>
+            </div>
+            <div class="point-info">
+              <h3>Development</h3>
+              <p>Building and configuring the digital twin system</p>
+              <span class="duration">Week 5-8</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-point" data-aos="fade-left">
+          <div class="point-content">
+            <div class="point-marker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                <path d="M22 4L12 14.01l-3-3"/>
+              </svg>
+            </div>
+            <div class="point-info">
+              <h3>Deployment</h3>
+              <p>Implementation and integration with live systems</p>
+              <span class="duration">Week 9-10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Industry Preference Section */
+.industry-preference {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff 100%);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  background: linear-gradient(135deg, #2a2a2a, #d90a2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.preference-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.preference-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.preference-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(217, 10, 44, 0.1);
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), rgba(255, 75, 110, 0.1));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+  background: rgba(217, 10, 44, 0.1);
+}
+
+.card-icon svg {
+  width: 35px;
+  height: 35px;
+  stroke: #d90a2c;
+  position: relative;
+  z-index: 1;
+}
+
+.tech-tags {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tech-tags span {
+  padding: 5px 15px;
+  background: rgba(217, 10, 44, 0.1);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #d90a2c;
+}
+
+/* Implementation Roadmap */
+.implementation-roadmap {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+}
+
+.roadmap {
+  position: relative;
+  padding: 40px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #d90a2c, transparent);
+}
+
+.timeline-point {
+  position: relative;
+  margin: 100px 0;
+}
+
+.timeline-point:nth-child(odd) .point-content {
+  margin-right: 50%;
+  padding-right: 50px;
+  text-align: right;
+}
+
+.timeline-point:nth-child(even) .point-content {
+  margin-left: 50%;
+  padding-left: 50px;
+}
+
+.point-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(217, 10, 44, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.point-marker svg {
+  width: 24px;
+  height: 24px;
+  stroke: #d90a2c;
+}
+
+.point-info {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.point-info h3 {
+  color: #2a2a2a;
+  margin-bottom: 10px;
+}
+
+.duration {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 15px;
+  background: rgba(217, 10, 44, 0.1);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #d90a2c;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-track {
+    left: 30px;
+  }
+
+  .timeline-point .point-content {
+    margin: 0 0 0 60px !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .point-marker {
+    left: 30px;
+  }
+}
+</style>
    </main>
 
  <!-- footer-area-start -->

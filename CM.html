@@ -328,7 +328,7 @@
                                  }
                                </style>
                                <ul class="mega-menu-list">
-                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Digital Manufacturing</a></li>
+                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Manufacturing</a></li>
                                  <li><a href="IBP.html" style="font-size: 12px !important; display: block !important;">Integrated Business Planning​</a></li>
                                  <li><a href="df.html" style="font-size: 12px !important; display: block !important;">Demand Forecasting</a></li>
                                  <li><a href="svrr.html" style="font-size: 12px !important; display: block !important;">Supply Chain Visibility, <br>Responsiveness and Resilience​​</a></li>
@@ -359,6 +359,14 @@
                                  <li><a href="PIM.html" style="font-size: 12px !important; display: block !important;">Pipeline Integrity Monitoring​</a></li>
                                  <li><a href="IATDO.html" style="font-size: 12px !important; display: block !important;">Intelligent Automation of Trade desk Operations​</a></li>
                                  <li><a href="RS.html" style="font-size: 12px !important; display: block !important;">Remote Sensing - VFM</a></li>
+                                 <li class="has-hover-line">
+                                  <a href="Energy & Utilities.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; position: relative; display: block !important;margin-top:10px !important;">
+                                    Insurance
+                                    <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                                  </a>
+                                </li> 
+                                <li><a href="AUP.html" style="font-size: 12px !important; display: block !important;">Automation of Underwriting Process</a></li>
+                                 <li><a href="RAS.html" style="font-size: 12px !important; display: block !important;">Risk Assessment</a></li>
                                </ul>
                              </div>
                            </div>
@@ -647,10 +655,10 @@
          <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
        </a>
        <ul class="sub-menu">
-         <!-- Digital Manufacturing Section -->
+         <!-- Manufacturing Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
-             <span>Digital Manufacturing</span>
+             <span>Manufacturing</span>
              <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
            </a>
            <ul class="inner-submenu">
@@ -682,6 +690,17 @@
              <li><a href="RS.html">Remote Sensing - VFM</a></li>
            </ul>
          </li>
+         <li class="mobile-sub-item has-children">
+          <a href="#" class="toggle-submenu">
+            <span>Insurance</span>
+            <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <ul class="inner-submenu">
+            <li><a href="AUP.html">Automation of Underwriting Process</a></li>
+            <li><a href="RAS.html">Risk Assessment</a></li>
+           
+          </ul>
+        </li>
          <!-- Pharmacovigilance Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
@@ -913,140 +932,575 @@
 
 </section>
 <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Digital Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
-                </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/Conn-min.jpg" alt="Condition Monitoring">
-              </div>
-              <h4 class="tp-services-details-title mb-20">Condition Monitoring</h4>
-              <p style="white-space: pre-line;">
-                At Collabridge, we enable industries to monitor the health of their critical assets in real time using AI/ML-powered condition monitoring solutions. Unplanned downtimes, excessive maintenance costs, and unexpected equipment failures can disrupt operations and reduce productivity. Our advanced monitoring platform transforms sensor data into actionable insights—helping teams predict failures before they happen.
-          
-                By leveraging real-time data from IoT sensors and applying predictive analytics, our solution continuously evaluates equipment performance and detects early signs of anomalies. This not only improves asset reliability and lifecycle management but also reduces maintenance costs and enhances safety.
-          
-                Collabridge empowers businesses with a proactive maintenance strategy that minimizes downtime, extends asset longevity, and ensures uninterrupted operational efficiency—keeping your production and bottom line running at full speed.
-              </p>
-          
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Real-Time Asset Health Monitoring</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Predictive Maintenance with AI Models</span>
-                  </div>
-                </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Sensor-Based Anomaly Detection</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Downtime Reduction & Maintenance Optimization</span>
-                  </div>
-                </div>
-                <!-- Third row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Asset Lifecycle Intelligence</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+<section class="services-area pt-115 pb-80">
+  <div class="container">
+    <!-- Hero Section with Image Overlay -->
+    <div class="row mb-5">
+      <div class="col-12 position-relative overflow-hidden hero-section">
+        <div class="hero-image-container">
+          <img src="assets/WebImages/expwebp/Conn-min.jpg" alt="Condition Monitoring" class="hero-image">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <h2 class="hero-title" style = "color: #fff;">Condition Monitoring</h2>
+          <p class="hero-subtitle"style ="font-size:15px;">Intelligent Asset Management for Industry 4.0</p>
         </div>
       </div>
-    </section>
-   <!-- sercices-area-end -->
+    </div>
+
+    <!-- Content Grid -->
+    <div class="row g-4">
+      <!-- Main Content Column -->
+      <div class="col-lg-8">
+        <div class="content-card">
+          <div class="section-content">
+            <h3 class="section-title">Transform Your Asset Management</h3>
+            <p class="content-text">
+              At Collabridge, we enable industries to monitor the health of their critical assets in real time using AI/ML-powered condition monitoring solutions. Unplanned downtimes, excessive maintenance costs, and unexpected equipment failures can disrupt operations and reduce productivity. Our advanced monitoring platform transforms sensor data into actionable insights—helping teams predict failures before they happen.
+            </p>
+            <p class="content-text">
+              By leveraging real-time data from IoT sensors and applying predictive analytics, our solution continuously evaluates equipment performance and detects early signs of anomalies. This not only improves asset reliability and lifecycle management but also reduces maintenance costs and enhances safety.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Column -->
+      <div class="col-lg-4">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3v18h18"/>
+                <path d="M18 9l-5 5-2-2-4 4"/>
+              </svg>
+            </div>
+            <div class="stat-value">55%</div>
+            <div class="stat-label">Reduced Downtime</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+              </svg>
+            </div>
+            <div class="stat-value">96%</div>
+            <div class="stat-label">Prediction Accuracy</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+              </svg>
+            </div>
+            <div class="stat-value">60%</div>
+            <div class="stat-label">Cost Savings</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h4>Real-Time Monitoring</h4>
+            <p>Continuous asset health tracking with advanced IoT sensors</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <path d="M3.27 6.96L12 12.01l8.73-5.05"/>
+                <path d="M12 22.08V12"/>
+              </svg>
+            </div>
+            <h4>AI-Powered Predictions</h4>
+            <p>Predictive maintenance using sophisticated AI models</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="M21 21l-4.35-4.35"/>
+                <path d="M8 11h6"/>
+                <path d="M11 8v6"/>
+              </svg>
+            </div>
+            <h4>Anomaly Detection</h4>
+            <p>Advanced sensor-based anomaly detection system</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="20" x2="12" y2="10"/>
+                <line x1="18" y1="20" x2="18" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="16"/>
+                <path d="M2 20h20"/>
+              </svg>
+            </div>
+            <h4>Performance Analytics</h4>
+            <p>Comprehensive analytics for maintenance optimization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero-section {
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.hero-image-container {
+  position: relative;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.content-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  color: #2a2a2a;
+  margin-bottom: 1.5rem;
+}
+
+.content-text {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.stats-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #d90a2c;
+  margin-bottom: 1rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(217,10,44,0.1);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 400px;
+  }
+
+  .hero-content {
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<!-- Why Choose Our Solution Section -->
+<div class="solution-benefits">
+  <div class="benefits-container">
+    <div class="benefits-header">
+      <div class="glowing-badge">Industry Leader</div>
+      <h2>Why Leading Manufacturers Trust Us</h2>
+      <p>Transforming industrial monitoring with AI-powered intelligence</p>
+    </div>
+
+    <div class="benefits-wrapper">
+      <div class="benefit-column left-column">
+        <div class="benefit-card" data-number="01">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div class="benefit-content">
+            <h3>Predictive Intelligence</h3>
+            <p>45% reduction in downtime through early failure detection</p>
+          </div>
+        </div>
+
+        <div class="benefit-card" data-number="02">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <div class="benefit-content">
+            <h3>Cost Optimization</h3>
+            <p>60% maintenance cost reduction with smart scheduling</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-center">
+        <div class="center-image">
+          <img src="assets/WebImages/expwebp/Vector_2646.jpg" alt="AI Monitoring">
+          <div class="pulse-overlay"></div>
+        </div>
+      </div>
+
+      <div class="benefit-column right-column">
+        <div class="benefit-card" data-number="03">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
+            </svg>
+          </div>
+          <div class="benefit-content">
+            <h3>Real-Time Monitoring</h3>
+            <p>24/7 equipment health tracking with instant alerts</p>
+          </div>
+        </div>
+
+        <div class="benefit-card" data-number="04">
+          <div class="benefit-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+            </svg>
+          </div>
+          <div class="benefit-content">
+            <h3>Seamless Integration</h3>
+            <p>Quick deployment with existing infrastructure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.solution-benefits {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #0f1729 0%, #1a1f35 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-benefits::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(217, 10, 44, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(255, 75, 110, 0.1) 0%, transparent 50%);
+  animation: gradientShift 15s ease infinite;
+}
+
+.benefits-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.glowing-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(217, 10, 44, 0.1);
+  border: 1px solid rgba(217, 10, 44, 0.3);
+  border-radius: 30px;
+  color: #ff4b6e;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.benefits-header h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff 0%, #d1d1d1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.benefits-header p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.benefits-wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.benefit-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.benefits-center {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.center-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.center-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pulse-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(217, 10, 44, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.benefit-card::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.03);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background: rgba(217, 10, 44, 0.05);
+  border-color: rgba(217, 10, 44, 0.3);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.benefit-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: white;
+}
+
+.benefit-content h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.benefit-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(217, 10, 44, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(217, 10, 44, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(217, 10, 44, 0.3); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+@media (max-width: 1200px) {
+  .benefits-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .benefits-center {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .benefit-column {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .solution-benefits {
+    padding: 60px 0;
+  }
+
+  .benefits-header h2 {
+    font-size: 2rem;
+  }
+
+  .benefits-center {
+    width: 250px;
+    height: 250px;
+  }
+
+  .benefit-card {
+    padding: 20px;
+  }
+}
+</style>
 
    </main>
 

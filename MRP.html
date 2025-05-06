@@ -328,7 +328,7 @@
                                  }
                                </style>
                                <ul class="mega-menu-list">
-                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Digital Manufacturing</a></li>
+                                 <li><a href="services-details.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; display: block !important;">Manufacturing</a></li>
                                  <li><a href="IBP.html" style="font-size: 12px !important; display: block !important;">Integrated Business Planning​</a></li>
                                  <li><a href="df.html" style="font-size: 12px !important; display: block !important;">Demand Forecasting</a></li>
                                  <li><a href="svrr.html" style="font-size: 12px !important; display: block !important;">Supply Chain Visibility, <br>Responsiveness and Resilience​​</a></li>
@@ -359,6 +359,14 @@
                                  <li><a href="PIM.html" style="font-size: 12px !important; display: block !important;">Pipeline Integrity Monitoring​</a></li>
                                  <li><a href="IATDO.html" style="font-size: 12px !important; display: block !important;">Intelligent Automation of Trade desk Operations​</a></li>
                                  <li><a href="RS.html" style="font-size: 12px !important; display: block !important;">Remote Sensing - VFM</a></li>
+                                 <li class="has-hover-line">
+                                  <a href="Energy & Utilities.html" style="font-size: 18px !important; font-weight: normal !important; color: #000 !important; position: relative; display: block !important;margin-top:10px !important;">
+                                    Insurance
+                                    <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                                  </a>
+                                </li> 
+                                <li><a href="AUP.html" style="font-size: 12px !important; display: block !important;">Automation of Underwriting Process</a></li>
+                                 <li><a href="RAS.html" style="font-size: 12px !important; display: block !important;">Risk Assessment</a></li>
                                </ul>
                              </div>
                            </div>
@@ -647,10 +655,10 @@
          <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
        </a>
        <ul class="sub-menu">
-         <!-- Digital Manufacturing Section -->
+         <!-- Manufacturing Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
-             <span>Digital Manufacturing</span>
+             <span>Manufacturing</span>
              <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
            </a>
            <ul class="inner-submenu">
@@ -682,6 +690,17 @@
              <li><a href="RS.html">Remote Sensing - VFM</a></li>
            </ul>
          </li>
+         <li class="mobile-sub-item has-children">
+          <a href="#" class="toggle-submenu">
+            <span>Insurance</span>
+            <svg class="toggle-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <ul class="inner-submenu">
+            <li><a href="AUP.html">Automation of Underwriting Process</a></li>
+            <li><a href="RAS.html">Risk Assessment</a></li>
+           
+          </ul>
+        </li>
          <!-- Pharmacovigilance Section -->
          <li class="mobile-sub-item has-children">
            <a href="#" class="toggle-submenu">
@@ -912,148 +931,819 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Digital Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
-                </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
-              </div>
+<!-- MRP Solutions Section -->
+<section class="mrp-solutions-section py-120">
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="row align-items-center mb-80">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="mrp-hero-content">
+          <span class="section-badge" style="background: rgba(255, 255, 255, 0.1); color: #d90a2c; padding: 8px 16px; border-radius: 20px; display: inline-block; margin-bottom: 20px;">
+         
+          </span>
+          <h2 class="hero-title" style="font-size: 3rem; font-weight: 700; color: #2a2a2a; margin-bottom: 30px;">
+            Transform Your <span style="color: #d90a2c;">Material Planning</span> with AI-Powered Intelligence
+          </h2>
+          <p class="hero-description" style="color: #666; font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+            Revolutionize your manufacturing operations with our AI-driven MRP optimization solution. Experience seamless integration of demand forecasting, inventory management, and procurement scheduling.
+          </p>
+          <div class="hero-stats d-flex gap-4">
+            <div class="stat-item text-center p-4" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <h3 style="color: #d90a2c; font-size: 2.5rem; margin-bottom: 5px;">40%</h3>
+              <p style="color: #666; margin: 0;">Cost Reduction</p>
             </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/MRP-min.jpg" alt="">
-              </div>
-              <h4 class="tp-services-details-title mb-20">MRP Optimization</h4>
-              <p> 
-                At Collabridge, we help manufacturing and supply chain-driven businesses optimize their MRP systems by integrating AI and machine learning into the heart of their planning operations. In today's fast-paced production environments, traditional MRP systems often struggle with outdated forecasts, manual dependencies, and disconnected inventory and procurement data—leading to inefficiencies, delays, and increased costs.
-              </p>
-              
-              <p>
-                Our AI/ML-powered MRP optimization solution unifies data from demand forecasting, inventory levels, supplier performance, and production schedules into one intelligent, adaptive system. This enables businesses to move beyond reactive planning and toward proactive, data-driven material management—ensuring the right materials are available at the right time, in the right quantity.
-              </p>
-              
-              <p>
-                By transforming raw data into real-time, actionable insights, Collabridge empowers planning teams to reduce excess inventory, prevent stockouts, and streamline procurement cycles. With intelligent recommendations and predictive analytics, decision-makers gain confidence to adjust quickly to shifting market conditions, supplier delays, or changing customer demands.
-              </p>
-              
-              <p>
-                At Collabridge, we believe operational excellence in manufacturing starts with smarter planning. Our integrated MRP optimization platform delivers the intelligence, accuracy, and agility needed to stay competitive and scalable in an ever-evolving supply chain landscape.
-              </p>
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Real-Time Inventory Tracking</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>AI-Powered Demand Forecasting</span>
-                  </div>
-                </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Dynamic Procurement Scheduling</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Automated Shortage & Surplus Alerts</span>
-                  </div>
-                </div>
-                <!-- Third row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Supplier Performance Optimization</span>
-                  </div>
-                </div>
-              </div>
-              
+            <div class="stat-item text-center p-4" style="background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <h3 style="color: #d90a2c; font-size: 2.5rem; margin-bottom: 5px;">99%</h3>
+              <p style="color: #666; margin: 0;">Planning Accuracy</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-   <!-- sercices-area-end -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="mrp-hero-image" style="position: relative;">
+          <img src="assets/WebImages/expwebp/MRP-min.jpg" alt="MRP Solution" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+          <div class="image-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), transparent); border-radius: 20px;"></div>
+        </div>
+      </div>
+    </div>
+<!-- MRP Definition Section -->
+<section class="mrp-definition">
+  <div class="container">
+ 
 
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6 mb-4">
+        <div class="info-box">
+          <div class="info-header">
+            <div class="info-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+              </svg>
+            </div>
+            <h3>What is MRP?</h3>
+          </div>
+          <p>Material Requirements Planning (MRP) is a manufacturing planning and inventory control system.</p>
+          <ul class="info-list">
+            <li>Demand Forecasting</li>
+            <li>Inventory Management</li>
+            <li>Production Scheduling</li>
+            <li>Resource Optimization</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <div class="metrics-box">
+          <h3>Performance Metrics</h3>
+          <div class="metrics-grid">
+            <div class="metric-item">
+              <div class="metric-value">40%</div>
+              <div class="metric-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+              <div class="metric-label">Cost Reduction</div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-value">60%</div>
+              <div class="metric-bar">
+                <div class="progress" style="width: 60%"></div>
+              </div>
+              <div class="metric-label">Faster Planning</div>
+            </div>
+
+            <div class="metric-item">
+              <div class="metric-value">90%</div>
+              <div class="metric-bar">
+                <div class="progress" style="width: 90%"></div>
+              </div>
+              <div class="metric-label">Accuracy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.mrp-definition {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+}
+
+.section-header .badge {
+  background: #d90a2c;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.info-box, .metrics-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover, .metrics-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(217, 10, 44, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d90a2c;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.info-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #666;
+}
+
+.info-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #d90a2c;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.metric-item {
+  position: relative;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d90a2c;
+  margin-bottom: 0.5rem;
+}
+
+.metric-bar {
+  height: 6px;
+  background: rgba(217, 10, 44, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.metric-bar .progress {
+  height: 100%;
+  background: #d90a2c;
+  border-radius: 3px;
+  transition: width 1.5s ease;
+}
+
+.metric-label {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .info-box, .metrics-box {
+    padding: 1.5rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animate progress bars
+  const progressBars = document.querySelectorAll('.progress');
+  progressBars.forEach(bar => {
+    const width = bar.style.width;
+    bar.style.width = '0';
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 300);
+  });
+});
+</script>
+    <!-- Features Grid -->
+    <div class="row g-4 mb-80">
+      <div class="col-12 text-center mb-5">
+        <h3 style="font-size: 2.2rem; color: #2a2a2a;">Key Capabilities</h3>
+      </div>
+      
+      <!-- Feature Cards -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+              <path d="M16 16.5L12 12"/>
+            </svg>
+          </div>
+          <h4>Real-Time Analytics</h4>
+          <p>Live monitoring and analysis of inventory levels, demand patterns, and supply chain metrics.</p>
+          <ul class="feature-list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Inventory Tracking</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Performance Metrics</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12h4l3 9 6-18 3 9h4"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h4>Predictive Planning</h4>
+          <p>AI-powered demand forecasting and automated procurement scheduling.</p>
+          <ul class="feature-list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Demand Forecasting</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Smart Scheduling</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-card p-4">
+          <div class="feature-icon mb-4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z"/>
+              <path d="M12 8v4l3 3"/>
+              <path d="M9 2v3"/>
+              <path d="M15 2v3"/>
+            </svg>
+          </div>
+          <h4>Smart Automation</h4>
+          <p>Automated alerts and intelligent recommendations for optimal decision-making.</p>
+          <ul class="feature-list">
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Alert System</span>
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <span>Smart Suggestions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Benefits Section with SVG Icons -->
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="benefits-content">
+          <h3>Why Choose Our MRP Solution?</h3>
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                  <path d="M17 6h6v6"/>
+                </svg>
+              </div>
+              <div class="benefit-content">
+                <h5>Enhanced Efficiency</h5>
+                <p>Streamline operations and reduce manual interventions with AI-powered automation.</p>
+              </div>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2v4"/>
+                  <path d="M12 18v4"/>
+                  <path d="M4.93 4.93l2.83 2.83"/>
+                  <path d="M16.24 16.24l2.83 2.83"/>
+                  <path d="M2 12h4"/>
+                  <path d="M18 12h4"/>
+                  <path d="M4.93 19.07l2.83-2.83"/>
+                  <path d="M16.24 7.76l2.83-2.83"/>
+                </svg>
+              </div>
+              <div class="benefit-content">
+                <h5>Improved Accuracy</h5>
+                <p>Achieve higher forecast accuracy and better inventory optimization.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="benefits-metrics">
+          <canvas id="benefitsChart" width="400" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+    
+    <style>
+    .feature-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      height: 100%;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      overflow: hidden;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(217, 10, 44, 0.15);
+    }
+    
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s ease;
+    }
+    
+    .feature-icon svg {
+      width: 30px;
+      height: 30px;
+      color: white;
+      transition: all 0.4s ease;
+    }
+    
+    .feature-card:hover .feature-icon {
+      transform: rotate(12deg) scale(1.1);
+    }
+    
+    .feature-card h4 {
+      color: #2a2a2a;
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+    }
+    
+    .feature-card p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    
+    .check-icon {
+      width: 18px;
+      height: 18px;
+      color: #d90a2c;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(217, 10, 44, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.25rem;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-icon svg {
+      width: 24px;
+      height: 24px;
+      color: #d90a2c;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateX(10px);
+    }
+    
+    .benefit-item:hover .benefit-icon {
+      transform: rotate(12deg) scale(1.1);
+      background: rgba(217, 10, 44, 0.15);
+    }
+    
+    .benefits-metrics {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+    
+    @media (max-width: 991px) {
+      .benefit-item {
+        margin-bottom: 1.5rem;
+      }
+      
+      .benefits-metrics {
+        margin-top: 2rem;
+      }
+    }
+    </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Benefits Chart
+  document.addEventListener('DOMContentLoaded', function() {
+    const ctx = document.getElementById('benefitsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Efficiency Improvement',
+          data: [30, 45, 55, 65, 75, 85],
+          borderColor: '#d90a2c',
+          tension: 0.4,
+          fill: true,
+          backgroundColor: 'rgba(217, 10, 44, 0.1)'
+        },
+        {
+          label: 'Accuracy Rate',
+          data: [40, 50, 65, 75, 85, 95],
+          borderColor: '#2a2a2a',
+          tension: 0.4,
+          fill: true,
+          backgroundColor: 'rgba(42, 42, 42, 0.1)'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'top',
+            labels: {
+              usePointStyle: true,
+              padding: 20,
+              font: {
+                size: 12
+              }
+            }
+          },
+          title: {
+            display: true,
+            text: 'Performance Metrics',
+            font: {
+              size: 16,
+              weight: 'bold'
+            },
+            padding: {
+              top: 10,
+              bottom: 30
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                return value + '%';
+              }
+            }
+          }
+        },
+        interaction: {
+          intersect: false,
+          mode: 'index'
+        },
+        animation: {
+          duration: 2000,
+          easing: 'easeInOutQuart'
+        }
+      }
+    });
+  });
+  </script>
+  
+  <!-- Update the metrics container styles -->
+  <style>
+  .benefits-metrics {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 2rem;
+    height: 400px; /* Fixed height for better chart display */
+  }
+  
+  @media (max-width: 991px) {
+    .benefits-metrics {
+      margin-top: 2rem;
+      height: 350px;
+    }
+  }
+  </style>
+<!-- MRP Explanation Section with Modern Grid Layout -->
+
+<!-- MRP Introduction Section -->
+<section class="mrp-intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="journey-map">
+          <div class="journey-step active">
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h3>Raw Materials</h3>
+              <p>Start with precise inventory tracking</p>
+            </div>
+          </div>
+      
+         <!-- Replace the journey-connector divs with this new version -->
+<div class="journey-connector">
+  <!-- Horizontal arrow for desktop -->
+  <svg class="arrow-horizontal" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="5" y1="12" x2="19" y2="12"/>
+    <polyline points="12 5 19 12 12 19"/>
+  </svg>
+  <!-- Vertical arrow for mobile -->
+  <svg class="arrow-vertical" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="12" y1="5" x2="12" y2="19"/>
+    <polyline points="5 12 12 19 19 12"/>
+  </svg>
+</div>
+      
+          <div class="journey-step">
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h3>Production</h3>
+              <p>Optimize manufacturing processes</p>
+            </div>
+          </div>
+      
+         <!-- Replace the journey-connector divs with this new version -->
+<div class="journey-connector">
+  <!-- Horizontal arrow for desktop -->
+  <svg class="arrow-horizontal" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="5" y1="12" x2="19" y2="12"/>
+    <polyline points="12 5 19 12 12 19"/>
+  </svg>
+  <!-- Vertical arrow for mobile -->
+  <svg class="arrow-vertical" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <line x1="12" y1="5" x2="12" y2="19"/>
+    <polyline points="5 12 12 19 19 12"/>
+  </svg>
+</div>
+      
+          <div class="journey-step">
+            <div class="step-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="20" x2="12" y2="10"/>
+                <line x1="18" y1="20" x2="18" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="16"/>
+                <path d="M2 20h20"/>
+              </svg>
+            </div>
+            <div class="step-content">
+              <h3>Planning</h3>
+              <p>AI-driven demand forecasting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+        /* Add these styles to your existing CSS */
+.journey-connector .arrow-vertical {
+  display: none;
+}
+
+.journey-connector .arrow-horizontal {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .journey-map {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .journey-connector {
+    transform: none; /* Remove the rotation */
+  }
+
+  .journey-connector .arrow-horizontal {
+    display: none;
+  }
+
+  .journey-connector .arrow-vertical {
+    display: block;
+  }
+
+  /* Update pulse animation for vertical arrows */
+  @keyframes pulse {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+  }
+}
+      .journey-map {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 0;
+      }
+      
+      .journey-step {
+        text-align: center;
+        flex: 1;
+        max-width: 200px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.5s ease forwards;
+      }
+      
+      .step-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        transition: transform 0.3s ease;
+      }
+      
+      .step-icon svg {
+        width: 32px;
+        height: 32px;
+        stroke: white;
+        transition: transform 0.3s ease;
+      }
+      
+      .journey-step:hover .step-icon {
+        transform: scale(1.1) rotate(10deg);
+      }
+      
+      .journey-step:hover .step-icon svg {
+        transform: scale(1.1);
+      }
+      
+      .journey-connector {
+        color: #d90a2c;
+        display: flex;
+        align-items: center;
+        animation: pulse 2s infinite;
+      }
+      
+      .journey-connector svg {
+        width: 24px;
+        height: 24px;
+        stroke: currentColor;
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .journey-map {
+          flex-direction: column;
+          gap: 30px;
+        }
+      
+        .journey-connector {
+          transform: rotate(90deg);
+        }
+      }
+      </style>
+    </div>
+
+    <!-- MRP Definition Cards -->
+
+  </div>
+</section>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Animate journey steps sequentially
+  const steps = document.querySelectorAll('.journey-step');
+  steps.forEach((step, index) => {
+    setTimeout(() => {
+      step.classList.add('active');
+    }, index * 300);
+  });
+});
+</script>
    </main>
 
  <!-- footer-area-start -->
