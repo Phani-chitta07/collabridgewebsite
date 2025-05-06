@@ -13,6 +13,8 @@
 
       <!-- CSS here -->
       <link rel="stylesheet" href="assets/css/bootstrap.css">
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
       <link rel="stylesheet" href="assets/css/animate.css">
       <link rel="stylesheet" href="assets/css/swiper-bundle.css">
       <link rel="stylesheet" href="assets/css/slick.css">
@@ -909,117 +911,259 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Digital Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
-                </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
-              </div>
+<!-- Update the services section with parallax and modern grid layout -->
+<section class="services-area pt-115 pb-80" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left content column -->
+      <div class="col-lg-6 order-lg-1 order-2">
+        <div class="service-content" data-aos="fade-right">
+          <h2 class="section-title-large">Transform Your Planning Process</h2>
+          <p class="lead mb-4">At Collabridge, we empower businesses to break down silos and harness the full potential of their operations through a unified, AI/ML-powered approach.</p>
+          <div class="feature-list">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-check-circle"></i>
+              <span>Cross-Functional Data Integration</span>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-check-circle"></i>
+              <span>Predictive & Prescriptive Intelligence</span>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-check-circle"></i>
+              <span>Strategic Alignment Engine</span>
             </div>
           </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/dash1.jpg" alt="">
-              </div>
-              <h4 class="tp-services-details-title mb-20">Integrated Business Planning</h4>
-              <p> At Collabridge, we empower businesses to break down silos and harness the full potential of their operations through a unified, AI/ML-powered approach. In today's dynamic business environment, isolated systems and fragmented workflows can slow growth and hinder innovation. Our integrated business solution brings together data, intelligence, and automation across departments—driving smarter collaboration, faster decisions, and consistent strategic alignment.
-                By connecting every aspect of your operations with advanced AI and machine learning, we transform scattered information into cohesive, real-time insights that power more agile and effective decision-making. Our solution ensures that teams across functions are no longer working in isolation but are moving together toward common goals, supported by a seamless flow of information and intelligent recommendations.
-                
-                We combine cutting-edge AI/ML models with real-time business logic to ensure your teams are not only informed—but also empowered to act confidently and proactively. At Collabridge, we believe that true operational excellence comes from integration, intelligence, and the ability to anticipate and adapt quickly in an ever-evolving market landscape.
-                
-              </p>
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Cross-Functional Data Integration</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Predictive & Prescriptive Intelligence</span>
+        </div>
+      </div>
+      <!-- Right image column with floating effect -->
+      <div class="col-lg-6 order-lg-2 order-1 mb-lg-0 mb-5">
+        <div class="service-image floating" data-aos="fade-left">
+          <img src="assets/WebImages/expwebp/dash1.jpg" alt="IBP Dashboard" class="img-fluid rounded-lg shadow-lg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section with improved alignment -->
+<section class="features-section" style="background: #f8f9fa; padding: 100px 0; position: relative;">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center" style="margin-bottom: 50px;">
+        <h2 style="font-size: 2.5rem; font-weight: 700; background: linear-gradient(45deg, #2a2a2a, #444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px;" data-aos="fade-up">Key Features</h2>
+        <p style="font-size: 1.25rem; color: #666; line-height: 1.6;" data-aos="fade-up" data-aos-delay="100">Our comprehensive IBP solution delivers end-to-end planning capabilities</p>
+      </div>
+    </div>
+    
+    <!-- Features Timeline -->
+    <div class="features-timeline" style="position: relative; max-width: 1000px; margin: 0 auto;">
+      <!-- Central Timeline Line -->
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, transparent, #d90a2c, transparent); transform: translateX(-50%);"></div>
+      
+      <!-- Feature 1 - Left aligned -->
+      <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;" data-aos="fade-right">
+        <div style="flex: 1; padding-right: 50px; text-align: right;">
+          <h4 style="font-size: 24px; color: #2a2a2a; margin-bottom: 15px; font-weight: 600;">Demand Planning</h4>
+          <p style="color: #666; line-height: 1.6; margin: 0;">AI-powered forecasting combining historical data, market signals, and business intelligence.</p>
+        </div>
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d90a2c, #ff4b6e); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(217,10,44,0.2); transform: rotate(-45deg); transition: all 0.4s ease;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(45deg);">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+        </div>
+      </div>
+
+   <!-- Feature 2 - Right aligned -->
+<div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;" data-aos="fade-left">
+  <!-- Icon Container -->
+  <div class="feature-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #d90a2c, #ff4b6e); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(217,10,44,0.2); transform: rotate(-45deg); transition: all 0.4s ease; order: 1;">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(45deg);">
+      <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+    </svg>
+  </div>
+  
+  <!-- Text Container -->
+  <div class="feature-text" style="flex: 1; padding-left: 50px; order: 2;">
+    <h4 style="font-size: 24px; color: #2a2a2a; margin-bottom: 15px; font-weight: 600;">Supply Planning</h4>
+    <p style="color: #666; line-height: 1.6; margin: 0;">Optimize inventory levels and production schedules while maintaining service levels.</p>
+  </div>
+</div>
+
+<style>
+@media (max-width: 768px) {
+  [data-aos="fade-left"] {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+
+  .feature-text {
+    order: 1 !important;
+    padding-left: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .feature-icon {
+    order: 2 !important;
+    margin: 20px auto 0 !important;
+  }
+
+  /* Add spacing between text and icon on mobile */
+  .feature-text p {
+    margin-bottom: 20px !important;
+  }
+}
+</style>
+
+      <!-- Feature 3 - Left aligned -->
+      <div style="display: flex; align-items: center; margin-bottom: 60px; position: relative;" data-aos="fade-right">
+        <div style="flex: 1; padding-right: 50px; text-align: right;">
+          <h4 style="font-size: 24px; color: #2a2a2a; margin-bottom: 15px; font-weight: 600;">Financial Planning</h4>
+          <p style="color: #666; line-height: 1.6; margin: 0;">Align operational plans with financial goals through integrated P&L forecasting.</p>
+        </div>
+        <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #d90a2c, #ff4b6e); border-radius: 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(217,10,44,0.2); transform: rotate(-45deg); transition: all 0.4s ease;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(45deg);">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this style for hover effects -->
+<style>
+@media (max-width: 768px) {
+  .features-timeline > div {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 0 20px !important;
+  }
+  
+  .features-timeline > div > div {
+    padding: 20px 0 !important;
+    text-align: center !important;
+  }
+  
+  .features-timeline::before {
+    display: none;
+  }
+}
+</style>
+
+<!-- Why IBP Section - Hexagon Grid -->
+<section class="why-ibp-section py-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <h2 class="section-title-xl gradient-text" data-aos="fade-up">Why Your Business Needs IBP</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Transform your planning process with our integrated approach</p>
+      </div>
+    </div>
+
+    <div class="hexagon-grid">
+      <!-- Benefit items as hexagons -->
+    
+      <div class="hexagon-item" data-aos="zoom-in" data-aos-delay="100">
+        <div class="hexagon-content">
+          <div class="benefit-icon">
+            <svg>...</svg>
+          </div>
+          <h5>Eliminate Silos</h5>
+          <p>Break down departmental barriers and enhance collaboration.</p>
+        </div>
+      </div>
+    
+      <div class="hexagon-item" data-aos="zoom-in" data-aos-delay="200">
+        <div class="hexagon-content">
+          <div class="benefit-icon">
+            <svg>...</svg>
+          </div>
+          <h5>Integrated Data</h5>
+          <p>Unify operational and financial data for better alignment and visibility.</p>
+        </div>
+      </div>
+    
+      <div class="hexagon-item" data-aos="zoom-in" data-aos-delay="300">
+        <div class="hexagon-content">
+          <div class="benefit-icon">
+            <svg>...</svg>
+          </div>
+          <h5>Forecast Accuracy</h5>
+          <p>Boost reliability of forecasts across all departments with shared insights.</p>
+        </div>
+      </div>
+    
+      
+     
+    </div>
+    
+  </div>
+</section>
+<!-- why choose us section with improved layout -->
+<section class="why-choose-section py-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column - Cards -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="content-wrapper">
+          <h2 class="section-title-xl gradient-text" style="font-size: 2.5rem; margin-bottom: 3rem;">Why Choose Our IBP Solution</h2>
+          <div class="choose-cards">
+            <!-- Card 1 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <div class="card-content">
+                <div class="icon-box" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <div class="card-body">
+                  <h4 style="color: #2a2a2a; font-weight: 700;">Proven ROI</h4>
+                  <p class="card-description" style="color: #666;">6-8 months average payback period</p>
+                  <div class="card-details" style="background: linear-gradient(135deg, rgba(217,10,44,0.05), rgba(255,75,110,0.05));">
+                    <p>Our customers see tangible results with rapid ROI through improved efficiency and reduced costs.</p>
                   </div>
                 </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Strategic Alignment Engine</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <div class="card-content">
+                <div class="icon-box" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div class="card-body">
+                  <h4 style="color: #2a2a2a; font-weight: 700;">AI-Powered Engine</h4>
+                  <p class="card-description" style="color: #666;">Advanced analytics and ML capabilities</p>
+                  <div class="card-details" style="background: linear-gradient(135deg, rgba(217,10,44,0.05), rgba(255,75,110,0.05));">
+                    <p>Leverage cutting-edge AI/ML algorithms for accurate forecasting and optimization.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+              <div class="card-content">
+                <div class="icon-box" style="background: linear-gradient(135deg, #d90a2c, #ff4b6e);">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                </div>
+                <div class="card-body">
+                  <h4 style="color: #2a2a2a; font-weight: 700;">Rapid Implementation</h4>
+                  <p class="card-description" style="color: #666;">Go live in weeks, not months</p>
+                  <div class="card-details" style="background: linear-gradient(135deg, rgba(217,10,44,0.05), rgba(255,75,110,0.05));">
+                    <p>Accelerated deployment methodology ensures quick time-to-value.</p>
                   </div>
                 </div>
               </div>
@@ -1027,7 +1171,1389 @@
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Right Column - Metrics -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="metrics-container" style="padding: 30px; background: linear-gradient(145deg, #ffffff, #f8f9fa); border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+          <!-- Circular Progress Metric -->
+          <div class="metric-item" style="margin-bottom: 30px; text-align: center;">
+            <div class="circular-progress" data-value="95" style="position: relative; display: inline-block;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width: 150px; height: 150px;">
+                <path d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" class="circle-bg" style="stroke: #eee; stroke-width: 3; fill: none;"/>
+                <path d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" class="circle" style="stroke: #d90a2c; stroke-width: 3; fill: none; stroke-linecap: round;"/>
+                <text x="18" y="20.35" class="percentage" style="fill: #2a2a2a; font-size: 6px; font-weight: normal;">95%</text>
+              </svg>
+              <h5 style="margin-top: 15px; color: #2a2a2a;">Forecast Accuracy</h5>
+            </div>
+          </div>
+
+          <!-- Bar Chart Metric -->
+          <div class="metric-item" style="margin-bottom: 30px;">
+            <div class="bar-chart" data-value="65" style="height: 150px; background: #eee; border-radius: 8px; position: relative; overflow: hidden;">
+              <div class="bar-progress" style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(135deg, #d90a2c, #ff4b6e);"></div>
+              <span class="bar-label" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold;">65%</span>
+              <h5 style="margin-top: 15px; text-align: center; color: #2a2a2a;">Cost Reduction</h5>
+            </div>
+          </div>
+
+        <!-- Wave Progress Metric -->
+<div class="metric-item" style="margin-bottom: 30px; text-align: center;">
+  <div class="wave-progress" data-value="85" style="height: 150px; background: #eee; border-radius: 8px; position: relative; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+    <!-- Background layer -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(145deg, #ffffff, #f8f9fa); z-index: 1;"></div>
+    
+    <!-- Wave layer -->
+    <div class="wave" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 85%; background: linear-gradient(135deg, #d90a2c, #ff4b6e); transition: height 1.5s cubic-bezier(0.4, 0, 0.2, 1); z-index: 2;">
+      <!-- Shimmer effect -->
+      <div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%); animation: shimmer 2s infinite linear;"></div>
+    </div>
+    
+    <!-- Content container -->
+    <div style="position: relative; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 3;">
+      <!-- Percentage label -->
+      <span style="font-size: 18px; font-weight: bold; color: #ffffff; text-shadow: 0 1px 2px rgba(255,255,255,0.8); margin-bottom: 5px;">85%</span>
+      
+      <!-- Title -->
+      <h5 style="margin: 0; color: #ffffff; font-size: 16px; font-weight: 600; text-shadow: 0 1px 2px rgba(255,255,255,0.8);">Process Efficiency</h5>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+</style>
+
+          <!-- Customer Satisfaction Metric -->
+          <div class="metric-item">
+            <div class="circular-progress" data-value="98" style="position: relative; display: inline-block;">
+              <svg viewBox="0 0 36 36" class="circular-chart" style="width: 150px; height: 150px;">
+                <path d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" class="circle-bg" style="stroke: #eee; stroke-width: 3; fill: none;"/>
+                <path d="M18 2.0845a15.9155 15.9155 0 0 1 0 31.831a15.9155 15.9155 0 0 1 0 -31.831" class="circle" style="stroke: #d90a2c; stroke-width: 3; fill: none; stroke-linecap: round;"/>
+                <text x="18" y="20.35" class="percentage" style="fill: #2a2a2a; font-size: 6px; font-weight: normal;">98%</text>
+              </svg>
+              <h5 style="margin-top: 15px; text-align: center; color: #2a2a2a;">Customer Satisfaction</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this CSS to your existing styles -->
+<style>
+/* Updated Metrics Container Styles */
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 0 !important;
+}
+
+.metric-item {
+  text-align: center;
+}
+
+/* Animation for circular progress */
+.circular-chart .circle {
+  animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0, 100;
+  }
+  100% {
+    stroke-dasharray: var(--value), 100;
+  }
+}
+
+/* Responsive fixes */
+@media (max-width: 991px) {
+  .metrics-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .metric-item {
+    margin-bottom: 30px !important;
+  }
+}
+</style>
+  <style>
+    /* Modern Feature Cards Styling */
+.feature-card {
+  background: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  height: 200px; /* Fixed initial height */
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  height: 300px; /* Expanded height on hover */
+}
+
+.card-content {
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon-box {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.feature-card:hover .icon-box::after {
+  transform: translateX(100%);
+}
+
+.icon-box svg {
+  stroke: white;
+  stroke-width: 2;
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .icon-box {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-body h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.feature-card:hover .card-body h4 {
+  color: #d90a2c;
+}
+
+.card-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, rgba(217,10,44,0.05), rgba(255,75,110,0.05));
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.feature-card:hover .card-details {
+  max-height: 200px;
+  opacity: 1;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.card-details p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Remove overlay since we're using height transition */
+.card-overlay {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .feature-card {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+  }
+
+  .feature-card:hover {
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-content {
+    padding: 25px;
+  }
+  
+  .icon-box {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .card-body h4 {
+    font-size: 20px;
+  }
+  
+  .card-description {
+    font-size: 15px;
+  }
+
+  .feature-card {
+    height: 180px;
+  }
+
+  .feature-card:hover {
+    height: 260px;
+  }
+}
+  </style>
+
+<style>
+  /* Updated Card Styles */
+.choose-card {
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 180px; /* Fixed height */
+  overflow: hidden;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  height: 250px; /* Expanded height on hover */
+}
+
+.card-content {
+  padding: 20px;
+  position: relative;
+}
+
+.card-text {
+  transition: all 0.3s ease;
+}
+
+.expanded-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  padding: 15px;
+  background: linear-gradient(145deg, #2a2a2a, #4a4a4a);
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.choose-card:hover .expanded-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Metrics Styles */
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px;
+}
+
+.metric-item {
+  text-align: center;
+}
+
+/* Circular Progress */
+.circular-chart {
+  width: 150px;
+  height: 150px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3;
+}
+
+.circle {
+  fill: none;
+  stroke: #d90a2c;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0, 100;
+  animation: progress 1s ease-out forwards;
+}
+
+.percentage {
+  fill: #2a2a2a;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+/* Bar Chart */
+.bar-chart {
+  height: 150px;
+  position: relative;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bar-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #d90a2c, #ff4b6e);
+  transition: height 1s ease-out;
+}
+
+.bar-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+/* Wave Progress */
+.wave-progress {
+  height: 150px;
+  background: #eee;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  transition: height 1s ease-out;
+}
+
+.wave-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes progress {
+  to {
+    stroke-dasharray: var(--value), 100;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .metrics-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .choose-card {
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+}
+</style>
+<!-- Implementation Roadmap Section -->
+<section class="implementation-roadmap py-100">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title-xl" data-aos="fade-up">Effective IBP Implementation</h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">Strategic approach to transform your planning processes</p>
+      </div>
+    </div>
+
+    <div class="row implementation-steps">
+      <!-- Step 1 -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h4>Assessment & Strategy</h4>
+            <ul class="step-list">
+              <li>Process maturity evaluation</li>
+              <li>Data readiness assessment</li>
+              <li>Technology landscape analysis</li>
+              <li>ROI projection & timeline planning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h4>Design & Configuration</h4>
+            <ul class="step-list">
+              <li>Process harmonization</li>
+              <li>System architecture setup</li>
+              <li>Integration framework design</li>
+              <li>Custom algorithms development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h4>Deploy & Optimize</h4>
+            <ul class="step-list">
+              <li>Phased implementation</li>
+              <li>User training & adoption</li>
+              <li>Performance monitoring</li>
+              <li>Continuous improvement</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Success Factors -->
+    <div class="row success-factors mt-5">
+      <div class="col-12">
+        <h3 class="text-center mb-4" data-aos="fade-up">Key Success Factors</h3>
+        <div class="factors-grid">
+          <div class="factor-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="factor-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h5>Change Management</h5>
+            <p>Structured approach to transition teams to new processes</p>
+          </div>
+
+          <div class="factor-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="factor-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12" y2="8"/>
+              </svg>
+            </div>
+            <h5>Data Governance</h5>
+            <p>Robust data management and quality control framework</p>
+          </div>
+
+          <div class="factor-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="factor-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h5>Stakeholder Alignment</h5>
+            <p>Cross-functional collaboration and leadership buy-in</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Implementation Roadmap Styles */
+.implementation-roadmap {
+  background: #f8f9fa;
+  position: relative;
+}
+
+.step-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(0,0,0,0.1);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.step-content {
+  position: relative;
+  z-index: 1;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.step-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.step-list li:before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #1a1a1a;
+}
+
+/* Success Factors Styles */
+.factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.factor-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.factor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.factor-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.factor-icon svg {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .factors-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .step-card {
+    margin-bottom: 1rem;
+  }
+}
+</style>
+<!-- Add this CSS in your existing style section -->
+<style>
+  /* Add this CSS to create proper spacing and update gradients */
+/* Modern Timeline Features */
+.features-timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+.features-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #333, transparent);
+}
+
+.feature-item-modern {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.feature-item-modern.right {
+  flex-direction: row-reverse;
+}
+
+.feature-icon-wrapper {
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 20px;
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-icon:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Hexagon Grid */
+.hexagon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.hexagon-item {
+  position: relative;
+  width: 100%;
+  padding-top: 115%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(135deg, #fff, #f5f5f5);
+  transition: all 0.4s ease;
+}
+
+.hexagon-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
+  text-align: center;
+}
+
+/* 3D Cards */
+.choose-card-3d {
+  perspective: 1000px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.choose-card-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+  box-shadow: -20px 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Circular Metrics */
+.metric-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle-progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-progress circle {
+  fill: none;
+  stroke: #333;
+  stroke-width: 8;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: circleProgress 2s ease-out forwards;
+}
+
+@keyframes circleProgress {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .features-timeline::before {
+    left: 30px;
+  }
+  
+  .hexagon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hexagon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Modern Timeline Features */
+.features-timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+.features-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #333, transparent);
+}
+
+.feature-item-modern {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.feature-item-modern.right {
+  flex-direction: row-reverse;
+}
+
+.feature-icon-wrapper {
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 20px;
+  transform: rotate(-45deg);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-icon:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Hexagon Grid */
+.hexagon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.hexagon-item {
+  position: relative;
+  width: 100%;
+  padding-top: 115%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(135deg, #fff, #f5f5f5);
+  transition: all 0.4s ease;
+}
+
+.hexagon-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20%;
+  text-align: center;
+}
+
+/* 3D Cards */
+.choose-card-3d {
+  perspective: 1000px;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.choose-card-3d:hover {
+  transform: rotateY(10deg) rotateX(5deg);
+  box-shadow: -20px 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Circular Metrics */
+.metric-circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle-progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-progress circle {
+  fill: none;
+  stroke: #333;
+  stroke-width: 8;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: circleProgress 2s ease-out forwards;
+}
+
+@keyframes circleProgress {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .features-timeline::before {
+    left: 30px;
+  }
+  
+  .hexagon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .hexagon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Section Spacing */
+.why-ibp-section,
+.why-choose-section,
+.implementation-roadmap {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+/* Updated gradient colors */
+.benefit-icon {
+  background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  transform: rotate(-10deg);
+  transition: all 0.4s ease;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #2a2a2a, #4a4a4a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-icon {
+  background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+}
+
+.choose-icon {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.factor-icon {
+  background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+}
+
+/* Section dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+  margin: 60px 0;
+  width: 100%;
+}
+
+/* Additional spacing adjustments */
+.benefits-grid {
+  margin-top: 40px;
+}
+
+.success-metrics-grid {
+  margin-top: 30px;
+}
+
+.implementation-steps {
+  margin-top: 50px;
+}
+
+.success-factors {
+  margin-top: 80px;
+}
+
+/* Background color updates */
+.why-choose-section {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+/* Add these dividers in your HTML between sections */
+/* Hero section animation */
+.gradient-text {
+  background: linear-gradient(45deg, #2a2a2a, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+}
+
+.benefit-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.benefit-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(45deg, #d90a2c, #ff4b6e);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  transform: rotate(-10deg);
+  transition: all 0.4s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: rotate(0deg) scale(1.1);
+}
+
+.choose-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.choose-item:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(10px);
+}
+
+.choose-icon {
+  margin-right: 1rem;
+  color: #d90a2c;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Animation keyframes */
+@keyframes floatUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+[data-aos="float-up"] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+[data-aos="float-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-title-large {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #2a2a2a, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation */
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Modern feature cards */
+.feature-card-modern {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card-modern:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.5));
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+}
+
+.feature-card-modern:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.feature-card-modern:hover:before {
+  transform: translateY(0);
+}
+
+/* Card icon styling */
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #d90a2c, #ff4b6e);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transform: rotate(-10deg);
+  transition: all 0.4s ease;
+}
+
+.card-icon i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.feature-card-modern:hover .card-icon {
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Feature list styling */
+.feature-list {
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.feature-item i {
+  color: #d90a2c;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Add scroll reveal animations */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.breadcrumb-title {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.breadcrumb-area p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+/* Feature cards animations */
+.feature-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.col-lg-4:nth-child(1) .feature-card {
+  animation-delay: 0.3s;
+}
+
+.col-lg-4:nth-child(2) .feature-card {
+  animation-delay: 0.5s;
+}
+
+.col-lg-4:nth-child(3) .feature-card {
+  animation-delay: 0.7s;
+}
+
+/* Benefits section animations */
+.benefit-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease forwards;
+}
+
+.col-lg-6:first-child .benefit-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.col-lg-6:first-child .benefit-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.col-lg-6:last-child .benefit-item:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.col-lg-6:last-child .benefit-item:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Updated feature card styling */
+.feature-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(217, 10, 44, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.icon-wrapper i {
+  font-size: 2rem;
+  color: #d90a2c;
+}
+
+.feature-card h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Updated benefits section styling */
+.benefit-item {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(217, 10, 44, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.benefit-icon i {
+  font-size: 1.5rem;
+  color: #d90a2c;
+}
+
+.benefit-content h5 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.benefit-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* Section titles styling */
+.section-title {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #d90a2c;
+}
+</style> 
    <!-- sercices-area-end -->
 
    </main>
@@ -1402,6 +2928,87 @@
            });
          });
        });
+          </script>
+          <script>
+            // Add scroll reveal animations
+document.addEventListener('DOMContentLoaded', function() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe feature cards and benefit items
+  document.querySelectorAll('.feature-card, .benefit-item').forEach(el => {
+    observer.observe(el);
+  });
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+          </script>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init({
+              duration: 800,
+              offset: 100,
+              once: true
+            });
+          </script>
+          <script>
+            // Initialize AOS with custom animation
+            AOS.init({
+              duration: 800,
+              offset: 100,
+              once: true,
+              easing: 'ease-out-cubic'
+            });
+          
+            // Add parallax effect to sections
+            window.addEventListener('scroll', () => {
+              const scrolled = window.pageYOffset;
+              document.querySelectorAll('.parallax').forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+              });
+            });
+          </script>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+  // Initialize circular progress
+  document.querySelectorAll('.circular-chart').forEach(chart => {
+    const value = chart.closest('.circular-progress').dataset.value;
+    const circle = chart.querySelector('.circle');
+    circle.style.setProperty('--value', value);
+  });
+
+  // Initialize bar charts
+  document.querySelectorAll('.bar-chart').forEach(bar => {
+    const value = bar.dataset.value;
+    bar.querySelector('.bar-progress').style.height = `${value}%`;
+  });
+
+  // Initialize wave progress
+  document.querySelectorAll('.wave-progress').forEach(wave => {
+    const value = wave.dataset.value;
+    wave.querySelector('.wave').style.height = `${value}%`;
+  });
+});
           </script>
         <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
         <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
