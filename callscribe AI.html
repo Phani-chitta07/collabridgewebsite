@@ -920,7 +920,7 @@
     <!-- Semi-transparent overlay -->
     <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);"></div>
  <!-- Stats Container -->
-<div class="stats-container" style="position: absolute; top: 300px; width: 100%; padding: 0 20px;">
+<div class="stats-container" style="position: absolute; top: 260px; width: 100%; padding: 0 20px;">
   <div class="container">
     <div class="row">
       <!-- Left Stat -->
@@ -1010,75 +1010,650 @@ document.addEventListener('DOMContentLoaded', () => {
 <style>
 
 </style>
-<!-- services-area-start -->
-<section class="services-area" style="padding: 100px 0; background: #eef2f3; font-family: 'Roboto', sans-serif;">
-   <div class="container" style="max-width: 1200px; margin: 0 auto;">
-     <!-- Updated Sidebar Section: Horizontal Navigation -->
-     <div class="services-nav" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; text-align: center;">
-       <h3 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px;">Pharmacovigilance</h3>
-       <nav style="display: inline-flex; flex-wrap: wrap; gap: 30px;">
-         <a href="callscribe AI.html" style="font-size: 16px; text-decoration: none; color: #e63946; padding: 5px 10px; border-bottom: 2px solid #e63946;">
-          CallscribeAI
-         </a>
-         <a href="docbridge AI.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">DocBridgeAI</a>
-         <a href="Smartbridge AI.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">SmartbrigeAI</a>
-         <a href="EmailAi.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">EmailAI</a>
-         <a href="Litsearch.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">LitSearchAI</a>
-       </nav>
-     </div>
-      
-     <!-- Updated Content Section -->
-     <div class="services-content" style="background: #fff; border-radius: 10px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 30px;">
-       <!-- Left: Text & Check Icon Section -->
-       <div class="services-text" style="flex: 1 1 60%;">
-         <!-- Text Content on Top -->
-         <h2 style="font-size: 32px; color: #1d3557; margin-bottom: 20px; text-align: center;">
-           CallScribe AI
-         </h2>
-         <p style="font-size: 16px; line-height: 1.8; color: #457b9d; text-align: justify;">
-            At Collabridge, we built CallScribe AI to revolutionize the way organizations capture, understand, and act on voice interactions. Whether it's customer service calls, sales discussions, or medical product inquiries, CallScribe AI transforms conversations into structured, actionable intelligence — automatically, accurately, and at scale.
+<section class="services-area" style="padding: 100px 0; background: linear-gradient(135deg, #eef2f3 0%, #f8f9ff 100%); font-family: 'Roboto', sans-serif;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    
+    <!-- Hero Section -->
+    <div class="solution-hero" style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 42px; color: #1d3557; margin-bottom: 20px; font-weight: 700;">
+        Transform Voice into Value
+      </h2>
+      <p style="font-size: 18px; color: #457b9d; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+        CallScribe AI turns conversations into actionable insights, helping organizations unlock the full potential of every customer interaction.
+      </p>
+    </div>
 
-            Using the power of advanced AI, Speech-to-Text (STT), Natural Language Processing (NLP), and Machine Learning (ML), CallScribe AI does much more than transcribe. It extracts key information, identifies trends, and delivers summaries that can directly feed into your operational systems for faster decision-making and improved customer outcomes.
-         </p>
-           
-         <!-- Updated Check Icon Section -->
-         <div class="services-check" style="margin-top: 30px;">
-           <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;">Accurate Call Transcription</span>
-             </div>
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;">Context-Aware Summarization</span>
-             </div>
-           </div>
-           <div style="display: flex; justify-content: center;">
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;">Multilingual Support</span>
-             </div>
-           </div>
-         </div>
-       </div>
-       
-       <!-- Right: Image Section -->
-       <div class="services-image" style="flex: 1 1 35%; text-align: center;">
-         <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/CB_AI.mp4" style="display: block;">
-            <video autoplay muted loop playsinline style="width: 100%; border-radius: 8px;">
-              <source src="assets/WebImages/expwebp/CB_AI.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </a>     </div>
-     </div>
-   </div>
- </section>
- <!-- sercices-area-end -->
+    <!-- Main Content Grid -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 50px;">
+      <!-- Left: Video Demo -->
+      <div class="demo-section" style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <div style="padding: 30px;">
+          <h3 style="font-size: 24px; color: #1d3557; margin-bottom: 20px;">See It in Action</h3>
+        <!-- Video Container with Popup Functionality -->
+<div class="video-container" style="position: relative; border-radius: 10px; overflow: hidden; cursor: pointer;">
+  <video id="inlineVideo2" autoplay muted loop playsinline style="width: 100%; border-radius: 8px;">
+    <source src="assets/WebImages/expwebp/CB_AI.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay with Play Button -->
+  <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(29,53,87,0.1) 0%, rgba(29,53,87,0.2) 100%);">
+    <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;">
+      <i class="fa-solid fa-expand" style="color: #d90a2c; font-size: 24px;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Video Popup Modal -->
+<div id="videoModal2" class="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
+  <div class="modal-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 960px;">
+    <span class="close-modal" style="position: absolute; top: -40px; right: -40px; color: #fff; font-size: 30px; cursor: pointer; z-index: 1;">&times;</span>
+    <video id="popupVideo2" controls style="width: 100%; height: auto; border-radius: 10px;">
+      <source src="assets/WebImages/expwebp/CB_AI.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<style>
+.video-container {
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+}
+
+.video-container:hover .play-button {
+  opacity: 1;
+}
+
+.video-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.video-modal.active .modal-content {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-modal {
+  transition: transform 0.3s ease;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+  
+  .close-modal {
+    right: 0;
+    top: -30px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.video-container');
+  const modal = document.getElementById('videoModal2');
+  const closeBtn = modal.querySelector('.close-modal');
+  const popupVideo = document.getElementById('popupVideo2');
+  const inlineVideo = document.getElementById('inlineVideo2');
+
+  container.addEventListener('click', function() {
+    modal.style.display = 'block';
+    setTimeout(() => modal.classList.add('active'), 10);
+    // Sync the videos
+    popupVideo.currentTime = inlineVideo.currentTime;
+    popupVideo.play();
+    // Keep inline video playing
+    inlineVideo.play();
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      popupVideo.pause();
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') closeModal();
+  });
+
+  // Ensure inline video keeps playing when popup is closed
+  popupVideo.addEventListener('pause', function() {
+    inlineVideo.play();
+  });
+});
+</script>
+        </div>
+      </div>
+
+      <!-- Right: Key Features -->
+     <!-- Right: Key Features -->
+<div class="features-section" style="background: #fff; border-radius: 15px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+  <h3 style="font-size: 24px; color: #1d3557; margin-bottom: 25px;">Intelligent Features</h3>
+  <div class="features-grid" style="display: grid; gap: 20px;">
+    <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+      <div class="feature-icon" style="background: rgba(217,10,44,0.1); padding: 12px; border-radius: 10px;">
+        <i class="fa-light fa-waveform" style="color: #d90a2c; font-size: 20px;"></i>
+      </div>
+      <div>
+        <h4 style="font-size: 18px; color: #1d3557; margin-bottom: 5px;">99.9% Accuracy</h4>
+        <p style="font-size: 14px; color: #457b9d;">Industry-leading speech recognition accuracy across multiple languages</p>
+      </div>
+    </div>
+
+    <!-- New Feature 1 -->
+    <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+      <div class="feature-icon" style="background: rgba(217,10,44,0.1); padding: 12px; border-radius: 10px;">
+        <i class="fa-light fa-language" style="color: #d90a2c; font-size: 20px;"></i>
+      </div>
+      <div>
+        <h4 style="font-size: 18px; color: #1d3557; margin-bottom: 5px;">Multi-Language Support</h4>
+        <p style="font-size: 14px; color: #457b9d;">Seamless transcription and analysis in over 30 global languages</p>
+      </div>
+    </div>
+
+    <!-- New Feature 2 -->
+    <div class="feature-item" style="display: flex; align-items: center; gap: 15px;">
+      <div class="feature-icon" style="background: rgba(217,10,44,0.1); padding: 12px; border-radius: 10px;">
+        <i class="fa-light fa-brain-circuit" style="color: #d90a2c; font-size: 20px;"></i>
+      </div>
+      <div>
+        <h4 style="font-size: 18px; color: #1d3557; margin-bottom: 5px;">Context-Aware Insights</h4>
+        <p style="font-size: 14px; color: #457b9d;">Leverages AI to extract actionable insights based on conversation context</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  <!-- Benefits & Process Section -->
+<div class="solution-wrapper" style="margin-top: 60px;">
+
+
+
+<div class="process-section" style="background: linear-gradient(to bottom right, #fff 0%, #f8f9ff 100%); border-radius: 30px; padding: 80px 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+  <h2 class="section-title" style="text-align: center; color: #1d3557; font-size: 36px; margin-bottom: 80px; position: relative;">
+    The Journey of Voice to Intelligence
+    <span class="title-underline"></span>
+  </h2>
+
+  <div class="process-flow">
+    <div class="process-timeline">
+      <!-- Step 1 -->
+      <div class="process-step active">
+        <div class="step-connector"></div>
+        <div class="step-icon-wrapper">
+   
+          <div class="step-icon">
+            <i class="fa-light fa-microphone"></i>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Audio Input</h3>
+          <p>Capture and process high-quality audio from various sources including calls, meetings, and voice notes</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step">
+        <div class="step-connector"></div>
+        <div class="step-icon-wrapper">
+
+          <div class="step-icon">
+            <i class="fa-light fa-robot"></i>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>AI Transcription</h3>
+          <p>Convert speech to text with 99.9% accuracy using our advanced LLM models</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step">
+        <div class="step-connector"></div>
+        <div class="step-icon-wrapper">
+
+          <div class="step-icon">
+            <i class="fa-light fa-brain-circuit"></i>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Smart Analysis</h3>
+          <p>Extract key insights, patterns, and sentiment using context-aware AI</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step">
+        <div class="step-icon-wrapper">
+
+          <div class="step-icon">
+            <i class="fa-light fa-chart-network"></i>
+          </div>
+        </div>
+        <div class="step-content">
+          <h3>Actionable Intelligence</h3>
+          <p>Transform insights into structured data ready for your business systems</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.title-underline {
+  display: block;
+  width: 100px;
+  height: 4px;
+  margin: 20px auto 0;
+  background: linear-gradient(90deg, #d90a2c 0%, #ff4d6d 100%);
+  border-radius: 2px;
+}
+
+.process-timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.process-step {
+  flex: 1;
+  position: relative;
+  padding: 0 20px;
+}
+
+.step-connector {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  right: -50%;
+  height: 3px;
+  background: linear-gradient(90deg, #d90a2c 50%, #ff4d6d 100%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.process-step:last-child .step-connector {
+  display: none;
+}
+
+.step-icon-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 30px;
+  z-index: 2;
+}
+
+.step-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 35px;
+  height: 35px;
+  background: #d90a2c;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(217,10,44,0.3);
+  z-index: 3;
+}
+
+.step-icon {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 3px solid #d90a2c;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-icon i {
+  font-size: 40px;
+  color: #d90a2c;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-content {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-content h3 {
+  color: #1d3557;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #457b9d;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Hover Effects */
+.process-step:hover .step-icon {
+  transform: translateY(-15px) rotate(8deg);
+  box-shadow: 0 20px 40px rgba(217,10,44,0.2);
+  border-color: #ff4d6d;
+}
+
+.process-step:hover .step-icon i {
+  transform: scale(1.2) rotate(-8deg);
+  color: #ff4d6d;
+}
+
+.process-step:hover .step-content {
+  transform: translateY(8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Floating Animation */
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.step-icon-wrapper {
+  animation: floating 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .process-timeline {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .step-connector {
+    left: 50%;
+    width: 3px;
+    height: 40px;
+    top: 100%;
+  }
+
+  .process-step {
+    padding: 20px 0;
+  }
+
+  .step-content {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+</style>
+
+<script>
+// Add intersection observer for step animation
+const processStepObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.process-step').forEach(step => {
+  processStepObserver.observe(step);
+});
+</script>
+
+  
+  </div>
+</section>
+
+<style>
+@media (max-width: 768px) {
+  .solution-hero h2 {
+    font-size: 32px;
+  }
+  
+  .solution-hero p {
+    font-size: 16px;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .demo-section,
+  .features-section {
+    grid-column: span 2;
+  }
+}
+
+.benefit-card {
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(217,10,44,0.3);
+}
+</style>
  <!-- services-area-end -->
 
  
  
- 
+ <!-- Implementation Process Section -->
+<section class="implementation-section" style="padding: 80px 0; background: #fff;">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+      <h2 style="font-size: 36px; color: #1d3557; margin-bottom: 20px;">
+        Implementation Journey
+        <span style="display: block; width: 80px; height: 4px; background: #d90a2c; margin: 20px auto 0;"></span>
+      </h2>
+      <p style="font-size: 18px; color: #457b9d; max-width: 800px; margin: 0 auto;">
+        A structured approach to deploying CallScribe AI in your organization
+      </p>
+    </div>
+
+    <!-- Implementation Timeline -->
+    <div class="implementation-timeline" style="position: relative; max-width: 1000px; margin: 0 auto;">
+      <!-- Timeline Line -->
+      <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #d90a2c;"></div>
+
+      <!-- Phase 1 -->
+      <div class="timeline-item" style="display: flex; margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
+        <div class="timeline-content" style="flex: 1; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-right: 50px;">
+          <span class="phase-number" style="display: inline-block; background: #d90a2c; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 15px;">Phase 1</span>
+          <h3 style="color: #1d3557; font-size: 24px; margin-bottom: 15px;">Assessment & Planning</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Requirements gathering and system analysis
+            </li>
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Infrastructure assessment and planning
+            </li>
+            <li style="color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Customization requirements identification
+            </li>
+          </ul>
+        </div>
+        <div class="timeline-marker" style="width: 20px; height: 20px; background: #d90a2c; border-radius: 50%; margin: 30px 40px 0;"></div>
+        <div style="flex: 1;"></div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="timeline-item" style="display: flex; margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
+        <div style="flex: 1;"></div>
+        <div class="timeline-marker" style="width: 20px; height: 20px; background: #d90a2c; border-radius: 50%; margin: 30px 40px 0;"></div>
+        <div class="timeline-content" style="flex: 1; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-left: 50px;">
+          <span class="phase-number" style="display: inline-block; background: #d90a2c; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 15px;">Phase 2</span>
+          <h3 style="color: #1d3557; font-size: 24px; margin-bottom: 15px;">Setup & Configuration</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              System installation and basic configuration
+            </li>
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Integration with existing systems
+            </li>
+            <li style="color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Initial model training and customization
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="timeline-item" style="display: flex; margin-bottom: 60px; opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
+        <div class="timeline-content" style="flex: 1; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-right: 50px;">
+          <span class="phase-number" style="display: inline-block; background: #d90a2c; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 15px;">Phase 3</span>
+          <h3 style="color: #1d3557; font-size: 24px; margin-bottom: 15px;">Testing & Validation</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Comprehensive system testing
+            </li>
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              User acceptance testing
+            </li>
+            <li style="color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Performance optimization
+            </li>
+          </ul>
+        </div>
+        <div class="timeline-marker" style="width: 20px; height: 20px; background: #d90a2c; border-radius: 50%; margin: 30px 40px 0;"></div>
+        <div style="flex: 1;"></div>
+      </div>
+
+      <!-- Phase 4 -->
+      <div class="timeline-item" style="display: flex; opacity: 0; transform: translateY(20px); transition: all 0.5s ease;">
+        <div style="flex: 1;"></div>
+        <div class="timeline-marker" style="width: 20px; height: 20px; background: #d90a2c; border-radius: 50%; margin: 30px 40px 0;"></div>
+        <div class="timeline-content" style="flex: 1; padding: 30px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-left: 50px;">
+          <span class="phase-number" style="display: inline-block; background: #d90a2c; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 15px;">Phase 4</span>
+          <h3 style="color: #1d3557; font-size: 24px; margin-bottom: 15px;">Deployment & Support</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Production deployment
+            </li>
+            <li style="margin-bottom: 10px; color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              User training and documentation
+            </li>
+            <li style="color: #457b9d; display: flex; align-items: flex-start;">
+              <i class="fa-light fa-check" style="color: #d90a2c; margin-right: 10px; margin-top: 5px;"></i>
+              Ongoing support and maintenance
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Animate timeline items on scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+});
+</script>
+
+<style>
+@media (max-width: 768px) {
+  .implementation-timeline {
+    padding: 0 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .timeline-content {
+    margin: 0 0 20px 0 !important;
+    width: 100%;
+  }
+
+  .timeline-marker {
+    margin: 20px 0 !important;
+  }
+
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+</style>
 
    </main>
 

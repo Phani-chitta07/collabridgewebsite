@@ -932,119 +932,533 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-<!-- New Services Area Layout for Flare Analysis (Small Top Dropdown & Content-First Layout) -->
-<section class="services-area" style="padding:80px 0; background-color:#ffffff;">
-   <div class="container" style="max-width:1200px; margin:0 auto;">
-<!-- Updated Sidebar Section: Horizontal Navigation -->
-<div class="services-nav" style="background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; text-align: center;">
-  <h3 style="font-size: 28px; color: #2c3e50; margin-bottom: 15px;">Oil & Gas</h3>
-  <nav style="display: inline-flex; flex-wrap: wrap; gap: 30px;">
-    <a href="FE.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Furnance Efficiency</a>
-    <a href="FA.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Flare Analytics</a>
+      <section class="crude-optimization">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <img src="assets/WebImages/expwebp/crude-min.jpg" alt="Crude Oil Operations">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="hero-tag">AI-Powered Solutions</span>
+            <h1 style="color: #fff;">Transforming Crude Oil Operations</h1>
+            <p>Optimize refinery performance with intelligent analytics and real-time decision support</p>
+          </div>
+        </div>
+      
+        <!-- Features Section -->
+        <div class="features-section">
+          <div class="feature-card primary">
+            <div class="feature-image">
+              <img src="assets/WebImages/expwebp/oil1.jpg" alt="Crude Analytics">
+            </div>
+            <div class="feature-content">
+              <span class="feature-tag">Core Technology</span>
+              <h2>Intelligent Crude Selection</h2>
+              <p>Our advanced AI algorithms analyze multiple parameters to optimize crude oil selection and blending decisions, maximizing refinery efficiency and product quality.</p>
+              <ul class="feature-benefits">
+                <li>
+                  <i class="fa-light fa-chart-network"></i>
+                  <div>
+                    <h4>Real-time Analytics</h4>
+                    <p>Continuous monitoring and analysis of market trends and operational data</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-light fa-brain-circuit"></i>
+                  <div>
+                    <h4>Smart Decision Engine</h4>
+                    <p>AI-powered recommendations for optimal crude selection and blending</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-light fa-gauge-high"></i>
+                  <div>
+                    <h4>Performance Optimization</h4>
+                    <p>Maximize yield and efficiency through intelligent process control</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+      
+          <div class="feature-card secondary">
+            <div class="feature-content">
+              <span class="feature-tag">Process Excellence</span>
+              <h2>Real-Time Process Control</h2>
+              <p>Advanced monitoring and control systems ensure optimal operation of your refinery processes, maximizing efficiency and product quality.</p>
+              <ul class="feature-benefits">
+                <li>
+                  <i class="fa-light fa-cogs"></i>
+                  <div>
+                    <h4>Automated Control</h4>
+                    <p>Smart process control with real-time adjustments</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-light fa-chart-line"></i>
+                  <div>
+                    <h4>Predictive Maintenance</h4>
+                    <p>Early detection and prevention of potential issues</p>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-light fa-sync"></i>
+                  <div>
+                    <h4>Quality Assurance</h4>
+                    <p>Continuous monitoring of product specifications</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="feature-image">
+              <img src="assets/WebImages/expwebp/oil2.jpg" alt="Process Control">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <style>
+      .crude-optimization {
+        background: #f8f9fa;
+        overflow: hidden;
+      }
+      
+      /* Hero Banner */
+      .hero-banner {
+        position: relative;
+        height: 80vh;
+        background: #000;
+        overflow: hidden;
+      }
+      
+      .hero-banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        transform: scale(1.1);
+        transition: transform 8s ease;
+      }
+      
+      .hero-banner:hover img {
+        transform: scale(1);
+      }
+      
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          45deg,
+          rgba(0,0,0,0.9),
+          rgba(0,0,0,0.4)
+        );
+      }
+      
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+        max-width: 1000px;
+        color: #fff;
+        z-index: 2;
+      }
+      
+      .hero-tag {
+        display: inline-block;
+        padding: 10px 20px;
+        background: rgba(217,10,44,0.2);
+        border: 1px solid rgba(217,10,44,0.3);
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+        backdrop-filter: blur(5px);
+        transform: translateY(30px);
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.3s;
+      }
+      
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.5s;
+      }
+      
+      .hero-content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        opacity: 0.9;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards 0.7s;
+      }
+      
+      /* Features Section */
+      .features-section {
+        padding: 100px 40px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      
+      .feature-card {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 100px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 0.8s ease forwards;
+      }
+      
+      .feature-card.secondary {
+        flex-direction: row-reverse;
+      }
+      
+      .feature-image {
+        flex: 1;
+        position: relative;
+        height: 600px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+      }
+      
+      .feature-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+      
+      .feature-card:hover .feature-image img {
+        transform: scale(1.1);
+      }
+      
+      .feature-content {
+        flex: 1;
+        padding: 40px;
+      }
+      
+      .feature-tag {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(217,10,44,0.1);
+        color: #d90a2c;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+      
+      .feature-content h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+      
+      .feature-content > p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #666;
+        margin-bottom: 40px;
+      }
+      
+      .feature-benefits {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .feature-benefits li {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+      }
+      
+      .feature-benefits li:hover {
+        transform: translateX(10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      }
+      
+      .feature-benefits i {
+        font-size: 24px;
+        color: #d90a2c;
+        background: rgba(217,10,44,0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      
+      .feature-benefits h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #1a1a1a;
+      }
+      
+      .feature-benefits p {
+        font-size: 0.95rem;
+        color: #666;
+        margin: 0;
+      }
+      
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Mobile Responsiveness */
+      @media (max-width: 991px) {
+        .hero-content h1 {
+          font-size: 3rem;
+        }
+        
+        .feature-card {
+          flex-direction: column;
+          gap: 40px;
+        }
+        
+        .feature-card.secondary {
+          flex-direction: column;
+        }
+        
+        .feature-image {
+          height: 400px;
+          width: 100%;
+        }
+        
+        .feature-content h2 {
+          font-size: 2.2rem;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+        
+        .feature-content {
+          padding: 20px;
+        }
+        
+        .feature-benefits li {
+          padding: 15px;
+        }
+      }
+      </style>
+      <!-- Why Choose Our Solution -->
+<section class="why-choose-us">
+  <div class="section-header">
+    <h2>Why Choose Our Solution</h2>
+    <p>Discover the advantages that set us apart in transforming crude oil operations</p>
+  </div>
+  <div class="choose-cards">
+    <div class="choose-card">
+      <i class="fa-light fa-brain"></i>
+      <h4>AI-Driven Precision</h4>
+      <p>Leverage advanced machine learning models for highly accurate and reliable insights.</p>
+    </div>
+    <div class="choose-card">
+      <i class="fa-light fa-tachometer-fast"></i>
+      <h4>Faster Time to Value</h4>
+      <p>Deploy rapidly and see measurable performance improvements in weeks, not months.</p>
+    </div>
+    <div class="choose-card">
+      <i class="fa-light fa-shield-check"></i>
+      <h4>Proven Compliance</h4>
+      <p>Our solutions align with global refinery safety and quality standards.</p>
+    </div>
+    <div class="choose-card">
+      <i class="fa-light fa-handshake"></i>
+      <h4>Collaborative Integration</h4>
+      <p>Seamless integration with your existing ecosystem and stakeholder alignment.</p>
+    </div>
+  </div>
+</section>
 
-    <a href="CBO.html" style="font-size: 16px; text-decoration: none; color: #e63946; padding: 5px 10px; border-bottom: 2px solid #e63946;">
-      Crude Basket Optimization</a>
-     </a>
-    <a href="COM.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Corrosion Monitoring</a>
-    <a href="PIM.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">PipeLine Integrity Monitoring</a>
-  <a href="IATDO.html" style="font-size: 16px;text-decoration: none; color: 2c3e50; padding: 5px 10px;text-wrap: nowrap">
-      Intelligent Automation of  Trade Desk Operations
-     </a>    <a href="RS.html" style="font-size: 16px; text-decoration: none; color: #2c3e50; padding: 5px 10px;">Remote Sensing-VFM</a>
-  </nav>
-</div>
-     
-<!-- Variation 1: Image on Left, Content on Right -->
-<div class="service-detail-alt" style="display:flex; align-items:center; margin-bottom:40px;">
-   <div class="service-image" style="flex:1; padding-right:20px;">
-     <img src="assets/WebImages/expwebp/crude-min.jpg" alt="Crude Basket Optimization" style="width:100%;">
-   </div>
-   <div class="service-content" style="flex:1; text-align:left;">
-     <h4 style="font-size:28px; color:#181616; font-family:Arial, sans-serif; margin-bottom:20px;">Crude Basket Optimization</h4>
-     <p style="font-size:16px; line-height:1.7; color:#555;">
-       At Collabridge, our Crude Basket Optimization solution empowers refiners to make data‑driven decisions when selecting and blending crude oils. By analyzing global crude grades, pricing, yield profiles, and refinery configurations, we help you identify the most profitable combinations—maximizing throughput, minimizing processing costs, and aligning supply with market demand.
-       <br><br>
-       With AI and advanced optimization algorithms at the core, our platform continuously evaluates economic, operational, and logistical variables—so you can optimize every barrel before it even enters your refinery.
-     </p>
-     <div class="service-features" style="margin-top:20px; display:flex; justify-content:space-around; flex-wrap:wrap;">
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Crude Assay Analysis & Comparison</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Dynamic Blending Optimization</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Refinery Configuration Matching</div>
-       </div>
-     </div>
-   </div>
- </div>
- 
-<!-- Variation 2: Content on Left, Image on Right -->
-<div class="service-detail-alt" style="display:flex; align-items:center; margin-bottom:40px;">
-   <div class="service-content" style="flex:1; text-align:left; padding-right:20px;">
-     <h4 style="font-size:28px; color:#181616; font-family:Arial, sans-serif; margin-bottom:20px;">Optimized Crude Oil Refining</h4>
-     <p style="font-size:16px; line-height:1.7; color:#555;">
-       At Collabridge, our Optimized Crude Oil Refining solution is designed to help refiners make precise decisions in crude oil selection and blending to ensure high-quality output. By analyzing crude characteristics, refinery configurations, and yield data, our platform enables you to choose the most efficient crude blends, enhancing operational efficiency and profitability.
-       <br><br>
-       Powered by AI and advanced optimization algorithms, our solution continuously adapts to market conditions, pricing fluctuations, and changes in refinery performance, empowering you to make data-driven decisions for maximum profit while maintaining quality standards.
-     </p>
-     <div class="service-features" style="margin-top:20px; display:flex; justify-content:space-around; flex-wrap:wrap;">
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-cogs" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Advanced Blending Algorithms</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-chart-line" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Market-Driven Refining Decisions</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-sync" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Real-Time Refining Adjustments</div>
-       </div>
-     </div>
-   </div>
-   <div class="service-image" style="flex:1;">
-     <img src="assets/WebImages/expwebp/oil1.jpg" alt="Optimized Crude Oil Refining" style="width:100%;">
-   </div>
-</div>
+<!-- Implementation Roadmap -->
+<section class="roadmap">
+  <div class="section-header">
+    <h2>Implementation Roadmap</h2>
+    <p>Our step-by-step approach ensures smooth integration and continuous optimization</p>
+  </div>
+  <div class="roadmap-steps">
+    <div class="step">
+      <span class="step-number">1</span>
+      <h4>Discovery & Assessment</h4>
+      <p>Evaluate current processes, data sources, and define objectives.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">2</span>
+      <h4>Solution Design</h4>
+      <p>Customize AI modules and dashboards to your refinery’s needs.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">3</span>
+      <h4>Deployment & Integration</h4>
+      <p>Seamless plug-in to your existing systems with minimal disruption.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">4</span>
+      <h4>Training & Enablement</h4>
+      <p>Hands-on sessions for teams to understand and trust the AI recommendations.</p>
+    </div>
+    <div class="step">
+      <span class="step-number">5</span>
+      <h4>Monitoring & Optimization</h4>
+      <p>Ongoing support and enhancements for continuous value delivery.</p>
+    </div>
+  </div>
+</section>
+<style>
+  /* Why Choose Our Solution */
+.why-choose-us {
+  background: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
 
+.section-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
 
- 
-<!-- Variation 3: Repeat Variation 1 -->
-<div class="service-detail-alt" style="display:flex; align-items:center; margin-bottom:40px;">
-   <div class="service-image" style="flex:1; padding-right:20px;">
-     <img src="assets/WebImages/expwebp/oil2.jpg" alt="Crude Quality Optimization" style="width:100%;">
-   </div>
-   <div class="service-content" style="flex:1; text-align:left;">
-     <h4 style="font-size:28px; color:#181616; font-family:Arial, sans-serif; margin-bottom:20px;">Maximizing Crude Oil Value</h4>
-     <p style="font-size:16px; line-height:1.7; color:#555;">
-       At Collabridge, our Maximizing Crude Oil Value solution is tailored to help refiners optimize crude oil selections and blending strategies. By analyzing various crude grades, pricing fluctuations, and yield profiles, we guide you to identify the most economically viable blends that improve refinery performance and profitability.
-       <br><br>
-       Leveraging AI-driven algorithms and dynamic optimization tools, our platform continuously adapts to market changes, ensuring that every barrel entering your refinery is processed with the highest level of efficiency and cost-effectiveness.
-     </p>
-     <div class="service-features" style="margin-top:20px; display:flex; justify-content:space-around; flex-wrap:wrap;">
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Optimized Crude Blending</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Market-Aware Decision Making</div>
-       </div>
-       <div style="min-width:150px; margin:8px; text-align:center;">
-         <i class="fa-light fa-check" style="font-size:22px; color:#d90a2c; margin-bottom:8px;"></i>
-         <div style="font-size:14px; color:#333;">Real-Time Process Adjustment</div>
-       </div>
-     </div>
-   </div>
- </div>
+.section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
 
+.section-header p {
+  font-size: 1.1rem;
+  color: #555;
+}
 
-   </div>
- </section>
+.choose-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.choose-card {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.choose-card i {
+  font-size: 32px;
+  color: #d90a2c;
+  margin-bottom: 20px;
+}
+
+.choose-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.choose-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Roadmap Section */
+.roadmap {
+  background: #f1f3f5;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.roadmap-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.step {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+}
+
+.step-number {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #d90a2c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+
+.step h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .choose-cards,
+  .roadmap-steps {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+</style>
    </main>
 
  <!-- footer-area-start -->

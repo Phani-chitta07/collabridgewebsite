@@ -930,136 +930,691 @@
      
       </section>
       <!-- breadcrumb-area-end -->
-    <!-- sercices-area-start -->
-    <section class="services-area pt-115 pb-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="tp-services-details-wrap mb-40 sticky-sidebar" style="position: sticky; top: 100px; z-index: 10; max-height: 80vh; overflow-y: auto;">
-              <div class="tp-services-details-services mb-50">
-                <h4 class="tp-services-details-services-title">
-                  Manufacturing 
-                  <span class="dropdown-indicator"></span>
-                </h4>            
-                <div class="tp-services-details-services-wrap">
-                  <!-- Removed the extra SVG dropdown icon here -->
-                  <span class="dropdown-indicator" onclick="toggleDropdown()"></span>
-                  <div class="dropdown-container sticky-dropdown" style="position: sticky; top: 100px; z-index: 20; background: #fff; padding-bottom: 0;">
-                    <div style="position: relative;">
-                      <select id="digitalManufacturingDropdown" class="digitalManufacturingDropdown" onchange="if(this.value) window.location.href=this.value;" style="padding-right: 30px; background: transparent;">
-                        <option value="" disabled selected>Select a Service</option>
-                        <option value="IBP.html">Integrated Business Planning</option>
-                        <option value="df.html">Demand Forecasting</option>
-                        <option value="svrr.html">Supply Chain Visibility​​</option>
-                        <option value="IM.html">Inventory Modeling</option>
-                        <option value="MRP.html">MRP Optimization</option>
-                        <option value="CM.html">Condition Monitoring</option>
-                        <option value="DigitalTwins.html">Digital Twins</option>
-                        <option value="Transport.html">Transport Cost Optimization</option>
-                        <option value="VPRA.html">Vendor Performance & Risk Assessment​​</option>
-                      </select>
-                      <!-- Keep only this SVG for dropdown chevron -->
-                      <svg width="16" height="16" viewBox="0 0 18 18" fill="none" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;">
-                        <path d="M4 7l5 5 5-5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <style>
-                    .sticky-dropdown {
-                      position: sticky !important;
-                      top: 100px;
-                      z-index: 20;
-                      background: #fff;
-                      padding-bottom: 0; /* Remove extra white space */
-                    }
-                    .sticky-dropdown select {
-                      margin-bottom: 0 !important;
-                      box-shadow: none !important;
-                      border-radius: 4px !important;
-                      border: 1px solid #ddd !important;
-                      min-width: 100%;
-                      background: transparent;
-                    }
-                    .sticky-dropdown select:focus {
-                      outline: none;
-                      border-color: #d90a2c;
-                    }
-                    /* Remove extra space below the select */
-                    .sticky-dropdown > div {
-                      margin-bottom: 0 !important;
-                    }
-                  </style>
-                </div>
-                <script>
-                  function toggleDropdown() {
-                    var dropdown = document.getElementById('digitalManufacturingDropdown');
-                    dropdown.focus();
-                    dropdown.click();
-                  }
-                </script>
-                <script>
-                  document.addEventListener("DOMContentLoaded", function() {
-                    var currentPage = window.location.pathname.split("/").pop();
-                    var dropdown = document.getElementById("digitalManufacturingDropdown");
-                    for (var i = 0; i < dropdown.options.length; i++) {
-                      if (dropdown.options[i].value === currentPage) {
-                        dropdown.selectedIndex = i;
-                        break;
-                      }
-                    }
-                  });
-                </script>
+<!-- Vendor Assessment Overview Section -->
+<section class="vendor-assessment-overview" style="background: #f8f9fa; padding: 100px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="overview-content">
+          <span class="section-badge">Strategic Solution</span>
+          <h2 class="section-title">Vendor Performance & Risk Assessment</h2>
+          <div class="overview-description">
+            <p>A comprehensive approach to evaluate, monitor, and optimize vendor relationships while identifying and mitigating potential risks that could impact your business operations.</p>
+          </div>
+
+          <!-- Key Components -->
+          <div class="key-components">
+            <div class="component-item">
+              <div class="component-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="component-content">
+                <h4>Performance Evaluation</h4>
+                <p>Systematic assessment of vendor delivery, quality, and compliance with agreed terms</p>
+              </div>
+            </div>
+
+            <div class="component-item">
+              <div class="component-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div class="component-content">
+                <h4>Risk Analysis</h4>
+                <p>Identification and assessment of potential risks in vendor relationships</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-8">
-            <div class="tp-services-details-wrapper ml-30">
-              <div class="tp-services-details-main-thumb mb-30 w-img">
-                <img src="assets/WebImages/expwebp/Risk-min.jpg" alt="Vendor Performance and Risk Assessment">
-              </div>
-              <h4 class="tp-services-details-title mb-20">Vendor Performance and Risk Assessment</h4>
-              <p> At Collabridge, we help businesses evaluate and optimize their vendor relationships through comprehensive performance tracking and risk assessments. In an increasingly globalized marketplace, managing vendor risk is essential to maintaining operational continuity and reducing exposure to unforeseen disruptions. Our AI/ML-powered solution offers advanced analytics to evaluate vendor performance across various metrics and identify potential risks before they impact your operations.
-          
-                By leveraging data from multiple sources, we provide actionable insights into vendor reliability, quality, delivery performance, and financial stability. Our solution enables businesses to monitor vendor activities in real-time, giving you the power to proactively address issues, renegotiate terms, or explore alternative vendors.
-          
-                We combine predictive analytics with real-time data to assess both historical performance and emerging risks, helping businesses make informed, proactive decisions. At Collabridge, we believe that understanding vendor performance and mitigating risk is key to building resilient and sustainable supply chains.
-              </p>
-          
-              <div class="tp-services-details-check-container">
-                <!-- First row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-30">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Vendor Performance Tracking</span>
-                  </div>
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20 ml-30">
-                    <i class="fa-light fa-check"></i>
-                    <span>Risk Detection and Mitigation</span>
-                  </div>
-                </div>
-                <!-- Second row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Real-Time Risk Assessment</span>
-                  </div>
-                </div>
-                <!-- Third row of checkboxes -->
-                <div class="tp-services-details-check d-flex align-items-center mt-20">
-                  <div class="tp-services-details-check-item d-flex align-items-center mb-20">
-                    <i class="fa-light fa-check"></i>
-                    <span>Predictive Analytics for Vendor Stability</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
         </div>
       </div>
-    </section>
-   <!-- sercices-area-end -->
 
+      <!-- Right Visual -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="assessment-visual">
+          <img src="assets/WebImages/expwebp/Risk-min.jpg" alt="Vendor Assessment Process">
+          <div class="visual-overlay">
+            <div class="overlay-content">
+              <h3 style="color: #fff;">Comprehensive Vendor Management</h3>
+              <p>Strategic evaluation and risk mitigation for sustainable partnerships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+  .vendor-assessment-overview {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(217, 10, 44, 0.1);
+    color: #d90a2c;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  .overview-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .key-components {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .component-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .component-item:hover {
+    transform: translateX(10px);
+  }
+
+  .component-icon {
+    color: #d90a2c;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(217, 10, 44, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .component-content h4 {
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .component-content p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .assessment-visual {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  .assessment-visual img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+  }
+
+  .visual-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .assessment-visual:hover .visual-overlay {
+    transform: translateY(0);
+  }
+
+  .assessment-visual:hover img {
+    transform: scale(1.05);
+  }
+
+  .overlay-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .overlay-content p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .component-item {
+      padding: 20px;
+    }
+
+    .assessment-visual {
+      margin-top: 40px;
+    }
+
+    .visual-overlay {
+      position: relative;
+      transform: none;
+      background: #d3a4a4;
+    }
+  }
+  </style>
+</section>
+
+<!-- Why It's Needed Section -->
+<section class="why-needed-section" style="background: #0a0721; color: white; padding: 80px 0;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
+        <h2 class="section-title" style="color: white;">Why Vendor Assessment is Critical</h2>
+        <p class="lead">In today's interconnected business landscape, effective vendor management is crucial for:</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="reason-card" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; height: 100%;">
+          <div class="icon mb-4" style="color: #d90a2c;">
+            <i class="fa-light fa-shield-check fa-2x"></i>
+          </div>
+          <h4 style="color: #fff;">Risk Mitigation</h4>
+          <p>Identify and address potential risks before they impact your operations</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="reason-card" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; height: 100%;">
+          <div class="icon mb-4" style="color: #d90a2c;">
+            <i class="fa-light fa-chart-line fa-2x"></i>
+          </div>
+          <h4 style="color: #fff;">Performance Optimization</h4>
+          <p>Ensure vendors meet quality and delivery standards consistently</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="reason-card" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px; height: 100%;">
+          <div class="icon mb-4" style="color: #d90a2c;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 2v20h20"/>
+              <path d="M16 8l4 4-4 4"/>
+              <path d="M8 12h12"/>
+              <path d="M6 16l-4-4 4-4"/>
+            </svg>
+          </div>
+          <h4 style="color: #fff;">Cost Control</h4>
+          <p>Optimize spending and improve vendor negotiations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Solution Section -->
+<section class="our-solution-section" style="background: white; padding: 80px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <h2 class="section-title">Why Choose Our Solution?</h2>
+        <div class="benefits-list">
+          <div class="benefit-item d-flex align-items-start mb-4">
+            <div class="icon" style="color: #d90a2c; margin-right: 20px;">
+              <i class="fa-light fa-robot fa-2x"></i>
+            </div>
+            <div>
+              <h4>AI-Powered Analytics</h4>
+              <p>Advanced algorithms for accurate risk prediction and performance analysis</p>
+            </div>
+          </div>
+
+          <div class="benefit-item d-flex align-items-start mb-4">
+            <div class="icon" style="color: #d90a2c; margin-right: 20px;">
+              <i class="fa-light fa-clock-rotate-left fa-2x"></i>
+            </div>
+            <div>
+              <h4>Real-time Monitoring</h4>
+              <p>Continuous tracking and instant alerts for potential issues</p>
+            </div>
+          </div>
+
+          <div class="benefit-item d-flex align-items-start">
+            <div class="icon" style="color: #d90a2c; margin-right: 20px;">
+              <i class="fa-light fa-chart-mixed fa-2x"></i>
+            </div>
+            <div>
+              <h4>Actionable Insights</h4>
+              <p>Clear recommendations for improving vendor relationships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="metrics-dashboard">
+          <!-- Metric Card 1 -->
+          <div class="metric-box">
+            <div class="metric-content">
+              <svg class="metric-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" 
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="metric-info">
+                <h3>95%</h3>
+                <span>Risk Detection Rate</span>
+              </div>
+              <div class="metric-progress">
+                <div class="progress-ring">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none" stroke-width="3" stroke-dasharray="95, 100"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Metric Card 2 -->
+          <div class="metric-box">
+            <div class="metric-content">
+              <svg class="metric-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M23 6l-9.5 9.5-5-5L1 18" fill="none" stroke="currentColor" 
+                  stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div class="metric-info">
+                <h3>85%</h3>
+                <span>Performance Score</span>
+              </div>
+              <div class="metric-progress">
+                <div class="progress-ring">
+                  <svg viewBox="0 0 36 36">
+                    <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      fill="none" stroke-width="3" stroke-dasharray="85, 100"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <style>
+      .metrics-dashboard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+      }
+      
+      .metric-box {
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        border-radius: 20px;
+        padding: 1.5rem;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.05),
+                    -5px -5px 15px rgba(255,255,255,0.8);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .metric-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 8px 8px 20px rgba(0,0,0,0.1),
+                    -8px -8px 20px rgba(255,255,255,0.9);
+      }
+      
+      .metric-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      
+      .metric-icon {
+        color: #d90a2c;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .metric-info {
+        flex: 1;
+      }
+      
+      .metric-info h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #2a2a2a;
+        margin: 0;
+        line-height: 1;
+      }
+      
+      .metric-info span {
+        font-size: 0.9rem;
+        color: #666;
+        display: block;
+        margin-top: 0.5rem;
+      }
+      
+      .metric-progress svg {
+        width: 50px;
+        height: 50px;
+        transform: rotate(-90deg);
+      }
+      
+      .metric-progress path {
+        stroke: #d90a2c;
+        stroke-linecap: round;
+        transition: stroke-dasharray 1s ease;
+      }
+      
+      @media (max-width: 768px) {
+        .metrics-dashboard {
+          grid-template-columns: 1fr;
+        }
+      
+        .metric-box {
+          padding: 1.25rem;
+        }
+      
+        .metric-info h3 {
+          font-size: 1.5rem;
+        }
+      
+        .metric-progress svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      </style>
+    </div>
+    
+  </div>
+
+</section>
+
+<style>
+/* Add your custom styles here */
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-card {
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.reason-card {
+  transition: all 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+.benefit-item {
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateX(10px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    margin: 10px 0;
+  }
+  
+  .image-wrapper {
+    margin-top: 40px;
+  }
+}
+</style>
+<!-- Implementation Process and ROI Section -->
+<section class="implementation-roi-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 80px 0;">
+  <div class="container">
+    <!-- Implementation Process -->
+    <div class="implementation-process mb-80">
+      <h2 class="section-title text-center mb-50">Implementation Process</h2>
+      <div class="process-timeline">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <h4>Assessment</h4>
+              <p>Initial evaluation and requirement analysis</p>
+              <div class="step-number">1</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M8 12h8"/>
+                  <path d="M12 8v8"/>
+                </svg>
+              </div>
+              <h4>Integration</h4>
+              <p>System setup and data integration</p>
+              <div class="step-number">2</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+                </svg>
+              </div>
+              <h4>Optimization</h4>
+              <p>System fine-tuning and testing</p>
+              <div class="step-number">3</div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <path d="M22 4L12 14.01l-3-3"/>
+                </svg>
+              </div>
+              <h4>Deployment</h4>
+              <p>Full deployment and continuous support</p>
+              <div class="step-number">4</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROI Benefits -->
+    <div class="roi-benefits">
+      <h2 class="section-title text-center mb-50">ROI Benefits</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="roi-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="roi-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="roi-content">
+              <h3>30-40%</h3>
+              <p>Cost Reduction</p>
+              <span class="roi-period">Within 6 months</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="roi-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="roi-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                <path d="M23 6l-9.5 9.5-5-5L1 18"/>
+                <path d="M17 6h6v6"/>
+              </svg>
+            </div>
+            <div class="roi-content">
+              <h3>65%</h3>
+              <p>Risk Reduction</p>
+              <span class="roi-period">Year over year</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="roi-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="roi-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d90a2c" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4"/>
+                <path d="M12 8h.01"/>
+              </svg>
+            </div>
+            <div class="roi-content">
+              <h3>85%</h3>
+              <p>Improved Efficiency</p>
+              <span class="roi-period">Process optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Implementation Process Styles */
+.process-step {
+  text-align: center;
+  position: relative;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  margin-bottom: 20px;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background: #d90a2c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ROI Card Styles */
+.roi-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.roi-card:hover {
+  transform: translateY(-10px);
+}
+
+.roi-icon {
+  margin-bottom: 20px;
+}
+
+.roi-content h3 {
+  color: #d90a2c;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.roi-period {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .process-step {
+    margin-bottom: 40px;
+  }
+  
+  .roi-card {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+</style>
    </main>
 
  <!-- footer-area-start -->
