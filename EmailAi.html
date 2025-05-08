@@ -917,7 +917,7 @@
            <!-- Semi-transparent overlay -->
   <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);"></div>
 <!-- Email Stats Container -->
-<div class="stats-container" style="position: absolute; top: 300px; width: 100%; padding: 0 20px;">
+<div class="stats-container" style="position: absolute; top: 250px; width: 100%; padding: 0 20px;">
   <div class="container">
     <div class="row">
       <!-- Emails Processed -->
@@ -1003,62 +1003,978 @@ document.addEventListener('DOMContentLoaded', () => {
      
       </section>
       <!-- breadcrumb-area-end -->
-<!-- services-area-start -->
-<section class="services-area" style="padding: 100px 0; background: #eef2f3; font-family: 'Roboto', sans-serif;">
-   <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
+      <section class="email-ai-section">
+        <div class="container">
+          <div class="content-card">
+            <!-- Header with badge -->
+            <div class="section-header">
+              <span class="section-badge">Email Automation</span>
+              <h2 class="section-title">Email AI</h2>
+              <div class="title-underline"></div>
+            </div>
       
-     <!-- Updated Content Section -->
-     <div class="services-content" style="background: #fff; border-radius: 10px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: flex; align-items: flex-start; gap: 30px;">
-       <!-- Left: Text & Check Icon Section -->
-       <div class="services-text" style="flex: 1 1 60%;">
-         <!-- Text Content on Top -->
-         <h2 style="font-size: 32px; color: #1d3557; margin-bottom: 20px; text-align: center;">
-           Email AI
-         </h2>
-         <p style="font-size: 16px; line-height: 1.8; color: #457b9d; text-align: justify;">
-            At Collabridge, we designed Email AI to help businesses move beyond manual email handling and slow response cycles. With intelligent automation, Email AI reads, understands, categorizes, summarizes, and extracts critical information from incoming emails — turning unstructured communication into structured data that drives action, faster.
+            <div class="section-grid">
+              <!-- Left: Content Area -->
+              <div class="content-area">
+                <div class="intro-text">
+                  <p class="highlight">Transform your email workflow with AI-powered automation that understands, categorizes, and acts on your communications instantly.</p>
+                  <p>At Collabridge, we designed Email AI to help businesses move beyond manual email handling and slow response cycles. With intelligent automation, Email AI reads, understands, categorizes, summarizes, and extracts critical information from incoming emails — turning unstructured communication into structured data that drives action, faster.</p>
+                  <p>Built using Natural Language Processing (NLP), Machine Learning (ML), and Deep Learning models, Email AI empowers teams to manage thousands of emails daily with unmatched accuracy, speed, and consistency — all while improving customer engagement and operational efficiency.</p>
+                </div>
+      
 
-            Built using Natural Language Processing (NLP), Machine Learning (ML), and Deep Learning models, Email AI empowers teams to manage thousands of emails daily with unmatched accuracy, speed, and consistency — all while improving customer engagement and operational efficiency.
-         </p>
-           
-         <!-- Updated Check Icon Section -->
-         <div class="services-check" style="margin-top: 30px;">
-           <div style="display: flex; justify-content: center; gap: 40px; margin-bottom: 20px;">
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;"> Contextual Understanding
-               </span>
-             </div>
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;"> Automatic Categorization and Routing</span>
-             </div>
-           </div>
-           <div style="display: flex; justify-content: center;">
-             <div style="display: flex; align-items: center; gap: 10px;">
-               <i class="fa-light fa-check" style="font-size: 22px; color: #e63946;"></i>
-               <span style="font-size: 16px; color: #1d3557;">Field Extraction and Summarization</span>
-             </div>
-           </div>
-         </div>
-       </div>
-       
-       <!-- Right: Image Section -->
-       <div class="services-image" style="flex: 1 1 35%; text-align: center;">
-         <a href="#" class="video-popup" data-video-url="assets/WebImages/expwebp/CB_AI.mp4" style="display: block;">
-            <video autoplay muted loop playsinline style="width: 100%; border-radius: 8px;">
-              <source src="assets/WebImages/expwebp/email.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </a>     </div>
-     </div>
-   </div>
- </section>
- <!-- sercices-area-end -->
+              </div>
+      
+              <!-- Right: Video Area -->
+              <div class="video-area">
+                <div class="video-card">
+                  <div class="video-wrapper" id="videoTrigger">
+                    <video id="inlineVideo" autoplay muted loop playsinline>
+                      <source src="assets/WebImages/expwebp/email.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                      <button class="play-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M15 3h6v6"></path>
+                          <path d="M9 21H3v-6"></path>
+                          <path d="M21 3l-7 7"></path>
+                          <path d="M3 21l7-7"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+      
+                  <!-- Stats Below Video -->
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <h4>99.9%</h4>
+                      <p>Accuracy Rate</p>
+                    </div>
+                    <div class="stat-item">
+                      <h4>60%</h4>
+                      <p>Faster Processing</p>
+                    </div>
+                    <div class="stat-item">
+                      <h4>85%</h4>
+                      <p>Cost Reduction</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+<!-- Video Popup Modal -->
+<div id="videoModal" class="video-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999;">
+  <div class="modal-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 960px;">
+    <span class="close-modal" style="position: absolute; top: -40px; right: -40px; color: #fff; font-size: 30px; cursor: pointer; z-index: 1;">&times;</span>
+    <video id="popupVideo" controls style="width: 100%; height: auto; border-radius: 10px;">
+      <source src="assets/WebImages/expwebp/email.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<style>
+.video-wrapper:hover .play-button {
+  opacity: 1;
+}
+
+.video-modal {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.video-modal.active .modal-content {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+  }
+  
+  .close-modal {
+    right: 0;
+    top: -30px;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const wrapper = document.querySelector('.video-wrapper');
+  const modal = document.getElementById('videoModal');
+  const closeBtn = document.querySelector('.close-modal');
+  const popupVideo = document.getElementById('popupVideo');
+  const inlineVideo = document.getElementById('inlineVideo');
+
+  wrapper.addEventListener('click', function() {
+    modal.style.display = 'block';
+    setTimeout(() => modal.classList.add('active'), 10);
+    // Sync the videos
+    popupVideo.currentTime = inlineVideo.currentTime;
+    popupVideo.play();
+    inlineVideo.pause();
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      popupVideo.pause();
+      inlineVideo.play();
+    }, 300);
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.style.display === 'block') closeModal();
+  });
+});
+</script>
+        
+      </section>
+      
+      <style>
+      .email-ai-section {
+        padding: 120px 0;
+        background: linear-gradient(135deg, #f8f9ff 0%, #eef2f3 100%);
+        font-family: 'Roboto', sans-serif;
+        color: #1d3557;
+      }
+      
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+      
+      .content-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 30px;
+        padding: 60px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(10px);
+      }
+      
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      
+      .section-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        background: rgba(217, 10, 44, 0.1);
+        color: #d90a2c;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      
+      .section-title {
+        font-size: 42px;
+        background: linear-gradient(45deg, #1d3557, #457b9d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        font-weight: 800;
+      }
+      
+      .title-underline {
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #d90a2c, rgba(217, 10, 44, 0.5));
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+      
+      .section-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+      
+      .intro-text {
+        margin-bottom: 50px;
+      }
+      
+      .intro-text .highlight {
+        font-size: 24px;
+        color: #1d3557;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 30px;
+      }
+      
+      .intro-text p {
+        color: #457b9d;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      
+      .feature-grid {
+        display: grid;
+        gap: 25px;
+      }
+      
+      .feature-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 30px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(217, 10, 44, 0.1);
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(217, 10, 44, 0.15);
+        border-color: rgba(217, 10, 44, 0.3);
+      }
+      
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), rgba(217, 10, 44, 0.05));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      
+      .feature-icon i {
+        font-size: 24px;
+        color: #d90a2c;
+        transition: all 0.3s ease;
+      }
+      
+      .feature-card:hover .feature-icon {
+        background: #d90a2c;
+      }
+      
+      .feature-card:hover .feature-icon i {
+        color: #fff;
+      }
+      
+      .feature-content h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: #1d3557;
+      }
+      
+      .feature-content p {
+        font-size: 15px;
+        color: #457b9d;
+        line-height: 1.6;
+      }
+      
+      .video-card {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+      }
+      
+      .video-wrapper {
+        position: relative;
+        aspect-ratio: 16/9;
+        cursor: pointer;
+      }
+      
+      .video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .video-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(29, 53, 87, 0.1) 0%, rgba(29, 53, 87, 0.2) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .play-button {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.95);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      
+      .video-wrapper:hover .play-button {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      .play-button:hover {
+        background: #d90a2c;
+        transform: scale(1.1);
+      }
+      
+      .play-button svg {
+        transition: all 0.3s ease;
+        width: 30px;
+        height: 30px;
+      }
+      
+      .play-button:hover svg {
+        stroke: #fff;
+      }
+      
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px;
+        gap: 20px;
+        background: #fff;
+      }
+      
+      .stat-item {
+        text-align: center;
+      }
+      
+      .stat-item h4 {
+        font-size: 28px;
+        color: #d90a2c;
+        margin-bottom: 5px;
+      }
+      
+      .stat-item p {
+        font-size: 14px;
+        color: #457b9d;
+        margin-bottom: 30px;
+      
+      }
+      
+      /* Mobile Responsiveness */
+      @media (max-width: 1200px) {
+        .content-card {
+          padding: 40px;
+        }
+        
+        .section-grid {
+          gap: 40px;
+        }
+      }
+      
+      @media (max-width: 992px) {
+        .section-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .video-area {
+          order: -1;
+        }
+        
+        .section-title {
+          font-size: 36px;
+        }
+        
+        .intro-text .highlight {
+          font-size: 20px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .email-ai-section {
+          padding: 60px 0;
+        }
+        
+        .content-card {
+          padding: 30px;
+        }
+        
+        .feature-card {
+          padding: 20px;
+        }
+        
+        .stats-grid {
+          padding: 20px;
+        }
+        
+        .stat-item h4 {
+          font-size: 24px;
+        }
+      }
+      </style>
+      
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const videoTrigger = document.getElementById('videoTrigger');
+        const videoModal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const closeModal = document.querySelector('.close-modal');
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const inlineVideo = document.getElementById('inlineVideo');
+      
+        function openModal() {
+          videoModal.style.display = 'block';
+          modalVideo.currentTime = inlineVideo.currentTime;
+          modalVideo.play();
+          inlineVideo.pause();
+          setTimeout(() => videoModal.classList.add('active'), 10);
+        }
+      
+        function closeVideoModal() {
+          videoModal.classList.remove('active');
+          setTimeout(() => {
+            videoModal.style.display = 'none';
+            modalVideo.pause();
+            inlineVideo.play();
+          }, 300);
+        }
+      
+        videoTrigger.addEventListener('click', openModal);
+        closeModal.addEventListener('click', closeVideoModal);
+        modalOverlay.addEventListener('click', closeVideoModal);
+      
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && videoModal.style.display === 'block') {
+            closeVideoModal();
+          }
+        });
+      });
+      </script>
  <!-- services-area-end -->
+ <section class="features-section">
+  <div class="feature-grid">
+    <!-- Card 1 -->
+    <div class="feature-card">
+      <div class="feature-inner">
+        <div class="feature-front">
+          <div class="icon-wrapper">
+            <i class="fa-light fa-brain-circuit"></i>
+          </div>
+          <h3>Contextual Understanding</h3>
+        </div>
+        <div class="feature-back">
+          <p>Advanced AI comprehension of email context and intent</p>
+        </div>
+      </div>
+    </div>
 
+    <!-- Card 2 -->
+    <div class="feature-card">
+      <div class="feature-inner">
+        <div class="feature-front">
+          <div class="icon-wrapper">
+            <i class="fa-light fa-route"></i>
+          </div>
+          <h3>Smart Routing</h3>
+        </div>
+        <div class="feature-back">
+          <p>Automatic categorization and intelligent workflow routing</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="feature-card">
+      <div class="feature-inner">
+        <div class="feature-front">
+          <div class="icon-wrapper">
+            <i class="fa-light fa-file-check"></i>
+          </div>
+          <h3>Data Extraction</h3>
+        </div>
+        <div class="feature-back">
+          <p>Automated field extraction and smart summarization</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.features-section {
+  padding: 40px 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feature-card {
+  perspective: 1000px;
+  height: 280px;
+  width: 100%;
+}
+
+.feature-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.feature-card:hover .feature-inner {
+  transform: rotateY(180deg);
+}
+
+.feature-front,
+.feature-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.feature-front {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+}
+
+.feature-back {
+  background: linear-gradient(145deg, #d90a2c, #ff1f4b);
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), rgba(217, 10, 44, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.icon-wrapper i {
+  font-size: 32px;
+  color: #d90a2c;
+  transition: all 0.3s ease;
+}
+
+.feature-front h3 {
+  color: #1d3557;
+  font-size: 20px;
+  margin: 0;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.feature-back p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 15px;
+  color: #fff;
+}
+
+/* Hover Effects */
+.feature-card:hover .icon-wrapper {
+  transform: scale(1.1);
+  background: #d90a2c;
+}
+
+.feature-card:hover .icon-wrapper i {
+  color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-section {
+    padding: 30px 15px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .feature-card {
+    height: 250px;
+  }
+
+  .feature-front h3 {
+    font-size: 18px;
+  }
+
+  .feature-back p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-wrapper i {
+    font-size: 24px;
+  }
+}
+
+/* Touch Device Support */
+@media (hover: none) {
+  .feature-card:active .feature-inner {
+    transform: rotateY(180deg);
+  }
+}
+</style>
  
+<!-- Why Choose Us Section -->
+<section class="why-choose-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-badge">Our Advantages</span>
+      <h2 class="section-title">Why Choose Email AI</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="advantages-grid">
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <i class="fa-light fa-robot"></i>
+        </div>
+        <h3>Advanced AI Technology</h3>
+        <p>State-of-the-art NLP and ML models for accurate email understanding and processing</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <i class="fa-light fa-shield-check"></i>
+        </div>
+        <h3>Enterprise Security</h3>
+        <p>Built-in compliance with HIPAA, GDPR, and other regulatory requirements</p>
+      </div>
+
+      <div class="advantage-card">
+        <div class="advantage-icon">
+          <i class="fa-light fa-gauge-high"></i>
+        </div>
+        <h3>Rapid Implementation</h3>
+        <p>Quick deployment and seamless integration with existing email systems</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Challenges & Solutions Section -->
+<section class="challenges-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-badge">Challenges & Solutions</span>
+      <h2 class="section-title">Addressing Key Email Processing Challenges</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="challenges-grid">
+      <div class="challenge-solution-card">
+        <div class="challenge">
+          <h3><i class="fa-light fa-triangle-exclamation"></i> Challenge</h3>
+          <p>Manual email categorization leading to delays and errors</p>
+        </div>
+        <div class="solution">
+          <h3><i class="fa-light fa-lightbulb"></i> Solution</h3>
+          <p>AI-powered auto-categorization with 99.9% accuracy</p>
+        </div>
+      </div>
+
+      <div class="challenge-solution-card">
+        <div class="challenge">
+          <h3><i class="fa-light fa-triangle-exclamation"></i> Challenge</h3>
+          <p>Inconsistent handling of sensitive information</p>
+        </div>
+        <div class="solution">
+          <h3><i class="fa-light fa-lightbulb"></i> Solution</h3>
+          <p>Automated PII detection and standardized processing</p>
+        </div>
+      </div>
+
+      <div class="challenge-solution-card">
+        <div class="challenge">
+          <h3><i class="fa-light fa-triangle-exclamation"></i> Challenge</h3>
+          <p>Time-consuming data extraction from emails</p>
+        </div>
+        <div class="solution">
+          <h3><i class="fa-light fa-lightbulb"></i> Solution</h3>
+          <p>Intelligent extraction with ML-powered accuracy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Validation & Compliance Section -->
+<section class="compliance-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-badge">Security & Compliance</span>
+      <h2 class="section-title">Enterprise-Grade Security Standards</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="compliance-grid">
+      <div class="compliance-card hipaa">
+        <div class="compliance-icon">
+          <i class="fa-light fa-clipboard-list-check"></i>
+        </div>
+        <h3>HIPAA Compliance</h3>
+        <ul>
+          <li>Protected Health Information (PHI) safeguards</li>
+          <li>Secure data transmission protocols</li>
+          <li>Access control and audit trails</li>
+          <li>Data encryption at rest and in transit</li>
+        </ul>
+      </div>
+
+      <div class="compliance-card gdpr">
+        <div class="compliance-icon">
+          <i class="fa-light fa-user-shield"></i>
+        </div>
+        <h3>GDPR Compliance</h3>
+        <ul>
+          <li>Data minimization and purpose limitation</li>
+          <li>Right to erasure implementation</li>
+          <li>Data protection by design</li>
+          <li>Transparent data processing</li>
+        </ul>
+      </div>
+
+      <div class="compliance-card validation">
+        <div class="compliance-icon">
+          <i class="fa-light fa-check-double"></i>
+        </div>
+        <h3>Validation Process</h3>
+        <ul>
+          <li>Multi-layer content verification</li>
+          <li>Automated quality checks</li>
+          <li>Human-in-the-loop validation</li>
+          <li>Continuous accuracy monitoring</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Common Section Styles */
+.why-choose-section,
+.challenges-section,
+.compliance-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9ff 0%, #eef2f3 100%);
+}
+
+/* Advantage Cards */
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.advantage-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card:hover {
+  transform: translateY(-10px);
+}
+
+.advantage-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), rgba(217, 10, 44, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.advantage-icon i {
+  font-size: 30px;
+  color: #d90a2c;
+}
+
+/* Challenge Solution Cards */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.challenge-solution-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.challenge, .solution {
+  padding: 25px;
+}
+
+.challenge {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.solution {
+  background: #fff;
+}
+
+.challenge h3, .solution h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d3557;
+  margin-bottom: 10px;
+}
+
+/* Compliance Cards */
+.compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.compliance-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.compliance-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(217, 10, 44, 0.1), rgba(217, 10, 44, 0.05));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.compliance-icon i {
+  font-size: 24px;
+  color: #d90a2c;
+}
+
+.compliance-card h3 {
+  color: #1d3557;
+  margin-bottom: 20px;
+}
+
+.compliance-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.compliance-card ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #457b9d;
+}
+
+.compliance-card ul li:before {
+  content: "•";
+  color: #d90a2c;
+  position: absolute;
+  left: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .advantages-grid,
+  .challenges-grid,
+  .compliance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages-grid,
+  .challenges-grid,
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantage-card,
+  .challenge-solution-card,
+  .compliance-card {
+    padding: 20px;
+  }
+}
+</style>
  
  
 
