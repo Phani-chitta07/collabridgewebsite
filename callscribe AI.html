@@ -1486,7 +1486,230 @@ document.querySelectorAll('.process-step').forEach(step => {
 }
 </style>
  <!-- services-area-end -->
+<!-- Challenges Section -->
+<section class="challenges-section" style="margin-top: 60px; padding: 80px 40px;">
+  <h2 class="section-title" style="text-align: center; color: #1d3557; font-size: 36px; margin-bottom: 60px; position: relative;">
+    Industry Challenges We Address
+    <span class="title-underline"></span>
+  </h2>
 
+  <div class="challenges-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+    <!-- Challenge 1 -->
+    <div class="challenge-card">
+      <div class="challenge-icon">
+        <i class="fa-light fa-clock"></i>
+      </div>
+      <h3>Time & Resource Intensive</h3>
+      <p class="challenge">Manual transcription and analysis of customer calls requires significant time and resources</p>
+      <div class="solution">
+        <h4>Our Solution</h4>
+        <p>Automated transcription reduces processing time by 60% while maintaining 99.9% accuracy</p>
+      </div>
+    </div>
+
+    <!-- Challenge 2 -->
+    <div class="challenge-card">
+      <div class="challenge-icon">
+        <i class="fa-light fa-chart-mixed"></i>
+      </div>
+      <h3>Inconsistent Analysis</h3>
+      <p class="challenge">Human analysis leads to subjective interpretations and inconsistent insights</p>
+      <div class="solution">
+        <h4>Our Solution</h4>
+        <p>AI-powered analysis ensures consistent, objective evaluation across all interactions</p>
+      </div>
+    </div>
+
+    <!-- Challenge 3 -->
+    <div class="challenge-card">
+      <div class="challenge-icon">
+        <i class="fa-light fa-shield-exclamation"></i>
+      </div>
+      <h3>Compliance Risks</h3>
+      <p class="challenge">Missing critical compliance issues in customer interactions can lead to regulatory violations</p>
+      <div class="solution">
+        <h4>Our Solution</h4>
+        <p>Real-time compliance monitoring and automated risk detection</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance Section -->
+<section class="compliance-section" style="margin-top: 60px; padding: 80px 40px; background: linear-gradient(to bottom right, #fff 0%, #f8f9ff 100%);">
+  <h2 class="section-title" style="text-align: center; color: #1d3557; font-size: 36px; margin-bottom: 60px; position: relative;">
+    Compliance & Security
+    <span class="title-underline"></span>
+  </h2>
+
+  <div class="compliance-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+    <!-- Compliance Card 1 -->
+    <div class="compliance-card">
+      <div class="compliance-icon">
+        <i class="fa-light fa-shield-check"></i>
+      </div>
+      <h3>Data Security</h3>
+      <ul>
+        <li>End-to-end encryption</li>
+        <li>Secure data storage</li>
+        <li>Access control</li>
+        <li>Regular security audits</li>
+      </ul>
+    </div>
+
+    <!-- Compliance Card 2 -->
+    <div class="compliance-card">
+      <div class="compliance-icon">
+        <i class="fa-light fa-file-certificate"></i>
+      </div>
+      <h3>Regulatory Compliance</h3>
+      <ul>
+        <li>HIPAA compliant</li>
+        <li>GDPR ready</li>
+        <li>SOC 2 certified</li>
+        <li>ISO 27001 certified</li>
+      </ul>
+    </div>
+
+    <!-- Compliance Card 3 -->
+    <div class="compliance-card">
+      <div class="compliance-icon">
+        <i class="fa-light fa-gears"></i>
+      </div>
+      <h3>Process Controls</h3>
+      <ul>
+        <li>Audit trails</li>
+        <li>Version control</li>
+        <li>Data retention policies</li>
+        <li>Regular compliance monitoring</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Challenge Cards Styling */
+.challenge-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.challenge-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.challenge-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(217,10,44,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.challenge-icon i {
+  font-size: 24px;
+  color: #d90a2c;
+}
+
+.challenge-card h3 {
+  color: #1d3557;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.challenge-card .challenge {
+  color: #457b9d;
+  margin-bottom: 20px;
+}
+
+.challenge-card .solution {
+  border-top: 2px dashed rgba(217,10,44,0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.challenge-card .solution h4 {
+  color: #d90a2c;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Compliance Cards Styling */
+.compliance-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.compliance-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.compliance-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(217,10,44,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.compliance-icon i {
+  font-size: 24px;
+  color: #d90a2c;
+}
+
+.compliance-card h3 {
+  color: #1d3557;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.compliance-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.compliance-card ul li {
+  color: #457b9d;
+  margin-bottom: 12px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.compliance-card ul li:before {
+  content: "•";
+  color: #d90a2c;
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .challenges-grid,
+  .compliance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-card,
+  .compliance-card {
+    padding: 20px;
+  }
+}
+</style>
  
  
  <!-- Implementation Process Section -->
