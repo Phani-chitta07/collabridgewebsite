@@ -247,12 +247,16 @@
              <div class="main-menu">
                     <nav id="mobile-menu" style="margin-left: 50px;">
                  <ul>
-                   <!-- OFFERINGS MENU -->
-                      <li class="has-dropdown tp-megamenu">
-                     <a style="font-weight: normal !important; position: relative; display: block !important;">
-                       Offerings
-                       <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
-                     </a>
+                     <!-- OFFERINGS MENU -->
+                   <li class="has-dropdown tp-megamenu">
+                    <a style="font-weight: normal !important; position: relative; display: flex !important; align-items: center; gap: 5px;">
+                      Offerings
+                      <!-- Dropdown Icon -->
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                    </a>
                      <div class="mega-menu-container" style="font-size: 13px !important; font-weight: lighter !important; color: #000 !important;">
                        <div class="container">
                          <!-- First Row - Current Categories -->
@@ -416,10 +420,14 @@
                    </li>
                    <!-- RESOURCES MENU -->
                    <li class="has-dropdown tp-megamenu">
-                     <a style="font-weight: normal !important; position: relative; display: block !important;">
-                       Resources
-                       <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
-                     </a>
+                    <a style="font-weight: normal !important; position: relative; display: flex !important; align-items: center; gap: 5px;">
+                      Resources
+                      <!-- Dropdown Icon -->
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                    </a>
                      <div class="mega-menu-container">
                        <div class="container">
                          <div class="row" style="justify-content: center; gap: 0;">
@@ -477,10 +485,14 @@
                    </li>
                    <!-- COMPANY MENU -->
                    <li class="has-dropdown tp-megamenu">
-                     <a style="font-weight: normal !important; position: relative; display: block !important;">
-                       Company
-                       <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
-                     </a>
+                    <a style="font-weight: normal !important; position: relative; display: flex !important; align-items: center; gap: 5px;">
+                      Company
+                      <!-- Dropdown Icon -->
+                      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span class="hover-line" style="position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: #d90a2c; transition: width 0.3s ease;"></span>
+                    </a>
                      <div class="mega-menu-container">
                        <div class="container">
                          <div class="row">
@@ -955,7 +967,7 @@
                   <select id="industries" name="industry" class="form-select" required>
                      <option value="" selected disabled>Select Industry</option>
                      <option value="Manufacturing">Manufacturing</option>
-                     <option value="Energy & Utilities">Energy & Utilities</option>
+                     <option value="Energy & Utilities">Oil & Gas</option>
                      <option value="Pharma & Lifesciences">Pharma & Lifesciences</option>
                      <option value="Insurance">Insurance</option>
                      <option value="Wholesale & Retail">Wholesale & Retail</option>
@@ -1117,6 +1129,175 @@
       <button type="submit" class="tp-btn" style="font-size:12px; padding:4px 8px;">Schedule Demo</button>
    </div>
 </div>
+<style>
+    /* Compact layout styles */
+    .demo-form-step {
+      max-width: 100%;
+      padding: 15px !important;
+    }
+    
+    .demo-step-title {
+      font-size: 18px !important;
+      margin-bottom: 8px !important;
+    }
+    
+    .demo-step-description {
+      font-size: 12px !important;
+      margin-bottom: 12px !important;
+    }
+    
+    .service-selection-row,
+    .schedule-section {
+      margin-bottom: 15px !important;
+    }
+    
+    .mb-20 {
+      margin-bottom: 10px !important;
+    }
+    
+    .tp-contact-details-form-input {
+      margin-bottom: 8px !important;
+    }
+    
+    .form-control,
+    .form-select {
+      height: 32px !important;
+      padding: 4px 8px !important;
+      font-size: 12px !important;
+    }
+    
+    .schedule-section {
+      padding: 12px !important;
+    }
+    
+    .schedule-heading {
+      font-size: 14px !important;
+      margin-bottom: 10px !important;
+    }
+    
+    /* Step 2 adjustments */
+    #step2 {
+      transform: none !important;
+    }
+    
+    .tp-contact-details-form-input input,
+    .tp-contact-details-form-input textarea {
+      height: 32px !important;
+      padding: 4px 8px !important;
+    }
+    
+    .tp-contact-details-form-input textarea {
+      height: 40px !important;
+    }
+    
+    /* Button adjustments */
+    .demo-form-buttons {
+      margin-top: 12px !important;
+    }
+    
+    .tp-btn,
+    .tp-btn-outline {
+      padding: 6px 12px !important;
+      font-size: 12px !important;
+    }
+    
+    .tp-contact-details-form {
+  /* Remove max-height and overflow properties */
+  width: 100%;
+  padding: 15px;
+}
+
+/* Rest of the compact layout styles remain the same */
+.demo-form-step {
+  max-width: 100%;
+  padding: 15px !important;
+}
+
+.demo-step-title {
+  font-size: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .col-md-4 {
+        padding: 0 5px !important;
+      }
+      
+      .row {
+        margin: 0 -5px !important;
+      }
+    }
+    </style>
+    <style>
+        /* Adjust container spacing */
+        .demo-scheduler-area {
+          padding-top: 60px !important; /* Reduced from 115px */
+          padding-bottom: 40px !important; /* Reduced from 80px */
+        }
+        
+        /* Make form more compact */
+        .tp-contact-details-form {
+          width: 100%;
+          padding: 10px !important; /* Reduced padding */
+        }
+        
+        /* Reduce space between elements */
+        .demo-form-step {
+          max-width: 100%;
+          padding: 10px !important;
+        }
+        
+        .service-selection-row {
+          margin-bottom: 10px !important;
+        }
+        
+        .schedule-section {
+          margin-bottom: 10px !important;
+          padding: 10px !important;
+        }
+        
+        /* Adjust heading spaces */
+        .demo-step-title {
+          font-size: 16px !important;
+          margin-bottom: 5px !important;
+        }
+        
+        .schedule-heading {
+          font-size: 14px !important;
+          margin-bottom: 8px !important;
+        }
+        
+        /* Make form elements more compact */
+        .mb-20 {
+          margin-bottom: 8px !important;
+        }
+        
+        .form-control,
+        .form-select {
+          height: 30px !important;
+          padding: 4px 8px !important;
+        }
+        
+        /* Adjust button spacing */
+        .demo-form-buttons {
+          margin-top: 10px !important;
+        }
+        
+        /* Make step 2 more compact */
+        #step2 {
+          transform: none !important;
+          padding-top: 0 !important;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .demo-scheduler-area {
+            padding-top: 40px !important;
+          }
+        }
+        </style>
                    </div>
                 </form>
              </div>
