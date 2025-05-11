@@ -960,49 +960,47 @@
    <!-- Service Selection Dropdowns - Improved Layout -->
    <div class="service-selection-row mb-30">
       <div class="row">
-            <!-- Industry Solutions Dropdown -->
-            <div class="col-md-4 mb-20" id="demo">
-               <div class="tp-contact-details-form-input">
-                  <label for="industries"><strong>Industry Solutions</strong></label>
-                  <select id="industries" name="industry" class="form-select" required>
-                     <option value="" selected disabled>Select Industry</option>
-                     <option value="Manufacturing">Manufacturing</option>
-                     <option value="Energy & Utilities">Oil & Gas</option>
-                     <option value="Pharma & Lifesciences">Pharma & Lifesciences</option>
-                     <option value="Insurance">Insurance</option>
-                     <option value="Wholesale & Retail">Wholesale & Retail</option>
-                  </select>
-               </div>
-            </div>
-         <!-- Service Offerings Dropdown -->
-         <div class="col-md-4 mb-20">
-            <div class="tp-contact-details-form-input">
-               <label for="service-offerings"><strong>Service Offerings</strong></label>
-               <select id="service-offerings" name="service" class="form-select" required>
-                  <option value="" selected disabled>Select Service</option>
-                  <option value="QBPM">QBPM</option>
-                  <option value="Digital Transformation">Digital Transformation</option>
-                  <option value="Data Science">Data Science & Analytics</option>
-                  <option value="Digital Talent Gardening">Digital Talent Gardening</option>
-                  <option value="Managed Systems">Globally Managed Systems</option>
-               </select>
-            </div>
-         </div>
-         
-         <!-- Technologies Dropdown -->
-         <div class="col-md-4 mb-20">
-            <div class="tp-contact-details-form-input">
-               <label for="technologies"><strong>Technologies</strong></label>
-               <select id="technologies" name="technology" class="form-select" required>
-                  <option value="" selected disabled>Select Technology</option>
-                  <option value="AI/ML">AI/ML</option>
-                  <option value="GenAI">GenAI</option>
-                  <option value="LLM/SLM">LLM/SLM</option>
-                  <option value="SAP/BTP">SAP/BTP</option>
-                  <option value="Oracle">Oracle</option>
-               </select>
-            </div>
-         </div>
+        <style>
+            .inline-select {
+              display: inline-block;
+              width: 32%;  /* Adjust width as needed */
+              vertical-align: top;
+              margin-right: 1%;
+            }
+            .inline-select:last-child {
+              margin-right: 0;
+            }
+          </style>
+          
+          <!-- Industry Solutions Dropdown -->
+          <select id="industries" name="industry" class="form-select inline-select">
+            <option value="" selected disabled>Select Industry</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Energy & Utilities">Oil & Gas</option>
+            <option value="Pharma & Lifesciences">Pharma & Lifesciences</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Wholesale & Retail">Wholesale & Retail</option>
+          </select>
+          
+          <!-- Service Offerings Dropdown -->
+          <select id="service-offerings" name="service" class="form-select inline-select">
+            <option value="" selected disabled>Select Service</option>
+            <option value="QBPM">QBPM</option>
+            <option value="Digital Transformation">Digital Transformation</option>
+            <option value="Data Science">Data Science & Analytics</option>
+            <option value="Digital Talent Gardening">Digital Talent Gardening</option>
+            <option value="Managed Systems">Globally Managed Systems</option>
+          </select>
+          
+          <!-- Technologies Dropdown -->
+          <select id="technologies" name="technology" class="form-select inline-select">
+            <option value="" selected disabled>Select Technology</option>
+            <option value="AI/ML">AI/ML</option>
+            <option value="GenAI">GenAI</option>
+            <option value="LLM/SLM">LLM/SLM</option>
+            <option value="SAP/BTP">SAP/BTP</option>
+            <option value="Oracle">Oracle</option>
+          </select>
          
       
       </div>
@@ -1067,68 +1065,228 @@
       <button type="button" class="tp-btn next-step" data-step="2">Continue to Details</button>
    </div>
 </div>
+<!-- Step 2: Contact Details -->
+<div class="col-lg-12 demo-form-step" id="step2" style="display: none;">
+    <h4 class="demo-step-title">Complete Your Details</h4>
+    <p class="demo-step-description mb-20">Tell us about yourself and your requirements:</p>
+    
+    <div class="row">
+      <!-- First Name -->
+      <div class="col-lg-6">
+        <div class="tp-contact-details-form-input mb-20">
+          <div class="input-container">
+            <input type="text" name="first_name" placeholder="First Name*" required>
+            <i class="fa-light fa-user input-icon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Last Name -->
+      <div class="col-lg-6">
+        <div class="tp-contact-details-form-input mb-20">
+          <div class="input-container">
+            <input type="text" name="last_name" placeholder="Last Name*" required>
+            <i class="fa-light fa-user input-icon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Email -->
+      <div class="col-lg-12">
+        <div class="tp-contact-details-form-input mb-20">
+          <div class="input-container">
+            <input type="email" name="email" placeholder="Email Address*" required>
+            <i class="fa-light fa-envelope input-icon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Phone -->
+      <div class="col-lg-12">
+        <div class="tp-contact-details-form-input mb-20">
+          <div class="input-container">
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <i class="fa-light fa-phone input-icon"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Requirements -->
+      <div class="col-lg-12">
+        <div class="tp-contact-details-form-input mb-20">
+          <div class="input-container">
+            <textarea name="requirements" placeholder="Tell us about your specific requirements or questions"></textarea>
+            <i class="fa-light fa-pen input-icon"></i>
+          </div>
+        </div>
+      </div>
 
-<!-- Step 2: Contact Details (previously Step 3) -->
-<div class="col-lg-12 demo-form-step" id="step2" style="display: none; transform: scale(0.9); transform-origin: top left;">
-   <h4 class="demo-step-title" style="font-size:16px;">Complete Your Details</h4>
-   <p class="demo-step-description mb-20" style="font-size:12px;">Tell us about yourself and your requirements:</p>
-   
-   <div class="row">
-      <div class="col-lg-6">
-         <div class="tp-contact-details-form-input mb-20" style="position:relative; padding:4px 8px;">
-             <input type="text" name="first_name" placeholder="First Name*" required style="width:100%; height:28px; font-size:12px; box-sizing:border-box;">
-             <span style="position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:12px; color:#666;">
-                <i class="fa-light fa-user"></i>
-             </span>
-         </div>
-      </div>
-      <div class="col-lg-6">
-         <div class="tp-contact-details-form-input mb-20" style="position:relative; padding:4px 8px;">
-             <input type="text" name="last_name" placeholder="Last Name*" required style="width:100%; height:28px; font-size:12px; box-sizing:border-box;">
-             <span style="position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:12px; color:#666;">
-                <i class="fa-light fa-user"></i>
-             </span>
-         </div>
-      </div>
-      <div class="col-lg-12">
-         <div class="tp-contact-details-form-input mb-20" style="position:relative; padding:4px 8px;">
-             <input type="email" name="email" placeholder="Email Address*" required style="width:100%; height:28px; font-size:12px; box-sizing:border-box;">
-             <span style="position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:12px; color:#666;">
-                <i class="fa-light fa-envelope"></i>
-             </span>
-         </div>
-      </div>
-      <div class="col-lg-12">
-         <div class="tp-contact-details-form-input mb-20" style="position:relative; padding:4px 8px;">
-             <input type="tel" name="phone" placeholder="Phone Number" required style="width:100%; height:28px; font-size:12px; box-sizing:border-box;">
-             <span style="position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:12px; color:#666;">
-                <i class="fa-light fa-phone"></i>
-             </span>
-         </div>
-      </div>
-      <div class="col-lg-12">
-         <div class="tp-contact-details-form-input mb-20" style="position:relative; padding:4px 8px;">
-            <textarea name="requirements" placeholder="Tell us about your specific requirements or questions" style="width:100%; height:48px; font-size:12px; box-sizing:border-box; resize:none;"></textarea>
-            <span style="position:absolute; right:4px; top:50%; transform:translateY(-50%); font-size:12px; color:#666;">
-               <i class="fa-light fa-pen"></i>
-            </span>
-         </div>
-      </div>
-      <div class="col-lg-12 mt-20">
-         <div class="form-check mb-20" style="font-size:12px;">
-            <input class="form-check-input" type="checkbox" id="consent" name="consent" required style="margin-right:4px;">
-            <label class="form-check-label" for="consent" style="font-size:12px;">
-               I agree to receive communications about Collabridge services and solutions
-            </label>
-         </div>
-      </div>
-   </div>
-   
-   <div class="demo-form-buttons mt-30" style="margin-top:10px;">
-      <button type="button" class="tp-btn-outline prev-step" data-step="1" style="font-size:12px; padding:4px 8px;">Back</button>
-      <button type="submit" class="tp-btn" style="font-size:12px; padding:4px 8px;">Schedule Demo</button>
-   </div>
-</div>
+  <!-- Consent Checkbox -->
+  <div class="col-lg-12">
+    <div class="form-check mb-20" style="margin-top: 15px;">
+      <input class="form-check-input" type="checkbox" id="consent" name="consent" required 
+             style="margin-right: 8px; cursor: pointer;">
+      <label class="form-check-label" for="consent" 
+             style="font-size: 13px; cursor: pointer; color: #666;">
+        I agree to receive communications about Collabridge services and solutions
+      </label>
+    </div>
+  </div>
+  
+  <!-- Navigation Buttons -->
+  <div class="col-lg-12">
+    <div class="demo-form-buttons" style="display: flex; gap: 10px; margin-top: 20px;">
+        <button type="button" class="tp-btn-outline prev-step" data-step="1"
+        style="padding: 8px 20px; font-size: 14px; background-color: #fff; border: 1px solid #d90a2c; color: #d90a2c; border-radius: 4px; cursor: pointer; transition: background 0.3s ease, color 0.3s ease;"
+        onmouseover="this.style.backgroundColor='#d90a2c'; this.style.color='#fff';"
+        onmouseout="this.style.backgroundColor='#fff'; this.style.color='#d90a2c';">
+  Back
+</button>
+     <!-- Update your submit button -->
+<button type="submit" class="tp-btn" 
+style="padding: 8px 20px; font-size: 14px; background: #474ed4; color: white; border: none;">
+Schedule Demo
+</button>
+    </div>
+  </div>
+  
+  <style>
+  /* Button hover effects */
+  .tp-btn-outline:hover {
+    background: #474ed4;
+    color: white !important;
+  }
+  
+  .tp-btn:hover {
+    background: #3339b1;
+  }
+  
+  /* Checkbox styling */
+  .form-check-input {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .form-check-input:checked {
+    background-color: #474ed4;
+    border-color: #474ed4;
+  }
+  </style>
+    </div>
+  </div>
+  
+  <style>
+  /* Input container and field styles */
+  .input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-container input,
+  .input-container textarea {
+    width: 100%;
+    height: 36px;
+    padding: 8px 35px 8px 12px;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .input-container textarea {
+    height: 80px;
+    resize: none;
+    padding-right: 35px;
+  }
+  
+  /* Icon styles */
+  .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 14px;
+    pointer-events: none;
+  }
+  
+  /* Adjust icon position for textarea */
+  .input-container textarea + .input-icon {
+    top: 20px;
+    transform: none;
+  }
+  
+  /* Focus states */
+  .input-container input:focus,
+  .input-container textarea:focus {
+    border-color: #474ed4;
+    box-shadow: 0 0 0 2px rgba(71, 78, 212, 0.1);
+    outline: none;
+  }
+  
+  /* Spacing adjustments */
+  .tp-contact-details-form-input {
+    margin-bottom: 15px;
+  }
+  
+  /* Make form more compact */
+  .demo-form-step {
+    padding: 15px 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .input-container input,
+    .input-container textarea {
+      font-size: 12px;
+      height: 32px;
+    }
+    
+    .input-container textarea {
+      height: 60px;
+    }
+  }
+  </style>
+
+<style>
+    /* Thank you message styles */
+    .thank-you-message {
+        padding: 40px 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .thank-you-message h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .thank-you-message p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+    }
+    
+    .success-icon {
+        margin-bottom: 20px;
+    }
+    
+    /* Animation for the message */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .thank-you-message {
+        animation: fadeIn 0.5s ease-out;
+    }
+    </style>
 <style>
     /* Compact layout styles */
     .demo-form-step {
@@ -1738,17 +1896,17 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
          
          // Form validation functions - UPDATED FOR DROPDOWNS
          function validateStep(step) {
-            switch(step) {
-               case 1:
-                  // Validate dropdown selections instead of checkboxes
-                  const serviceOffering = document.getElementById('service-offerings').value;
-                  const technology = document.getElementById('technologies').value;
-                  const industry = document.getElementById('industries').value;
-                  
-                  if (!serviceOffering && !technology && !industry) {
-                     alert('Please select at least one option from Service Offerings, Technologies, or Industry Solutions.');
-                     return false;
-                  }
+  switch(step) {
+    case 1:
+      const industry = document.getElementById('industries').value;
+      const service = document.getElementById('service-offerings').value;
+      const technology = document.getElementById('technologies').value;
+      
+      if (!industry && !service && !technology) {
+        alert('Please select at least one option from Industry Solutions, Service Offerings, or Technologies.');
+        return false;
+      }
+      
                   
                   // Validate date and time selection
                   const demoDate = document.getElementById('demo-date').value;
@@ -1816,75 +1974,80 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
       });
       
       </script>
-      <script>
-         // Add this to your existing script section or create a new one before the closing body tag
-document.addEventListener('DOMContentLoaded', function() {
-    // Get form element
-    const demoForm = document.getElementById('demoRequestForm');
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get form element
+        const form = document.getElementById('demoRequestForm');
+        // Get the container where the form is
+        const formContainer = document.querySelector('.tp-contact-details-form');
     
-    // Add submit event handler
-    if (demoForm) {
-        demoForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent default form submission
-            
-            // Get all the form data
-            const formData = new FormData(this);
-            
-            // Show loading state
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.innerHTML;
-            submitButton.innerHTML = 'Processing...';
-            submitButton.disabled = true;
-            
-            // Here you would typically send the data to your server
-            // For demonstration, we'll simulate a successful submission after a delay
-            setTimeout(function() {
-                // Hide the form
-                document.getElementById('step2').style.display = 'none';
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent form from submitting normally
                 
-                // Create and display success message
-                const formContainer = document.querySelector('.tp-contact-details-form');
-                const successMessage = document.createElement('div');
-                successMessage.className = 'demo-success-message text-center p-5';
-                successMessage.innerHTML = `
+                // Get all required form values
+                const firstName = form.querySelector('input[name="first_name"]').value;
+                const lastName = form.querySelector('input[name="last_name"]').value;
+                const email = form.querySelector('input[name="email"]').value;
+                const phone = form.querySelector('input[name="phone"]').value;
+                const consent = form.querySelector('#consent').checked;
+    
+                // Get schedule details from Step 1
+                const demoDate = document.getElementById('demo-date').value;
+                const timeSlot = document.getElementById('time-slot').value;
+                const timezone = document.getElementById('timezone').value;
+    
+                // Basic validation
+                if (!firstName || !lastName || !email || !phone || !consent) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+    
+                // Hide the current form step
+                const step2 = document.getElementById('step2');
+                if (step2) {
+                    step2.style.display = 'none';
+                }
+    
+                // Remove any existing thank you message
+                const existingMessage = formContainer.querySelector('.thank-you-message');
+                if (existingMessage) {
+                    existingMessage.remove();
+                }
+    
+                // Create thank you message with user's name and scheduled time details
+                const thankYouMessage = document.createElement('div');
+                thankYouMessage.className = 'thank-you-message text-center';
+                thankYouMessage.innerHTML = `
                     <div class="success-icon mb-4">
                         <i class="fa-solid fa-check-circle" style="font-size: 48px; color: #28a745;"></i>
                     </div>
-                    <h3 class="mb-3">Demo Scheduled Successfully!</h3>
-                    <p class="mb-4">Thank you for scheduling a demo with Collabridge. One of our experts will confirm your appointment shortly.</p>
-                    <div>
-                        <a href="index.html" class="tp-btn">Return to Homepage</a>
+                    <h3 class="mb-3" style="color: #474ed4;">Thank You, ${firstName} ${lastName}!</h3>
+                    <p class="mb-4">Your demo is scheduled on ${demoDate} at ${timeSlot} (${timezone}).<br>
+                    We will get back to you shortly to confirm your appointment.</p>
+                    <div class="mt-4">
+                        <a href="index.html" class="tp-btn" 
+                           style="display: inline-block; padding: 10px 20px; text-decoration: none; 
+                                  background: #474ed4; color: white;">
+                            Return to Homepage
+                        </a>
                     </div>
                 `;
-                formContainer.appendChild(successMessage);
-                
-                // Optional: Scroll to success message
-                successMessage.scrollIntoView({ behavior: 'smooth' });
-                
-            }, 1500); // Simulate server delay
-            
-            // For actual implementation, replace the setTimeout with an AJAX call:
-            /*
-            fetch('your-server-endpoint', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle successful response
-                // Show success message or redirect
-            })
-            .catch(error => {
-                // Handle error
-                submitButton.innerHTML = originalButtonText;
-                submitButton.disabled = false;
-                alert('An error occurred. Please try again.');
+    
+                // Add the thank you message to the form container
+                formContainer.appendChild(thankYouMessage);
+    
+                // Scroll to the thank you message
+                thankYouMessage.scrollIntoView({ behavior: 'smooth' });
+    
+                // Optional: Reset the form
+                form.reset();
             });
-            */
-        });
-    }
-});
-      </script>
+        }
+    });
+</script>
+
 <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2025/04/23/10/20250423104450-O7HTWLSO.js"></script>
    </body>
