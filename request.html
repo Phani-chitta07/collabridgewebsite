@@ -957,7 +957,7 @@
 <!-- Combined Step 1 & 2: Service Selection and Scheduling -->
 <div class="col-lg-12 demo-form-step" id="step1">
    <h4 class="demo-step-title">Select Services & Schedule Your Demo</h4>
-   <p class="demo-step-description mb-20">Choose the solutions you're interested in and your preferred time:</p>
+   <p class="demo-step-description mb-20">Pick one of the Following:</p>
    
    <!-- Service Selection Dropdowns - Improved Layout -->
    <div class="service-selection-row mb-30">
@@ -1016,53 +1016,74 @@
          <div class="row align-items-end">
             <!-- Date Picker -->
             <div class="col-md-4 mb-20">
-               <div class="tp-contact-details-form-input">
-                  <label for="demo-date"><strong>Select Date</strong></label>
-                  <input type="date" id="demo-date" name="demo-date" min="" class="form-control" required>
-               </div>
-            </div>
-            
+                <div class="tp-contact-details-form-input">
+                    <label for="demo-date">
+                        <strong class="required-label" style="white-space: nowrap;">Select Date</strong>
+                     </label>
+                     <input type="date" id="demo-date" name="demo-date" min="" class="form-control" required>
+                </div>
+             </div>
+             <style>
+                .required-label::after {
+                  content: "*";
+                  color: red;
+                }
+                </style>
             <!-- Time Slot Dropdown -->
             <div class="col-md-4 mb-20">
                <div class="tp-contact-details-form-input">
-                  <label for="time-slot"><strong>Select Time</strong></label>
+                <label for="time-slot">
+                    <strong class="required-label" style="white-space: nowrap;">Select Time</strong>
+                  </label>
                   <select id="time-slot" name="time-slot" class="form-select" required>
-                     <option value="" selected disabled>Select Time Slot</option>
-                     <option value="09:00">09:00 AM</option>
-                     <option value="10:00">10:00 AM</option>
-                     <option value="11:00">11:00 AM</option>
-                     <option value="12:00">12:00 PM</option>
-                     <option value="13:00">01:00 PM</option>
-                     <option value="14:00">02:00 PM</option>
-                     <option value="15:00">03:00 PM</option>
-                     <option value="16:00">04:00 PM</option>
-                     <option value="17:00">05:00 PM</option>
+                    <option value="" selected disabled>Select Time Slot</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="17:00">05:00 PM</option>
                   </select>
                </div>
             </div>
-            
+            <style>
+                .required-label::after {
+                  content: "*";
+                  color: red;
+                }
+              </style>
             <!-- Timezone Selection -->
             <div class="col-md-4 mb-20">
                <div class="tp-contact-details-form-input">
-                  <label for="timezone"><strong>Select Timezone</strong></label>
+                <label for="timezone">
+                    <strong class="required-label" style="white-space: nowrap;">Select Timezone</strong>
+                  </label>
                   <select id="timezone" name="timezone" class="form-select" required>
-                     <option value="" selected disabled>Select Timezone</option>
-                     <option value="EST">Eastern Time (ET)</option>
-                     <option value="CST">Central Time (CT)</option>
-                     <option value="MST">Mountain Time (MT)</option>
-                     <option value="PST">Pacific Time (PT)</option>
-                     <option value="IST">India Standard Time (IST)</option>
-                     <option value="GMT">Greenwich Mean Time (GMT)</option>
-                     <option value="UTC">Coordinated Universal Time (UTC)</option>
-                     <option value="BST">British Summer Time (BST)</option>
-                     <option value="CET">Central European Time (CET)</option>
+                    <option value="" selected disabled>Select Timezone</option>
+                    <option value="EST">Eastern Time (ET)</option>
+                    <option value="CST">Central Time (CT)</option>
+                    <option value="MST">Mountain Time (MT)</option>
+                    <option value="PST">Pacific Time (PT)</option>
+                    <option value="IST">India Standard Time (IST)</option>
+                    <option value="GMT">Greenwich Mean Time (GMT)</option>
+                    <option value="UTC">Coordinated Universal Time (UTC)</option>
+                    <option value="BST">British Summer Time (BST)</option>
+                    <option value="CET">Central European Time (CET)</option>
                   </select>
                </div>
             </div>
          </div>
       </div>
    </div>
-   
+   <style>
+    .required-label::after {
+      content: "*";
+      color: red;
+    }
+  </style>
    <div class="demo-form-buttons mt-30">
       <button type="button" class="tp-btn next-step" data-step="2">Continue to Details</button>
    </div>
