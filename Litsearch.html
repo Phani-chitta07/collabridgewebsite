@@ -1122,7 +1122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
     </div>
   </div>
-  <div class="stat-overlay">
+  <!-- <div class="stat-overlay">
     <div class="stat-item">
       <span class="stat-number">98%</span>
       <span class="stat-label">Accuracy</span>
@@ -1135,8 +1135,82 @@ document.addEventListener('DOMContentLoaded', () => {
       <span class="stat-number">85%</span>
       <span class="stat-label">Cost Reduction</span>
     </div>
-  </div>
+  </div> -->
 </div>
+<style>
+  /* Existing styles for .stat-overlay remain for larger screens */
+  .stat-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(29,53,87,0.9), transparent);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Mobile fixes */
+  @media (max-width: 768px) {
+    .stat-overlay {
+      position: relative !important; /* let it flow normally */
+      bottom: auto !important;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+    }
+    .stat-item {
+      flex: 1 1 30%;
+      margin: 5px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 20px;
+    }
+    .stat-label {
+      font-size: 12px;
+    }
+  }
+  <style>
+  /* Desktop Styles */
+  .stat-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(29,53,87,0.9), transparent);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .stat-overlay {
+      position: relative;
+      bottom: auto;
+      padding: 10px;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background: rgba(29,53,87,0.9); /* solid bg for clarity */
+    }
+    .stat-item {
+      width: 100%;
+      text-align: center;
+      padding: 5px 0;
+    }
+    .stat-number {
+      font-size: 24px;
+    }
+    .stat-label {
+      font-size: 14px;
+    }
+  }
+</style>
 
 <style>
 .visual-wrapper {
