@@ -10872,7 +10872,7 @@ blockquote cite::before {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
   .tp-footer-col-3 {
-    margin-left: 0px;
+    margin-left: 20px;
   }
 }
 .tp-footer-col-4 {
@@ -10880,7 +10880,7 @@ blockquote cite::before {
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 767px) {
   .tp-footer-col-4 {
-    margin-left: 0px;
+    margin-left: 20px;
   }
 }
 
